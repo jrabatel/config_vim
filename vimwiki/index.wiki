@@ -1,0 +1,86 @@
+====== General table of content ======
+* [[General TODO]]
+
+== Daily TODO ==
+
+vendredi 2 mars 2012, 09:34:59 (UTC+0100)
+* [X] mail réponse Bertrand
+* [X] mail Thomas
+* [ ] any idea for pattern matcher time?
+* [ ] advances on presentation
+
+jeudi 1 mars 2012, 15:36:06 (UTC+0100)
+
+* [X] réunion Ronan CERMN
+* [X] mail Bertrand
+* [X] Code
+  * [X] problem with distances
+  * [X] check and insert rules for hybridization
+  * [X] logarithmic IC50 value
+* [ ] Having jak2 and mips code running on laptop
+
+mercredi 29 février 2012, 14:52:19 (UTC+0100)
+
+* [X] Code
+* [X] Questions Ronan
+* [X] Mail Thomas
+* [X] Mail Bruno (déplacement Paris)
+
+
+vendredi 24 février 2012, 08:43:10 (UTC+0100)
+* [X] cours
+	- [X] imprimer documents utiles
+	- [X] mail Gaël Dias, Frédérick
+	- [X] plan 1er cours + demander énoncer TP Nicolas
+
+
+= GDR I3 presentation: outline =
+* I. Contexte chémogénomique
+	- Affinité protéique
+	- Voies de dégradation
+	- Application : inhiber JAK, découvrir des ligands
+	- Montrer une image qui montre l'affinité d'une protéine et d'un ligand (conformation)
+* II. Information recherchée (Motifs recherchés)
+	- Type de motifs
+	- Arbre de décision avec motifs
+	- Aspect multi-instances (différentes conformations --> 1 slide : un ligand satisfait un motif si une des conformations satisfait le motif)
+* III. Méthode d'extraction
+	- Ne pas focaliser dessus pour le 6 mars
+* IV. Résultats expérimentaux
+	- Temps en fonction de certains paramètres
+	- Avec ou sans utilisation de la stratégie de refinement sur le nouveau sommet généré
+	- Nombre de motifs générés
+* V. Conclusion et perspectives
+	- Outil de visualisation des motifs dans les conformations pour les experts, outil de paramétrage
+	
+mardi 28 février 2012, 10:36:49 (UTC+0100)
+* [X] Finir Cours + TP
+  * [X] cours
+    * [X] logos
+    * [X] corrections
+    * [X] other exercices?
+    * [X] avantages des motifs : interprétabilité, tiennent pleinement compte de l'aspect séquentiel des données textuelles, peuvent être considérés comme de nouveaux descripteurs d'un texte (classification, ...)
+    * [X] notation
+  * [X] TP
+    * [X] pas à pas :
+      * [X] compiler le code
+      * [X] extraire sans filtrage et lemmatisation
+      * [X] extraire sans filtrage et avec les étiquettes grammaticales
+      * [X] traduire les motifs
+      * [X] extraire avec filtrage grammatical
+      * [X] extraire avec lemmatisation
+* [O] JAK2 Data
+  * [X] create list of distances (Java)
+  * [X] create list of coordinates (on x, y , z) (Java)
+  * [X] create histograms (Weka, R, Gnuplot, ?)
+  * [.] write short document
+    * [ ] different parameters for the discretization
+    * [X] histograms and data
+      * [X] minimum and maximum values, mean value, etc.
+      * [X] density histograms
+    * [ ] how to select the right parameters?
+* [X] email to Ronan --> ok for thursday
+  * [X] first patterns (decision tree)
+  * [X] book + usb key
+  * [X] data to tag
+  * [X] H-bond donor / acceptor?
