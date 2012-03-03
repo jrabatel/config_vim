@@ -1,4 +1,3 @@
-" just a small test...
 " VERY GENERAL OPTIONS
 set nocompatible
 set hidden
