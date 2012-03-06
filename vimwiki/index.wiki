@@ -3,11 +3,45 @@
 
 == Daily TODO ==
 
+
+mardi 6 mars 2012, 15:16:38 (UTC+0100)
+* [X] Presentation in chemoinformatic group
+* [X] Document for GREYC administration (mission document)
+* [ ] Thomas
+  * [ ] code running?
+  * [ ] meeting with Ronan? Coming to Caen?
+* [.] Leuven
+  * [ ] registration on web site
+  * [X] username and password
+  * [ ] documents
+* [X] Mail Hugo
+* [ ] Teaching
+  * [ ] Lectures
+  * [ ] Practical work
+* [ ] GREYC web site
+
+lundi 5 mars 2012, 15:52:40 (UTC+0100)
+
+  * [X] Arbre de décision
+    * [X] Exemple + explications
+    * [X] Avantage : problème de seuil
+  * [X] Exemple motif --> animation
+    * [X] créer images pour BD
+    * [X] créer images pour motif
+  * [ ] Mettre en forme
+  * [X] Remplacer la section "résultats expérimentaux" par autre chose ?
+  * [X] To add
+    * [X] logos on slide 1
+    * [X] slide numbers
+    * [X] unité pour l'IC50 (nM)
+
+
+
 vendredi 2 mars 2012, 09:34:59 (UTC+0100)
 * [X] mail réponse Bertrand
 * [X] mail Thomas
-* [ ] any idea for pattern matcher time?
-* [ ] advances on presentation
+* [X] any idea for pattern matcher time?
+* [X] advances on presentation
 
 jeudi 1 mars 2012, 15:36:06 (UTC+0100)
 

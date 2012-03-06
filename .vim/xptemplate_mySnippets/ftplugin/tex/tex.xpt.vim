@@ -138,6 +138,83 @@ XPT $mcal "$ \mathcal{..} $
 $ \mathcal{`X~} $`cursor~
 ..XPT
 
+XPT cinred " \inred{...}
+\inred{`text~}`cursor~
+..XPT
+XPT cinred_ wraponly=wrapped " \inred{...}
+\inred{`wrapped~}`cursor~
+..XPT
+
+" colors (require the definition of corresponding commands)
+XPT cinblueg " \inblueg{...}
+\inblueg{`text~}`cursor~
+..XPT
+XPT cinblueg_ wraponly=wrapped " \inblueg{...}
+\inblueg{`wrapped~}`cursor~
+..XPT
+
+XPT cinbor " \inbor{...}
+\inbor{`text~}`cursor~
+..XPT
+XPT cinbor_ wraponly=wrapped " \inbor{...}
+\inbor{`wrapped~}`cursor~
+..XPT
+
+XPT cingreen " \ingreen{...}
+\ingreen{`text~}`cursor~
+..XPT
+XPT cingreen_ wraponly=wrapped " \ingreen{...}
+\ingreen{`wrapped~}`cursor~
+..XPT
+
+""""""""""""""""""""""""""""""""""""""""""""
+" Useful environment for figures, tables, math mode
+
+XPT graph " \includegraphics...
+\includegraphics[width=`width~\textwidth]{img/`file~}
+`cursor~
+..XPT
+
+XPT $_ wraponly=wrapped " $...$
+$ `wrapped~ $`cursor~
+..XPT
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+" Arrows
+
+XPT => " \Rightarrow
+\Rightarrow`cursor~
+..XPT
+
+XPT <= " \Lefttarrow
+\Lightarrow`cursor~
+..XPT
+
+XPT -> " \rightarrow
+\rightarrow`cursor~
+..XPT
+
+XPT <- " \lefttarrow
+\lightarrow`cursor~
+..XPT
+
+XPT $=> " $\Rightarrow$
+$\Rightarrow$`cursor~
+..XPT
+
+XPT $<= " $\Lefttarrow$
+$\Lightarrow$`cursor~
+..XPT
+
+XPT $-> " $\rightarrow$
+$\rightarrow$`cursor~
+..XPT
+
+XPT $<- " $\lefttarrow$
+$\lightarrow$`cursor~
+..XPT
+
 """"""""""""""""""""""""""""""""""""""""""""
 " References to objects
 

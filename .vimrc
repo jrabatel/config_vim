@@ -44,8 +44,9 @@ set viminfo+=!
 nmap ,o o<Esc>k
 nmap ,O O<Esc>j
 
-vmap g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
-vmap w :<C-U>!firefox "http://fr.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
+" Search for the selected text in Google or Wikipedia
+vmap ,g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
+vmap ,w :<C-U>!firefox "http://fr.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
 
  "Mapping for xptemplate autocompletion
  ""imap <C-m> <C-\><CR>
@@ -77,39 +78,9 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-" Mapping to have j+k (i.ew., at the same time) meaning <Esc> (i.e., leave the insert mode)
-" Warning: the arpeggio insert mode maps do not seem to work when vim-latex is
-" running.
-" call arpeggio#load()
-" " To quickly exit the insert of visual mode, type j+l
-" Arpeggioinoremap jz <Esc>
-" Arpeggioinoremap jz <Esc>
-" " To allow motions in insert mode (not really convenient)
-" Arpeggioimap ,a <C-o><S-a>
-" Arpeggioimap ,i <C-o><S-i>
-" Arpeggioimap ,e <C-o>e
-" Arpeggioimap ,w <C-o>w
-" Arpeggioimap ,b <C-o>b
-" Arpeggioimap qj <C-o>j
-" Arpeggioimap qk <C-o>k
-" Arpeggioimap qh <C-o>h
-" Arpeggioimap ql <C-o>l
-" Arpeggioimap ,s <Esc>:w<CR>
-" " same thing with simply hold Alt key (does not work)
-" " inoremap <A-H> <C-o>h
-" " inoremap <A-j> <C-o>j
-" " inoremap <A-k> <C-o>k
-" " inoremap <A-l> <C-o>l
-" " inoremap <A-e> <C-o>e
-" " inoremap <A-w> <C-o>w
-" " inoremap <A-b> <C-o>b
-" " To comment a line quickly in insert mode (use shortcuts of tcomment plugin)
-" Arpeggioimap ja <Esc>gcc
-" Arpeggionmap ja gcc
-" Arpeggiovmap ja gc
-
 " Quickly quit vim
 nmap ,;qq :qall!<CR>
+nmap ,;wq :wq<CR>
 " This map allows to exit the insert or visual or command mode quickly, without typing
 " <Esc>.
 imap ,; <Esc>
@@ -135,14 +106,17 @@ vmap ,c gc
 nmap ,c gcc
 " allows quick indenting of a ling or a selected bloc (does not work
 " correctly)
-imap ,= <Esc>==   
+imap ,;= <Esc>==   
 " allows quick motions between tabs (in minibufexpl)
 nmap ,l :bn<CR>
 nmap ,k :bp<CR>
 " allows removing the highlighted matchings
-nmap noh :nohls<CR>
+nmap ,noh :nohls<CR>
 " allows redrawing the screen
-nmap red :redraw!<CR>
+nmap ,red :redraw!<CR>
+
+" manipulating windows
+nmap ,wc <C-w>c
 
 " Smart indent when entering insert mode with i on empty lines
 function! IndentWithI()
@@ -150,7 +124,7 @@ function! IndentWithI()
 		return "\"_ddO"
 	else
 
-		return "i"
+	  return "i"
 	endif
 endfunction
 nnoremap <expr> i IndentWithI()
@@ -190,7 +164,7 @@ let g:xptemplate_snippet_folders=['$HOME/.vim/xptemplate_mySnippets']
 let g:xptemplate_brace_complete = 0
 " "
 " Snippet triggering key:
-let g:xptemplate_key = '<Tab>'
+let g:xptemplate_key = '<C-k>'
 " "
 " " open the pop-up menu:
 " let g:xptemplate_key_pum_only = '<Leader><Tab>'
