@@ -1,8 +1,52 @@
 ====== General table of content ======
 * [[General TODO]]
+* [[Config TODO]]
 
 == Daily TODO ==
 
+
+lundi 12 mars 2012, 08:45:50 (UTC+0100)
+* [O] Mails:
+  * [X] Accommodation Leuven
+  * [X] Bertrand : plan présentation
+  * [X] Thomas : 1 level-deep
+  * [X] Sandra : recommandation letter
+  * [ ] Admin : GREYC web site
+
+dimanche 11 mars 2012, 15:14:17 (UTC+0100)
+* [X] mail Sandra
+  * [X] corrections lettre + remarque
+  * [X] n° de poste
+* [X] Cours 3 Fouille de texte
+
+mercredi 7 mars 2012, 17:21:53 (UTC+0100)
+* [X] Presentation preparation for IATE on 2012-03-09
+  * [X] S6: better link between association rules and FCA?
+  * [X] S6: "the attributes are directly viewed as itemsets" --> "the attributes are directly viewed as items"
+  * [X] S7: not "translating the FCA problem into a frequent itemset mining problem"?
+  * [X] S7: automatic ontology elicitation?
+  * [X] S30: put an image from the last presentation?
+  * [X] S32: first line : ????! :)
+  * [X] At the beginning, make a slide on the itemset mining problem (quite simple) in order to better see the translation into FCA
+    * [X] Quick presentation of the problem --> example(s)
+    * [X] Show the link with knowledge acquisition
+  * [X] Implications in a concept lattice
+    * [X] have a good understanding of it: e.g., what happens with dog?
+    * [X] introduce the fact that association rules can also provide this type of rules, but with a less "crisp" notion of implication
+  * [X] How to introduce sequential pattern mining?
+  * [X] How to introduce contextual pattern mining?
+    * [X] think about the exploitation of contextual pattern mining in itemsets : what can it give that classical pattern mining can't? Domain knowledge can be exploited in order to build the context hiearchy
+  * [X] When showing items in sequences that are related to originally numerical attributes, speak about fuzzy logic and pattern mining techniques?
+  * [X] Show one context hierarchy in the slides?
+  * [X] Globally highlight the fact that extracting patterns is usually very good when dealing with experts : they are interpretable (like the original idea of fuzzy logic?.. :) )
+  * [X] Find a concrete example of the fact that contextual information can be seen at a different level than attributes-values
+  * [X] when dealing with sequential patterns, mention that it is about dealing with structured data (sequences, graphs, etc.), which is a more complex domain than itemsets, but that can model numerous real-world domains (e.g., time-related domains, bioinformatics, texts, chemistry, etc.). Mention the fact that I already have worked on numbers of them.
+  * [X] Two directions: from pattern mining to knowledge and "from knowledge (ontologies, taxonomies) to patterns to applications"
+    * [X] Direction 1
+      * [X] fastly provide an ontology based on concepts taht can be observed within the data (then validation)
+    * [X] Direction 2
+      * [X] being able to extract patterns at a given level of a taxonomy or directly exploiting the different levels of a taxonomy (without a specified one)
+      * [X] use the obtained knowledge to build the contexts that will be used in order to obtain precise results
 
 mardi 6 mars 2012, 15:16:38 (UTC+0100)
 * [X] Presentation in chemoinformatic group
@@ -10,15 +54,19 @@ mardi 6 mars 2012, 15:16:38 (UTC+0100)
 * [ ] Thomas
   * [ ] code running?
   * [ ] meeting with Ronan? Coming to Caen?
-* [.] Leuven
+* [o] Leuven
   * [ ] registration on web site
   * [X] username and password
-  * [ ] documents
+  * [X] documents
+    * [X] CV
+    * [X] passport
+    * [X] diploma
 * [X] Mail Hugo
 * [ ] Teaching
   * [ ] Lectures
+    * [ ] 
   * [ ] Practical work
-* [ ] GREYC web site
+* [X] GREYC web site
 
 lundi 5 mars 2012, 15:52:40 (UTC+0100)
 
@@ -34,8 +82,6 @@ lundi 5 mars 2012, 15:52:40 (UTC+0100)
     * [X] logos on slide 1
     * [X] slide numbers
     * [X] unité pour l'IC50 (nM)
-
-
 
 vendredi 2 mars 2012, 09:34:59 (UTC+0100)
 * [X] mail réponse Bertrand

@@ -272,6 +272,10 @@ XPT minipage "\begin{minipage}... \end{minipage}
 \end{minipage}
 ..XPT
 
+XPT pause " \pause
+\pause
+..XPT
+
 XPT input " \input{}
 \input{`file~}`CURSOR~
 ..XPT
@@ -281,8 +285,16 @@ XPT // " \\
 
 ..XPT
 
+XPT x " \times
+\times
+..XPT
+
 XPT frac " frac{..}{..}
 \frac{`a~}{`b~}
+..XPT
+
+XPT dfrac " dfrac{..}{..}
+\dfrac{`a~}{`b~}
 ..XPT
 
 XPT lbl " label{..}

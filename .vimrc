@@ -65,6 +65,8 @@ nnoremap <silent> <C-F8> :TagbarToggle<CR>
 let gtagbarautoclose = 0
 
 nmap <silent> <c-n> :NERDTreeToggle<CR>
+nmap <silent> ,nn :NERDTreeToggle<CR>
+nmap <silent> ,nb :NERDTreeToggle<CR><S-b><CR>
 let mapleader=","
 
 " map <C-F9> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -72,6 +74,8 @@ map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 nnoremap ' `
 nnoremap ` '
+nnoremap ù %
+nnoremap à 0
 
 " PATHOGEN
 call pathogen#infect()
@@ -128,6 +132,8 @@ function! IndentWithI()
 	endif
 endfunction
 nnoremap <expr> i IndentWithI()
+
+
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGING SPECIFIC OPTIONS
