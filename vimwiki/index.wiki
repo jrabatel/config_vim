@@ -4,8 +4,20 @@
 
 == Daily TODO ==
 
-mardi 13 mars 2012, 09:29:28 (UTC+0100)
-
+dimanche 18 mars 2012, 09:55:10 (UTC+0100)
+* [X] Mail KUL (admin)
+* [ ] AKDM3
+  * [ ] print original, current version of the paper
+  * [ ] paper final version
+  * [ ] reviewer letter
+* [X] Dossier UM3
+  * [X] CV
+  * [X] Préparer mail
+  * [X] Envoyer mail
+* [ ] Code
+  * [ ] supprimer vertexList
+  * [ ] tester inclusions
+* [ ] Document Bruno
 
 lundi 12 mars 2012, 08:45:50 (UTC+0100)
 * [O] Mails:

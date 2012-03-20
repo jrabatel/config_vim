@@ -78,12 +78,12 @@ XPT se " section{..}
 
 XPT ss " subsection{..}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{`sectionTitle~}\label{sec:`label~}
-
+\subsection{`sectionTitle~}
+`cursor~
 ..XPT
 
 XPT sss " subsubsection{..}
-\subsubsection{`sectionTitle~}\label{sec:`label~}
+\subsubsection{`sectionTitle~}
 `cursor~
 ..XPT
 
@@ -283,6 +283,13 @@ XPT input " \input{}
 XPT // " \\
 \\
 
+..XPT
+
+XPT / " \ (imposing empty line)
+
+\
+
+`cursor~
 ..XPT
 
 XPT x " \times
