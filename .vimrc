@@ -44,6 +44,9 @@ set viminfo+=!
 nmap ,o o<Esc>k
 nmap ,O O<Esc>j
 
+" Mapping to open vimrc config file
+nmap ,vim :edit ~/.vimrc<CR>
+
 " Search for the selected text in Google or Wikipedia
 vmap ,g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
 vmap ,w :<C-U>!firefox "http://fr.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
@@ -76,6 +79,7 @@ nnoremap ' `
 nnoremap ` '
 nnoremap ù %
 nnoremap à 0
+nnoremap é ~
 
 " PATHOGEN
 call pathogen#infect()
@@ -121,6 +125,10 @@ nmap ,red :redraw!<CR>
 
 " manipulating windows
 nmap ,wc <C-w>c
+
+" space-indenting lines
+imap ,;<space> <ESC><S-I><space><space><S-A>
+nmap ,<space> <S-I><space><space><ESC>
 
 " Smart indent when entering insert mode with i on empty lines
 function! IndentWithI()

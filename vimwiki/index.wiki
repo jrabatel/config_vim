@@ -4,20 +4,43 @@
 
 == Daily TODO ==
 
+mercredi 21 mars 2012, 08:35:04 (UTC+0100)
+* [X] Final version of AKDM paper
+* [X] mail Maguelonne
+* [X] mail Mathieu
+* [X] mail Marc
+* [X] mail Enseignements UCBN
+  * [X] envoyer CV
+* [ ] List of experiments on Jak2
+  * [ ] Ronan
+    * [ ] One and Two-levels deep refinement strategy
+    * [ ] Distance upper limit --> TO IMPLEMENT
+    * [ ] Finer discretization on distances
+    * [ ] With/without a strategy for reducing IC50 value in Yes branches --> TO IMPLEMENT
+  * [ ] Paper
+    * [ ] IC50 value, log(IC50), rank
+    * [ ] Prediction accuracy (with training and test datasets)
+    * [ ] Different discretization methods:
+      * [ ] Distances
+        * [ ] based on a geometric series interval bounds (current)
+        * [ ] based on equal-frequency intervals
+        * [ ] based on equal-length intervals
+      * [ ] Coordinates
+        * [ ] different values on boxes size
+        * [ ] space-segmentation methods
+    * [ ] Pre/Post-pruning parameters in the decision tree?
+* [ ] Summary document on Jak2 project for Bruno
+* [ ] Dossier MCF : Enseignement
+* [X] Corrections AKDM Sandra
+
 dimanche 18 mars 2012, 09:55:10 (UTC+0100)
 * [X] Mail KUL (admin)
-* [ ] AKDM3
-  * [ ] print original, current version of the paper
-  * [ ] paper final version
-  * [ ] reviewer letter
 * [X] Dossier UM3
   * [X] CV
   * [X] Préparer mail
   * [X] Envoyer mail
-* [ ] Code
-  * [ ] supprimer vertexList
-  * [ ] tester inclusions
-* [ ] Document Bruno
+* [X] Code
+  * [X] supprimer vertexList
 
 lundi 12 mars 2012, 08:45:50 (UTC+0100)
 * [O] Mails:
