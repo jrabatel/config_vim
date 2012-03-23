@@ -292,8 +292,24 @@ XPT / " \ (imposing empty line)
 `cursor~
 ..XPT
 
+XPT \ " \backslash
+\backslash
+..XPT
+
 XPT x " \times
 \times
+..XPT
+
+XPT { " \{
+\{
+..XPT
+
+XPT } " \}
+\}
+..XPT
+
+XPT in " \in
+\in
 ..XPT
 
 XPT frac " frac{..}{..}
