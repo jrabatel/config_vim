@@ -4,6 +4,16 @@
 
 == Daily TODO ==
 
+vendredi 23 mars 2012, 08:09:23 (UTC+0100)
+* [o] Dossier candidature MCF UM3
+  * [X] Relire projet enseignement
+  * [X] Envoyer à Sandra
+  * [ ] Ecrire projet de recherche
+  * [ ] Envoyer à Pascal
+* [X] Corrections Fouille de texte
+* [ ] Papier AKDM
+* [X] Rappeler Bruno et Bertrand (lettre de recommandations)
+
 mercredi 21 mars 2012, 08:35:04 (UTC+0100)
 * [X] Final version of AKDM paper
 * [X] mail Maguelonne
@@ -29,11 +39,11 @@ mercredi 21 mars 2012, 08:35:04 (UTC+0100)
         * [X] different values on boxes size
         * [X] space-segmentation methods
     * [X] Pre/Post-pruning parameters in the decision tree?
-* [ ] Jak2 code
-  * [ ] distance upper limit
-  * [ ] decreasing IC50 value
-* [ ] Summary document on Jak2 project for Bruno
-* [ ] Dossier MCF : Enseignement
+* [X] Jak2 code
+  * [X] distance upper limit
+  * [X] decreasing IC50 value
+* [X] Summary document on Jak2 project for Bruno
+* [X] Dossier MCF : Enseignement
 * [X] Corrections AKDM Sandra
 
 dimanche 18 mars 2012, 09:55:10 (UTC+0100)
