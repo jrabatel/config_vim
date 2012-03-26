@@ -126,6 +126,9 @@ nmap ,red :redraw!<CR>
 " manipulating windows
 nmap ,wc <C-w>c
 
+" change operator
+nmap cs ct.
+
 " space-indenting lines
 imap ,;<space> <ESC><S-I><space><space><S-A>
 nmap ,<space> <S-I><space><space><ESC>

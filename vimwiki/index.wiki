@@ -4,6 +4,19 @@
 
 == Daily TODO ==
 
+dimanche 25 mars 2012, 14:03:27 (UTC+0200)
+* [ ] Dossier UM3
+  * [ ] Dossier enseignement
+    * [ ] Détail Fouille de Texte : ajouter lien vers supports de cours
+    * [ ] Ajouter Béziers et insister sur 'je connais ...'
+    * [ ] Parler des différentes formations
+  * [ ] Dossier recherche
+    * [ ] Finir texte
+  * [ ] Divers
+    * [ ] Ajouter jury de thèse en page 2
+    * [ ] Ajouter Leuven en page 1 (CV)
+    * [ ] Ajouter intervenants
+
 mercredi 21 mars 2012, 08:35:04 (UTC+0100)
 * [X] Final version of AKDM paper
 * [X] mail Maguelonne
