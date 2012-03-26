@@ -288,7 +288,6 @@ XPT // " \\
 XPT / " \ (imposing empty line)
 
 \
-
 `cursor~
 ..XPT
 

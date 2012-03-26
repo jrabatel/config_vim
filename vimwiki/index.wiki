@@ -4,6 +4,27 @@
 
 == Daily TODO ==
 
+lundi 26 mars 2012, 08:49:12 (UTC+0200)
+* [ ] Dossier candidature
+  * [ ] ajouter école de printemps?
+  * [ ] 
+* [X] Mail Thomas accommodation
+* [ ] Code jak2
+* [X] Mail Mathieu Roche
+
+dimanche 25 mars 2012, 14:03:27 (UTC+0200)
+* [o] Dossier UM3
+  * [ ] Dossier enseignement
+    * [ ] Détail Fouille de Texte : ajouter lien vers supports de cours
+    * [ ] Ajouter Béziers et insister sur 'je connais ...'
+    * [ ] Parler des différentes formations
+  * [X] Dossier recherche
+    * [X] Finir texte
+  * [o] Divers
+    * [X] Ajouter jury de thèse en page 2
+    * [X] Ajouter Leuven en page 1 (CV)
+    * [ ] Ajouter intervenants
+
 vendredi 23 mars 2012, 08:09:23 (UTC+0100)
 * [o] Dossier candidature MCF UM3
   * [X] Relire projet enseignement
