@@ -9,21 +9,26 @@ Fri Apr  6 11:00:02 CEST 2012
 * [ ] Log embeddings
   * [ ] as a post-processing
   * [ ] INPUT: pattern / OUTPUT : list of embeddings
-* [ ] Pattern OUTPUT
-  * [ ] as a list of logical conjunctions (e.g., GroundedAt(X,4,2.3,1),InDistance(X,Y,6.7),...)
+* [X] Pattern OUTPUT
+  * [X] as a list of logical conjunctions (e.g., GroundedAt(X,4,2.3,1),InDistance(X,Y,6.7),...)
 * [ ] PATTERN INPUT/OUPUT
   * [ ] GraphViz methods (boost methods)
 * [ ] TESTS
+  * [ ] Allow a 10-fold cross-validation
+    * [ ] automatic random segmentation of the dataset
+    * [ ] running and storing the correct information
   * [ ] As INPUT : the pattern language wanted for the execution
   * [ ] As OUTPUT :
-    * [ ] average time (and +/- standard deviation)
-    * [ ] RMSE (root mean squared error)
+    * [ ] average time (and +/- standard deviation?)
+    * [ ] RMSE (root mean squared error) --> in multi-instances settings, use the conformation with the smallest IC50 value
     * [ ] average tree size +/- standard deviation
     * [ ] log everything
 
 Tue Apr  3 09:18:28 CEST 2012
-* [ ] Meeting with Jan, Thomas, Bertrand
-  * [ ] list of experiments
+* [X] Meeting with Jan, Thomas, Bertrand
+* [ ] list of experiments
+* [X] Updating the code	on local machine
+* [X] installing QT-creator on local machine
 * [ ] Administration
   * [ ] Groot Begijnhof
     * [ ] contract Groot Begijnhof
