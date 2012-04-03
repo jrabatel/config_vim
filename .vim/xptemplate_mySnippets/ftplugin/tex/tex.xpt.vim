@@ -438,14 +438,6 @@ XPT gr " \growthrate{`pattern~}{`from~}{`to~}
 ..XPT
 
 
-XPT ie " i.e., 
-i.e., `cursor~
-..XPT
-
-XPT eg " e.g., 
-e.g., `cursor~
-..XPT
-
 """"""""""""""""""""""""""""""""""""""""""""
 " Various text snippets (should be put in a more general file?)
 " By convention, this kind of snippets will start with '_'

@@ -4,6 +4,32 @@
 
 == Daily TODO ==
 
+Fri Apr  6 11:00:02 CEST 2012
+* [ ] Pattern matching with unconnected graphs (conjunctions of graphs)
+* [ ] Log embeddings
+  * [ ] as a post-processing
+  * [ ] INPUT: pattern / OUTPUT : list of embeddings
+* [ ] Pattern OUTPUT
+  * [ ] as a list of logical conjunctions (e.g., GroundedAt(X,4,2.3,1),InDistance(X,Y,6.7),...)
+* [ ] PATTERN INPUT/OUPUT
+  * [ ] GraphViz methods (boost methods)
+* [ ] TESTS
+  * [ ] As INPUT : the pattern language wanted for the execution
+  * [ ] As OUTPUT :
+    * [ ] average time (and +/- standard deviation)
+    * [ ] RMSE (root mean squared error)
+    * [ ] average tree size +/- standard deviation
+    * [ ] log everything
+
+Tue Apr  3 09:18:28 CEST 2012
+* [ ] Meeting with Jan, Thomas, Bertrand
+  * [ ] list of experiments
+* [ ] Administration
+  * [ ] Groot Begijnhof
+    * [ ] contract Groot Begijnhof
+    * [ ] inventory
+    * [ ] bank transfer
+
 lundi 26 mars 2012, 08:49:12 (UTC+0200)
 * [ ] Dossier candidature
   * [ ] ajouter école de printemps?
