@@ -6,9 +6,10 @@
 
 Fri Apr  6 11:00:02 CEST 2012
 * [ ] Pattern matching with unconnected graphs (conjunctions of graphs)
-* [ ] Log embeddings
-  * [ ] as a post-processing
-  * [ ] INPUT: pattern / OUTPUT : list of embeddings
+* [X] Log embeddings
+  * [X] as a post-processing
+  * [X] INPUT: pattern / OUTPUT : list of embeddings
+  * [X] in OUTPUT log, print a pattern with the code of the node it is associated with (optional)
 * [X] Pattern OUTPUT
   * [X] as a list of logical conjunctions (e.g., GroundedAt(X,4,2.3,1),InDistance(X,Y,6.7),...)
 * [ ] PATTERN INPUT/OUPUT
@@ -20,20 +21,25 @@ Fri Apr  6 11:00:02 CEST 2012
   * [ ] As INPUT : the pattern language wanted for the execution
   * [ ] As OUTPUT :
     * [ ] average time (and +/- standard deviation?)
-    * [ ] RMSE (root mean squared error) --> in multi-instances settings, use the conformation with the smallest IC50 value
+    * [ ] RMSE (rooted mean squared error) --> in multi-instances settings, use the conformation with the smallest IC50 value
     * [ ] average tree size +/- standard deviation
     * [ ] log everything
+      * [ ] the datasets resulting from the cross-validation?
+
+Wed Apr  4 09:41:01 CEST 2012
+* [ ] Document about list of experiments
+  * [ ] RMSE instead of MSE
+  * [ ] average time on cross-validation
 
 Tue Apr  3 09:18:28 CEST 2012
 * [X] Meeting with Jan, Thomas, Bertrand
-* [ ] list of experiments
 * [X] Updating the code	on local machine
 * [X] installing QT-creator on local machine
-* [ ] Administration
-  * [ ] Groot Begijnhof
-    * [ ] contract Groot Begijnhof
-    * [ ] inventory
-    * [ ] bank transfer
+* [X] Administration
+  * [X] Groot Begijnhof
+    * [X] contract Groot Begijnhof
+    * [X] inventory
+    * [X] contacting bank for the bank transfer
 
 lundi 26 mars 2012, 08:49:12 (UTC+0200)
 * [ ] Dossier candidature
