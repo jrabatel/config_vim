@@ -200,6 +200,9 @@ vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
 nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
 nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
+" FOR ConqueTerm:
+nnoremap <silent> ,ob      :ConqueTerm bash<CR>
+
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE
 " Set personal snippet folder location:
