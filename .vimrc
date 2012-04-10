@@ -5,15 +5,16 @@ syntax on
 set number
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 set mouse=a
-set showmatch    " montre les correspondance entre les paranthèses ouvrantes et fermantes
-set ignorecase    " ignore case in search
-set smartcase	" case-sensitive only if there is a capital letter
+set showmatch  " montre les correspondance entre les paranthèses ouvrantes et fermantes
+set ignorecase " ignore case in search
+set smartcase  " case-sensitive only if there is a capital letter
+set hlsearch
+set incsearch
 filetype on
 set history=1000
 set nocp
-set hlsearch
 set cursorline
-"set cursorcolumn
+" set cursorcolumn
 set wildmenu
 set wildmode=list:longest
 
@@ -67,7 +68,7 @@ nmap ,<C-e> :setlocal spell spelllang=en<CR>
 nnoremap <silent> <C-F8> :TagbarToggle<CR>
 let gtagbarautoclose = 0
 
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+nmap <silent> <C-F11> :NERDTreeToggle<CR>
 nmap <silent> ,nn :NERDTreeToggle<CR>
 nmap <silent> ,nb :NERDTreeToggle<CR><S-b><CR>
 let mapleader=","
@@ -174,6 +175,30 @@ filetype indent on
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
+" FOR FuzzyFinder:
+nnoremap <silent> <C-n>      :FufBuffer<CR>
+nnoremap <silent> <C-p>      :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> <C-f><C-p> :FufFileWithFullCwd<CR>
+nnoremap <silent> <C-f>p     :FufFile<CR>
+nnoremap <silent> <C-f><C-d> :FufDirWithCurrentBufferDir<CR>
+nnoremap <silent> <C-f>d     :FufDirWithFullCwd<CR>
+nnoremap <silent> <C-f>D     :FufDir<CR>
+nnoremap <silent> <C-j>      :FufMruFile<CR>
+nnoremap <silent> <C-k>      :FufMruCmd<CR>
+nnoremap <silent> <C-b>      :FufBookmarkDir<CR>
+nnoremap <silent> <C-f><C-t> :FufTag<CR>
+nnoremap <silent> <C-f>t     :FufTag!<CR>
+noremap  <silent> g]         :FufTagWithCursorWord!<CR>
+nnoremap <silent> <C-f><C-f> :FufTaggedFile<CR>
+nnoremap <silent> <C-f><C-j> :FufJumpList<CR>
+nnoremap <silent> <C-f><C-g> :FufChangeList<CR>
+nnoremap <silent> <C-f><C-q> :FufQuickfix<CR>
+nnoremap <silent> <C-f><C-l> :FufLine<CR>
+nnoremap <silent> <C-f><C-h> :FufHelp<CR>
+nnoremap <silent> <C-f><C-b> :FufAddBookmark<CR>
+vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
+nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
+nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE

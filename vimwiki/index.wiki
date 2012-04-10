@@ -4,6 +4,29 @@
 
 == Daily TODO ==
 
+mardi 10 avril 2012, 08:10:51 (UTC+0200)
+* [ ] contract
+* [ ] email with address and bank account
+* [ ] 
+* [ ] MSRE global in the DT and for interesting leaves only (IC50 < 100)
+  * [ ] multiply by the number of examples
+* [ ] Benchmarks
+  * [ ] find datasets
+  * [ ] ask Leander for datasets and methods to compare with
+
+lundi 9 avril 2012, 10:48:46 (UTC+0200)
+* [X] get clang_complete plugin working
+* [ ] files on Caen computer
+* [ ] dr
+* [ ] input methods for GraphViz
+* [ ] update embeddings to work with new pattern matcher
+* [o] pattern matcher code
+  * [ ] use connected_components from boost
+  * [X] optimize the methods using the nth vertex
+    * [X] use the access to vertices and edges g[edgeOrVertex]
+      * [X] in vertexList option
+* [ ] Mail Nicolas
+
 Fri Apr  6 11:00:02 CEST 2012
 * [ ] Pattern matching with unconnected graphs (conjunctions of graphs)
 * [X] Log embeddings
@@ -14,9 +37,9 @@ Fri Apr  6 11:00:02 CEST 2012
   * [X] as a list of logical conjunctions (e.g., GroundedAt(X,4,2.3,1),InDistance(X,Y,6.7),...)
 * [ ] PATTERN INPUT/OUPUT
   * [ ] GraphViz methods (boost methods)
-* [ ] TESTS
-  * [ ] Allow a 10-fold cross-validation
-    * [ ] automatic random segmentation of the dataset
+* [.] TESTS
+  * [o] Allow a 10-fold cross-validation
+    * [X] automatic random segmentation of the dataset
     * [ ] running and storing the correct information
   * [ ] As INPUT : the pattern language wanted for the execution
   * [ ] As OUTPUT :
@@ -29,7 +52,7 @@ Fri Apr  6 11:00:02 CEST 2012
 Wed Apr  4 09:41:01 CEST 2012
 * [ ] Document about list of experiments
   * [ ] RMSE instead of MSE
-  * [ ] average time on cross-validation
+  * [ ] average time on cross-validation and size of the tree
 
 Tue Apr  3 09:18:28 CEST 2012
 * [X] Meeting with Jan, Thomas, Bertrand
