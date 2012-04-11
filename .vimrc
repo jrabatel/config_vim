@@ -18,6 +18,9 @@ set cursorline
 set wildmenu
 set wildmode=list:longest
 
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show unicode glyphs
+
 " GRAPHICAL OPTIONS
 colorscheme skittles_berry
 set t_Co=256
@@ -33,6 +36,14 @@ set directory=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 set scrolloff=3
+
+" Bubbling text
+" Bubble single lines
+nmap <Up> ddkP
+nmap <Down> ddp
+" " Bubble multiple lines
+vmap <Up> xkP`[V`]
+vmap <Down> xp`[V`]
 
 set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
