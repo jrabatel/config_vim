@@ -279,5 +279,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 
+" FOR CLANG_COMPLETE
+let g:clang_use_library = 0
 
 let g:session_autoload = 'no'
