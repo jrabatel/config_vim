@@ -22,6 +22,9 @@ set wildmode=list:longest
 colorscheme skittles_berry
 set t_Co=256
 
+" Mapping to open vimrc config file
+nmap ,vim :edit ~/.vimrc<CR>
+
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -45,8 +48,6 @@ set viminfo+=!
 nmap ,o o<Esc>k
 nmap ,O O<Esc>j
 
-" Mapping to open vimrc config file
-nmap ,vim :edit ~/.vimrc<CR>
 
 " Search for the selected text in Google or Wikipedia
 vmap ,g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
@@ -66,7 +67,7 @@ nmap ,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,<C-e> :setlocal spell spelllang=en<CR>
 
 nnoremap <silent> <C-F8> :TagbarToggle<CR>
-let gtagbarautoclose = 0
+let g:tagbarautoclose = 0
 
 nmap <silent> <C-F11> :NERDTreeToggle<CR>
 nmap <silent> ,nn :NERDTreeToggle<CR>
@@ -100,6 +101,19 @@ imap ,;w <Esc>:w<CR>
 nmap ,;w :w<CR>
 vmap ,; <Esc>
 cmap ,; <Esc> 
+
+"""""""""""""""""""""""""""""""""""""""""
+" Manipulating windows, tabs and buffers
+" Windows
+noremap wh <C-w>h<CR>
+noremap wj <C-w>j<CR>
+noremap wk <C-w>k<CR>
+noremap wl <C-w>l<CR>
+noremap wq <C-w>q<CR>
+" Buffers
+noremap ,bd :bd<CR>
+noremap ,rr :e<CR>
+
 " exit insert mode and undo last change
 imap ,: <Esc>u
 " allows motions in insert mode 
@@ -176,14 +190,14 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
 " FOR FuzzyFinder:
-nnoremap <silent> <C-n>      :FufBuffer<CR>
+nnoremap <silent> <C-f>b      :FufBuffer<CR>
 nnoremap <silent> <C-p>      :FufFileWithCurrentBufferDir<CR>
 nnoremap <silent> <C-f><C-p> :FufFileWithFullCwd<CR>
 nnoremap <silent> <C-f>p     :FufFile<CR>
 nnoremap <silent> <C-f><C-d> :FufDirWithCurrentBufferDir<CR>
 nnoremap <silent> <C-f>d     :FufDirWithFullCwd<CR>
 nnoremap <silent> <C-f>D     :FufDir<CR>
-nnoremap <silent> <C-j>      :FufMruFile<CR>
+nnoremap <silent> <C-f>mf    :FufMruFile<CR>
 nnoremap <silent> <C-k>      :FufMruCmd<CR>
 nnoremap <silent> <C-b>      :FufBookmarkDir<CR>
 nnoremap <silent> <C-f><C-t> :FufTag<CR>
@@ -202,6 +216,15 @@ nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " FOR ConqueTerm:
 nnoremap <silent> ,ob      :ConqueTerm bash<CR>
+
+" FOR a.vim
+let g:alternateExtensions_hxx = "hpp"
+let g:alternateExtensions_hpp = "hxx"
+nmap ,aa :A<CR>
+nmap ,as :AS<CR>
+nmap ,av :AV<CR>
+nmap ,an :AN<CR>
+
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE
