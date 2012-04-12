@@ -21,6 +21,8 @@ set wildmode=list:longest
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 
+set sw=4
+
 " GRAPHICAL OPTIONS
 colorscheme skittles_berry
 set t_Co=256

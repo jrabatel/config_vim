@@ -3,17 +3,17 @@
 * [[Config TODO]]
 
 == Daily TODO ==
+mercredi 11 avril 2012, 13:19:01 (UTC+0200)
 
 mardi 10 avril 2012, 08:10:51 (UTC+0200)
 * [ ] contract --> send to Annemie Dumoulin
 * [ ] email with address and bank account
-* [ ] MSRE global in the DT and for interesting leaves only (IC50 < 100)
+* [ ] RMSE global in the DT and for interesting leaves only (IC50 < 100)
   * [ ] multiply by the number of examples
 * [ ] Benchmarks
   * [ ] find datasets
   * [ ] ask Leander for datasets and methods to compare with
-* [ ] mail Nicolas
-* [ ] files on Caen computer
+* [X] mail Nicolas
 
 lundi 9 avril 2012, 10:48:46 (UTC+0200)
 * [X] get clang_complete plugin working
@@ -32,8 +32,8 @@ Fri Apr  6 11:00:02 CEST 2012
   * [X] in OUTPUT log, print a pattern with the code of the node it is associated with (optional)
 * [X] Pattern OUTPUT
   * [X] as a list of logical conjunctions (e.g., GroundedAt(X,4,2.3,1),InDistance(X,Y,6.7),...)
-* [ ] PATTERN INPUT/OUPUT
-  * [ ] GraphViz methods (boost methods)
+* [o] PATTERN INPUT/OUPUT
+  * [X] GraphViz output
 * [.] TESTS
   * [o] Allow a 10-fold cross-validation
     * [X] automatic random segmentation of the dataset
