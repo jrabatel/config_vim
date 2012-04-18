@@ -18,7 +18,6 @@ XPT cmis " var (var)`cursor~
 `member~(`member~)`cursor~
 ..XPT
 
-
 XPT cmi " member (value)`cursor~
 `member~(`value~)`cursor~
 ..XPT
@@ -35,4 +34,8 @@ for( `container_type~::const_iterator `it~=`cont~.begin(); `it~!=`cont~.end(); +
 {
 `cursor~
 }
+..XPT
+
+XPT () " ( `cursor~ )
+( `cursor~ )
 ..XPT

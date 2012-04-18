@@ -21,7 +21,13 @@ set wildmode=list:longest
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 
-set sw=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" FOLDING
+set foldmethod=syntax
+nnoremap zz zR
 
 " GRAPHICAL OPTIONS
 colorscheme skittles_berry
@@ -29,6 +35,9 @@ set t_Co=256
 
 " Mapping to open vimrc config file
 nmap ,vim :edit ~/.vimrc<CR>
+
+" MAKE
+nnoremap ,mak :make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -41,8 +50,8 @@ set scrolloff=3
 
 " Bubbling text
 " Bubble single lines
-nmap <Up> ddkP
-nmap <Down> ddp
+nmap b<Up> ddkP
+nmap b<Down> ddp
 " " Bubble multiple lines
 vmap <Up> xkP`[V`]
 vmap <Down> xp`[V`]
@@ -99,6 +108,24 @@ nnoremap é ~
 " Marks
 nnoremap '' `.
 
+" Quickfix window
+nnoremap ,Q :cw<CR>
+nnoremap ,q :ccl<CR>
+nnoremap ,s :cprev<CR>
+nnoremap ,d :cnext<CR>
+
+" Find methods and maps
+" find in the project (current directory) the matches of the word under the cursor (and show the list)
+nmap ,Fw :silent grep! -R <cword> *<CR>:redraw!<CR>
+nmap ,FFw :silent grep! -R <cword> %:p:h/*<CR>:redraw!<CR>
+nmap ,FW :silent grep! -w -R <cword> *<CR>:redraw!<CR>
+nmap ,FFW :silent grep! -w -R <cword> %:p:h/*<CR>:redraw!<CR>
+
+" find the commented lines (for // comments)
+nmap ,Fl /\/\//<CR>
+" find the calls to a function
+nmap ,Fc :silent grep! -R [^[:alnum:]_]<cword>[[:space:]]*\( *<CR>:redraw!<CR>
+
 " PATHOGEN
 call pathogen#infect()
 call pathogen#helptags()
@@ -113,7 +140,7 @@ imap ,; <Esc>
 imap ,;w <Esc>:w<CR>
 nmap ,;w :w<CR>
 vmap ,; <Esc>
-cmap ,; <Esc> 
+cmap ,; <Esc>
 
 """""""""""""""""""""""""""""""""""""""""
 " Manipulating windows, tabs and buffers
@@ -129,7 +156,7 @@ noremap ,rr :e<CR>
 
 " exit insert mode and undo last change
 imap ,: <Esc>u
-" allows motions in insert mode 
+" allows motions in insert mode
 inoremap <h <C-o>h
 inoremap <j <C-o>j
 inoremap <k <C-o>k
@@ -145,7 +172,7 @@ vmap ,c gc
 nmap ,c gcc
 " allows quick indenting of a ling or a selected bloc (does not work
 " correctly)
-imap ,;= <Esc>==   
+imap ,;= <Esc>==
 " allows quick motions between tabs (in minibufexpl)
 nmap ,l :bn<CR>
 nmap ,k :bp<CR>
@@ -155,7 +182,7 @@ nmap ,noh :nohls<CR>
 nmap ,red :redraw!<CR>
 
 " manipulating windows
-nmap ,wc <C-w>c
+  nmap ,wc <C-w>c
 
 " change operator
 nmap cs ct.
@@ -203,32 +230,41 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
 " FOR FuzzyFinder:
-nnoremap <silent> <C-f>b      :FufBuffer<CR>
-nnoremap <silent> <C-p>      :FufFileWithCurrentBufferDir<CR>
-nnoremap <silent> <C-f><C-p> :FufFileWithFullCwd<CR>
-nnoremap <silent> <C-f>p     :FufFile<CR>
-nnoremap <silent> <C-f><C-d> :FufDirWithCurrentBufferDir<CR>
-nnoremap <silent> <C-f>d     :FufDirWithFullCwd<CR>
-nnoremap <silent> <C-f>D     :FufDir<CR>
-nnoremap <silent> <C-f>mf    :FufMruFile<CR>
-nnoremap <silent> <C-k>      :FufMruCmd<CR>
-nnoremap <silent> <C-b>      :FufBookmarkDir<CR>
-nnoremap <silent> <C-f><C-t> :FufTag<CR>
-nnoremap <silent> <C-f>t     :FufTag!<CR>
-noremap  <silent> g]         :FufTagWithCursorWord!<CR>
-nnoremap <silent> <C-f><C-f> :FufTaggedFile<CR>
-nnoremap <silent> <C-f><C-j> :FufJumpList<CR>
-nnoremap <silent> <C-f><C-g> :FufChangeList<CR>
-nnoremap <silent> <C-f><C-q> :FufQuickfix<CR>
-nnoremap <silent> <C-f><C-l> :FufLine<CR>
-nnoremap <silent> <C-f><C-h> :FufHelp<CR>
-nnoremap <silent> <C-f><C-b> :FufAddBookmark<CR>
-vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
-nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
-nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
+" nnoremap <silent> <C-f>b      :FufBuffer<CR>
+" nnoremap <silent> <C-p>      :FufFileWithCurrentBufferDir<CR>
+" nnoremap <silent> <C-f><C-p> :FufFileWithFullCwd<CR>
+" nnoremap <silent> <C-f>p     :FufFile<CR>
+" nnoremap <silent> <C-f><C-d> :FufDirWithCurrentBufferDir<CR>
+" nnoremap <silent> <C-f>d     :FufDirWithFullCwd<CR>
+" nnoremap <silent> <C-f>D     :FufDir<CR>
+" nnoremap <silent> <C-f>mf    :FufMruFile<CR>
+" nnoremap <silent> <C-k>      :FufMruCmd<CR>
+" nnoremap <silent> <C-b>      :FufBookmarkDir<CR>
+" nnoremap <silent> <C-f><C-t> :FufTag<CR>
+" nnoremap <silent> <C-f>t     :FufTag!<CR>
+" noremap  <silent> g]         :FufTagWithCursorWord!<CR>
+" nnoremap <silent> <C-f><C-f> :FufTaggedFile<CR>
+" nnoremap <silent> <C-f><C-j> :FufJumpList<CR>
+" nnoremap <silent> <C-f><C-g> :FufChangeList<CR>
+" nnoremap <silent> <C-f><C-q> :FufQuickfix<CR>
+" nnoremap <silent> <C-f><C-l> :FufLine<CR>
+" nnoremap <silent> <C-f><C-h> :FufHelp<CR>
+" nnoremap <silent> <C-f><C-b> :FufAddBookmark<CR>
+" vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
+" nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
+" nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
+
+"FOR COMMAND-T
+nnoremap <silent> <C-f>f     :CommandT<CR>
+nnoremap <silent> <C-f>b     :CommandTBuffer<CR>
+nnoremap <silent> <C-f>t     :CommandTTag<CR>
+nnoremap <silent> <C-f>j     :CommandTJump<CR>
 
 " FOR ConqueTerm:
 nnoremap <silent> ,ob      :ConqueTerm bash<CR>
+let g:ConqueTerm_ReadUnfocused = 1
+let g:ConqueTerm_InsertOnEnter = 0
+let g:ConqueTerm_StartMessages = 0
 
 " FOR a.vim
 let g:alternateExtensions_hxx = "hpp"
@@ -238,13 +274,17 @@ nmap ,as :AS<CR>
 nmap ,av :AV<CR>
 nmap ,an :AN<CR>
 
+" FOR TABULAR
+" for aligning the last column in lines of code
+nmap ,alc :Tab /\s\S\+;<CR>
+vmap ,alc :Tab /\s\S\+;<CR>
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE
 " Set personal snippet folder location:
 let g:xptemplate_snippet_folders=['$HOME/.vim/xptemplate_mySnippets']
 "
-" Turn off automatic closing of quotes and braces:
+" Automatic closing of quotes and braces:
 let g:xptemplate_brace_complete = 0
 " "
 " Snippet triggering key:
@@ -279,9 +319,17 @@ let g:xptemplate_vars="$email=julien.rabatel@unicaen.fr"
 " FOR MINIBUFEXPL
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1
 
 " FOR CLANG_COMPLETE
-let g:clang_use_library = 0
+let g:clang_auto_select         = 1
+let g:clang_use_library         = 0
+let g:clang_complete_copen      = 0
+" let g:clang_periodic_quickfix = 1
+let g:clang_snippets            = 1
+let g:clang_snippets            = "clang_complete"
+let g:clang_user_options        = "-w"
+let g:clang_complete_macros     = 1
+" nmap <leader>CLu g:ClangUpdateQuickFix()
 
 let g:session_autoload = 'no'

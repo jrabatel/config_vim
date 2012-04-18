@@ -1,13 +1,36 @@
 ====== General table of content ======
 * [[General TODO]]
 * [[Config TODO]]
+* [[Mails]]
+* [[To learn and read]]
 
 == Daily TODO ==
-mercredi 11 avril 2012, 13:19:01 (UTC+0200)
+
+mercredi 18 avril 2012, 10:06:54 (UTC+0200)
+* [ ] List of things to read
+* [ ] Message for Ronan?
+* [ ] Data on Caen computer
+* [ ] Mails:
+  * [ ] Pascal, Sandra 
+  * [ ] AKDM3
+
+vendredi 13 avril 2012, 09:21:17 (UTC+0200)
+* [O] Code
+  * [X] external class cross-validation
+    * [X] log results
+		* [X] log the folds
+	* [X] in settings, add the interesting leaves IC50 threshold
+  * [ ] have results for interesting leaves only (IC50 < 100)
+  * [X] external class find embeddings
+  * [X] external class leave sorter
+  * [X] Experimental protocol
+    * [X] script to:
+      * [X] change the settings in settings.hpp 
+			* [X] run the code (compilation+running)
 
 mardi 10 avril 2012, 08:10:51 (UTC+0200)
 * [ ] contract --> send to Annemie Dumoulin
-* [ ] email with address and bank account
+* [X] email with address and bank account
 * [ ] RMSE global in the DT and for interesting leaves only (IC50 < 100)
   * [ ] multiply by the number of examples
 * [ ] Benchmarks
