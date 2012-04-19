@@ -1,1 +1,17 @@
-* [ ] 
+* [ ] reinforcement learning
+* [ ] extreme value theory and deviation detection (Tom Croonenborghs)
+  * [ ] Weibull distribution?
+* [ ] Zinc language (Tias's presentation)
+  * [ ] MIP solvers
+* [ ] Daan Fierens
+  * [ ] Weighted Model Counting
+  * [ ] MPE: Most Probably Explanation
+* [ ] Guy Van den Broek
+  * [ ] Relax, Compensate and then Recover
+  * [ ] Other work
+* [ ] Siegfried Nijssen
+  * [ ] recent work
+  * [ ] sampling patterns (itemsets)
+* [ ] Lifted probabilistic inference
+* [ ] Binomial/Multinomial distributions
+* [ ] Bernoulli trial

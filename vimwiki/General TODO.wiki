@@ -1,2 +1,8 @@
 == Administrative ==
- * [ ] 
+* [ ] Impôts: modify address!
+* [ ] SFR
+
+== Profesional ==
+* [ ] AKDM for 30/04/2012
+* [ ] DMKD
+* [ ] Thesis final version!!

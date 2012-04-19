@@ -1,17 +1,22 @@
 ====== General table of content ======
 * [[General TODO]]
-* [[Config TODO]]
 * [[Mails]]
 * [[To learn and read]]
+* [[JAK2]]
+* [[KULeuven information]]
 
 == Daily TODO ==
 
+jeudi 19 avril 2012, 09:35:36 (UTC+0200)
+* [X] Mail Hassan, Yoann
+* [ ] jdr
+
 mercredi 18 avril 2012, 10:06:54 (UTC+0200)
-* [ ] List of things to read
+* [X] List of things to read
 * [ ] Message for Ronan?
 * [ ] Data on Caen computer
-* [ ] Mails:
-  * [ ] Pascal, Sandra 
+* [o] Mails:
+  * [X] Pascal, Sandra 
   * [ ] AKDM3
 
 vendredi 13 avril 2012, 09:21:17 (UTC+0200)

@@ -1,0 +1,14 @@
+== Pattern matcher ==
+* [ ] Optimizations based on multi-instance:
+  * [ ] if preprocessing did not work because the domain of at least one vertex was empty, then do not test for other conformations of the same ligands. Note: this should work for vertex labels that are invariant wrt to the conformation (e.g., atom typing but not groundedAt).
+  * [ ] when the subgraph isomorphism test is false in a conformation, then we can order the vertices that "blocked" the test and test them first in the next conformations
+* [ ] Option for a pattern: the lists of components (shared ptr)
+  * [ ] on pattern creation: set to null
+  * [ ] on SubgraphIsomorphism test: test if null; if not, create the list of components
+  * [ ] + order the vertices according to failed tests
+
+== Input / Output ==
+* [ ] Write input GraphViz method
+
+== Experiments ==
+* [ ] Datasets: find and study some datasets with 3D information

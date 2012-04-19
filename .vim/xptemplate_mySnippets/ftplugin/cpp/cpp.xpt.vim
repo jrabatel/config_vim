@@ -39,3 +39,14 @@ for( `container_type~::const_iterator `it~=`cont~.begin(); `it~!=`cont~.end(); +
 XPT () " ( `cursor~ )
 ( `cursor~ )
 ..XPT
+
+XPT namespace_ wraponly=wrapped " namespace { ... }
+namespace
+{
+`cursor~`wrapped~
+}
+..XPT
+
+XPT unamespace " use namespace name;
+use namespace `name^;`cursor~
+..XPT
