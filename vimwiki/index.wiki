@@ -1,15 +1,49 @@
 ====== General table of content ======
-* [[General TODO]]
-* [[Mails]]
-* [[To learn and read]]
-* [[JAK2]]
-* [[KULeuven information]]
+[[General TODO]]
+[[Mails]]
+[[To learn and read]]
+[[JAK2]]
+[[KULeuven information]]
 
 == Daily TODO ==
 
+mercredi 25 avril 2012, 15:01:54 (UTC+0200)
+* [O] Implement and count ROC-like value
+  * [X] in 1 DT, count all couples of ligands
+  * [X] in 1 DT, count only couples of consecutive ligands
+  * [ ] extend to the cross-validation (average)
+  * [X] extend to the cross-validation (taking into account all possible ligands)
+  * [X] integrate into the scripts
+    * [X] java post-processer read and write
+* [X] Logs all experiments on trantor -> add the date
+* [X] Print the settings in the DT log
+* [X] Print the predictions in the DT log
+* [X] In HTML summary of experiments
+  * [X] add the date
+  * [X] add links to the log files
+* [ ] Add to experiment scripts:
+  * [ ] an argument to choose the type of distance discretization
+  * [ ] an usage section
+* [ ] Convert Muggleton data into our format + try DT learner
+* [ ] Distance discretization based on equal-width intervals
+  * [ ] allow an overlapping of intervals
+* [ ] Count embeddings of a pattern in a ligand (in each conformation) --> to be used in Leander visualization tool
+* [ ] Documentation Doxygen
+
+* [ ] AKDM3 
+  * [ ] mail to organizers
+  * [ ] mail to Pascal, Sandra
+* [o] JAK2  
+  * [ ] run tests
+  * [X] add the variance reduction and information gain (avg and standard deviation) in:
+    * [X] log
+    * [X] scripts
+    * [X] java post-processing
+  * [X] log global results in a HTML page
+* [X] install jak2 code on explorer
+
 jeudi 19 avril 2012, 09:35:36 (UTC+0200)
 * [X] Mail Hassan, Yoann
-* [ ] jdr
 
 mercredi 18 avril 2012, 10:06:54 (UTC+0200)
 * [X] List of things to read

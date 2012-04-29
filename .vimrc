@@ -88,7 +88,7 @@ nmap ,,S :set nospell<CR>
 nmap ,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,<C-e> :setlocal spell spelllang=en<CR>
 
-nnoremap <silent> <C-F8> :TagbarToggle<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbarautoclose = 0
 
 nmap <silent> <C-F11> :NERDTreeToggle<CR>
@@ -298,7 +298,7 @@ let g:xptemplate_key = '<C-k>'
 let g:xptemplate_nav_cancel = '<C-d>'
 " "
 " " Move to the next placeholder in a snippet:
-let g:xptemplate_nav_next = '<Tab>'
+let g:xptemplate_nav_next = '<C-k>'
 " "
 " " Go to the end of the current placeholder and in to insert mode:
 " " <C-_> is actually CONTROL-/ on my keyboard.
@@ -314,7 +314,7 @@ let g:xptemplate_pum_tab_nav = 1
 nmap ,xpt :XPTreload<CR>
 
 let g:xptemplate_vars="$author=Julien Rabatel"
-let g:xptemplate_vars="$email=julien.rabatel@unicaen.fr"
+let g:xptemplate_vars="$email=julien.rabatel@cs.kuleuven.be"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR MINIBUFEXPL
 let g:miniBufExplMapWindowNavVim = 1

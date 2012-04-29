@@ -50,3 +50,9 @@ namespace
 XPT unamespace " use namespace name;
 use namespace `name^;`cursor~
 ..XPT
+
+XPT struct "struct {...};
+struct `name~
+{
+`cursor~
+};

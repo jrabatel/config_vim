@@ -15,3 +15,8 @@
 * [ ] Lifted probabilistic inference
 * [ ] Binomial/Multinomial distributions
 * [ ] Bernoulli trial
+
+vendredi 27 avril 2012, 09:56:55 (UTC+0200)
+* [ ] Logic courses
+  * [ ] Part 1
+* [ ] Machine Learning courses
