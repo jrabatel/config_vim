@@ -8,10 +8,13 @@
 * [ ] write down a file that can be read by Ronan
 
 == Discretization ==
-* [ ] Propose an equal-width discretization for distances
-  * [ ] implementation of the discretizer
+* [o] Propose an equal-width discretization for distances
+  * [X] implementation of the discretizer
+  * [X] in preprocessors and settings files, allow to change the distance discretizer type, as well as the number of overlapping intervals
+  * [ ] integrate in the scripts
   * [ ] testing the different values
 * [ ] Propose a variable discretization for coordinates
+* [X] Allow overlapping intervals
 
 == Experiments ==
 * [ ] Datasets: find and study some datasets with 3D information
@@ -22,6 +25,13 @@
 * [ ] Automatically create some plots to summarize the results
 * [ ] Add a parameter about the post-pruning of the DT
 
+== Decision Tree Learner ==
+* [ ] Change the test selection criterion
+  * [ ] use a non weighted version
+  * [ ] find other measures
+
 == Problems ==
 * [ ] In the DT, the variance computation does not seem to be correct: leaves of size 1 have a non-0 variance value (positive or negative)
 * [ ] Check the correctness of the DT tester: in a 1-fold cross-validation, test whether each conformation is associated to the correct leaf
+* [ ] In ConjunctiveSubgraphIsomorphism, the distance-based options of conformations and atoms does not seem to be used
+* [ ] The ROC-like measure scores are the same for every learned Decision Tree!!

@@ -7,6 +7,24 @@
 
 == Daily TODO ==
 
+jeudi 3 mai 2012, 14:31:16 (UTC+0200)
+* [X] fix problem with discretizer type preprocessor
+* [X] added parameters for overlapping interval number in settings
+* [X] fix problem with ROC computing
+* [ ] 
+
+mercredi 2 mai 2012, 09:42:11 (UTC+0200)
+* [X] Mail réponse Sandra
+* [X] Put first results on svn repository
+* [X] Discretization based on equal-width intervals
+  * [X] allow overlapping intervals for all distance discretizers
+    * [X] method discretize returns a list of intervals
+    * [X] implement discretize for
+      * [X] Geometric discretizer (only for 1 overlapping interval)
+      * [X] EqualWidth discretizer
+    * [X] Check if the new discretization works well with preprocessings (distance lists, etc.)
+* [X] Look for other measures for test selection in the DT learner
+
 mercredi 25 avril 2012, 15:01:54 (UTC+0200)
 * [O] Implement and count ROC-like value
   * [X] in 1 DT, count all couples of ligands

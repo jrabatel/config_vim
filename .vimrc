@@ -102,8 +102,11 @@ map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 nnoremap ' `
 nnoremap ` '
 nnoremap ù %
+vnoremap ù %
 nnoremap à 0
+vnoremap à 0
 nnoremap é ~
+vnoremap é ~
 
 " Marks
 nnoremap '' `.
