@@ -17,6 +17,15 @@
 * [X] Allow overlapping intervals
 
 == Experiments ==
+* [ ] Allow a parallelization of experiments
+  * [ ] Copy of the source code in one specific place (different from the one used to change the code)
+  * [ ] a script to:
+    * [ ] compile every required test
+    * [ ] move it to a specific location (with folder name corresponding to the set of parameters)
+  * [ ] a script to:
+    * [ ] look for existing tests to run (look the corresponding folders)
+    * [ ] if there is a test to run, move the corresponding folder to another place (currentlyRunningTasks)
+    * [ ] run this test
 * [ ] Datasets: find and study some datasets with 3D information
 * [o] Cross-Validation:
   * [ ] check whether the segmentation proposed is good or not
