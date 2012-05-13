@@ -56,3 +56,10 @@ struct `name~
 {
 `cursor~
 };
+
+XPT tstruct "template ... struct {...};
+template <class `class~>
+struct `name~
+{
+`cursor~
+};

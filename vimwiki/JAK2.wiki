@@ -18,6 +18,7 @@
 
 == Experiments ==
 * [ ] Allow a parallelization of experiments
+  * [ ] separate the running of different DT learners on folds for one given experiment
   * [ ] Copy of the source code in one specific place (different from the one used to change the code)
   * [ ] a script to:
     * [ ] compile every required test

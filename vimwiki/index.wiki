@@ -3,18 +3,53 @@
 [[Mails]]
 [[To learn and read]]
 [[JAK2]]
+[[PaperReading]]
 [[KULeuven information]]
+[[TextPrediction]]
 
 == Daily TODO ==
 
+Wed May  9 08:52:18 CEST 2012
+* [X] select best patterns in trees
+* [X] push new code on git
+* [X] put experiments on svn
+* [ ] look at other datasets with 3D information
+* [X] look at the impact of the equalWidth discretizer
+* [X] add negative examples to Muggleton's data (by removing atoms of the pharmacophore) --> cancelled, we will wait for another dataset
+* [ ] change format of experiments summary --> in csv
+* [X] run with no grounded at labels and 2-levels deep lookahead
+
+Tue May  8 08:56:23 CEST 2012
+* [X] give all the embeddings of one given pattern in one given ligand
+  * [X] in subgraph isomorphism, store all the possible embeddings
+  * [X] in ConjunctiveSubgraphIsomorphism, count and write (in an outstream) all the possible embeddings
+* [X] run DT learner on Muggleton's data
+  * [X] equivalent of IC50 value?
+
+Mon May  7 10:27:15 CEST 2012
+* [X] Convert Muggleton data (eclipse)
+  * [X] read atoms and bonds
+    * [X] add charge information --> everything to 0
+    * [X] add aromaticity information
+  * [X] write cvs files
+* [X] Download courses
+* [X] Experiments: run with equalWidth interval distances, and smaller interval size, and overlapping intervals (1, 2, 3, 4)
+* [X] Mail Bruno and Bertrand
+* [X] install mail kuleuven on phone
+* [ ] Interesting paths in decision trees
+* [X] mutt configuration
+  * [X] added gmail address
+* [X] separate jak2 code for experiments and coding
+* [X] move scripts and results in the new folder for experiments
+
 Fri May  4 10:46:51 CEST 2012
-* [o] phone
+* [X] phone
   * [X] charge
-  * [ ] files
-* [ ] Answer mail Sandra, Pascal 
-* [ ] Mail UM3
-* [ ] Printing 2 chapters from Graph Theory book
-* [ ] Start transforming Muggleton's dataset
+  * [X] files
+* [X] Answer mail Sandra, Pascal 
+* [X] Mail UM3
+* [X] Printing 2 chapters from Graph Theory book
+* [X] Start transforming Muggleton's dataset
 
 jeudi 3 mai 2012, 14:31:16 (UTC+0200)
 * [X] fix problem with discretizer type preprocessor
