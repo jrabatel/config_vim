@@ -1,0 +1,11 @@
+== Main ideas ==
+* While generating the tests for a given node in the DT learner, we do generate lots of duplicate graphs. This issue is particularly present when we consider some lookahead in the graph generation process
+* We cannot directly use a canonical coding for graphs for the following reasons:
+  * canonical coding relies on the whole graph search space in order to consider only graphs that are globally minimal in this space. In our case, the fact that a graph canonical code is not minimal does not necessarily means that we have already consider a duplicate of this graph (because of the imposed best-first traversal of the search space)
+  * In consequence, we can generate a graph whose code is not minimal, and such that we have not considered the minimal version
+  * The prefix property (C.Borgelt) does not hold
+* The question mainly becomes: given a graph g, how to enumerate (without duplicates) all its supergraphs of size < S?
+* Principles of the right-most extension can not be used in this context, as graphs that are not enumerated because of these principles have not been visited yet
+
+== Problem ==
+* The code of a newly generated pattern should not be globally minimal, but should be minimal in the set of patterns that can be possibly generated from the parent pattern.

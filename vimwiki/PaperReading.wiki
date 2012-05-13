@@ -1,0 +1,3 @@
+Spline-fitting with a genetic algorithm: A method for developing classification structure-activity relationships
+
+p1906:
