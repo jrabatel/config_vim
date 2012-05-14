@@ -8,6 +8,24 @@
 [[TextPrediction]]
 
 == Daily TODO ==
+Mon May 14 10:41:56 CEST 2012
+* [X] Mail Pascal et Sandra
+* [.] Bertrand and Ronan
+  * [ ] Read Muggleton 2008 paper (in particular, the data description)
+  * [X] Discuss it with Thomas
+* [ ] UM3
+  * [ ] Mail to Nicolas
+  * [ ] Create PDF document
+* [ ] Mail Jan
+  * [ ] results of experiments (how long for learning the first DT?)
+  * [ ] Audition in Montpellier
+* [ ] Mail Yoann
+* [ ] JAK2 project
+  * [ ] convert the datasets of JCIM2003 (Spline-fitting with a genetic algorithm, Sutherland et al...)
+  * [ ] look at what has been done by Muggleton
+  * [ ] integrate angles in constraints?
+* [X] Text prediction: 
+  * [X] execute FPGrowth
 
 Wed May  9 08:52:18 CEST 2012
 * [X] select best patterns in trees
