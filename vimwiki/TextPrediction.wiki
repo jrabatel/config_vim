@@ -1,3 +1,6 @@
+== Java implementation ==
+* Transform text to relevant data files
+
 == Pattern mining ==
 * [ ] Mining association rules in inter-transactional itemsets
   * [ ] converting text data into itemsets

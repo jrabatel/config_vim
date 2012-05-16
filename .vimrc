@@ -49,9 +49,6 @@ nnoremap <C-y> 3<C-y>
 set scrolloff=3
 
 " Bubbling text
-" Bubble single lines
-nmap b<Up> ddkP
-nmap b<Down> ddp
 " " Bubble multiple lines
 vmap <Up> xkP`[V`]
 vmap <Down> xp`[V`]
@@ -147,12 +144,6 @@ cmap ,; <Esc>
 
 """""""""""""""""""""""""""""""""""""""""
 " Manipulating windows, tabs and buffers
-" Windows
-noremap wh <C-w>h<CR>
-noremap wj <C-w>j<CR>
-noremap wk <C-w>k<CR>
-noremap wl <C-w>l<CR>
-noremap wq <C-w>q<CR>
 " Buffers
 noremap ,bd :bd<CR>
 noremap ,rr :e<CR>
