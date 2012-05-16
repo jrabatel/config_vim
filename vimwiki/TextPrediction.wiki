@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 == Java implementation ==
-* Transform text to relevant data files
+TODO
+* [ ] build a tree structure out of the pattern file
+  * [ ] compute the confidence for each induced rule
+  * [ ] input/output methods for the prefix-tree
+  * [ ] given one sequence of text:
+    * [ ] build the corresponding extended itemset
+    * [ ] using the tree structure find the matching patterns and sort them by confidence
+    * [ ] keep track at where we are in the tree to be able to quickly find matching patterns at the next step in the sequence
 
 == Pattern mining ==
 * [ ] Mining association rules in inter-transactional itemsets
