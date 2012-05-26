@@ -37,15 +37,15 @@ set t_Co=256
 nmap ,vim :edit ~/.vimrc<CR>
 
 " MAKE
-nnoremap ,mak :make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
+nnoremap ,mak :silent make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Scroll the viewport faster
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 set scrolloff=3
 
 " Bubbling text
@@ -223,6 +223,9 @@ filetype indent on
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
+" Quickly find code markers in a project (should be modified to use vimgrep)
+nmap ,add :grep -l -r '\*\*ADDED' **/*
+
 " FOR FuzzyFinder:
 " nnoremap <silent> <C-f>b      :FufBuffer<CR>
 " nnoremap <silent> <C-p>      :FufFileWithCurrentBufferDir<CR>
@@ -248,11 +251,14 @@ let g:Tex_DefaultTargetFormat='pdf'
 " nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
 " nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
+" FOR CtrlP
+let g:ctrlp_map = '<c-f>'
+
 "FOR COMMAND-T
-nnoremap <silent> <C-f>f     :CommandT<CR>
-nnoremap <silent> <C-f>b     :CommandTBuffer<CR>
-nnoremap <silent> <C-f>t     :CommandTTag<CR>
-nnoremap <silent> <C-f>j     :CommandTJump<CR>
+" nnoremap <silent> <C-f>f     :CommandT<CR>
+" nnoremap <silent> <C-f>b     :CommandTBuffer<CR>
+" nnoremap <silent> <C-f>t     :CommandTTag<CR>
+" nnoremap <silent> <C-f>j     :CommandTJump<CR>
 
 " FOR ConqueTerm:
 nnoremap <silent> ,ob      :ConqueTerm bash<CR>
