@@ -2,6 +2,11 @@ XPTemplate priority=personal mark=`~
 
 " ================================= Snippets ===================================
 
+XPT _add "// **ADDED note title
+// **ADDED `title~
+`cursor~
+..XPT
+
 XPT out " std::cout << "`cursor~" << std::endl;
 std::cout << "`cursor~" << std::endl;
 ..XPT

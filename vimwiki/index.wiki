@@ -8,13 +8,114 @@
 [[TextPrediction]]
 
 == Daily TODO ==
+
+Sat May 26 10:28:03 CEST 2012
+* [ ] jak2
+  * [ ] preprocess 5 datasets
+  * [ ] run tests on explorer
+    * [ ] 1-step refiner
+    * [ ] 2-step refiner
+* [ ] change audition presentation
+* [ ] print audition slides
+
+Fri May 25 14:26:33 CEST 2012
+* [ ] take into account Pascal and Sandra's remarks on presentation
+* [o] work on jak2 problem
+  * [X] correct it
+  * [X] push the code
+  * [X] run tests on Ronan's data (2-step refiner) on pinacs
+* [ ] mail Yoann
+* [X] print train tickets
+* [X] print 2 papers from Bertrand
+
+Thu May 24 07:49:05 CEST 2012
+* [X] Paper
+  * [X] read paper
+    - QSAR based on the similarity between 3D structures (molecule kernel, independent of the spatial prealignement of the compounds)
+    - Kernel + potential SVM
+    - Relying on pairs of ordered bipods (V-shaped subfragments)
+    - Related work compared with the approach:
+      - Hologram QSAR (HQSAR) --> divides each molecule into a set of overlapping structural fragments and uses their frequency as 2D descriptors
+      - Comparative molecular field analysis (CoMFa) --> 3D QSAR, based on the idea similar steric and electrostatic fields of molecules lead to similar activity. Requires the spatial-imposition of the molecular structures, which needs expert knowledge and is time-consuming and might introduce user-bias
+      - CoMSIA (comparative molecular similarity index analysis) --> altervative method to CoMFa
+      - GRIND method: 3D QSAR --> only applicable for a set of compounds sharing a common scaffold
+      - EVA (eigenvalue analysis)
+    - molecular alignment = rigid transformation of the coordinates of a molecule
+    - DATASETS
+      - Fontaine (classification): 435 molecules (156 low-, 279 high-activity)
+      - ACE (regression): 114 molecules
+      - AChE (regression): 111 molecules
+      - BZR (regression): 163 molecules
+      - DHFR (regression) 397 examples
+  * [X] are datasets publicly available?
+  * [X] how the paper is cited?
+    * [X] 9 times
+* [X] Experiments
+  * [X] Compare with results in paper
+* [X] UM3
+  * [X] send pdf document
+  * [X] send email to Christian Lavergne
+  * [X] send email to Nicolas (infos)
+  * [X] répondre Bruno
+
+Wed May 23 08:00:15 CEST 2012
+* [O] UM3
+  * [X] sélectionner publications
+    * [X] lettre signée avec résumé
+    * [X] mail Nicolas (nombre d'exemplaires, thèse?)
+  * [.] finir présentation
+    * [X] trouver et stocker exemples de présentations
+    * [ ] enseignement
+    * [ ] recherche
+  * [X] Mail Sandra : utile de contacter Christian Lavergne?
+* [X] summary of last meeting to Thomas
+  * [X] mail
+* [o] JAK2
+  * [O] compare with the results of the genetic algo paper
+    * [X] in reading the input data, change IC50 to 1 or 0 whether it is above/below the given threshold --> 0 is inactive, 1 is active
+    * [X] remove log(IC50)
+    * [ ] note results in classification
+    * [X] new Test with memory problem fixed
+      * [X] on Ronan data --> pinacs
+      * [X] on bzr_3d data: with 1-step refiner --> test in a classification context
+  * [ ] look at http://pubs.acs.org/doi/abs/10.1021/ci800144y, do they have a publicly available dataset? 
+  * [X] memory problem
+    * [X] replace shared_ptr<pattern> by weak_ptr<pattern> --> not possible without more work
+    * [X] found and fixed
+
+Tue May 22 09:22:11 CEST 2012
+* [X] JAK2
+  * [X] test with/without keeping alternative patterns
+    * [X] Result: no difference at all between keeping and not keeping intermediate patterns
+  * [X] explicitely clear the test collection of a node when it has been finished (in mips)
+    * [X] clear the container (DBWrapper == TestCollection) when all tests have been checked
+    * [X] print memory usage before and after --> no effect at all on the destruction of the patterns
+    * [X] find a way to clear the patterns when the test collection is cleared
+      * [X] Problem: in a test, the pattern is associated with a boost::shared_ptr --> maybe even when the test collection is cleared, the patterns are pointed by more than one object (i.e., by at least another object than the test itself) --> yes, there are several references to the same pattern (2 at the beginning, 3 after).
+      * [X] Is there a case where there is only 1 reference to a pattern? --> apparently not. So, why patterns are sometimes destructed?
+      * [X] in removeUsedTestGenerator.hpp it seems that the test collection of a parent node is copied and passed to children? --> not used for jak2
+      * [X] print the number of references to a pattern
+      * [X] in embeddingTest (jak2), create a delete function
+      * [X] is the number of references to a pattern the same for 1 and 2-step refiners?
+
+Mon May 21 09:05:03 CEST 2012
+* [X] UM3
+  * [X] mail Nicolas 
+  * [X] préparer dossier pdf
+* [X] Jak2
+  * [X] Code
+    * [X] Test the memory consumption with 1-step refiner
+    * [X] Create a destructor for the patterns and print something when used
+    * [X] Speak with Thomas
+  * [X] Answer Bruno's email
+
 Mon May 14 10:41:56 CEST 2012
 * [X] Mail Pascal et Sandra
-* [.] Bertrand and Ronan
-  * [ ] Read Muggleton 2008 paper (in particular, the data description)
+* [X] Bertrand and Ronan
+  * [X] Read Muggleton 2008 paper (in particular, the data description)
   * [X] Discuss it with Thomas
-* [ ] UM3
-  * [ ] Mail to Nicolas
+* [o] UM3
+  * [X] Mail to Nicolas
   * [ ] Create PDF document
 * [ ] Mail Jan
   * [ ] results of experiments (how long for learning the first DT?)
