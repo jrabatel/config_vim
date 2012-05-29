@@ -5,7 +5,7 @@ syntax on
 set number
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 set mouse=a
-set showmatch  " montre les correspondance entre les paranthèses ouvrantes et fermantes
+" set showmatch  " montre les correspondance entre les paranthèses ouvrantes et fermantes
 set ignorecase " ignore case in search
 set smartcase  " case-sensitive only if there is a capital letter
 set hlsearch
@@ -322,8 +322,10 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 
 " FOR CLANG_COMPLETE
+" let g:clang_complete_auto       = 1
 let g:clang_auto_select         = 1
 let g:clang_use_library         = 0
+" let g:clang_library_path      = ""
 let g:clang_complete_copen      = 0
 " let g:clang_periodic_quickfix = 1
 let g:clang_snippets            = 1

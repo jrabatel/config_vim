@@ -8,15 +8,26 @@
 [[TextPrediction]]
 
 == Daily TODO ==
+lundi 28 mai 2012, 09:16:03 (UTC+0200)
+ * [ ] Audition UM3
+   * [ ] Discours slide par slide
+   * [ ] Réponse questions
+ * [ ] JAK2
+   * [ ] when does a pattern is destructed?
+   * [ ] pattern selection in the query engine
 
 Sat May 26 10:28:03 CEST 2012
-* [ ] jak2
-  * [ ] preprocess 5 datasets
-  * [ ] run tests on explorer
-    * [ ] 1-step refiner
-    * [ ] 2-step refiner
-* [ ] change audition presentation
-* [ ] print audition slides
+* [X] jak2
+  * [X] preprocess 5 datasets
+  * [X] run tests on explorer
+    * [X] 1-step refiner
+    * [X] 2-step refiner
+* [X] Work on memory consumption issues
+  * [X] Remarks:
+   - replaced the testCollection by the DBWrapper
+   - patterns and corresponding tests are generated, but they are not selected ? --> resulting DT only contain the root
+   - when counting the nb of patterns generated and destructed, there is a gap : not all patterns are destructed, where they should be destructed just before creating a new one
+* [X] change audition presentation
 
 Fri May 25 14:26:33 CEST 2012
 * [ ] take into account Pascal and Sandra's remarks on presentation

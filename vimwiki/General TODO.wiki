@@ -6,3 +6,6 @@
 * [ ] AKDM for 30/04/2012
 * [ ] DMKD
 * [ ] Thesis final version!!
+
+== Config ==
+* [ ] Add an alias : tmux --> tmux -2 attach
