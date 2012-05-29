@@ -8,13 +8,27 @@
 [[TextPrediction]]
 
 == Daily TODO ==
+mardi 29 mai 2012, 08:30:41 (UTC+0200)
+* [ ] UM3 presentation
+  * [ ] check the content
+  * [ ] send it
+* [ ] Skype Meeting
+  * [ ] Results
+    * [ ] on other datasets
+      * [ ] Results to analyse and compare
+      * [ ] Do it with the other datasets
+    * [ ] 2-step refiner
+      * [ ] no statistics on the failing
+      * [ ] new strategy?
+        * [ ] not storing the patterns
+        * [ ] looping over the patterns before the ligands
+
 lundi 28 mai 2012, 09:16:03 (UTC+0200)
- * [ ] Audition UM3
-   * [ ] Discours slide par slide
-   * [ ] Réponse questions
- * [ ] JAK2
-   * [ ] when does a pattern is destructed?
-   * [ ] pattern selection in the query engine
+ * [X] Audition UM3
+   * [X] Discours slide par slide
+ * [X] JAK2
+   * [X] when does a pattern is destructed?
+   * [X] pattern selection in the query engine
 
 Sat May 26 10:28:03 CEST 2012
 * [X] jak2
