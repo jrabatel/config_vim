@@ -8,20 +8,25 @@
 [[TextPrediction]]
 
 == Daily TODO ==
+
+dimanche 3 juin 2012, 15:25:48 (UTC+0200)
+* [ ] JAK2
+  * [ ] in Cross Validation, create an empty pattern and refine it
+
 mardi 29 mai 2012, 08:30:41 (UTC+0200)
-* [ ] UM3 presentation
-  * [ ] check the content
-  * [ ] send it
-* [ ] Skype Meeting
-  * [ ] Results
-    * [ ] on other datasets
-      * [ ] Results to analyse and compare
-      * [ ] Do it with the other datasets
-    * [ ] 2-step refiner
-      * [ ] no statistics on the failing
-      * [ ] new strategy?
-        * [ ] not storing the patterns
-        * [ ] looping over the patterns before the ligands
+* [X] UM3 presentation
+  * [X] check the content
+  * [X] send it
+* [X] Skype Meeting
+  * [X] Results
+    * [X] on other datasets
+      * [X] Results to analyse and compare
+      * [X] Do it with the other datasets
+    * [X] 2-step refiner
+      * [X] no statistics on the failing
+      * [X] new strategy?
+        * [X] not storing the patterns
+        * [X] looping over the patterns before the ligands
 
 lundi 28 mai 2012, 09:16:03 (UTC+0200)
  * [X] Audition UM3
