@@ -8,20 +8,38 @@
 [[TextPrediction]]
 
 == Daily TODO ==
+
+Wed May 30 09:03:48 CEST 2012
+* [.] UM3
+  * [o] print:
+    * [X] train tickets
+    * [X] dossier
+    * [ ] information on MISASHS
+    * [X] slides
+    * [ ] information on various projects
+* [ ] JAK2
+  * [ ] print node information (description)
+  * [ ] Scripts to run on JAK2 data (2-step refinement)
+  * [ ] Scripts to run on other datasets (2-step refinement)
+    * [ ] Preprocessing all files (for regression)
+    * [ ] Creating training/test datasets
+
 mardi 29 mai 2012, 08:30:41 (UTC+0200)
-* [ ] UM3 presentation
-  * [ ] check the content
-  * [ ] send it
-* [ ] Skype Meeting
-  * [ ] Results
-    * [ ] on other datasets
-      * [ ] Results to analyse and compare
-      * [ ] Do it with the other datasets
-    * [ ] 2-step refiner
-      * [ ] no statistics on the failing
-      * [ ] new strategy?
-        * [ ] not storing the patterns
-        * [ ] looping over the patterns before the ligands
+* [X] UM3 presentation
+  * [X] check the content
+  * [X] send it
+* [X] Skype Meeting
+  * [X] Results
+    * [X] on other datasets
+      * [X] Results to analyse and compare
+      * [X] Do it with the other datasets
+      * [X] Comparison
+        * [X] what is the measure used in the paper?
+    * [X] 2-step refiner
+      * [X] no statistics on the failing
+      * [X] new strategy?
+        * [X] not storing the patterns
+        * [X] looping over the patterns before the ligands
 
 lundi 28 mai 2012, 09:16:03 (UTC+0200)
  * [X] Audition UM3
