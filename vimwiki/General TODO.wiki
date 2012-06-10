@@ -8,4 +8,7 @@
 * [ ] Thesis final version!!
 
 == Config ==
-* [ ] Add an alias : tmux --> tmux -2 attach
+* vim templates
+  * C++
+    * tdf --> typedef ...
+    * exit --> exit(0);

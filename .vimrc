@@ -229,7 +229,7 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
 " Quickly find code markers in a project (should be modified to use vimgrep)
-nmap ,add :grep -l -r '\*\*ADDED' **/*
+nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>
 
 " FOR FuzzyFinder:
 " nnoremap <silent> <C-f>b      :FufBuffer<CR>

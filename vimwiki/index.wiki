@@ -9,9 +9,36 @@
 
 == Daily TODO ==
 
+Mon Jun  4 09:54:03 CEST 2012
+* [.] JAK2
+  * [o] memory problem
+    * [X] manually refining a pattern
+    * [ ] create new example
+    * [ ] refine patterns until a certain number of patterns
+  * [ ] preprocessing data
+  * [ ] filtering atoms when reading the data
+* [ ] Other
+  * [ ] mail to Bertrand and Bruno
+  * [ ] mail to Pascal and Sandra
+
 dimanche 3 juin 2012, 15:25:48 (UTC+0200)
-* [ ] JAK2
-  * [ ] in Cross Validation, create an empty pattern and refine it
+* [X] JAK2
+  * [X] in Cross Validation, create an empty pattern
+
+Wed May 30 09:03:48 CEST 2012
+* [X] UM3
+  * [X] print:
+    * [X] train tickets
+    * [X] dossier
+    * [X] information on MISASHS
+    * [X] slides
+    * [X] information on various projects
+* [.] JAK2
+  * [X] print node information (description)
+  * [ ] Scripts to run on JAK2 data (2-step refinement)
+  * [ ] Scripts to run on other datasets (2-step refinement)
+    * [ ] Preprocessing all files (for regression)
+    * [ ] Creating training/test datasets
 
 mardi 29 mai 2012, 08:30:41 (UTC+0200)
 * [X] UM3 presentation
@@ -22,6 +49,8 @@ mardi 29 mai 2012, 08:30:41 (UTC+0200)
     * [X] on other datasets
       * [X] Results to analyse and compare
       * [X] Do it with the other datasets
+      * [X] Comparison
+        * [X] what is the measure used in the paper?
     * [X] 2-step refiner
       * [X] no statistics on the failing
       * [X] new strategy?
