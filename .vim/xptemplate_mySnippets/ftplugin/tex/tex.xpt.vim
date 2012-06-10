@@ -433,6 +433,10 @@ XPT db " \db
 \db`cursor~
 ..XPT
 
+XPT ext " \ext{`context~}{`pattern~}
+\ext{`context~}{`pattern~}`cursor~
+..XPT
+
 XPT supp " \supp{`context~}{`pattern~}
 \supp{`context~}{`pattern~}`cursor~
 ..XPT
