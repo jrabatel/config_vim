@@ -6,20 +6,96 @@
 [[PaperReading]]
 [[KULeuven information]]
 [[TextPrediction]]
+[[Paper Writing]]
 
 == Daily TODO ==
 
+
+Sun Jun 10 11:05:50 CEST 2012
+* [ ] PVS: Git project reorganisation
+  * [ ] push everything on master
+  * [ ] make a copy
+  * [ ] delete on PVS and recreate in correct folders
+  * [ ] create new projects
+    * [ ] General config (scripts and files)
+    * [ ] Key discovery
+    * [ ] GRE
+    * [ ] Inhibitor pattern mining
+* [ ] JAK2
+  * [ ] create labels
+  * [ ] add lipophilic information
+  * [ ] add corresponding label
+
+Fri Jun  8 09:06:26 CEST 2012
+* [X] ERC report
+  * [X] write information
+  * [X] send to Samrat
+* [X] JAK2
+  * [X] Filtering atoms
+    * [X] implements different filters
+    * [X] write the datasets according to it
+  * [X] Convert the new datasets and the jak2 dataset
+  * [X] In jak2 code, correctly read the data
+* [.] Various
+  * [O] Download interesting courses
+    * [X] Automata
+    * [X] Computer vision
+    * [X] Introduction to logic
+  * [ ] Notes on the key discovery problem
+    * [ ] look at the 2006 paper, Gordian approach
+    * [ ] look at the VLDB 2010 paper
+    * [ ] notes on the related work
+  * [ ] Git projects on PVS
+    * [ ] a project for KeyDiscovery
+    * [ ] a project for Pattern-based regression
+
+Thu Jun  7 10:11:40 CEST 2012
+* [X] JAK2
+  * [X] OpenBabel integration
+    * [X] For new datasets
+      * [X] read input data files
+        * [X] atoms and bonds information
+        * [X] molecules information
+      * [X] write in jak2 files
+        * [X] target_values
+        * [X] conformations
+
+Wed Jun  6 10:16:56 CEST 2012
+* [X] JAK2
+  * [X] Check results from various datasets
+  * [X] re-run tests on datasets
+    * [X] update scripts
+    * [X] run them
+  * [X] Start OpenBabel integration
+    * [X] compile and install openbabel
+    * [X] create a project including OpenBabel
+* [o] Various
+  * [X] Notes on the key mining problem
+
+Tue Jun  5 10:42:22 CEST 2012
+* [X] JAK2
+  * [X] update the script parameters.sh
+  * [X] update jak2 code to consider new settings
+    * [X] use log
+    * [X] cross-validation fold number
+    * [X] re-add discretization parameters
+  * [X] update the script run.sh
+  * [X] write a script to run some tests for evaluating the impact of parameters
+* [X] Skype Bruno - Bertrand
+* [X] Mails
+  * [X] to Pascal
+  * [X] to Yoann
+
 Mon Jun  4 09:54:03 CEST 2012
-* [.] JAK2
-  * [o] memory problem
+* [X] JAK2
+  * [X] memory problem
     * [X] manually refining a pattern
-    * [ ] create new example
-    * [ ] refine patterns until a certain number of patterns
-  * [ ] preprocessing data
-  * [ ] filtering atoms when reading the data
-* [ ] Other
-  * [ ] mail to Bertrand and Bruno
-  * [ ] mail to Pascal and Sandra
+    * [X] create new example
+    * [X] refine patterns until a certain number of patterns
+  * [X] preprocessing data
+  * [X] filtering atoms when reading the data
+* [o] Other
+  * [X] mail to Bertrand and Bruno
 
 dimanche 3 juin 2012, 15:25:48 (UTC+0200)
 * [X] JAK2

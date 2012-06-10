@@ -37,7 +37,8 @@ set t_Co=256
 nmap ,vim :edit ~/.vimrc<CR>
 
 " MAKE
-nnoremap ,mak :silent make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
+" nnoremap ,mak :silent make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
+nnoremap ,mak :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -133,7 +134,7 @@ filetype plugin indent on
 
 " Quickly quit vim
 nmap ,;qq :qall!<CR>
-nmap ,;wq :wq<CR>
+nmap ,;qw :wq<CR>
 " This map allows to exit the insert or visual or command mode quickly, without typing
 " <Esc>.
 imap ,; <Esc>
@@ -225,6 +226,7 @@ let g:Tex_DefaultTargetFormat='pdf'
 
 " Quickly find code markers in a project (should be modified to use vimgrep)
 nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>
+nmap ,todo :silent grep -r '\*\*TODO' **/*<CR>
 
 " FOR FuzzyFinder:
 " nnoremap <silent> <C-f>b      :FufBuffer<CR>
@@ -253,6 +255,7 @@ nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>
 
 " FOR CtrlP
 let g:ctrlp_map = '<c-f>'
+let g:ctrlp_working_path_mode = 0
 
 "FOR COMMAND-T
 " nnoremap <silent> <C-f>f     :CommandT<CR>

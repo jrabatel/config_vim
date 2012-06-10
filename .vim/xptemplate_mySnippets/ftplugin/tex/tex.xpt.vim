@@ -187,6 +187,10 @@ XPT => " \Rightarrow
 \Rightarrow`cursor~
 ..XPT
 
+XPT <=> " \Leftrightarrow
+\Leftrightarrow `cursor~
+..XPT
+
 XPT <= " \Lefttarrow
 \Lightarrow`cursor~
 ..XPT
@@ -205,6 +209,10 @@ $\Rightarrow$`cursor~
 
 XPT $<= " $\Lefttarrow$
 $\Lightarrow$`cursor~
+..XPT
+
+XPT $<=> " $\Leftrightarrow$
+$\Leftrightarrow$ `cursor~
 ..XPT
 
 XPT $-> " $\rightarrow$

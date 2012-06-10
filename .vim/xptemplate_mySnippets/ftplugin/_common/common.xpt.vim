@@ -26,3 +26,15 @@ e.g., `cursor~
 XPT ie " i.e., 
 i.e., `cursor~
 ..XPT
+
+XPT wrt " w.r.t. 
+w.r.t. `cursor~
+..XPT
+
+XPT /t " \t (tabulation)
+\t
+..XPT
+
+XPT /n " \n (new line)
+\n
+..XPT
