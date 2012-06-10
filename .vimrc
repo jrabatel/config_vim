@@ -114,12 +114,17 @@ nnoremap ,q :ccl<CR>
 nnoremap ,s :cprev<CR>
 nnoremap ,d :cnext<CR>
 
+" Capitalize/uncapitalize the first character of all words on a line
+nmap ,cap :s/\<[a-z]/\u&/g<CR>
+nmap ,ucap :s/\<[A-Z]/\l&/g<CR>
+
 " Find methods and maps
 " find in the project (current directory) the matches of the word under the cursor (and show the list)
 nmap ,Fw :silent grep! -R <cword> *<CR>:redraw!<CR>
 nmap ,FFw :silent grep! -R <cword> %:p:h/*<CR>:redraw!<CR>
 nmap ,FW :silent grep! -w -R <cword> *<CR>:redraw!<CR>
 nmap ,FFW :silent grep! -w -R <cword> %:p:h/*<CR>:redraw!<CR>
+
 
 " find the commented lines (for // comments)
 nmap ,Fl /\/\//<CR>
