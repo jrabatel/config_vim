@@ -11,6 +11,10 @@ XPT _todo "// **TODO note title
 // **TODO `title~
 ..XPT
 
+XPT _note "// **NOTE note title
+// **NOTE `title~
+..XPT
+
 XPT out " std::cout << "`cursor~" << std::endl;
 std::cout << "`cursor~" << std::endl;
 ..XPT
@@ -119,8 +123,12 @@ XPT cout " std::cout <<
 std::cout << `cursor~
 ..XPT
 
-XPT endl; " std::endl;
+XPT endl " std::endl;
 std::endl;
+..XPT
+
+XPT ostream " std::ostream;
+std::ostream
 ..XPT
 
 XPT tostr " create a str from numeric variable

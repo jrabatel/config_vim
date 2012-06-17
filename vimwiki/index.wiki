@@ -10,19 +10,63 @@
 
 == Daily TODO ==
 
+Fri Jun 15 09:44:22 CEST 2012
+* [X] Check availability of Mohr et al predictions
+* [X] Send mail to group
+* [ ] Plot data (RMSE vs IC50)
+  * [ ] Create the input file for Gnuplot
+* [ ] Draft of mail to Mohr et al.?
+* [.] Run XP:
+  * [o] Everything with 
+    * [X] filter hbd_hba_polar
+    * [ ] 2-step refiner
+    * [o] Minimum leaf size
+      * [X] 15
+      * [X] 25
+      * [ ] 30
+
+Wed Jun 13 09:02:55 CEST 2012
+* [X] Remove polarity label to remove reduce the pattern nb
+* [X] in Cross-Validation, change the computation of the average values when K=2
+* [X] check the computation of
+  * [X] SD measure
+  * [X] MSE/RMSE
+  * [X] ROC
+* [X] In CrossValidation log, add the YES/NO refiners
+* [X] New experiments without DHFR
+  * [X] Labels
+  * [X] Filters
+* [X] Add lipophilicity
+* [X] Also make experiments with 1-step refiner
+
+Tue Jun 12 11:12:09 CEST 2012
+* [X] JAK2
+  * [X] is the generation of patterns okay? (check whether the same label can be used in different vertices)
+  * [X] run tests for evaluating the different labels
+
+Mon Jun 11 08:57:29 CEST 2012
+* [X] JAK2
+  * [X] test if everything is working
+    * [X] Try on a small dataset
+    * [X] in preprocessing, write the folds.data file
+    * [X] test the xp scripts
+  * [X] run new tests with new parameters and new information
+* [X] Mail Pascal Sandra
+* [X] Mail parents
 
 Sun Jun 10 11:05:50 CEST 2012
-* [ ] PVS: Git project reorganisation
-  * [ ] push everything on master
-  * [ ] make a copy
-  * [ ] delete on PVS and recreate in correct folders
+* [.] PVS: Git project reorganisation
+  * [ ] Move all projects
+  * [X] Update .git/config on local copies
+    * [X] vim_config
+    * [X] ssh_config
   * [ ] create new projects
     * [ ] General config (scripts and files)
     * [ ] Key discovery
     * [ ] GRE
     * [ ] Inhibitor pattern mining
-* [ ] JAK2
-  * [ ] create labels
+* [.] JAK2
+  * [X] create labels
   * [ ] add lipophilic information
   * [ ] add corresponding label
 

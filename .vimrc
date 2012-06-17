@@ -37,8 +37,8 @@ set t_Co=256
 nmap ,vim :edit ~/.vimrc<CR>
 
 " MAKE
-" nnoremap ,mak :silent make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
-nnoremap ,mak :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
+nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
+nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -230,8 +230,9 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
 " Quickly find code markers in a project (should be modified to use vimgrep)
-nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>
-nmap ,todo :silent grep -r '\*\*TODO' **/*<CR>
+nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>:redraw!<CR>
+nmap ,todo :silent grep -r '\*\*TODO' **/*<CR>:redraw!<CR>
+nmap ,note :silent grep -r '\*\*NOTE' **/*<CR>:redraw!<CR>
 
 " FOR FuzzyFinder:
 " nnoremap <silent> <C-f>b      :FufBuffer<CR>
