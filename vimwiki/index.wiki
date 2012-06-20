@@ -10,16 +10,26 @@
 
 == Daily TODO ==
 
+Mon Jun 18 08:01:19 CEST 2012
+* [X] Mail
+  * [X] document with plotting the IC50 value against RMSE
+  * [X] about new paper and data and approach
+* [o] paper to read
+  * [ ] read paper
+  * [ ] data to find
+  * [X] source code to find
+  * [X] preprocessing scripts to find
+
 Fri Jun 15 09:44:22 CEST 2012
 * [X] Check availability of Mohr et al predictions
 * [X] Send mail to group
-* [ ] Plot data (RMSE vs IC50)
-  * [ ] Create the input file for Gnuplot
+* [X] Plot data (RMSE vs IC50)
+  * [X] Create the input file for Gnuplot
 * [ ] Draft of mail to Mohr et al.?
 * [.] Run XP:
-  * [o] Everything with 
+  * [O] Everything with 
     * [X] filter hbd_hba_polar
-    * [ ] 2-step refiner
+    * [X] 2-step refiner
     * [o] Minimum leaf size
       * [X] 15
       * [X] 25

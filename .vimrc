@@ -37,7 +37,7 @@ set t_Co=256
 nmap ,vim :edit ~/.vimrc<CR>
 
 " MAKE
-nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
+nnoremap ,makj :silent make -C $experiments/build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
 nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
@@ -228,6 +228,7 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_GotoError=0
 
 " Quickly find code markers in a project (should be modified to use vimgrep)
 nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>:redraw!<CR>

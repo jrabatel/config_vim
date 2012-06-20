@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/rabatel/TP_M2_2012-02-29/Nicolas/TP/classification'
 let g:netrw_dirhist_2='/export/home/rabatel/Project/Code/programming/mips/mips'
 let g:netrw_dirhist_3='/home/rabatel/Documents/FouilleDeTexte_UCBN/TP/tp3/documents/TP/classification'
 let g:netrw_dirhist_4='/home/rabatel/workspace/programming/jak2/src'
 let g:netrw_dirhist_5='/cw/dtaitrantor/NoCsBack/dtai/julien/Experiments/code/jak2/src/examples/crossValidation'
 let g:netrw_dirhist_6='/cw/dtaitrantor/NoCsBack/dtai/julien/Code/experiments/test_bzr_1_1_1_1_0_0_1_1_1_1_1_-1_1_2.5_1_2_0_4.6'
+let g:netrw_dirhist_7='/cw/dtaitrantor/NoCsBack/dtai/julien'

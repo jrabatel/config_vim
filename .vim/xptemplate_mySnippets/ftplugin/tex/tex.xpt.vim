@@ -227,6 +227,7 @@ $\lightarrow$`cursor~
 " References to objects
 
 "the following templates must be used with latex-suite!
+\includegraphics[width=.8\textwidth]{img/predictions_points.png}
 XPT Fig " Figure~\ref{fig:...}
 Figure~\ref{fig:`label~}`cursor~
 ..XPT
