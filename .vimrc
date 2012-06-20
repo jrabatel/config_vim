@@ -89,6 +89,7 @@ nmap ,<C-e> :setlocal spell spelllang=en<CR>
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbarautoclose = 0
 
+
 nmap <silent> <C-F11> :NERDTreeToggle<CR>
 nmap <silent> ,nn :NERDTreeToggle<CR>
 nmap <silent> ,nb :NERDTreeToggle<CR><S-b><CR>
@@ -259,6 +260,13 @@ nmap ,note :silent grep -r '\*\*NOTE' **/*<CR>:redraw!<CR>
 " vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
 " nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
 " nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
+
+" FOR Show YankRing window:
+nnoremap <silent> <F9> :YRShow<CR>
+let g:yankring_window_use_horiz = 0  " Use vertical split
+let g:yankring_min_element_length = 2 " Do not put simple characters in the yankring
+let g:yankring_window_width = 50 " Size used in a vertical split
+
 
 " FOR CtrlP
 let g:ctrlp_map = '<c-f>'
