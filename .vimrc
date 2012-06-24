@@ -262,7 +262,7 @@ nmap ,note :silent grep -r '\*\*NOTE' **/*<CR>:redraw!<CR>
 " nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " FOR Show YankRing window:
-nnoremap <silent> <F9> :YRShow<CR>
+nnoremap <silent> <C-F9> :YRShow<CR>
 let g:yankring_window_use_horiz = 0  " Use vertical split
 let g:yankring_min_element_length = 2 " Do not put simple characters in the yankring
 let g:yankring_window_width = 50 " Size used in a vertical split

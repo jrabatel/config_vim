@@ -3,6 +3,7 @@
 [[Mails]]
 [[To learn and read]]
 [[JAK2]]
+[[General_Ideas]]
 [[PaperReading]]
 [[KULeuven information]]
 [[TextPrediction]]
@@ -10,13 +11,44 @@
 
 == Daily TODO ==
 
+Fri Jun 22 10:09:35 CEST 2012
+* [X] read closed graph mining
+* [X] geometric pattern mining
+  * [X] list possible difficulties
+* [ ] Meeting with Jan
+  * [ ] Task1
+    * [ ] Ask Ronan, Leander, Thomas whether the information about the protein side can be used or not. How to collect the data?
+  * [ ] Task2
+    * [ ] As soon as the protein-side data are available
+      * [ ] Preprocessing and filter the protein atoms to find anchor atoms:
+        * [ ] keep only atoms that are at distance < 6-7 angstroms to a ligand atom in at least 3% or 5% of the instances --> those are anchor points
+      * [ ] Expand the pattern language in order to take into account the protein binding site. 2 types of new tests in the refinement operator:
+        * [ ] Given an anchor point, is there an atom that is in the neighborhood of this anchor atom?
+        * [ ] Given a pattern, is there an anchor point that can be "connected" to one of the vertices of the pattern?
+  * [ ] Task3
+    * [ ] Reduce the memory consumption of the patterns
+      * [ ] use minimum-cost types to reduce unnecessary memory consumption
+      * [ ] remove the pattern-matching preprocessing features after the pattern matching
+  * [ ] Task4: for the closed pattern mining problem
+    * [ ] Compute hash-values out of the pattern extension: a vector of bits that represent for each conformation (or example) whether or not it covers the pattern
+      * If two patterns have the same vector, then we should test further
+    * [ ] Also use this principle for the DT learner
+    * [ ] Ask Mostafa about "Hashing of root images"
+
+Thu Jun 21 09:59:34 CEST 2012
+* [X] Test new heuristic
+  * [X] Run the tests
+  * [X] Compare the plots RSE vs predicted/real value
+* [X] Implement new heuristics
+  * [X] give more weight to high values
+
 Mon Jun 18 08:01:19 CEST 2012
 * [X] Mail
   * [X] document with plotting the IC50 value against RMSE
   * [X] about new paper and data and approach
-* [o] paper to read
-  * [ ] read paper
-  * [ ] data to find
+* [X] paper to read
+  * [X] read paper
+  * [X] data to find
   * [X] source code to find
   * [X] preprocessing scripts to find
 
@@ -25,15 +57,14 @@ Fri Jun 15 09:44:22 CEST 2012
 * [X] Send mail to group
 * [X] Plot data (RMSE vs IC50)
   * [X] Create the input file for Gnuplot
-* [ ] Draft of mail to Mohr et al.?
-* [.] Run XP:
-  * [O] Everything with 
+* [X] Run XP:
+  * [X] Everything with 
     * [X] filter hbd_hba_polar
     * [X] 2-step refiner
-    * [o] Minimum leaf size
+    * [X] Minimum leaf size
       * [X] 15
       * [X] 25
-      * [ ] 30
+      * [X] 30
 
 Wed Jun 13 09:02:55 CEST 2012
 * [X] Remove polarity label to remove reduce the pattern nb
