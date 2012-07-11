@@ -37,7 +37,7 @@ set t_Co=256
 nmap ,vim :edit ~/.vimrc<CR>
 
 " MAKE
-nnoremap ,makj :silent make -C $experiments/build/jak2/src/examples/crossValidation<CR>:redraw!<CR>
+nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
 nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
@@ -126,7 +126,13 @@ nmap ,Fw :silent grep! -R <cword> *<CR>:redraw!<CR>
 nmap ,FFw :silent grep! -R <cword> %:p:h/*<CR>:redraw!<CR>
 nmap ,FW :silent grep! -w -R <cword> *<CR>:redraw!<CR>
 nmap ,FFW :silent grep! -w -R <cword> %:p:h/*<CR>:redraw!<CR>
+" run a grep search in the whole source directory
+nmap ,grep :grep -r '' **/*<Left><Left><Left><Left><Left><Left>
+nmap ,grepa :grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
 
+" search and replace in a line or in a file
+nmap ,repl :s```g<Left><Left><Left>
+nmap ,repa :%s```g<Left><Left><Left>
 
 " find the commented lines (for // comments)
 nmap ,Fl /\/\//<CR>
@@ -262,7 +268,7 @@ nmap ,note :silent grep -r '\*\*NOTE' **/*<CR>:redraw!<CR>
 " nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " FOR Show YankRing window:
-nnoremap <silent> <C-F9> :YRShow<CR>
+nnoremap <silent> <C-c> :YRShow<CR>
 let g:yankring_window_use_horiz = 0  " Use vertical split
 let g:yankring_min_element_length = 2 " Do not put simple characters in the yankring
 let g:yankring_window_width = 50 " Size used in a vertical split
@@ -340,7 +346,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 
 " FOR CLANG_COMPLETE
-" let g:clang_complete_auto       = 1
+let g:clang_complete_auto       = 0
 let g:clang_auto_select         = 1
 let g:clang_use_library         = 0
 " let g:clang_library_path      = ""

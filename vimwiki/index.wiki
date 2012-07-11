@@ -8,20 +8,73 @@
 [[KULeuven information]]
 [[TextPrediction]]
 [[Paper Writing]]
+[[Web development]]
+[[Various]]
 
 == Daily TODO ==
+
+Tue Jul 10 08:56:04 CEST 2012
+* [o] jak2
+  * [X] classification and score computation
+* [ ] GRE and Keys
+  * [ ] Read one paper (the Gordian approach)
+* [ ] Mails
+  * [ ] Anne
+
+Mon Jul  9 09:00:30 CEST 2012
+* [X] jak2
+  * [X] code with decision forest
+    * [X] implement voting decision
+    * [X] when learner builds the DT, it also gives the example DB
+* [X] Mails
+  * [X] Ronan
+
+Tue Jul  3 09:46:00 CEST 2012
+* [X] Skype meeting
+* [X] Get everything working
+* [X] Tests
+* [X] GRE & Keys
+  * [X] informally note the problems
+  * [X] book a room?
+
+Mon Jul  2 09:40:58 CEST 2012
+* [X] add additional vertex labels (without working)
+
+Fri Jun 29 10:17:50 CEST 2012
+* [X] Mail to Jan
+  * [X] skype meetings
+  * [X] protein data
+  * [X] Leander and I meeting
+  * [X] vacation
+* [X] Mail to Leander
+* [o] Code
+  * [X] check whether data are correctly read and stored in the jak2 db
+
+Thu Jun 28 11:20:21 CEST 2012
+Wed Jun 27 14:35:00 CEST 2012
+Tue Jun 26 10:00:08 CEST 2012
+* [X] Finish reading and filtering the protein data
+  * [X] coded
+  * [X] problem with filter
+* [o] Read the protein data in the jak2 code
+  * [X] coded
+  * [o] tested
+    * [X] copy new jak2 data
+    * [ ] check whether are correctly read and stored in the db
+* [ ] Start writing an additional possible refinement
+  * [ ] of the form of a vertex label
 
 Fri Jun 22 10:09:35 CEST 2012
 * [X] read closed graph mining
 * [X] geometric pattern mining
   * [X] list possible difficulties
-* [ ] Meeting with Jan
-  * [ ] Task1
-    * [ ] Ask Ronan, Leander, Thomas whether the information about the protein side can be used or not. How to collect the data?
-  * [ ] Task2
-    * [ ] As soon as the protein-side data are available
-      * [ ] Preprocessing and filter the protein atoms to find anchor atoms:
-        * [ ] keep only atoms that are at distance < 6-7 angstroms to a ligand atom in at least 3% or 5% of the instances --> those are anchor points
+* [.] Meeting with Jan
+  * [X] Task1
+    * [X] Ask Ronan, Leander, Thomas whether the information about the protein side can be used or not. How to collect the data?
+  * [.] Task2
+    * [o] As soon as the protein-side data are available
+      * [X] Preprocessing and filter the protein atoms to find anchor atoms:
+        * [X] keep only atoms that are at distance < 6-7 angstroms to a ligand atom in at least 3% or 5% of the instances --> those are anchor points
       * [ ] Expand the pattern language in order to take into account the protein binding site. 2 types of new tests in the refinement operator:
         * [ ] Given an anchor point, is there an atom that is in the neighborhood of this anchor atom?
         * [ ] Given a pattern, is there an anchor point that can be "connected" to one of the vertices of the pattern?
@@ -31,6 +84,7 @@ Fri Jun 22 10:09:35 CEST 2012
       * [ ] remove the pattern-matching preprocessing features after the pattern matching
   * [ ] Task4: for the closed pattern mining problem
     * [ ] Compute hash-values out of the pattern extension: a vector of bits that represent for each conformation (or example) whether or not it covers the pattern
+      * [ ] 2 patterns having the same hash-value have to be further studied
       * If two patterns have the same vector, then we should test further
     * [ ] Also use this principle for the DT learner
     * [ ] Ask Mostafa about "Hashing of root images"

@@ -27,6 +27,24 @@ XPT outval " std::cout << "`txt~ = " << `expr~ << std::endl;
 std::cout << "`txt~ = " << `expr~ << std::endl;
 ..XPT
 
+XPT outd " std::cout << "`cursor~" << std::endl;
+#ifdef DEBUG
+std::cout << "`cursor~" << std::endl;
+#endif
+..XPT
+
+XPT outvard " std::cout << "variable = " << `cursor~ << std::endl;
+#ifdef DEBUG
+std::cout << "`variable~ = " << `variable~ << std::endl;
+#endif
+..XPT
+
+XPT outvald " std::cout << "`txt~ = " << `expr~ << std::endl;
+#ifdef DEBUG
+std::cout << "`txt~ = " << `expr~ << std::endl;
+#endif
+..XPT
+
 XPT cmis " var (var)`cursor~
 `member~(`member~)`cursor~
 ..XPT
