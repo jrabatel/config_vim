@@ -117,8 +117,8 @@ nnoremap ,s :cprev<CR>
 nnoremap ,d :cnext<CR>
 
 " Capitalize/uncapitalize the first character of all words on a line
-nmap ,cap :s/\<[a-z]/\u&/g<CR>
-nmap ,ucap :s/\<[A-Z]/\l&/g<CR>
+nmap ,cap :s/\<[a-z]/\u&/g<CR>:nohls<CR>
+nmap ,ucap :s/\<[A-Z]/\l&/g<CR>:nohls<CR>
 
 " Find methods and maps
 " find in the project (current directory) the matches of the word under the cursor (and show the list)
@@ -268,7 +268,7 @@ nmap ,note :silent grep -r '\*\*NOTE' **/*<CR>:redraw!<CR>
 " nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " FOR Show YankRing window:
-nnoremap <silent> ,cop :YRShow<CR>
+nnoremap <silent> ,,c :YRShow<CR>
 let g:yankring_window_use_horiz = 0  " Use vertical split
 let g:yankring_min_element_length = 2 " Do not put simple characters in the yankring
 let g:yankring_window_width = 50 " Size used in a vertical split

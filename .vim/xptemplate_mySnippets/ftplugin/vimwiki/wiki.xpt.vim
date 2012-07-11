@@ -23,3 +23,13 @@ XPTinclude
 XPT * " * [ ] 
 * [ ] `cursor~
 ..XPT
+
+XPT ** " *text* 
+*`text~*`cursor~
+..XPT
+XPT _ " _text_ 
+_`text~_`cursor~
+..XPT
+XPT / " /text/ 
+/`text~/`cursor~
+..XPT

@@ -1,0 +1,31 @@
+= KD2R =
+
+== Basic definitions ==
+S --> data source
+C --> class
+
+*Non keys* : 
+A set of property expressions is a non-key for the class C in S if: 
+There exist X, Y in C such that Y and X are different but share the same values on the property expressions
+
+*Keys* :
+For all X and Y in C, there exists at least one property expression such that the values of X and Y differ
+
+*Undetermined Keys* :
+A set of property expressions is an undetermined key if
+ - it is not a non-key
+ - for all property expression X and Y have the same value
+ - there exists one property expression such that there does not exist any value for X and Y
+
+Top-Down algorithm: the keys discovered for a given class are derived from its subclasses (i.e., more specific classes).
+
+== Prefix Tree ==
+ - each level corresponds to one property expression (i.e., one property)
+ - each cell at a given level contains:
+   - a value for the corresponding level
+   - an (boolean) attribute to specifiy whether the value is null or not
+   - a list of URI to the corresponding class instances
+ - a prefix-path represents the set of instances that share the same values for the properties involvedin the path
+
+=== Intermediate Prefix Tree ===
+ - 
