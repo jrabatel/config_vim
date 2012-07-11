@@ -1,0 +1,100 @@
+== JDR ==
+* Add personal/global statistics
+  * Charts
+    * frequency of dreams in time
+    * tags frequency in time
+    * a calendar where the dream titles appear (search railcasts on calendars)
+* Tags
+  * Given the written text, propose some tags automatically (based on rules)
+  * Same thing to propose some categories
+* Favourite dreams or users
+* Provide interesting knowledge
+  * Is there a tag (or a word?) that has been significantly less/more frequent in the last N weeks?
+* Dreams similar to the one that has been written/read?
+* Make links between similar tags used by different users
+
+= MODELS =
+* dream
+  * attributes
+    * title
+    * date
+    * text
+    * public_comment
+    * private_comment
+    * lucidity level (automatically propose based on the text)
+    * visible
+    * anonymous
+    * images
+    * tags
+* user
+  * login
+  * mail
+  * password
+  * gender
+  * birth date
+  * about
+* tag
+  * name
+  * (owner)
+  * category (optional) --> characters, mood, place, time
+  * images
+* comment
+* image
+  * id
+  * owner
+  * title
+  * description
+  * visible
+
+= RELATIONS =
+* dream_tags
+* user_dreams
+* dream_comments
+* dream_images
+* tag_images
+
+= Interactive Stories =
+* IDEAS
+* the main author of a story can define some limitations
+  * how many possible sequels to a paragraph?
+  * the story can be modified/etc. by other users or not
+  * images can be added to paragraphs
+  * readers should be able to mention that a story should be rated as adult
+  * can the user go back or not? or how many times the reader can go back?
+  * a writer can propose some challenges to the readers : finish it in less than X clicks, etc.
+  * for a (completed) story, store some statistics : number of times it was finished, etc.
+  * the note given by people can be modified (because the story can be modified)
+
+* MODELS
+* story
+  * title
+  * summary
+  * authorization (others can read, modify, add, ...)
+* chapter
+* paragraph
+* category
+* user
+
+* QUESTIONS
+  * How to introduce cycles in the tree? (by having a paragraph that is linked with one of its ancestors, or with any other node in the paragraph)
+
+Websites
+* text prediction web service?
+* Interactive Stories
+* Manga-Comics-DVD-Book management site
+  * allows to manage a collection, a wish-list, a loan-list, a recommandation-service
+  * contains a recommander system (based on association-rules, etc.)
+  * can connect to someone's collection (because it is very close to mine, for instance)
+  * find people having similar collections
+  * print statistics about my collection
+  * can invite people on the site
+  * mail system between users
+* My Collection
+  * a site to manage any kind of collection and talk with people
+  * category system for the collections
+  * for each object, the user can post 1..n pictures, a description, etc.
+  * can connect to people's collection
+  * system to comment other people's objects/collection
+  * integrate a mail system, and a system to allow exchanging/selling objects
+  * if the user wants to put information about price, etc. he has to pay
+* Games based on resources...

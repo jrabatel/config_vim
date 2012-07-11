@@ -1,0 +1,1 @@
+* [ ] Pattern-based regression? (by similarity with pattern-based classifiers)
