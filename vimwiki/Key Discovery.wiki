@@ -28,4 +28,4 @@ Top-Down algorithm: the keys discovered for a given class are derived from its s
  - a prefix-path represents the set of instances that share the same values for the properties involvedin the path
 
 === Intermediate Prefix Tree ===
- - 
+

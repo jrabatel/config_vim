@@ -13,6 +13,10 @@
 
 == Daily TODO ==
 
+Thu Jul 12 10:16:51 CEST 2012
+* [ ] Compare with Mohr et al. and random forests
+* [ ] Results with much more trees in random forests (100?)
+
 Tue Jul 10 08:56:04 CEST 2012
 * [o] jak2
   * [X] classification and score computation
