@@ -359,3 +359,9 @@ let g:clang_complete_macros     = 1
 " nmap <leader>CLu g:ClangUpdateQuickFix()
 
 let g:session_autoload = 'no'
+
+" Ruby on rails
+" Mappings
+nmap ,rgs :!rails g scaffold 
+nmap ,rdbm :!bundle exec rake db:migrate<CR>
+nmap ,rc :!rails console<CR>
