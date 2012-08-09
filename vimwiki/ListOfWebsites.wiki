@@ -1,0 +1,138 @@
+= Web Sites =
+
+== Last trends and potential ideas ==
+* design and decoration
+
+== Indirect Crowd Sourcing ==
+
+* FindAGift
+  * Users store the people they want to find a gift to
+    * type of relation (parent, sibling, colleague, friend, boyfriend, girlfriend, etc.)
+    * hobbies (with tags)
+    * date of birth
+
+* Meeting website
+  * Users save profiles rather than wishes
+  * An algorithm suggest some people
+
+* PicOfTheDay
+  * users propose some pictures and tag them
+  * there is a recommender system based on tags
+  * it is possible to vote for pictures:
+    * by adding it as a favourite
+    * by labeling it with 'so cute!', 'impressive!', etc.
+
+* CoupDeGueule / CoupdDeCoeur
+  * Users can post their 'coup de gueule' and put some references (pictures, link)
+  * Readers can vote: 'agree!', 'disagree!'
+  * Comments
+
+* EcologicalTips
+  * users give their ecological tips
+  * other users can vote for it (useful, ...)
+
+* ThriftyTips
+  * users give their tips to save money
+  * other users can vote for it (useful, ...)
+
+* Recipes
+  * people can enter some recipes or variant of recipes
+  * the search engine can be used to propose what can be done with the content of the fridge or to buy missing things
+  * users can save what they served as a dessert, starter, etc.
+  * recipes can be tagged
+    * origin, type of dish
+
+* Hypnose
+  * people can save inductions and tag them according to what it addresses
+  * users can save an mp3 corresponding to an induction
+    * optionally, some existing big sites can put online some inductions as examples
+  * users can save a technique for inducing hypnose state
+
+* LucidDreaming
+  * Users can share some resources about lucid dreaming
+  * Users can write their objectives of lucid dreams
+    * validate them with a date and a comment and a link to the dream
+  * Put some exercises
+  * Linked to dream journal website
+  * Linked to hypnosis induction repository
+  * Users have their 'lucid world'
+    * dream goals
+      * what will you do in your next lucid dream?
+    * dreams
+    * techniques
+    * sort of blog...
+  * RSS for best dreams (most commented, best dreams, etc.) and for dreamers
+  * Users have some ranks based on the number of lucid dreams they had
+  * Statistics
+    * quality of dream memories: average number of dreams a day, average length of dreams
+    * number of lucid dreams and evolution in time
+    * top lucid dreamers: w.r.t. the number of lucid dreams, the number of followers
+    * most popular dream signs, most popular reality tests, ...
+  * User profile:
+    * favourite induction techniques
+    * favourite tags
+    * frequent dream signs
+    * each user can select its 3 favourite dreams according to various criteria (to move in dream journal for normal dreams)
+      * most beautiful dreams
+      * most arousing dreams
+      * weirdest dreams
+      * frightening dreams
+  * repository of techniques for different purposes: teleportation, change scene, import an object, etc. (users can add these techniques as tags to their dreams, or their goals, and vote for them ('it worked for me!', 'I want to try it! add it to my goals') )
+    * induction techniques
+    * in-dream techniques
+
+* TakeAwayRestaurants
+  * Enter and vote for take away restaurants in your neighborhood
+  * given an address and some wishes (type of food, etc.), the system can suggest some restaurants
+
+* InteractiveStories
+
+* DreamJournal
+  * follow dreamers
+  * suggest similar dreams/dreamers
+  * tags should be taggable, i.e., a person can be tagged as friend, family, etc.
+  * various categories of tags:
+    * place
+    * feelings
+    * DC (dream characters)
+
+* LifeJournal
+  * follow people
+  * add images, links
+  * What do I like/hate/listen, etc.
+
+* LanguageOralUnderstanding
+  * put online some mini scenes from DVD with their subtitles, the goal is to help people improving their understanding of languages
+  * with the same idea of exploiting movie subtitles, we can add 
+
+* Hosting Search Engine
+  * Free / Not free hosting providers
+  * Think about the search engine
+
+== Resource handling ==
+* MyMangas
+  * saving a collection of comics and mangas
+  * ranking the best series
+  * recommender system
+
+* Collection
+  * users can save their collections of various objects
+  * following other people collections
+  * manage the possible exchanges of objects (users are localised)
+
+== e-commerce ==
+* Artisan
+  * an e-commerce site dedicated to home-made objects (jewelry, etc.)
+
+
+= Mobile Applications =
+* Hypnose
+  * read some inductions
+  * download some mp3 on the phone
+
+* LucidDreaming
+  * read some techniques of lucid dreams
+  * provide some tools for lucid dreaming (read some of your dreams, read your lucid dream objectives, ...)
+  * remind exercices to do
+
+* Recipes
