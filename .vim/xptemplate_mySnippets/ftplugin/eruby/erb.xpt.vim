@@ -19,26 +19,10 @@ XPTinclude
 
 " ================================= Snippets ===================================
 
-XPT hm " has_many
-has_many :`cursor~
-..XPT
-XPT bt " belongs_to
-belongs_to :`cursor~
+XPT < " <% `cursor~ %>
+<% `cursor~ %>
 ..XPT
 
-XPT vac " validates complete
-validates :`attr~, :`crit~ => { :`key~ => `val~ }
+XPT <= " <%= `cursor~ %>
+<%= `cursor~ %>
 ..XPT
-
-XPT va " validates
-validates :`attr~, :`crit~
-..XPT
-
-XPT vl " validates length
-validates :`attr~, :length => { :minimum => `0~, :maximum => `100~ }
-..XPT
-
-XPT aac " attr_accessible :
-attr_accessible :`attr~
-..XPT
-
