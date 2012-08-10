@@ -13,9 +13,80 @@
 
 == Daily TODO ==
 
+Fri Jul 20 09:18:35 CEST 2012
+* [ ] JAK2
+  * [ ] new preprocessing
+  * [ ] new DT and embeddings
+* [ ] Various
+  * [ ] email to Anne
+Thu Jul 19 09:40:22 CEST 2012
+* [X] JAK2
+  * [X] Copy data
+  * [X] Have the last version with "old" anchor labels
+  * [X] run one DT
+  * [X] send to Ronan
+  * [X] make a point with Ronan about the datasets available
+
+Wed Jul 18 10:50:24 CEST 2012
+* [ ] JAK2
+  * [ ] Experiment 2-step refiner
+    * [ ] with/without anchor (DF50, MaxDist6, samp5, K4)
+
+Tue Jul 17 09:04:15 CEST 2012
+* [X] Meeting Ronan
+  * [X] Remember the work we did?
+  * [X] New introduced labels
+    * [X] element name, hybridization, aromaticity, charge
+    * [X] HBD, HBA, lipophilicity
+  * [X] Results
+    * [X] Tried on other datasets
+      * [X] while other approaches do not propose descriptive results, we cannot be better
+      * [X] Random forest : instead of having only one DT for one dataset, we can have describing the same data (randomization)
+      * [X] Protein data
+  * [X] Protein Data
+    * [X] Summary
+      * [X] We can use the approach to exploit both the ligand data (conformations) and the protein data in the same process.
+      * [X] Seem to be quite new : interesting for us, as we can show that it is possible to integrate a lot of different information.
+    * [X] Questions
+      * [X] Given the fact that the protein site has been considered as static, is it a good idea to use these protein data?
+      * [X] Is it possible to have better data?
+      * [X] Other datasets?
+      * [X] Relevant distance thresholds?
+      * [X] Filtering some protein atoms?
+  * [X] Visualisation tool
+    * [X] Summary
+    * [X] Questions
+  * [X] What next?
+
+Mon Jul 16 10:33:13 CEST 2012
+* [o] Experiments
+  * [X] with K=4
+  * [X] with Mohr data and random forests
+  * [ ] with varying the sample rate
+* [ ] test the correcteness of the matching operator
+  * [ ] for each root anchor test and ligand 
+    * [ ] calculate the distance between the anchor atom and each ligand atom, and increment the correct counter
+
+Fri Jul 13 08:42:58 CEST 2012
+* [.] test matching operator
+  * [o] for each root anchor test and ligand 
+    * [ ] calculate the distance between the anchor atom and each ligand atom
+    * [X] compute the average values for satisfying/not satisfying ligands
+      * [X] in the learning set
+      * [X] in the testing set
+* [X] test with simple DT and count the signs differences
+* [ ] run tests with the random forest and Mohr's datasets
+* [X] Jan:
+  * [X] couples of results (average values)
+  * [X] results with ROC
+* [o] mail to Bertrand etc.
+  * [ ] results
+  * [X] administration
+
 Thu Jul 12 10:16:51 CEST 2012
-* [ ] Compare with Mohr et al. and random forests
-* [ ] Results with much more trees in random forests (100?)
+* [X] Check the average values on training and testing datasets for tests at the root of trees
+* [o] Compare with Mohr et al. and random forests
+  * [X] print the MSE and r_pred measures
 
 Tue Jul 10 08:56:04 CEST 2012
 * [o] jak2

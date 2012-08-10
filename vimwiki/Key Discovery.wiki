@@ -52,3 +52,31 @@ Given the root of the prefix tree for a class, the number of attributes, and the
    - candidate generate-and-test approach
    - minimal cover approach
    - formal concept analysis approach
+
+
+= Advancing the discoveyr of Unique column combinations (CIKM 2011) =
+Principle:
+ - Gordian uses a row-based approach
+ - There exist also some column-based approaches (based on Apriori)
+ - Focus is on the candidate generation strategy because checking whether a candidate is unique is costly. => the set of generated candidates must be as small as possible
+
+Statistics-based pruning
+ - Principle: find some functional dependencies on the fly and exploit them
+ - for a combination of columns, it retrieves:
+   - the number of distinct values and the histogram of value frequencies (build the histogram is in O(n.log(n)) ), or
+   - only the number of distinct values
+ - candidate is unique if it contains as many distinct values as there are tuples in the table or if all value frequencies are 1
+
+IDEAS
+ - is it possible to use a pattrn-growth approach instead of a apriori approach to generate the candidates?
+ - is it possible to exploit the prefix-tree structure of Gordian?
+ - is there other pruning rules that can be integrated?
+
+
+= Scharffe =
+RDF data
+a predicate can be multivaluated
+the partition of a set of predicates
+
+_partition for a predicate_: the set of sets of subjects such that the elements of each set have the same image through p
+_partition for a set of predicates_: the set of sets of 
