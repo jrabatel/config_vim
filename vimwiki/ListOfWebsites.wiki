@@ -2,14 +2,20 @@
 
 == Last trends and potential ideas ==
 * design and decoration
+* PNL: programmation neuro linguistique
 
 == Indirect Crowd Sourcing ==
 
 * FindAGift
-  * Users store the people they want to find a gift to
+  * Users store characteristics of the people they want to find a gift to
     * type of relation (parent, sibling, colleague, friend, boyfriend, girlfriend, etc.)
     * hobbies (with tags)
     * date of birth
+  * the service is:
+    * provide suggestions for gifts
+    * send an email for reminding birthday dates, with suggestions
+  * for each suggestion, the user can comment it with 'brilliant idea!', 'potentially a good idea', 'I don't think it is a good idea, but who knows...' or 'really not a good idea!'
+  * if the user has already a vague idea of what could be interesting, he can add some tags to his request (that can be considered as very required or not)
 
 * Meeting website
   * Users save profiles rather than wishes
@@ -21,6 +27,7 @@
   * it is possible to vote for pictures:
     * by adding it as a favourite
     * by labeling it with 'so cute!', 'impressive!', etc.
+  * Do the same for videos?
 
 * CoupDeGueule / CoupdDeCoeur
   * Users can post their 'coup de gueule' and put some references (pictures, link)
@@ -90,7 +97,11 @@
 * DreamJournal
   * follow dreamers
   * suggest similar dreams/dreamers
+  * provice some information about the dreamers
+    * measure of dream reminding quality: integrate the average number of dreams by night + the average length of these dreams
   * tags should be taggable, i.e., a person can be tagged as friend, family, etc.
+  * is it possible in the tags to describe some elements of the dream more precisely?
+    * a dream character can be tagged with 'young', 'angry', etc.
   * various categories of tags:
     * place
     * feelings
@@ -109,6 +120,9 @@
   * Free / Not free hosting providers
   * Think about the search engine
 
+* VideoFinder
+  * Collect links to some (X?) video links (youtube, daily motion, youporn, etc.) and propose to vote, share, etc.
+
 == Resource handling ==
 * MyMangas
   * saving a collection of comics and mangas
@@ -119,6 +133,9 @@
   * users can save their collections of various objects
   * following other people collections
   * manage the possible exchanges of objects (users are localised)
+
+* AmateurPics
+  * users can post their home-made amateur pictures, and put them online and exchange them with other people
 
 == e-commerce ==
 * Artisan

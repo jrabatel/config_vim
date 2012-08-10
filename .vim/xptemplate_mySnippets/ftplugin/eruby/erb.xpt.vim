@@ -26,3 +26,11 @@ XPT < " <% `cursor~ %>
 XPT <= " <%= `cursor~ %>
 <%= `cursor~ %>
 ..XPT
+
+XPT <lt " <%= link_to "text", "link" %>
+<%= link_to "`text~", "`link~"`cursor~ %>
+..XPT
+
+XPT <img " image_tag "img.png", alt: "text"
+image_tag("`img_location~", alt: "`text~")
+..XPT
