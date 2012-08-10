@@ -3,11 +3,12 @@
 == Last trends and potential ideas ==
 * design and decoration
 * PNL: programmation neuro linguistique
+* ecology
 
-== Indirect Crowd Sourcing ==
+== Repositories and Indirect Crowd Sourcing ==
 
 * FindAGift
-  * Users store characteristics of the people they want to find a gift to
+  * Users store characteristics of people they want to find a gift to
     * type of relation (parent, sibling, colleague, friend, boyfriend, girlfriend, etc.)
     * hobbies (with tags)
     * date of birth
@@ -24,6 +25,7 @@
 * PicOfTheDay
   * users propose some pictures and tag them
   * there is a recommender system based on tags
+  * users can have some favourites (see deviantart)
   * it is possible to vote for pictures:
     * by adding it as a favourite
     * by labeling it with 'so cute!', 'impressive!', etc.
@@ -56,6 +58,7 @@
   * users can save a technique for inducing hypnose state
 
 * LucidDreaming
+  * Names: LucidWorld
   * Users can share some resources about lucid dreaming
   * Users can write their objectives of lucid dreams
     * validate them with a date and a comment and a link to the dream
@@ -91,6 +94,7 @@
 * TakeAwayRestaurants
   * Enter and vote for take away restaurants in your neighborhood
   * given an address and some wishes (type of food, etc.), the system can suggest some restaurants
+  * find ways to start it!
 
 * InteractiveStories
 
@@ -111,36 +115,72 @@
   * follow people
   * add images, links
   * What do I like/hate/listen, etc.
+  * After writing a post, see who had had a similar experience --> propose to send a message to him
 
 * LanguageOralUnderstanding
   * put online some mini scenes from DVD with their subtitles, the goal is to help people improving their understanding of languages
-  * with the same idea of exploiting movie subtitles, we can add 
+    * games:
+      * try to write down what has been said: score based on number of correct words
+      * scenes can be tagged
+      * the user can ask for some specific tags
+      * the system should be able to analyse the results and propose some specific exercises
+  * with the same idea of exploiting movie subtitles, we can add different games
+  * users can give some tutorials on various topics: grammar, vocabulary, etc.
+    * tutorials can be linked to some examples
 
 * Hosting Search Engine
   * Free / Not free hosting providers
   * Think about the search engine
 
 * VideoFinder
-  * Collect links to some (X?) video links (youtube, daily motion, youporn, etc.) and propose to vote, share, etc.
+  * Collect links to some video links (youtube, daily motion, etc.) and propose to vote, share, send to friends, etc.
+  * What is the interest?
+    * can keep a list of favorite videos for various sites
+
+* ArtisanRepository
+  * Artisans are referenced and people can vote for/against them
+
+* Practical
+  * propose some practical for students
 
 == Resource handling ==
 * MyMangas
   * saving a collection of comics and mangas
   * ranking the best series
   * recommender system
+  * find some clear advantages to use it!
 
 * Collection
   * users can save their collections of various objects
   * following other people collections
   * manage the possible exchanges of objects (users are localised)
+  * send an invitation to a friend (important at the beginning!)
+  * find some clear advantages to use it!
 
 * AmateurPics
   * users can post their home-made amateur pictures, and put them online and exchange them with other people
+  * find some clear advantages to use it!
+
+== Aggregators ==
+* NewsAggregator
+  * Find news from different news websites and mine them to:
+    * provide some word clouds, trends, etc.
+
+* VideoAggregator
+  * for youtube only first
+  * propose a new perspective on videos by looking at the comments and mining them
+
+* TwitterBasedTrends
+  * with contextual patterns, provide the current new trends, the old ones, etc.
+  * for the very new trends, propose to find news on this (from google news)
+  * propose some geography-based visualisation of trends
+
+* Bookmakers
+  * retrieve informations from online bookmakers?
 
 == e-commerce ==
 * Artisan
   * an e-commerce site dedicated to home-made objects (jewelry, etc.)
-
 
 = Mobile Applications =
 * Hypnose
@@ -153,3 +193,8 @@
   * remind exercices to do
 
 * Recipes
+
+= Topics to exploit =
+* hotels, trips
+* insurances
+* online casinos, games (poker, bets, etc.)
