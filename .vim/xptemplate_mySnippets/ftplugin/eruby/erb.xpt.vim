@@ -19,26 +19,18 @@ XPTinclude
 
 " ================================= Snippets ===================================
 
-XPT hm " has_many
-has_many :`cursor~
-..XPT
-XPT bt " belongs_to
-belongs_to :`cursor~
+XPT < " <% `cursor~ %>
+<% `cursor~ %>
 ..XPT
 
-XPT vac " validates complete
-validates :`attr~, :`crit~ => { :`key~ => `val~ }
+XPT <= " <%= `cursor~ %>
+<%= `cursor~ %>
 ..XPT
 
-XPT va " validates
-validates :`attr~, :`crit~
+XPT <lt " <%= link_to "text", "link" %>
+<%= link_to "`text~", "`link~"`cursor~ %>
 ..XPT
 
-XPT vl " validates length
-validates :`attr~, :length => { :minimum => `0~, :maximum => `100~ }
+XPT <img " image_tag "img.png", alt: "text"
+image_tag("`img_location~", alt: "`text~")
 ..XPT
-
-XPT aac " attr_accessible :
-attr_accessible :`attr~
-..XPT
-

@@ -238,6 +238,12 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_GotoError=0
 
+" Compiling rules to generate pdf from dvi
+let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+
 " Quickly find code markers in a project (should be modified to use vimgrep)
 nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>:redraw!<CR>
 nmap ,todo :silent grep -r '\*\*TODO' **/*<CR>:redraw!<CR>
