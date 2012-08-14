@@ -38,3 +38,45 @@ XPT /t " \t (tabulation)
 XPT /n " \n (new line)
 \n
 ..XPT
+
+" Double characters (without spaces)
+XPT " " "text"
+"`text~"`cursor~
+..XPT
+
+XPT ' " 'text'
+'`text~'`cursor~
+..XPT
+
+XPT ( " (text)
+(`text~)`cursor~
+..XPT
+
+XPT { " {text}
+{`text~}`cursor~
+..XPT
+
+XPT [ " [text]
+[`text~]`cursor~
+..XPT
+
+" Double characters (with spaces)
+XPT "" " " text "
+" `text~ "`cursor~
+..XPT
+
+XPT '' " ' text '
+' `text~ '`cursor~
+..XPT
+
+XPT (( " ( text )
+( `text~ )`cursor~
+..XPT
+
+XPT {{ " { text }
+{ `text~ }`cursor~
+..XPT
+
+XPT [[ " [ text ]
+[ `text~ ]`cursor~
+..XPT

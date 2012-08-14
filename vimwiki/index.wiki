@@ -13,12 +13,10 @@
 
 == Daily TODO ==
 
-Fri Jul 20 09:18:35 CEST 2012
-* [ ] JAK2
-  * [ ] new preprocessing
-  * [ ] new DT and embeddings
-* [ ] Various
-  * [ ] email to Anne
+Tue Aug 14 10:24:01 CEST 2012
+* [ ] Tests with decoys and new interactions
+* [ ] Mail all the group
+
 Thu Jul 19 09:40:22 CEST 2012
 * [X] JAK2
   * [X] Copy data

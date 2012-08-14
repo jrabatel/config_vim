@@ -91,6 +91,7 @@
   * repository of techniques for different purposes: teleportation, change scene, import an object, etc. (users can add these techniques as tags to their dreams, or their goals, and vote for them ('it worked for me!', 'I want to try it! add it to my goals') )
     * induction techniques
     * in-dream techniques
+  * as an example, have a look at 43things.com and information they are providing for the goals
 
 * TakeAwayRestaurants
   * Enter and vote for take away restaurants in your neighborhood
@@ -105,12 +106,21 @@
   * provice some information about the dreamers
     * measure of dream reminding quality: integrate the average number of dreams by night + the average length of these dreams
   * tags should be taggable, i.e., a person can be tagged as friend, family, etc.
+  * it is possible to give some super-tags for a tag: 'father' is a subtag of 'parent' and 'family'; 'dog' is a subtag of 'animal'; 'Larry David' is a subtag of 'celebrity', 'TV', etc.
+  * it is possible to give some equivalent for a tag: 'father' is an equivalent for 'dad'
   * is it possible in the tags to describe some elements of the dream more precisely?
     * a dream character can be tagged with 'young', 'angry', etc.
   * various categories of tags:
     * place
     * feelings
     * DC (dream characters)
+  * How to organize tags?
+    * different categories of tags: places, characters, feelings, actions, objects, etc.
+    * for each category, it is possible to enter several bags of tags, each one corresponding to one entity in the dream
+      * e.g., one dream character can be tagged with
+    * in order to show the interest of it, in the dreamer profile, we can provide:
+      * his most frequent dream characters and what is associated to them (which places, feelings, actions, types of dreams, etc.)
+      * his most frequent places and what is frequently associated to them (which characters, feelings, actions, types of dreams, etc.)
 
 * LifeJournal
   * follow people
