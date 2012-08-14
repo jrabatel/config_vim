@@ -3,7 +3,8 @@
 == Last trends and potential ideas ==
 * design and decoration
 * PNL: programmation neuro linguistique
-* ecology
+* ecology (your tips)
+* yoga and meditation (propose your own tutorial)
 
 == Repositories and Indirect Crowd Sourcing ==
 
