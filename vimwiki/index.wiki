@@ -16,6 +16,7 @@
 Tue Aug 14 10:24:01 CEST 2012
 * [ ] Tests with decoys and new interactions
 * [ ] Mail all the group
+* [X] answer Begijnhof
 
 Thu Jul 19 09:40:22 CEST 2012
 * [X] JAK2
