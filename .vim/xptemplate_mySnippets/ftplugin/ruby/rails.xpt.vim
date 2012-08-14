@@ -34,11 +34,26 @@ XPT va " validates
 validates :`attr~, :`crit~
 ..XPT
 
-XPT vl " validates length
-validates :`attr~, :length => { :minimum => `0~, :maximum => `100~ }
+XPT val " validates length
+validates :`attr~, length: { minimum: `0~, maximum: `100~ }
+..XPT
+
+XPT vap " validates presence
+validates :`attr~, presence: true
+..XPT
+
+XPT vau " validates uniqueness
+validates :`attr~, uniqueness: true
+..XPT
+
+XPT vauc " validates uniqueness, ignoring case
+validates :`attr~, uniqueness: { case_sensitive: false }
 ..XPT
 
 XPT aac " attr_accessible :
 attr_accessible :`attr~
 ..XPT
 
+XPT bef_s " before_save { |obj| code }
+before_save { |`obj~| `cursor~ }
+..XPT
