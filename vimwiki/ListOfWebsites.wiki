@@ -92,6 +92,17 @@
     * induction techniques
     * in-dream techniques
   * as an example, have a look at 43things.com and information they are providing for the goals
+  * users can propose some challenges to other users
+    * users vote and the chosen challenge is kept for everyone
+  * models:
+    * dream
+    * dreamer
+    * tag
+    * method
+      * induction_method
+      * in_dream_method
+    * reality_test
+    * dream_objective
 
 * TakeAwayRestaurants
   * Enter and vote for take away restaurants in your neighborhood
