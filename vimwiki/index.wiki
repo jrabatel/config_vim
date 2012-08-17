@@ -13,26 +13,40 @@
 
 == Daily TODO ==
 
+Fri Aug 17 10:08:44 CEST 2012
+* [.] JAK2
+  * [o] Test the conformation scores
+    * [X] test current implementation
+      * [X] test with it
+      * [X] test without it
+    * [ ] test a selection of best conformations only (in preprocessing)?
+  * [o] Test protein/ligand interaction labels
+    * [X] without labels
+    * [X] with 2 types of interaction type labels
+    * [ ] with anchorAtomId
+  * [ ] Go and look for administrative documents in mailbox
+  * [ ] send by email the planning
+
 Thu Aug 16 09:02:45 CEST 2012
-* [ ] Send email with planning (Madalina)
+* [X] Write planning (Madalina)
 * [X] Send file with ECAI newsletter (Madalina)
 * [X] Meeting Jan
 * [X] Call Les Doges
 * [X] Mail to Groot Begijnhof
 * [X] send Jan the lipophilicity rules and some papers about decoys
 * [o] JAK2
-  * [.] use conformation score as test
+  * [X] use conformation score as test
     * [X] put score in database (preprocess and db reading)
-    * [ ] create new label?
-    * [ ] test it
+    * [X] create new label?
+    * [X] test it
   * [X] write table with scores and conformations and IC50
     * [X] in preprocessing
   * [ ] test different label sets (protein/ligand interactions)
     * [ ] how to use old labels?
 * [X] write dr
-* [ ] send email Bruno
-  * [ ] ask for skype meeting
-  * [ ] departure date
+* [X] send email Bruno
+  * [X] ask for skype meeting
+  * [X] departure date
 
 Tue Aug 14 10:24:01 CEST 2012
 * [ ] Tests with decoys and new interactions

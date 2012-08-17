@@ -91,6 +91,8 @@ nmap ,<C-e> :setlocal spell spelllang=en<CR>
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbarautoclose = 0
 
+" Quickly remove other buffers
+nmap ,bufo :Bufonly<CR>
 
 nmap <silent> <C-F11> :NERDTreeToggle<CR>
 nmap <silent> ,nn :NERDTreeToggle<CR>
