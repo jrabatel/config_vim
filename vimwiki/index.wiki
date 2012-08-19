@@ -14,18 +14,25 @@
 == Daily TODO ==
 
 Fri Aug 17 10:08:44 CEST 2012
-* [.] JAK2
-  * [o] Test the conformation scores
+* [o] JAK2
+  * [X] Test the conformation scores
     * [X] test current implementation
       * [X] test with it
       * [X] test without it
-    * [ ] test a selection of best conformations only (in preprocessing)?
+    * [X] test a selection of best conformations only (in preprocessing)?
   * [o] Test protein/ligand interaction labels
     * [X] without labels
     * [X] with 2 types of interaction type labels
-    * [ ] with anchorAtomId
+  * [X] Meeting with Jan
+    * [X] xls file with RMSE and ROC score for different experiments
+      * [X] with / without conformation score tests
+      * [X] top1 / top5 / all conformations
+      * [X] with / without interaction labels
+        * [X] without
+        * [X] with interaction type labels
+    * [X] file with conformation scores
+      * [X] add header
   * [ ] Go and look for administrative documents in mailbox
-  * [ ] send by email the planning
 
 Thu Aug 16 09:02:45 CEST 2012
 * [X] Write planning (Madalina)
