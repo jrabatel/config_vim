@@ -13,14 +13,24 @@
 
 == Daily TODO ==
 
+Mon Aug 20 08:57:26 CEST 2012
+* [ ] Add bond edges
+  * [ ] in the form of new edge label?
+  * [ ] in the form of new vertex label?
+* [ ] Convert dataset from Jan
+  * [ ] to sdf file
+* [ ] Answer Bertrand's email
+* [ ] Send an email to Jan for meeting tomorrow with Bertrand and Bruno
+* [X] Send planning to Madalina and me today
+
 Fri Aug 17 10:08:44 CEST 2012
-* [o] JAK2
+* [X] JAK2
   * [X] Test the conformation scores
     * [X] test current implementation
       * [X] test with it
       * [X] test without it
     * [X] test a selection of best conformations only (in preprocessing)?
-  * [o] Test protein/ligand interaction labels
+  * [X] Test protein/ligand interaction labels
     * [X] without labels
     * [X] with 2 types of interaction type labels
   * [X] Meeting with Jan
@@ -32,7 +42,7 @@ Fri Aug 17 10:08:44 CEST 2012
         * [X] with interaction type labels
     * [X] file with conformation scores
       * [X] add header
-  * [ ] Go and look for administrative documents in mailbox
+  * [X] Go and look for administrative documents in mailbox
 
 Thu Aug 16 09:02:45 CEST 2012
 * [X] Write planning (Madalina)
