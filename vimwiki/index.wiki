@@ -14,7 +14,7 @@
 == Daily TODO ==
 
 Fri Aug 17 10:08:44 CEST 2012
-* [o] JAK2
+* [O] JAK2
   * [X] Test the conformation scores
     * [X] test current implementation
       * [X] test with it
@@ -32,7 +32,7 @@ Fri Aug 17 10:08:44 CEST 2012
         * [X] with interaction type labels
     * [X] file with conformation scores
       * [X] add header
-  * [ ] Go and look for administrative documents in mailbox
+  * [X] Go and look for administrative documents in mailbox
 
 Thu Aug 16 09:02:45 CEST 2012
 * [X] Write planning (Madalina)
