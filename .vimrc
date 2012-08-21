@@ -35,12 +35,17 @@ set t_Co=256
 
 " Mapping to open vimrc config file
 nmap ,vim :edit ~/.vimrc<CR>
+" Mapping to open wikifiles
+nmap ,wjdr :edit ~/vimwiki/JDR.wiki<CR>
+nmap ,wsit :edit ~/vimwiki/ListOfWebsites.wiki<CR>
 
 " MAKE
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
-nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
+" nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
+nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
 nnoremap ,makbj :silent make -B -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
+nnoremap ,makbo :silent make -B -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -72,8 +77,8 @@ nmap ,O O<Esc>j
 
 
 " Search for the selected text in Google or Wikipedia
-vmap ,g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
-vmap ,w :<C-U>!firefox "http://fr.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
+" vmap ,g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
+" vmap ,w :<C-U>!firefox "http://fr.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
 
  "Mapping for xptemplate autocompletion
  ""imap <C-m> <C-\><CR>

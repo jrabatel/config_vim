@@ -13,15 +13,24 @@
 
 == Daily TODO ==
 
+Tue Aug 21 08:10:00 CEST 2012
+* [X] Test Mutag dataset
+  * [X] Convert dataset from Jan
+  * [X] Run DT learner on it
+* [X] Prepare Skype meeting
+* [X] Skype Meeting
+* [X] Send an email to Jan for meeting tomorrow with Bertrand and Bruno
+* [ ] Send planning to Madalina and me today
+* [X] vim date shortcut ,D : propose other formats
+
 Mon Aug 20 08:57:26 CEST 2012
-* [ ] Add bond edges
-  * [ ] in the form of new edge label?
-  * [ ] in the form of new vertex label?
-* [ ] Convert dataset from Jan
-  * [ ] to sdf file
-* [ ] Answer Bertrand's email
-* [ ] Send an email to Jan for meeting tomorrow with Bertrand and Bruno
-* [X] Send planning to Madalina and me today
+* [X] Add bond edges
+  * [X] in the form of new edge label
+    * [X] copy ExternalInDistance
+  * [X] implement the pattern matcher operator
+    * [X] are two atoms bonded in a conformation?
+      * [X] for each conformation, 
+* [X] Answer Bertrand's email
 
 Fri Aug 17 10:08:44 CEST 2012
 * [X] JAK2

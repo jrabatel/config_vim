@@ -60,6 +60,10 @@ XPT [ " [text]
 [`text~]`cursor~
 ..XPT
 
+XPT | " |text|
+|`text~|`cursor~
+..XPT
+
 " Double characters (with spaces)
 XPT "" " " text "
 " `text~ "`cursor~
@@ -79,4 +83,8 @@ XPT {{ " { text }
 
 XPT [[ " [ text ]
 [ `text~ ]`cursor~
+..XPT
+
+XPT || " | text |
+| `text~ |`cursor~
 ..XPT
