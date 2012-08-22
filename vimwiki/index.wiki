@@ -13,6 +13,20 @@
 
 == Daily TODO ==
 
+2012-08-22 Wed 10:00:04 CEST
+* [X] Jak2
+  * [X] add internal bond refiner
+  * [X] check conformation distance list option: why does it lead to a segmentation fault?
+  * [X] test interaction labels with 2-step refiner and without bond refiners (running on pinac28)
+* [X] Key discovery
+  * [X] Add references to planning
+  * [X] Send planning to Madalina and me today
+  * [X] download François's code
+* [o] General
+  * [X] write dr
+  * [X] change date format for todo wiki
+  * [ ] progress on RoR tutorial
+
 Tue Aug 21 08:10:00 CEST 2012
 * [X] Test Mutag dataset
   * [X] Convert dataset from Jan
@@ -20,7 +34,6 @@ Tue Aug 21 08:10:00 CEST 2012
 * [X] Prepare Skype meeting
 * [X] Skype Meeting
 * [X] Send an email to Jan for meeting tomorrow with Bertrand and Bruno
-* [ ] Send planning to Madalina and me today
 * [X] vim date shortcut ,D : propose other formats
 
 Mon Aug 20 08:57:26 CEST 2012

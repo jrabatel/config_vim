@@ -336,6 +336,10 @@ XPT ref " ref{..}
 \ref{`cursor~}
 ..XPT
 
+XPT cite " cite{..}
+\cite{`cursor~}
+..XPT
+
 XPT integral " int_..^..
 \int_`begin~^`end~{`cursor~}
 ..XPT
