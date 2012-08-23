@@ -13,6 +13,21 @@
 
 == Daily TODO ==
 
+2012-08-23 Thu 09:51:07 CEST
+* [o] Jak2
+  * [X] find papers using muta dataset
+  * [X] write them into a list and make an archive
+  * [X] find DT-based approaches using muta datasets
+  * [X] run DT learner with classification threshold
+  * [ ] add the bond type to the bond refiners
+* [o] Key Discovery
+  * [X] index datasets with Jena
+  * [X] run algorithm
+  * [ ] partially read CIKM 2011 paper
+* [o] General
+  * [X] write dr
+  * [ ] progress on RoR tutorial
+
 2012-08-22 Wed 10:00:04 CEST
 * [X] Jak2
   * [X] add internal bond refiner
@@ -25,7 +40,6 @@
 * [o] General
   * [X] write dr
   * [X] change date format for todo wiki
-  * [ ] progress on RoR tutorial
 
 Tue Aug 21 08:10:00 CEST 2012
 * [X] Test Mutag dataset

@@ -189,9 +189,10 @@ nmap ,c gcc
 " allows quick indenting of a ling or a selected bloc (does not work
 " correctly)
 imap ,;= <Esc>==
-" allows quick motions between tabs (in minibufexpl)
+" allows quick motions between buffers
 nmap ,l :bn<CR>
 nmap ,k :bp<CR>
+nmap ,j :e#<CR>
 " allows removing the highlighted matchings
 nmap ,noh :nohls<CR>
 " allows redrawing the screen
