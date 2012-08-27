@@ -37,7 +37,7 @@ set t_Co=256
 nmap ,vim :edit ~/.vimrc<CR>
 " Mapping to open wikifiles
 nmap ,wjdr :edit ~/vimwiki/JDR.wiki<CR>
-nmap ,wsit :edit ~/vimwiki/ListOfWebsites.wiki<CR>
+nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki<CR>
 
 " MAKE
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
@@ -136,8 +136,8 @@ nmap ,FFw :silent grep! -R <cword> %:p:h/*<CR>:redraw!<CR>
 nmap ,FW :silent grep! -w -R <cword> *<CR>:redraw!<CR>
 nmap ,FFW :silent grep! -w -R <cword> %:p:h/*<CR>:redraw!<CR>
 " run a grep search in the whole source directory
-nmap ,grep :grep -r '' **/*<Left><Left><Left><Left><Left><Left>
-nmap ,agrep :grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
+nmap ,grep :silent grep -r '' **/*<Left><Left><Left><Left><Left><Left>
+nmap ,agrep :silent grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
 
 " search and replace in a line or in a file
 nmap ,repl :s```g<Left><Left><Left>
@@ -173,10 +173,10 @@ noremap ,rr :e<CR>
 " exit insert mode and undo last change
 imap ,: <Esc>u
 " allows motions in insert mode
-inoremap <h <C-o>h
-inoremap <j <C-o>j
-inoremap <k <C-o>k
-inoremap <l <C-o>l
+" inoremap <h <C-o>h
+" inoremap <j <C-o>j
+" inoremap <k <C-o>k
+" inoremap <l <C-o>l
 inoremap ,e <C-o>e
 inoremap ,w <C-o>w
 inoremap ,b <C-o>b
@@ -338,7 +338,7 @@ let g:xptemplate_key = '<C-k>'
 let g:xptemplate_nav_cancel = '<C-d>'
 " "
 " " Move to the next placeholder in a snippet:
-let g:xptemplate_nav_next = '<C-k>'
+let g:xptemplate_nav_next = '<C-l>'
 " "
 " " Go to the end of the current placeholder and in to insert mode:
 " " <C-_> is actually CONTROL-/ on my keyboard.

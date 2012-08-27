@@ -28,7 +28,7 @@ XPT <= " <%= `cursor~ %>
 ..XPT
 
 XPT <lt " <%= link_to "text", "link" %>
-<%= link_to "`text~", "`link~"`cursor~ %>
+<%= link_to "`text~", `link~ %>
 ..XPT
 
 XPT <img " image_tag "img.png", alt: "text"
@@ -38,3 +38,22 @@ image_tag("`img_location~", alt: "`text~")
 XPT <p " <% provide (:var, 'value') %>
 <% provide (:`var~, '`value~') %>
 ..XPT
+
+" ===== Forms
+XPT form " form_for @model do ...
+<%= form_for(@`model~) do |f| %>
+  <%= render 'shared/error_messages' %>
+  `cursor~
+<% end %>
+..XPT
+
+XPT ff " form field
+XSET type=Choose(['text_field','input','password_field'])
+<%= f.label :`attr~ %>
+<%= f.`type~ :`attr~ %>
+..XPT
+
+XPT fsub " form submit field
+<%= f.submit "`attr~" %>
+..XPT
+

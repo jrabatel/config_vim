@@ -48,3 +48,11 @@ def `method~
 `cursor~
 end
 ..XPT
+
+XPT ++ " += 1
+ += 1
+..XPT
+
+XPT -- " -= 1
+ -= 1
+..XPT

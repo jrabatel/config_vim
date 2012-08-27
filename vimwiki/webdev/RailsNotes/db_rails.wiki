@@ -1,0 +1,2 @@
+=== reset the db (chapter 7)
+bundle exec rake db:reset

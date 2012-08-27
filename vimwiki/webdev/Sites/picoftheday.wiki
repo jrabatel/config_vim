@@ -1,0 +1,12 @@
+= Main Tasks =
+* [ ] Galery
+* [ ] Image (or document?)
+
+* [ ] User
+  * [ ] Devise
+  * [ ] CanCan
+  * [ ] Additional information
+
+* [ ] Tag
+* [ ] Favourite
+* [ ] Followers

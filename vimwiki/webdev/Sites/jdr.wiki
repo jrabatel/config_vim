@@ -1,0 +1,54 @@
+= Main Tasks =
+* [o] Dream
+  * [X] Model
+    * [X] title
+    * [X] dream_date
+    * [X] public_description
+    * [X] public_comment
+    * [X] private_description
+    * [X] private_comment
+    * [X] privacy_state (public, anonymous, private)
+    * [ ] belongs_to user
+  * [ ] Controllers and views
+
+* [ ] User
+  * [ ] Devise
+  * [ ] CanCan
+  * [ ] Additional information
+    * [ ] birth_date
+    * [ ] country
+    * [ ] gender
+    * [ ] ...?
+  * [ ] has_many user
+
+* [ ] Logs
+  * [ ] ip, date
+
+* [ ] Dream Search Engine
+* [ ] Tags
+  * [ ] short_description
+  * [ ] long_description
+  * [ ] images
+
+* [ ] Images
+  * [ ] upload
+    * [ ] from file
+    * [ ] from url
+    * [ ] from existing image
+  * [ ] link to dreams or tags (or whatever)
+  * [ ] search images for a new dream, image or whatever
+
+* [ ] Comments
+  * [ ] polymorphic relation
+  * [ ] to Dream
+
+* [ ] Favourites
+  * [ ] polymorphic relation
+
+* [ ] Statistics
+  * [ ] dream recall over time
+  * [ ] dream number over time
+  * [ ] tag-dream number over time
+
+* [ ] Followers
+* [ ] RSS Feeds

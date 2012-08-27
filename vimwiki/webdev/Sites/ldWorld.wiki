@@ -1,0 +1,22 @@
+= Main Tasks =
+* [ ] Dream
+  * [ ] take for jdr
+
+* [ ] User
+  * [ ] Devise
+  * [ ] CanCan
+  * [ ] Additional information
+
+* [ ] Goal
+  * [ ] goal_specialisation_order (act_as_tree gem?)
+  * [ ] goal_followers
+  * [ ] goal_examples
+
+* [ ] Technique
+  * [ ] technique_followers
+  * [ ] technique_examples
+  * [ ] technique_experiment_report
+
+* [ ] Tutorial
+  * [ ] tutorial_followers
+  * [ ] tutorial_requests
