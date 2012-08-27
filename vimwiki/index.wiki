@@ -13,22 +13,32 @@
 
 == Daily TODO ==
 
+2012-08-27 Mon 09:13:19 CEST
+* [X] Jak2
+  * [X] finish the implementation of the bond type in bond refiners
+  * [ ] start implementation of new test generator
+    * [ ] generate individual vertices
+      * [ ] generate extension
+      * [ ] keep frequent ones
+* [ ] Key Discovery
+  * [ ] print CIKM 2011 paper
+  * [ ] read CIKM 2011 paper
+* [X] General
+  * [X] write dr
+  * [ ] print train tickets
+
 2012-08-24 Fri 09:20:05 CEST
-* [.] Jak2
-  * [o] run experiments
+* [X] Jak2
+  * [X] run experiments
     * [X] without atom typing --> cannot grow a DT with that!
     * [X] with atom typing
-    * [ ] report results
-  * [ ] send email to everyone
-  * [ ] finish the implementation of the bond type in bond refiners
-* [ ] Key Discovery
-  * [ ] partially read CIKM 2011 paper
-  * [ ] have a look at François's code
-* [.] General
+    * [X] report results
+  * [X] send email to everyone
+* [X] General
   * [X] write dr
-  * [ ] progress on RoR tutorial
-  * [ ] think about structure of RoR models
-  * [ ] train tickets Leuven-Caen
+  * [X] progress on RoR tutorial
+  * [X] think about structure of RoR models
+  * [X] train tickets Leuven-Caen
 
 2012-08-23 Thu 09:51:07 CEST
 * [X] Jak2
@@ -36,7 +46,7 @@
   * [X] write them into a list and make an archive
   * [X] find DT-based approaches using muta datasets
   * [X] run DT learner with classification threshold
-* [o] Key Discovery
+* [X] Key Discovery
   * [X] index datasets with Jena
   * [X] run algorithm
 * [X] General
@@ -51,7 +61,7 @@
   * [X] Add references to planning
   * [X] Send planning to Madalina and me today
   * [X] download François's code
-* [o] General
+* [X] General
   * [X] write dr
   * [X] change date format for todo wiki
 

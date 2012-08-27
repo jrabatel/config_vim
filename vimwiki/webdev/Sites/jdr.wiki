@@ -8,18 +8,20 @@
     * [X] private_description
     * [X] private_comment
     * [X] privacy_state (public, anonymous, private)
-    * [ ] belongs_to user
+    * [X] belongs_to user
+    * [ ] has_many comments polymorphic
   * [ ] Controllers and views
 
-* [ ] User
-  * [ ] Devise
+* [o] User
+  * [X] Devise
   * [ ] CanCan
   * [ ] Additional information
     * [ ] birth_date
     * [ ] country
     * [ ] gender
+    * [ ] description
     * [ ] ...?
-  * [ ] has_many user
+  * [X] has_many users
 
 * [ ] Logs
   * [ ] ip, date
@@ -31,11 +33,16 @@
   * [ ] images
 
 * [ ] Images
+  * [ ] Model
+    * [ ] path
+    * [ ] description
+    * [ ] owner
+    * [ ] privacy_state
   * [ ] upload
     * [ ] from file
     * [ ] from url
     * [ ] from existing image
-  * [ ] link to dreams or tags (or whatever)
+  * [ ] link to dreams or tags (polymorphic)
   * [ ] search images for a new dream, image or whatever
 
 * [ ] Comments
@@ -50,5 +57,6 @@
   * [ ] dream number over time
   * [ ] tag-dream number over time
 
+* [ ] Interpretation
 * [ ] Followers
 * [ ] RSS Feeds
