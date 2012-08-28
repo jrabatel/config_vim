@@ -15,6 +15,9 @@
 * [o] User
   * [X] Devise
   * [ ] CanCan
+    * [ ] installation
+    * [ ] dreams
+    * [ ] comments
   * [ ] Additional information
     * [ ] birth_date
     * [ ] country
@@ -38,6 +41,7 @@
     * [ ] description
     * [ ] owner
     * [ ] privacy_state
+    * [ ] source
   * [ ] upload
     * [ ] from file
     * [ ] from url
@@ -48,6 +52,12 @@
 * [ ] Comments
   * [ ] polymorphic relation
   * [ ] to Dream
+  * [ ] like, dislike
+
+* [ ] Rating
+  * [ ] polymorphic relation
+  * [ ] to Dream
+  * [ ] to Images
 
 * [ ] Favourites
   * [ ] polymorphic relation
@@ -58,5 +68,6 @@
   * [ ] tag-dream number over time
 
 * [ ] Interpretation
+* [ ] LifeEvent (an important event in a dreamer's life, to see its impact on dreams)
 * [ ] Followers
 * [ ] RSS Feeds
