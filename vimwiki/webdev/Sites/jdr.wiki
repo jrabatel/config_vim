@@ -14,8 +14,8 @@
 
 * [o] User
   * [X] Devise
-  * [ ] CanCan
-    * [ ] installation
+  * [.] CanCan
+    * [X] installation
     * [ ] dreams
     * [ ] comments
   * [ ] Additional information
@@ -28,12 +28,28 @@
 
 * [ ] Logs
   * [ ] ip, date
+  * [ ] dream readings
+  * [ ] search queries
 
 * [ ] Dream Search Engine
+  * [ ] Simple
+    * [ ] contains text
+    * [ ] author
+    * [ ] ordered by
+  * [ ] Complex
+    * [ ] automatic solutions, see railscast
 * [ ] Tags
-  * [ ] short_description
+  * [ ] short_description / title
   * [ ] long_description
   * [ ] images
+  * [ ] super_tags
+  * [ ] sub_tags (implicit?)
+  * [ ] related_tags?
+  * [ ] synonyms? antonyms?
+  * [ ] triggers? (i.e., expressions or words in dreams that can trigger this tag)
+* [ ] TagOccurrence
+  * [ ] category (i.e., character, feeling, place, etc.)
+  * [ ] dream
 
 * [ ] Images
   * [ ] Model

@@ -13,19 +13,34 @@
 
 == Daily TODO ==
 
-2012-08-27 Mon 09:13:19 CEST
-* [X] Jak2
-  * [X] finish the implementation of the bond type in bond refiners
+28/08/2012
+* [o] Jak2
+  * [X] send xls file with background knowledge
+  * [ ] implement a new version of the bond-refiners
+    * [ ] a test is a combination of edge and a new vertex label
   * [ ] start implementation of new test generator
     * [ ] generate individual vertices
       * [ ] generate extension
       * [ ] keep frequent ones
-* [ ] Key Discovery
-  * [ ] print CIKM 2011 paper
+  * [X] Skype meeting
+    * [X] summary
+      * [X] report sent on Friday
+      * [X] added the bond type
+    * [X] report
+    * [X] answer Bruno's email
+  * [o] General
+    * [X] write dr
+    * [ ] call residence in Caen
+
+2012-08-27 Mon 09:13:19 CEST
+* [o] Jak2
+  * [X] finish the implementation of the bond type in bond refiners
+* [o] Key Discovery
+  * [X] print CIKM 2011 paper
   * [ ] read CIKM 2011 paper
 * [X] General
   * [X] write dr
-  * [ ] print train tickets
+  * [X] print train tickets
 
 2012-08-24 Fri 09:20:05 CEST
 * [X] Jak2
