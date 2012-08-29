@@ -57,3 +57,19 @@ attr_accessible :`attr~
 XPT bef_s " before_save { |obj| code }
 before_save { |`obj~| `cursor~ }
 ..XPT
+
+XPT red " redirect_to path
+redirect_to `cursor~
+..XPT
+
+XPT red_e " redirect_to path, error: "Message"
+redirect_to `path~, error: "`cursor~"
+..XPT
+XPT red_n " redirect_to path, notice: "Message"
+redirect_to `path~, notice: "`cursor~"
+..XPT
+XPT red_s " redirect_to path, success: "Message"
+flash[:notice] = "`message~"
+redirect_to `path~
+..XPT
+
