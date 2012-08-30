@@ -13,6 +13,14 @@
 
 == Daily TODO ==
 
+2012-08-30 Thu 11:57:19 CEST
+* [o] Jak2
+  * [X] have lumo and logp tests working
+  * [X] debug the new refinement type
+  * [ ] run tests with chemical features and random forest for mutagenesis data
+* [ ] Administration
+  * [ ] call Les Doges for a rendez-vous
+
 28/08/2012
 * [o] Jak2
   * [X] send xls file with background knowledge
