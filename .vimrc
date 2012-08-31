@@ -376,6 +376,29 @@ let g:clang_complete_macros     = 1
 
 let g:session_autoload = 'no'
 
+" FOR EASYMOTIONS
+nmap f <leader><leader>f
+nmap F <leader><leader>F
+nmap w <leader><leader>w
+nmap W <leader><leader>W
+nmap b <leader><leader>b
+nmap B <leader><leader>B
+nmap e <leader><leader>e
+nmap E <leader><leader>E
+
+vmap f <leader><leader>f
+vmap F <leader><leader>F
+vmap w <leader><leader>w
+vmap W <leader><leader>W
+vmap b <leader><leader>b
+vmap B <leader><leader>B
+vmap e <leader><leader>e
+vmap E <leader><leader>E
+
+" FOR SPLITJOIN
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
+
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
