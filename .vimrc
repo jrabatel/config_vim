@@ -386,14 +386,17 @@ nmap B <leader><leader>B
 nmap e <leader><leader>e
 nmap E <leader><leader>E
 
-vmap f <leader><leader>f
-vmap F <leader><leader>F
-vmap w <leader><leader>w
-vmap W <leader><leader>W
-vmap b <leader><leader>b
-vmap B <leader><leader>B
-vmap e <leader><leader>e
-vmap E <leader><leader>E
+" Mappings for visual mode (below) are commented because they do not seem to be
+" compatible with xptemplate
+
+" vnoremap f <leader><leader>f
+" vnoremap F <leader><leader>F
+" vnoremap w <leader><leader>w
+" vnoremap W <leader><leader>W
+" vnoremap b <leader><leader>b
+" vnoremap B <leader><leader>B
+" vnoremap e <leader><leader>e
+" vnoremap E <leader><leader>E
 
 " FOR SPLITJOIN
 nmap sj :SplitjoinSplit<cr>
@@ -402,5 +405,6 @@ nmap sk :SplitjoinJoin<cr>
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
-nmap ,rdbm :!bundle exec rake db:migrate<CR>
+nmap ,rdbm :!rake db:migrate<CR>
+nmap ,rdbs :!rake db:seed<CR>
 nmap ,rc :!rails console<CR>

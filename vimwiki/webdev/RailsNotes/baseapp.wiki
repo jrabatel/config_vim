@@ -1,0 +1,40 @@
+Initial gems
+* devise
+* cancan
+* bootstrap (which one?)
+* rails_admin
+* annotate
+* will_paginate
+* bootstrap-will_paginate
+* bootstrap-sass
+* jquery-rails
+* formtastic?
+
+Create a generator
+* insert devise, cancan, bootstrap and install
+* will_paginate and bootstrap-will_paginate
+* annotate
+* rails_admin seed
+  * create one admin user
+  * create one non-admin user
+* views and actions for users
+* add partials for
+  * header
+  * footer
+  * side_bar (optional)
+  * static_pages
+* announcements and news (posts)
+* (annotate the models)
+* authorization and reforwarding for:
+  * users actions
+
+* how to generate a scaffold with
+  * model
+  * view
+  * controllers
+
+options:
+* devise: mail, username?
+* which static_pages to install? home, help, about, contact, etc.
+* global layout is fluid or fixed?
+* need comments? tags? images? other uploads?

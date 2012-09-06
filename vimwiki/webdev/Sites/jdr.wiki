@@ -10,7 +10,16 @@
     * [X] privacy_state (public, anonymous, private)
     * [X] belongs_to user
     * [ ] has_many comments polymorphic
+    * [ ] Views
+      * [ ] forms as a partial (for new and update)
+      * [ ] _dream partial for lists (title, date, length, dreamer, tags...)
+      * [ ] _dream_links partial (update and destroy)
   * [ ] Controllers and views
+  * [ ] authorisation and reforwarding
+  * [ ] Actions on dreams?
+    * [ ] like
+    * [ ] in my favourites
+    * [ ] share on facebook, twitter, google+
 
 * [o] User
   * [X] Devise
@@ -18,26 +27,34 @@
     * [X] installation
     * [ ] dreams
     * [ ] comments
-  * [ ] Additional information
+  * [ ] _user partial for lists (username, nb of dreams, dream_measure, frequent tags, ...)
+  * [ ] Additional information (age, country and gender should be public)
     * [ ] birth_date
     * [ ] country
     * [ ] gender
     * [ ] description
     * [ ] ...?
-  * [X] has_many users
+  * [X] has_many dreams
+  * [ ] Profile
+    * [ ] list of my dreams
+    * [ ] dream feed
+  * [ ] Actions
+    * [ ] follow him
 
 * [ ] Logs
   * [ ] ip, date
   * [ ] dream readings
   * [ ] search queries
+  * [ ] links' usages should be loggable
 
 * [ ] Dream Search Engine
   * [ ] Simple
-    * [ ] contains text
+    * [ ] contains text (full text)
     * [ ] author
     * [ ] ordered by
   * [ ] Complex
     * [ ] automatic solutions, see railscast
+    * [ ] contains tag(s)
 * [ ] Tags
   * [ ] short_description / title
   * [ ] long_description
@@ -47,9 +64,11 @@
   * [ ] related_tags?
   * [ ] synonyms? antonyms?
   * [ ] triggers? (i.e., expressions or words in dreams that can trigger this tag)
+  * [ ] controllers
 * [ ] TagOccurrence
   * [ ] category (i.e., character, feeling, place, etc.)
   * [ ] dream
+  * [ ] place
 
 * [ ] Images
   * [ ] Model
