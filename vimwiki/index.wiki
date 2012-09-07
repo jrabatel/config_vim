@@ -13,19 +13,25 @@
 
 == Daily TODO ==
 
+2012-09-07 ven. 08:51:41 CEST
+* [ ] Jak2
+  * [ ] copy data from kuleuven
+  * [ ] write and send meeting report
+  * [ ] tests on mutagenesis data (simple patterns and their real support)
+
 2012-09-06 jeu. 13:31:22 CEST
-* [o] GREYC installation
+* [X] GREYC installation
   * [X] install vim config
   * [X] install ssh config
   * [X] install tmux
-  * [ ] install openvpn (KULeuven)
-  * [ ] install mips code
-  * [ ] install jak2 code
-  * [ ] copy data
-* [o] Jak2
+  * [X] install mips code
+    * [X] source
+    * [X] build for mips
+  * [X] install jak2 code
+    * [X] source
+    * [X] build for jak2
+* [X] Jak2
   * [X] meeting with Ronan
-  * [ ] write and send meeting report
-  * [ ] tests on mutagenesis data (simple patterns and their real support)
 
 2012-08-30 Thu 11:57:19 CEST
 * [X] Jak2
