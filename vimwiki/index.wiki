@@ -14,13 +14,13 @@
 == Daily TODO ==
 
 2012-09-06 jeu. 13:31:22 CEST
-* [o] GREYC installation
+* [O] GREYC installation
   * [X] install vim config
   * [X] install ssh config
   * [X] install tmux
   * [ ] install openvpn (KULeuven)
-  * [ ] install mips code
-  * [ ] install jak2 code
+  * [X] install mips code
+  * [X] install jak2 code
   * [ ] copy data
 * [o] Jak2
   * [X] meeting with Ronan
