@@ -12,12 +12,24 @@
 [[Various]]
 
 == Daily TODO ==
+  * [ ] tests on mutagenesis data (simple patterns and their real support)
+  * [ ] run tests on other datasets (Mohr et al.)
+  * [ ] before leaving: install mips and jak2 on laptop!!!
 
 2012-09-07 ven. 08:51:41 CEST
-* [ ] Jak2
-  * [ ] copy data from kuleuven
+* [o] Jak2
+  * [X] copy data from kuleuven
+  * [X] copy datasets in the jak2 build directory
+  * [X] copy openbabel
+    * [X] source
+    * [X] build
   * [ ] write and send meeting report
-  * [ ] tests on mutagenesis data (simple patterns and their real support)
+  * [X] debug the edge and vertex refiner
+* [O] General
+  * [X] write dr
+  * [X] add -h to ll alias
+  * [X] add git config to general_config
+  * [X] print bus timetables for the sea
 
 2012-09-06 jeu. 13:31:22 CEST
 * [X] GREYC installation
