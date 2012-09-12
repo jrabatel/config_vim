@@ -20,6 +20,11 @@
     * [ ] like
     * [ ] in my favourites
     * [ ] share on facebook, twitter, google+
+  * [ ] New and Edit
+    * [ ] title should not be blank
+    * [ ] content should not be blank
+  * [ ] Show
+    * [ ] should be followable (the dream or the dreamer)
 
 * [o] User
   * [X] Devise
@@ -96,6 +101,8 @@
 
 * [ ] Favourites
   * [ ] polymorphic relation
+  * [ ] user -> user (follow, followed) ajax
+  * [ ] user -> dream (favorites) ajax
 
 * [ ] Statistics
   * [ ] dream recall over time

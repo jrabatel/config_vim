@@ -12,20 +12,78 @@
 [[Various]]
 
 == Daily TODO ==
-  * [ ] tests on mutagenesis data (simple patterns and their real support)
-  * [ ] run tests on other datasets (Mohr et al.)
-  * [ ] before leaving: install mips and jak2 on laptop!!!
+* [ ] Jak2
+  * [ ] push new version of jak2 and mips
+  * [ ] pull jak2 and mips before running experiments in KULeuven
+  * [ ] update mips remote branch (warning: in the local version of mips, I removed the trypsin example => checkout)
+  * [ ] work on bond refiner
+  * [ ] experiments
+    * [ ] test new bond refiners on Mohr's datasets
+    * [ ] redo experiments on random forests (the decision strategy was wrong in the previous ones)
+
+2012-09-12 Wed 09:09:58 CEST
+* [o] Jak2
+  * [X] answer Bruno's email
+  * [X] add new bond-refiners: one for each atom typing label
+  * [X] re-generate data for Mohr's datasets
+  * [X] write ruby script to generate settings for experiments
+  * [ ] generate the experiments settings
+* [o] KD
+  * [ ] work on KD implementation
+  * [X] structure of the code
+  * [X] read paper HCA
+* [X] General
+  * [X] call m
+  * [X] write dr
+  * [X] take train tickets
+
+2012-09-11 mar. 08:33:07 CEST
+* [X] Jak2
+  * [X] Have openbabel_preprocessing running on local machine
+  * [X] Run tests with Mohr's datasets and 2-step refiner
+  * [X] Re-run with random forests
+    * [X] Mutagenesis (warning: should display the classification results)
+    * [X] Mohr's datasets
+  * [X] Send meeting report with Ronan
+  * [X] Write skype meeting report
+* [X] Stimulation of patterns
+  * [X] ask Bertrand for Ryan's implementation
+* [X] Install jak2 on KULeuven disk space
+* [X] Install mips on KULeuven disk space
+* [X] Install openbabel on KULeuven disk space
+* [X] Install openbabel_preprocessing  on KULeuven disk space
+* [X] Install tmux on KULeuven disk space
+* [X] General
+  * [X] write dr
+  * [X] print Madalina's work
+  * [X] add global variables to configuration
+    * [X] $ruby
+    * [X] $java
+
+2012-09-10 lun. 07:55:58 CEST
+* [X] Jak2
+  * [X] Experiments
+    * [X] tests on mutagenesis data (simple patterns and their real support)
+    * [X] run tests on other datasets (Mohr et al.)
+    * [X] run tests on Jak2
+    * [X] start writing script in ruby for experiments (instead of bash)
+* [X] Toxicology
+  * [X] finish reading paper on pattern stimulation
+* [X] General
+  * [X] write dr
+  * [X] Anniversaire Rémi
 
 2012-09-07 ven. 08:51:41 CEST
-* [o] Jak2
+* [X] Jak2
   * [X] copy data from kuleuven
   * [X] copy datasets in the jak2 build directory
   * [X] copy openbabel
     * [X] source
     * [X] build
-  * [ ] write and send meeting report
+  * [X] write and send meeting report
   * [X] debug the edge and vertex refiner
-* [O] General
+  * [X] before leaving: install mips and jak2 on laptop!!!
+* [X] General
   * [X] write dr
   * [X] add -h to ll alias
   * [X] add git config to general_config

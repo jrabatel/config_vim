@@ -8,7 +8,7 @@ set mouse=a
 " set showmatch  " montre les correspondance entre les paranthèses ouvrantes et fermantes
 set ignorecase " ignore case in search
 set smartcase  " case-sensitive only if there is a capital letter
-set hlsearch
+" set hlsearch
 set incsearch
 filetype on
 set history=1000
@@ -43,6 +43,7 @@ nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
+" nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaDataRandomForest/<CR>:redraw!<CR>
 nnoremap ,makbj :silent make -B -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 nnoremap ,makbo :silent make -B -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
