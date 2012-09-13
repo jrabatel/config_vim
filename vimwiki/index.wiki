@@ -12,24 +12,39 @@
 [[Various]]
 
 == Daily TODO ==
-* [ ] Jak2
-  * [ ] push new version of jak2 and mips
-  * [ ] pull jak2 and mips before running experiments in KULeuven
-  * [ ] update mips remote branch (warning: in the local version of mips, I removed the trypsin example => checkout)
-  * [ ] work on bond refiner
-  * [ ] experiments
-    * [ ] test new bond refiners on Mohr's datasets
-    * [ ] redo experiments on random forests (the decision strategy was wrong in the previous ones)
+  * [ ] RoR
+    * [ ] install gems
+      * [ ] acts as list
+      * [ ] acts as commentable
+    * [ ] save readme
+
+2012-09-13 Thu 09:10:25 CEST
+* [X] Jak2
+  * [X] push new version of jak2
+  * [X] push new version of mips
+  * [X] update mips remote branch (warning: in the local version of mips, I removed the trypsin example => checkout)
+  * [X] pull jak2 and mips before running experiments in KULeuven
+  * [X] work on bond refiner
+  * [X] generate the experiments settings
+  * [X] experiments
+    * [X] test new bond refiners on Mohr's datasets
+    * [X] redo experiments on random forests (the decision strategy was wrong in the previous ones)
+  * [X] Key discovery
+    * [X] check implementation of François
+    * [X] see what can be taken
+* [X] General
+  * [X] scan papers for residence
+  * [X] write dr
+  * [X] RoR
+    * [X] save railscast on Test
 
 2012-09-12 Wed 09:09:58 CEST
-* [o] Jak2
+* [X] Jak2
   * [X] answer Bruno's email
   * [X] add new bond-refiners: one for each atom typing label
   * [X] re-generate data for Mohr's datasets
   * [X] write ruby script to generate settings for experiments
-  * [ ] generate the experiments settings
-* [o] KD
-  * [ ] work on KD implementation
+* [X] KD
   * [X] structure of the code
   * [X] read paper HCA
 * [X] General
