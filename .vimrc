@@ -144,6 +144,9 @@ nmap ,agrep :silent grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
 nmap ,repl :s```g<Left><Left><Left>
 nmap ,repa :%s```g<Left><Left><Left>
 
+" simple alignement function
+vmap ,al :Align
+
 " find the commented lines (for // comments)
 nmap ,Fl /\/\//<CR>
 " find the calls to a function
