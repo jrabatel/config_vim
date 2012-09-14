@@ -12,11 +12,24 @@
 [[Various]]
 
 == Daily TODO ==
-  * [ ] RoR
-    * [ ] install gems
-      * [ ] acts as list
-      * [ ] acts as commentable
-    * [ ] save readme
+
+ * [ ] Key discovery
+   * [ ] Java project: write architecture
+ * [ ] start a new C++ project
+   * [ ] should read the patterns and create a pattern tree (FP-Tree)
+
+2012-09-14 Fri 08:42:07 CEST
+ * [X] Jak2
+   * [ ] create new experiments
+   * [X] summarize results
+     * [X] read settings file
+     * [X] read cross-validation logs
+     * [X] create a csv file given all the experiments
+ * [X] Pattern Stimulation
+   * [X] read last part of the paper
+   * [X] find a closed itemset miner
+ * [ ] General
+   * [ ] write dr
 
 2012-09-13 Thu 09:10:25 CEST
 * [X] Jak2
