@@ -321,7 +321,11 @@ nmap ,an :AN<CR>
 " FOR TABULAR
 " for aligning the last column in lines of code
 nmap ,alc :Tab /\s\S\+;<CR>
-vmap ,alc :Tab /\s\S\+;<CR>
+nmap ,al= :Tab /=<CR>
+nmap ,al: :Tab /:\w*<CR>
+nmap ,al, :Tab /,<CR>
+nmap ,al; :Tab /;<CR>
+
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE

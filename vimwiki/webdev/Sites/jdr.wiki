@@ -9,7 +9,7 @@
     * [X] private_comment
     * [X] privacy_state (public, anonymous, private)
     * [X] belongs_to user
-    * [ ] act_as_commentable
+    * [ ] acts_as_commentable
     * [ ] published:boolean
     * [ ] Views
       * [ ] forms as a partial (for new and update)
