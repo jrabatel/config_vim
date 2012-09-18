@@ -13,29 +13,38 @@
 
 == Daily TODO ==
 
+2012-09-18 Tue 08:14:08 CEST
+* [X] Jak2
+  * [X] Meeting
+    * [X] print results
+    * [X] summarize results with random forests
+  * [X] write and send report
+  * [ ] print a selection of papers about virtual screening
+* [ ] Pattern Stimulation
+  * [ ] start a new C++ project
+    * [ ] should read the patterns and create a pattern tree (FP-Tree) or a pattern lattice from which algorithm?
+* [ ] Key discovery
+  * [ ] Java project: write architecture
+* [ ] General
+  * [ ] write dr
+
 2012-09-17 Mon 09:21:56 CEST
- * [X] Jak2
-   * [X] Summarize results
-   * [X] Run new tests
-     * [X] random forests
-   * [X] Multi-level atom-typing refiner
-     * [X] write a multi-level atom-typing refiner (for 2 and 3 levels)
-     * [X] test it
-   * [X] send e-mail to Bertrand
-   * [X] read results from random forests
-   * [X] add new settings
-     * [X] 1, 2, 3 level bond refiners
-     * [X] 1, 2, 3 level atom typing refiners
- * [ ] Key discovery
-   * [ ] Java project: write architecture
- * [ ] Pattern Stimulation
-   * [ ] start a new C++ project
-     * [ ] should read the patterns and create a pattern tree (FP-Tree) or a pattern lattice from which algorithm?
- * [O] General
-   * [X] write dr
-   * [X] print last bill from SFR
-   * [ ] print reviews from CNET
-   * [X] install vim plugin to convert from/into CamelCase/SnakeCase conventions
+* [X] Jak2
+  * [X] Summarize results
+  * [X] Run new tests
+    * [X] random forests
+  * [X] Multi-level atom-typing refiner
+    * [X] write a multi-level atom-typing refiner (for 2 and 3 levels)
+    * [X] test it
+  * [X] send e-mail to Bertrand
+  * [X] read results from random forests
+  * [X] add new settings
+    * [X] 1, 2, 3 level bond refiners
+    * [X] 1, 2, 3 level atom typing refiners
+* [X] General
+  * [X] write dr
+  * [X] print last bill from SFR
+  * [X] install vim plugin to convert from/into CamelCase/SnakeCase conventions
 
 2012-09-14 Fri 08:42:07 CEST
  * [X] Jak2
