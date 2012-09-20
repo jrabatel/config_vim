@@ -12,6 +12,51 @@
 [[Various]]
 
 == Daily TODO ==
+* [o] Jak2
+  * [X] send email to Ronan
+  * [ ] change ruby scripts for the result summary
+  * [X] read papers about virtual screening
+  * [ ] create vertices based on depth-first search-space traversal
+* [X] Pattern Stimulation
+  * [X] write ruby script to:
+    * [X] create the mapping value --> item_id
+    * [X] convert a dataset into a numerical format
+    * [X] add class items (it should be the first in the numerical order!)
+    * [X] split the data into 10 folds (for future cross-validation) (feasible with weka?)
+  * [X] have a look at Ryan's implementation
+* [X] KeyDiscovery
+  * [X] look at Gordian alg
+  * [X] is it possible to use it as a preprocessor in HCA? --> yes, but we should generate the sampled data...
+  * [X] send email to Madalina : no need to ask for implementation
+  * [ ] how multi-values are considered by François?
+  * [ ] how multi-values are considered by GordianRDF?
+  * [ ] how should we consider them?
+  * [ ] what will be the impact on HCA?
+* [.] General
+  * [ ] write dr
+  * [ ] move files to iPod
+  * [X] check messages from SFR
+  * [ ] File transfers:
+    * [ ] vim config
+    * [ ] general config
+
+2012-09-19 Wed 07:58:30 CEST
+* [X] Jak2
+  * [X] print a selection of papers about virtual screening
+  * [X] start implementation of test pre-generator
+  * [X] write settings for atom typing and bond multi-level refiners
+* [X] Pattern Stimulation
+  * [X] download CLOSET+
+  * [X] start a new C++ project
+    * [X] problem: for emerging patterns, we need patterns that are unfrequent in one class. We could mine frequent patterns in the whole dataset and then calculate the support of each pattern in both classes.
+  * [X] Find the slope one paper, SDM 2005
+* [X] Key discovery
+  * [X] Java project: write architecture
+* [X] General
+  * [X] send email to Bertrand
+  * [X] write dr
+  * [X] sfr
+  * [X] google maps
 
 2012-09-18 Tue 08:14:08 CEST
 * [X] Jak2
@@ -19,14 +64,8 @@
     * [X] print results
     * [X] summarize results with random forests
   * [X] write and send report
-  * [ ] print a selection of papers about virtual screening
-* [ ] Pattern Stimulation
-  * [ ] start a new C++ project
-    * [ ] should read the patterns and create a pattern tree (FP-Tree) or a pattern lattice from which algorithm?
-* [ ] Key discovery
-  * [ ] Java project: write architecture
-* [ ] General
-  * [ ] write dr
+* [X] General
+  * [X] write dr
 
 2012-09-17 Mon 09:21:56 CEST
 * [X] Jak2
