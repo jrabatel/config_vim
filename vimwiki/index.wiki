@@ -11,12 +11,36 @@
 [[Web development]]
 [[Various]]
 
-== Daily TODO ==
-* [o] Jak2
-  * [X] send email to Ronan
+== General TODO ==
+* [ ] Jak2
   * [ ] change ruby scripts for the result summary
-  * [X] read papers about virtual screening
   * [ ] create vertices based on depth-first search-space traversal
+* [ ] PatternStimulation
+  * [ ] compute supports and interestingness measures
+    * [ ] support in each class
+    * [ ] growth-rates, strength
+    * [ ] chi²
+* [ ] KeyDiscovery
+  * [ ] is it possible to change the multi-value handling?
+  * [ ] how multi-values are considered by GordianRDF?
+  * [ ] how should we consider them?
+  * [ ] what will be the impact on HCA?
+
+== Daily TODO ==
+
+2012-09-21 Fri 09:36:42 CEST
+* [X] PatternStimulation
+  * [X] create C++ project and cmake
+  * [X] read patterns from file
+* [X] General
+  * [X] write dr
+  * [X] check credit card
+  * [X] files to transfer:
+
+2012-09-20 Wed 07:58:30 CEST
+* [X] Jak2
+  * [X] send email to Ronan
+  * [X] read papers about virtual screening
 * [X] Pattern Stimulation
   * [X] write ruby script to:
     * [X] create the mapping value --> item_id
@@ -28,17 +52,13 @@
   * [X] look at Gordian alg
   * [X] is it possible to use it as a preprocessor in HCA? --> yes, but we should generate the sampled data...
   * [X] send email to Madalina : no need to ask for implementation
-  * [ ] how multi-values are considered by François?
-  * [ ] how multi-values are considered by GordianRDF?
-  * [ ] how should we consider them?
-  * [ ] what will be the impact on HCA?
-* [.] General
-  * [ ] write dr
-  * [ ] move files to iPod
+  * [X] how multi-values are considered by François?
+* [X] General
+  * [X] move files to iPod
   * [X] check messages from SFR
-  * [ ] File transfers:
-    * [ ] vim config
-    * [ ] general config
+  * [X] File transfers:
+    * [X] vim config
+    * [X] general config
 
 2012-09-19 Wed 07:58:30 CEST
 * [X] Jak2
