@@ -125,6 +125,10 @@ XPT list " std::list<...>
 std::list<`cursor~>
 ..XPT
 
+XPT vector " std::vector<...>
+std::vector<`cursor~>
+..XPT
+
 XPT set " std::set<...>
 std::set<`cursor~>
 ..XPT

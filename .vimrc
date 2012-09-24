@@ -142,8 +142,8 @@ nmap ,grep :silent grep -r '' **/*<Left><Left><Left><Left><Left><Left>
 nmap ,agrep :silent grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
 
 " search and replace in a line or in a file
-nmap ,repl :s```g<Left><Left><Left>
-nmap ,repa :%s```g<Left><Left><Left>
+nmap ,repl :Subvert```g<Left><Left><Left>
+nmap ,repa :%Subvert```g<Left><Left><Left>
 
 " simple alignement function
 vmap ,al :Tab /

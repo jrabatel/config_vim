@@ -15,7 +15,12 @@
 * [ ] Jak2
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
+  * [ ] run tests with new data
+  * [ ] create other versions of the new data (with top k conformations)
 * [ ] PatternStimulation
+  * [ ] compute measures
+    * [ ] growth-rates, strength
+    * [ ] chi²
 * [ ] KeyDiscovery
 * [ ] General
   * [ ] bank and credit card
@@ -23,16 +28,17 @@
 == Daily TODO ==
 
 2012-09-24 Mon 09:46:44 CEST
-* [ ] PatternStimulation
-  * [ ] change ruby scripts so that 
-    * [ ] one datafile is created for each class
-  * [ ] compute supports and interestingness measures
-    * [ ] support in each class
-    * [ ] growth-rates, strength
-    * [ ] chi²
-  * [ ] General
+* [X] Jak2
+  * [X] pre-process new data
+* [o] PatternStimulation
+  * [X] change ruby scripts so that 
+    * [X] one datafile is created for each class
+  * [.] compute supports and interestingness measures
+    * [X] support in each class
+  * [X] build pattern tree
+  * [o] General
     * [ ] write dr
-    * [ ] book train tickets
+    * [X] book train tickets
 
 2012-09-21 Fri 09:36:42 CEST
 * [X] PatternStimulation
