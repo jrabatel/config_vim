@@ -16,17 +16,23 @@
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
 * [ ] PatternStimulation
+* [ ] KeyDiscovery
+* [ ] General
+  * [ ] bank and credit card
+
+== Daily TODO ==
+
+2012-09-24 Mon 09:46:44 CEST
+* [ ] PatternStimulation
+  * [ ] change ruby scripts so that 
+    * [ ] one datafile is created for each class
   * [ ] compute supports and interestingness measures
     * [ ] support in each class
     * [ ] growth-rates, strength
     * [ ] chi²
-* [ ] KeyDiscovery
-  * [ ] is it possible to change the multi-value handling?
-  * [ ] how multi-values are considered by GordianRDF?
-  * [ ] how should we consider them?
-  * [ ] what will be the impact on HCA?
-
-== Daily TODO ==
+  * [ ] General
+    * [ ] write dr
+    * [ ] book train tickets
 
 2012-09-21 Fri 09:36:42 CEST
 * [X] PatternStimulation

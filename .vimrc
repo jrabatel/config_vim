@@ -146,7 +146,7 @@ nmap ,repl :s```g<Left><Left><Left>
 nmap ,repa :%s```g<Left><Left><Left>
 
 " simple alignement function
-vmap ,al :Align
+vmap ,al :Tab /
 
 " find the commented lines (for // comments)
 nmap ,Fl /\/\//<CR>
