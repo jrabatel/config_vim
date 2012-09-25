@@ -15,8 +15,6 @@
 * [ ] Jak2
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
-  * [ ] run tests with new data
-  * [ ] create other versions of the new data (with top k conformations)
 * [ ] PatternStimulation
   * [ ] compute measures
     * [ ] growth-rates, strength
@@ -27,17 +25,32 @@
 
 == Daily TODO ==
 
+2012-09-25 Tue 08:55:37 CEST
+* [ ] Jak2
+  * [ ] run new tests
+  * [ ] create new versions of the dataset
+    * [ ] problem: the conformations are not ordered w.r.t. their conformation score
+* [o] PatternStimulation
+  * [ ] in pattern tree, add other parent-to-child relations (i.e., every inclusion relation in the transitive reduction)
+  * [ ] compute measures
+    * [ ] growth-rates, strength
+    * [ ] chi²
+  * [X] find and save Springer digraph book
+  * [X] read paper on slope-one predictors
+* [X] General
+  * [X] write dr
+
 2012-09-24 Mon 09:46:44 CEST
 * [X] Jak2
   * [X] pre-process new data
-* [o] PatternStimulation
+* [X] PatternStimulation
   * [X] change ruby scripts so that 
     * [X] one datafile is created for each class
-  * [.] compute supports and interestingness measures
+  * [X] compute supports and interestingness measures
     * [X] support in each class
   * [X] build pattern tree
-  * [o] General
-    * [ ] write dr
+  * [X] General
+    * [X] write dr
     * [X] book train tickets
 
 2012-09-21 Fri 09:36:42 CEST
