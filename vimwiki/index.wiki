@@ -16,25 +16,30 @@
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
 * [ ] PatternStimulation
-  * [ ] compute measures
-    * [ ] growth-rates, strength
-    * [ ] chi²
+  * [ ] chi² computation should be tested
 * [ ] KeyDiscovery
+  * [ ] base class should be fully stored in main memory
 * [ ] General
   * [ ] bank and credit card
 
 == Daily TODO ==
 
+2012-09-26 Wed 08:55:23 CEST
+* [o] Jak2
+  * [X] create new versions of the dataset
+    * [X] problem: the conformations are not ordered w.r.t. their conformation score
+  * [ ] run new tests (one for each new dataset)
+* [X] PatternStimulation
+  * [X] in pattern tree, add other parent-to-child relations (i.e., every inclusion relation in the transitive reduction)
+  * [X] compute measures
+    * [X] frequency
+    * [X] growth-rates
+    * [X] strength
+    * [X] chi²
+* [X] General
+  * [X] write dr
+
 2012-09-25 Tue 08:55:37 CEST
-* [ ] Jak2
-  * [ ] run new tests
-  * [ ] create new versions of the dataset
-    * [ ] problem: the conformations are not ordered w.r.t. their conformation score
-* [o] PatternStimulation
-  * [ ] in pattern tree, add other parent-to-child relations (i.e., every inclusion relation in the transitive reduction)
-  * [ ] compute measures
-    * [ ] growth-rates, strength
-    * [ ] chi²
   * [X] find and save Springer digraph book
   * [X] read paper on slope-one predictors
 * [X] General
