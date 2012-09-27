@@ -386,14 +386,14 @@ nmap B <leader><leader>B
 nmap e <leader><leader>e
 nmap E <leader><leader>E
 
-vmap f <leader><leader>f
-vmap F <leader><leader>F
-vmap w <leader><leader>w
-vmap W <leader><leader>W
-vmap b <leader><leader>b
-vmap B <leader><leader>B
-vmap e <leader><leader>e
-vmap E <leader><leader>E
+" vmap f <leader><leader>f
+" vmap F <leader><leader>F
+" vmap w <leader><leader>w
+" vmap W <leader><leader>W
+" vmap b <leader><leader>b
+" vmap B <leader><leader>B
+" vmap e <leader><leader>e
+" vmap E <leader><leader>E
 
 " FOR SPLITJOIN
 nmap sj :SplitjoinSplit<cr>
