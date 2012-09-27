@@ -8,7 +8,7 @@ set mouse=a
 " set showmatch  " montre les correspondance entre les paranthèses ouvrantes et fermantes
 set ignorecase " ignore case in search
 set smartcase  " case-sensitive only if there is a capital letter
-set hlsearch
+" set hlsearch
 set incsearch
 filetype on
 set history=1000
@@ -43,9 +43,11 @@ nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
+" nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaDataRandomForest/<CR>:redraw!<CR>
 nnoremap ,makbj :silent make -B -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 nnoremap ,makbo :silent make -B -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
+nnoremap ,maks :silent make -C $build/stimulation_classification/src<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -140,8 +142,11 @@ nmap ,grep :silent grep -r '' **/*<Left><Left><Left><Left><Left><Left>
 nmap ,agrep :silent grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
 
 " search and replace in a line or in a file
-nmap ,repl :s```g<Left><Left><Left>
-nmap ,repa :%s```g<Left><Left><Left>
+nmap ,repl :Subvert```g<Left><Left><Left>
+nmap ,repa :%Subvert```g<Left><Left><Left>
+
+" simple alignement function
+vmap ,al :Tab /
 
 " find the commented lines (for // comments)
 nmap ,Fl /\/\//<CR>
@@ -317,7 +322,11 @@ nmap ,an :AN<CR>
 " FOR TABULAR
 " for aligning the last column in lines of code
 nmap ,alc :Tab /\s\S\+;<CR>
-vmap ,alc :Tab /\s\S\+;<CR>
+nmap ,al= :Tab /=<CR>
+nmap ,al: :Tab /:\w*<CR>
+nmap ,al, :Tab /,<CR>
+nmap ,al; :Tab /;<CR>
+
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE
@@ -386,15 +395,6 @@ nmap B <leader><leader>B
 nmap e <leader><leader>e
 nmap E <leader><leader>E
 
-" vmap f <leader><leader>f
-" vmap F <leader><leader>F
-" vmap w <leader><leader>w
-" vmap W <leader><leader>W
-" vmap b <leader><leader>b
-" vmap B <leader><leader>B
-" vmap e <leader><leader>e
-" vmap E <leader><leader>E
-
 " FOR SPLITJOIN
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
@@ -402,5 +402,6 @@ nmap sk :SplitjoinJoin<cr>
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
-nmap ,rdbm :!bundle exec rake db:migrate<CR>
+nmap ,rdbm :!rake db:migrate<CR>
+nmap ,rdbs :!rake db:seed<CR>
 nmap ,rc :!rails console<CR>

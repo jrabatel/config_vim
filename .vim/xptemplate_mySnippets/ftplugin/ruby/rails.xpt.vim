@@ -69,7 +69,19 @@ XPT red_n " redirect_to path, notice: "Message"
 redirect_to `path~, notice: "`cursor~"
 ..XPT
 XPT red_s " redirect_to path, success: "Message"
-flash[:notice] = "`message~"
+flash[:success] = "`message~"
 redirect_to `path~
 ..XPT
 
+XPT fla
+flash[:`type~] = "`message~"`cursor~
+..XPT
+XPT fla_e
+flash[:error] = "`message~"`cursor~
+..XPT
+XPT fla_n
+flash[:notice] = "`message~"`cursor~
+..XPT
+XPT fla_s
+flash[:success] = "`message~"`cursor~
+..XPT

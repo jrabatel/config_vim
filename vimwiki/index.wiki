@@ -11,15 +11,247 @@
 [[Web development]]
 [[Various]]
 
+== General TODO ==
+* [ ] Jak2
+  * [ ] change ruby scripts for the result summary
+  * [ ] create vertices based on depth-first search-space traversal
+* [ ] PatternStimulation
+  * [ ] chi² computation should be tested
+* [ ] KeyDiscovery
+  * [ ] base class should be fully stored in main memory
+* [ ] General
+  * [ ] bank and credit card
+
 == Daily TODO ==
 
-2012-08-30 Thu 11:57:19 CEST
+2012-09-26 Wed 08:55:23 CEST
 * [o] Jak2
+  * [X] create new versions of the dataset
+    * [X] problem: the conformations are not ordered w.r.t. their conformation score
+  * [ ] run new tests (one for each new dataset)
+* [X] PatternStimulation
+  * [X] in pattern tree, add other parent-to-child relations (i.e., every inclusion relation in the transitive reduction)
+  * [X] compute measures
+    * [X] frequency
+    * [X] growth-rates
+    * [X] strength
+    * [X] chi²
+* [X] General
+  * [X] write dr
+
+2012-09-25 Tue 08:55:37 CEST
+  * [X] find and save Springer digraph book
+  * [X] read paper on slope-one predictors
+* [X] General
+  * [X] write dr
+
+2012-09-24 Mon 09:46:44 CEST
+* [X] Jak2
+  * [X] pre-process new data
+* [X] PatternStimulation
+  * [X] change ruby scripts so that 
+    * [X] one datafile is created for each class
+  * [X] compute supports and interestingness measures
+    * [X] support in each class
+  * [X] build pattern tree
+  * [X] General
+    * [X] write dr
+    * [X] book train tickets
+
+2012-09-21 Fri 09:36:42 CEST
+* [X] PatternStimulation
+  * [X] create C++ project and cmake
+  * [X] read patterns from file
+* [X] General
+  * [X] write dr
+  * [X] check credit card
+  * [X] files to transfer:
+
+2012-09-20 Wed 07:58:30 CEST
+* [X] Jak2
+  * [X] send email to Ronan
+  * [X] read papers about virtual screening
+* [X] Pattern Stimulation
+  * [X] write ruby script to:
+    * [X] create the mapping value --> item_id
+    * [X] convert a dataset into a numerical format
+    * [X] add class items (it should be the first in the numerical order!)
+    * [X] split the data into 10 folds (for future cross-validation) (feasible with weka?)
+  * [X] have a look at Ryan's implementation
+* [X] KeyDiscovery
+  * [X] look at Gordian alg
+  * [X] is it possible to use it as a preprocessor in HCA? --> yes, but we should generate the sampled data...
+  * [X] send email to Madalina : no need to ask for implementation
+  * [X] how multi-values are considered by François?
+* [X] General
+  * [X] move files to iPod
+  * [X] check messages from SFR
+  * [X] File transfers:
+    * [X] vim config
+    * [X] general config
+
+2012-09-19 Wed 07:58:30 CEST
+* [X] Jak2
+  * [X] print a selection of papers about virtual screening
+  * [X] start implementation of test pre-generator
+  * [X] write settings for atom typing and bond multi-level refiners
+* [X] Pattern Stimulation
+  * [X] download CLOSET+
+  * [X] start a new C++ project
+    * [X] problem: for emerging patterns, we need patterns that are unfrequent in one class. We could mine frequent patterns in the whole dataset and then calculate the support of each pattern in both classes.
+  * [X] Find the slope one paper, SDM 2005
+* [X] Key discovery
+  * [X] Java project: write architecture
+* [X] General
+  * [X] send email to Bertrand
+  * [X] write dr
+  * [X] sfr
+  * [X] google maps
+
+2012-09-18 Tue 08:14:08 CEST
+* [X] Jak2
+  * [X] Meeting
+    * [X] print results
+    * [X] summarize results with random forests
+  * [X] write and send report
+* [X] General
+  * [X] write dr
+
+2012-09-17 Mon 09:21:56 CEST
+* [X] Jak2
+  * [X] Summarize results
+  * [X] Run new tests
+    * [X] random forests
+  * [X] Multi-level atom-typing refiner
+    * [X] write a multi-level atom-typing refiner (for 2 and 3 levels)
+    * [X] test it
+  * [X] send e-mail to Bertrand
+  * [X] read results from random forests
+  * [X] add new settings
+    * [X] 1, 2, 3 level bond refiners
+    * [X] 1, 2, 3 level atom typing refiners
+* [X] General
+  * [X] write dr
+  * [X] print last bill from SFR
+  * [X] install vim plugin to convert from/into CamelCase/SnakeCase conventions
+
+2012-09-14 Fri 08:42:07 CEST
+ * [X] Jak2
+   * [X] create new experiments
+   * [X] summarize results
+     * [X] read settings file
+     * [X] read cross-validation logs
+     * [X] create a csv file given all the experiments
+ * [X] Pattern Stimulation
+   * [X] read last part of the paper
+   * [X] find a closed itemset miner
+ * [X] General
+   * [X] write dr
+
+2012-09-13 Thu 09:10:25 CEST
+* [X] Jak2
+  * [X] push new version of jak2
+  * [X] push new version of mips
+  * [X] update mips remote branch (warning: in the local version of mips, I removed the trypsin example => checkout)
+  * [X] pull jak2 and mips before running experiments in KULeuven
+  * [X] work on bond refiner
+  * [X] generate the experiments settings
+  * [X] experiments
+    * [X] test new bond refiners on Mohr's datasets
+    * [X] redo experiments on random forests (the decision strategy was wrong in the previous ones)
+  * [X] Key discovery
+    * [X] check implementation of François
+    * [X] see what can be taken
+* [X] General
+  * [X] scan papers for residence
+  * [X] write dr
+  * [X] RoR
+    * [X] save railscast on Test
+
+2012-09-12 Wed 09:09:58 CEST
+* [X] Jak2
+  * [X] answer Bruno's email
+  * [X] add new bond-refiners: one for each atom typing label
+  * [X] re-generate data for Mohr's datasets
+  * [X] write ruby script to generate settings for experiments
+* [X] KD
+  * [X] structure of the code
+  * [X] read paper HCA
+* [X] General
+  * [X] call m
+  * [X] write dr
+  * [X] take train tickets
+
+2012-09-11 mar. 08:33:07 CEST
+* [X] Jak2
+  * [X] Have openbabel_preprocessing running on local machine
+  * [X] Run tests with Mohr's datasets and 2-step refiner
+  * [X] Re-run with random forests
+    * [X] Mutagenesis (warning: should display the classification results)
+    * [X] Mohr's datasets
+  * [X] Send meeting report with Ronan
+  * [X] Write skype meeting report
+* [X] Stimulation of patterns
+  * [X] ask Bertrand for Ryan's implementation
+* [X] Install jak2 on KULeuven disk space
+* [X] Install mips on KULeuven disk space
+* [X] Install openbabel on KULeuven disk space
+* [X] Install openbabel_preprocessing  on KULeuven disk space
+* [X] Install tmux on KULeuven disk space
+* [X] General
+  * [X] write dr
+  * [X] print Madalina's work
+  * [X] add global variables to configuration
+    * [X] $ruby
+    * [X] $java
+
+2012-09-10 lun. 07:55:58 CEST
+* [X] Jak2
+  * [X] Experiments
+    * [X] tests on mutagenesis data (simple patterns and their real support)
+    * [X] run tests on other datasets (Mohr et al.)
+    * [X] run tests on Jak2
+    * [X] start writing script in ruby for experiments (instead of bash)
+* [X] Toxicology
+  * [X] finish reading paper on pattern stimulation
+* [X] General
+  * [X] write dr
+  * [X] Anniversaire Rémi
+
+2012-09-07 ven. 08:51:41 CEST
+* [X] Jak2
+  * [X] copy data from kuleuven
+  * [X] copy datasets in the jak2 build directory
+  * [X] copy openbabel
+    * [X] source
+    * [X] build
+  * [X] write and send meeting report
+  * [X] debug the edge and vertex refiner
+  * [X] before leaving: install mips and jak2 on laptop!!!
+* [X] General
+  * [X] write dr
+  * [X] add -h to ll alias
+  * [X] add git config to general_config
+  * [X] print bus timetables for the sea
+
+2012-09-06 jeu. 13:31:22 CEST
+* [X] GREYC installation
+  * [X] install vim config
+  * [X] install ssh config
+  * [X] install tmux
+  * [X] install mips code
+    * [X] source
+    * [X] build for mips
+  * [X] install jak2 code
+    * [X] source
+    * [X] build for jak2
+* [X] Jak2
+  * [X] meeting with Ronan
+
+2012-08-30 Thu 11:57:19 CEST
+* [X] Jak2
   * [X] have lumo and logp tests working
   * [X] debug the new refinement type
-  * [ ] run tests with chemical features and random forest for mutagenesis data
-* [ ] Administration
-  * [ ] call Les Doges for a rendez-vous
 
 28/08/2012
 * [o] Jak2

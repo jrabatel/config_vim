@@ -42,7 +42,7 @@ XPT <p " <% provide (:var, 'value') %>
 " ===== Forms
 XPT form " form_for @model do ...
 <%= form_for(@`model~) do |f| %>
-  <%= render 'shared/error_messages' %>
+  <%= render 'shared/error_messages', object: f.object %>
   `cursor~
 <% end %>
 ..XPT
