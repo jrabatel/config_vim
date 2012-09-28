@@ -398,18 +398,6 @@ nmap B <leader><leader>B
 nmap e <leader><leader>e
 nmap E <leader><leader>E
 
-" Mappings for visual mode (below) are commented because they do not seem to be
-" compatible with xptemplate
-
-" vnoremap f <leader><leader>f
-" vnoremap F <leader><leader>F
-" vnoremap w <leader><leader>w
-" vnoremap W <leader><leader>W
-" vnoremap b <leader><leader>b
-" vnoremap B <leader><leader>B
-" vnoremap e <leader><leader>e
-" vnoremap E <leader><leader>E
-
 " FOR SPLITJOIN
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
