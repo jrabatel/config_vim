@@ -1,0 +1,29 @@
+2012-09-28 Fri 12:02:42 CEST
+
+Algorithm for derivations
+
+input:
+ - B = (p_1, ..., p_n) a sorted list of patterns included in T (i.e., the test object)
+output:
+ - the odds for the T in class C
+
+cov = emptyset
+currentOdds = pi_H(emptyset)
+for( i = 1..n )
+  p_i  = B[i]          // next pattern from B
+  p'_i = p_i \cap  cov // part of p_i which is not covered yet
+
+  // find known odds
+  full_odds    = odds( p_i )
+  partial_odds = odds( p'_i )
+
+  // compute derived odds
+  slopeOdds = slope_rule from full_odds, partial_odds
+  stimOdds  = stimulation_rule from slopeOdds and currentOdds
+
+  // update cov
+  cov = cov \cup p_i
+
+  // update currentOdds
+  currentOdds = stimOdds
+endfor

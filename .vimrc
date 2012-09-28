@@ -144,6 +144,7 @@ nmap ,agrep :silent grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
 " search and replace in a line or in a file
 nmap ,repl :Subvert```g<Left><Left><Left>
 nmap ,repa :%Subvert```g<Left><Left><Left>
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " simple alignement function
 vmap ,al :Tab /
@@ -388,6 +389,8 @@ let g:session_autoload = 'no'
 " FOR EASYMOTIONS
 nmap f <leader><leader>f
 nmap F <leader><leader>F
+nmap t <leader><leader>t
+nmap T <leader><leader>T
 nmap w <leader><leader>w
 nmap W <leader><leader>W
 nmap b <leader><leader>b

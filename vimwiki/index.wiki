@@ -15,20 +15,54 @@
 * [ ] Jak2
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
+  * [ ] run new tests (one for each new dataset)
 * [ ] PatternStimulation
   * [ ] chi² computation should be tested
 * [ ] KeyDiscovery
   * [ ] base class should be fully stored in main memory
 * [ ] General
   * [ ] bank and credit card
+* [ ] Vim config
+  * [ ] add swap list: ".", "->" for c++
 
 == Daily TODO ==
 
+2012-09-28 Fri 08:15:20 CEST
+* [ ] Jak2
+  * [ ] run tests with GOLD data
+* [ ] KeyDiscovery
+  * [ ] 
+* [ ] PatternStimulation
+  * [ ] implement the construction of the list of patterns to use for computing the product approximation
+    * [ ] for emerging patterns
+      * [ ] ordered by decreasing strength
+      * [ ] ordered by increasing length
+      * [ ] ordered by increasing size of increment
+    * [ ] for chi-squared and LB
+      * [ ] ordered by increasing size of increment
+      * [ ] ordered by decreasing length
+      * [ ] ordered by decreasing interestingness measure
+* [ ] General
+  * [ ] write dr
+  * [ ] bank and credit card
+
+2012-09-27 Thu 08:06:20 CEST
+* [X] Jak2
+  * [X] run new tests (one for each new dataset)
+  * [X] preprocess gold data
+* [X] PatternStimulation
+  * [X] implement some operations on the pattern lattice
+    * [X] keep patterns with a minimum value on given measure
+    * [X] select minimal patterns in pattern lattice: children of root
+    * [X] select maximal patterns in pattern lattice: leaves
+    * [X] compute pattern odds for each class
+* [X] General
+  * [X] write dr
+
 2012-09-26 Wed 08:55:23 CEST
-* [o] Jak2
+* [X] Jak2
   * [X] create new versions of the dataset
     * [X] problem: the conformations are not ordered w.r.t. their conformation score
-  * [ ] run new tests (one for each new dataset)
 * [X] PatternStimulation
   * [X] in pattern tree, add other parent-to-child relations (i.e., every inclusion relation in the transitive reduction)
   * [X] compute measures
