@@ -18,6 +18,10 @@
   * [ ] run new tests (one for each new dataset)
 * [ ] PatternStimulation
   * [ ] chi² computation should be tested
+  * [ ] for chi-squared and LB
+    * [ ] ordered by increasing size of increment
+    * [ ] ordered by decreasing length
+    * [ ] ordered by decreasing interestingness measure
 * [ ] KeyDiscovery
   * [ ] base class should be fully stored in main memory
 * [ ] General
@@ -27,24 +31,47 @@
 
 == Daily TODO ==
 
-2012-09-28 Fri 08:15:20 CEST
-* [ ] Jak2
-  * [ ] run tests with GOLD data
-* [ ] KeyDiscovery
-  * [ ] 
+2012-10-03 Wed 09:11:16 CEST
 * [ ] PatternStimulation
-  * [ ] implement the construction of the list of patterns to use for computing the product approximation
-    * [ ] for emerging patterns
-      * [ ] ordered by decreasing strength
-      * [ ] ordered by increasing length
-      * [ ] ordered by increasing size of increment
-    * [ ] for chi-squared and LB
-      * [ ] ordered by increasing size of increment
-      * [ ] ordered by decreasing length
-      * [ ] ordered by decreasing interestingness measure
-* [ ] General
+  * [ ] Code
+    * [ ] flagging
+      * [ ] compute stimset statistic
+        * [ ] calculation of the exact fisher test does not work!!
+    * [ ] Prepare classification methods
+      * [ ] cross validation
+      * [ ] compute probability for each class
+* [ ] Jak2
+  * [ ] write meeting report
+* [.] General
   * [ ] write dr
-  * [ ] bank and credit card
+  * [X] take address justification
+
+2012-10-02 Tue 08:33:06 CEST
+* [X] PatternStimulation
+  * [X] Code
+    * [X] give a numerical id to each pattern lattice node (to allow the creation of a vector) to mark them during a traversal
+    * [X] compute the interval of 2 patterns in pattern lattice _interval(p, p')_ -> list<NodePtrContainer>
+    * [X] compute the stimset of q on an interval _stimset(q, interval)_ -> list<double>
+  * [X] Skype with Ryan
+* [X] Jak2
+  * [X] skype meeting
+* [X] General
+  * [X] write dr
+  * [X] print train tickets
+
+2012-10-01 Mon 16:12:13 CEST
+* [X] PatternStimulation
+  * [X] implement the construction of the list of patterns to use for computing the product approximation
+    * [X] for emerging patterns
+      * [X] ordered by decreasing strength
+      * [X] ordered by increasing length
+      * [X] ordered by increasing size of increment
+
+2012-09-28 Fri 08:15:20 CEST
+* [X] PatternStimulation
+  * [X] implement the construction of the list of patterns that are included in the test object
+* [X] General
+  * [X] write dr
 
 2012-09-27 Thu 08:06:20 CEST
 * [X] Jak2

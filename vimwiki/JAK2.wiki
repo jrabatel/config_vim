@@ -1,3 +1,37 @@
+General ideas
+
+Would it be possible to generate for each molecule a boolean vector of features, where each feature corresponds to a pattern used in a DT
+In order to obtain several features, we can rely on the random forest learner.
+
+Test association rules on fingerprinting vectors?
+ -> could compress the vectors
+
+Seminar of 
+
+2012-10-02 Tue 08:38:26 CEST
+Meeting Jak2
+ - New data from Ronan, with two different docking tools
+   - much larger amount of conformations per ligands (up to 700!)
+   - first tests with 4-fold cross validation to compare performance with the old dataset, and the new ones
+     - Results: slight improvement, but no complete datasets used (selection over the top generated conformations)
+
+ - Virtual Screening
+   - decoys
+     - set of molecules that have different structure and similar chemical properties
+     - often, the inactivity of decoys can only be assumed (because data are not available)
+     - possible problems: when the decoys are too easy to distinguish from active compounds.
+     - Benchmark datasets: ZINC, Directory of Useful Decoys DUD are already widely used
+   - performance metrics
+     - enrichment factor: intuitive and easy to interpret
+       - ratio in the top X% of the ranked database, of the concentration of active ligands regarding the expected one
+       - criticized because it strongly depends on the chosen X%
+     - ROC and AUC, but does not take into account the early recognitin problem (best ligands should be at the top of the list)
+     - Boltzmann-enhanced discrimination of the ROC (BedROC) metric, using an exponential wieghting to assign higher weights to early recognition
+     - BedROC is a normalized version of the robust initial enhancement (RIE) measure
+
+     - We already have a database of decoys provided by Ronan (is it still usable, compared to new data?)
+     - First quick tests with weighted ROC
+
 == Memory problem ==
 * [ ] test with 1-level deep refining
   * [ ] measure memory consumption at the beginning and at the end of a refinement process
