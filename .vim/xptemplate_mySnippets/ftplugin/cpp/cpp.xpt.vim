@@ -154,8 +154,7 @@ std::ostream
 ..XPT
 
 XPT tostr " create a str from numeric variable
-std::string `var~Str;
 std::stringstream `var~Out;
 `var~Out << `var~;
-`var~Str = `var~Out.str();
+std::string `var~Str = `var~Out.str();
 ..XPT

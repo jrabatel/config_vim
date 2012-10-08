@@ -24,26 +24,41 @@
     * [ ] ordered by decreasing interestingness measure
 * [ ] KeyDiscovery
   * [ ] base class should be fully stored in main memory
-* [ ] General
-  * [ ] bank and credit card
 * [ ] Vim config
   * [ ] add swap list: ".", "->" for c++
 
 == Daily TODO ==
 
+2012-10-05 ven. 14:42:25 CEST
+* [.] PatternStimulation
+  * [.] Code
+    * [o] flagging
+      * [X] compute stimset statistic
+      * [X] propose a method to check whether a pattern is closed in pattern lattice
+      * [ ] integrate flagging to classification?
+    * [ ] Classification
+      * [ ] what about the uncovered attributes? check in the EP-based classifier
+      * [ ] is everything working?
+    * [ ] Ruby scripts
+      * [ ] extract frequent patterns instead of closed patterns
+* [X] General
+  * [X] write dr
+
+2012-10-04 jeu. 09:52:46 CEST
+* [X] PatternStimulation
+  * [X] Writing
+    * [X] compile latex sources
+  * [X] Code
+    * [X] Prepare classification methods
+      * [X] cross validation
+      * [X] compute probability for each class
+* [X] General
+  * [X] write dr
+  * [X] bank: changing address and withdrawing cash
+
+
 2012-10-03 Wed 09:11:16 CEST
-* [ ] PatternStimulation
-  * [ ] Code
-    * [ ] flagging
-      * [ ] compute stimset statistic
-        * [ ] calculation of the exact fisher test does not work!!
-    * [ ] Prepare classification methods
-      * [ ] cross validation
-      * [ ] compute probability for each class
-* [ ] Jak2
-  * [ ] write meeting report
-* [.] General
-  * [ ] write dr
+* [X] General
   * [X] take address justification
 
 2012-10-02 Tue 08:33:06 CEST
