@@ -29,18 +29,76 @@
 
 == Daily TODO ==
 
-2012-10-05 ven. 14:42:25 CEST
+2012-10-13 Sat 11:49:50 CEST
+* [ ] PatternStimulation
+  * [ ] Code
+    * [ ] check the median retrieval for slope values
+    * [ ] compute other measures for flagging
+
+2012-10-11 Thu 07:16:29 CEST
 * [.] PatternStimulation
-  * [.] Code
-    * [o] flagging
+  * [o] Code
+    * [X] Test heart dataset with old and new rules
+      * [X] look at the global accuracy
+    * [X] In case of 10th percentile, never take the first value
+    * [o] store information about flags
+      * [X] only first flags
+      * [X] all flags
+      * [ ] compute TN, TP, FP, FN
+    * [ ] compute and store success rate (TP, ..) for each fold and each dataset
+    * [X] filter for frequency and GR in process
+      * [X] frequency in pattern list
+      * [X] interest measure in pattern lattice
+  * [ ] Extract frequent patterns with low minimum support (1% when feasible?)
+  * [ ] Run tests on other datasets
+* [ ] General
+  * [ ] write dr
+
+2012-10-10 Wed 08:33:21 CEST
+* [o] PatternStimulation
+  * [o] Code
+    * [X] Compute frequencies when needed
+    * [X] derivation rules with degenerate odds
+    * [X] multi-class classification
+    * [X] embedded tests for R
+    * [X] logging results
+    * [X] change statistical tests!
+      * [X] to two sided
+      * [X] by considering the differences
+    * [X] stimset statistic
+      * [X] propose 2 options
+        * [X] stimset statistic is the 90th percentile
+        * [X] stimset statistic is the reversed 90th percentile (but never the smallest)
+  * [X] Store and log:
+    * [X] first flag (ask Bertrand about how to say that a flag is up or down)
+    * [X] list of flags
+    * [X] normal and alternative classifier results
+    * [X] n-way classification
+  * [X] Skype Ryan 
+
+2012-10-09 Tue 07:58:18 CEST
+* [X] PatternStimulation
+  * [X] Retrieve datasets from UCI
+    * [X] list available data from François's website
+    * [X] read them with ruby scripts and write on files
+  * [X] General questions
+    * [X] how to state whether a flag is up or down?
+    * [X] What to do with patterns in interval that are not frequent patterns? (we do not know their support)?
+* [X] General
+  * [X] write dr
+
+2012-10-05 ven. 14:42:25 CEST
+* [X] PatternStimulation
+  * [X] Code
+    * [X] flagging
       * [X] compute stimset statistic
       * [X] propose a method to check whether a pattern is closed in pattern lattice
-      * [ ] integrate flagging to classification?
-    * [ ] Classification
-      * [ ] what about the uncovered attributes? check in the EP-based classifier
-      * [ ] is everything working?
-    * [ ] Ruby scripts
-      * [ ] extract frequent patterns instead of closed patterns
+      * [X] integrate flagging to classification?
+    * [X] Classification
+      * [X] what about the uncovered attributes? check in the EP-based classifier
+      * [X] is everything working?
+    * [X] Ruby scripts
+      * [X] extract frequent patterns instead of closed patterns
 * [X] General
   * [X] write dr
 
