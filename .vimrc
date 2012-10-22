@@ -26,7 +26,7 @@ set shiftwidth=4
 set expandtab
 
 " FOLDING
-set foldmethod=syntax
+set foldmethod=manual
 nnoremap zz zR
 
 " GRAPHICAL OPTIONS

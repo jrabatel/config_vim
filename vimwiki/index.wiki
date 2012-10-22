@@ -59,8 +59,16 @@
 * [.] Jak2
   * [X] obtain a working source code
     * [X] delete test pre-generator
-  * [ ] install on /home/personnels/rabatel/
+  * [X] install on /home/personnels/rabatel/
+    * [X] install code
+    * [X] build it
+    * [X] copy data
   * [ ] implement new label type with frequent itemsets
+    * [ ] read itemset files and occurrences
+    * [ ] build an atom option with corresponding itemset
+      * [ ] with script: write on file mapping property->itemId
+      * [ ] read mapping of items
+      * [ ] transfer one atom into one itemset
   * [ ] think about mining pairs of atoms
   * [ ] test data from Ronan with current version
   * [ ] list references about atom pairs
@@ -78,7 +86,8 @@
   * [X] SpiderOak
     * [X] pay last bill
     * [X] terminate contract
-  * [ ] Rails
+  * [.] Rails
+    * [X] taggable generator
     * [ ] likeable generator
       * [ ] partials
         * [ ] like link
