@@ -105,4 +105,27 @@ Meeting Jak2
 * [ ] Rely only on pharmacophores only (see the Scaffold Hopping paper for how to define them) to mine patterns (isn't it what they do in Muggleton 1998?)
 * [ ] Try the DT learning process without hydrogen atoms
 * [ ] Try to build a training dataset with a near miss principle (see Scaffold Hopping paper, Data preparation section)
-* [ ] Use different ways of predicting values in a multi-conformation settings: the minimum IC50 value (used so far), the mean value, or others..
+
+* [ ] _Atom pairs principles_
+  * [ ] use atom triples
+  * [ ] use atom triples augmented with angles
+  * [ ] atom pairs/triples where one atom is a protein atom
+  * [ ] use itemset mining techniques to mine possible atom label sets?
+    * Finding distance-based atom pairs is a frequent itemset mining problem!
+    1. for each atom in the whole dataset: 1 transaction
+      { l1, l2, l3 } -> set of labels of one atom
+    2. for each atom pair in the dataset: 1 transaction
+      { (v0,l1), (v0,l2), (v1,l2), (v1,l3) }
+    3. the previous representation can easily be generalised to a atom triple, 4-atom set, etc.
+    3. for each conformation in the dataset: 1 transaction
+
+* [ ] _Ligand-based Virtual Screening_
+  * do not consider the protein structure or the docking positions (generated with the protein structure)
+  * the conformations of the molecule can be considered, or
+  * when considering the distance between two atoms, also consider the number of rotatable bonds in the path from one atom to the other
+
+* [ ] _2D -> 3D virtual screening_
+  * [ ] 2-step process
+    * first mine closed frequent 2D-graph patterns
+    * then use those fragments in a 3D representation
+    * Advantages: reduced 3d representation

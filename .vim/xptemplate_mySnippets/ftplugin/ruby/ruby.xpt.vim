@@ -49,6 +49,14 @@ def `method~
 end
 ..XPT
 
+XPT cmi " @member = expr
+@`member~ = `expr~
+..XPT
+
+XPT cmis " @member = member
+@`member~ = `member~
+..XPT
+
 XPT ++ " += 1
  += 1
 ..XPT

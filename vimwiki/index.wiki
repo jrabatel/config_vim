@@ -16,24 +16,208 @@
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
   * [ ] run new tests (one for each new dataset)
+  * [ ] study and see whether it is possible to quickly use in a multi-conformation framework a representation of the density distribution of distances between pairs of atoms --> problem: how to exploit this when working with graphs? Find corresponding paper and see what is used to generate the density distance distributions (the paper is Boltzmann-Enhanced Flexible Atom-Pair Kernel with Dynamic Dimension Reduction, the method to represent density distribution is the Gaussian Mixture Models)
+
 * [ ] PatternStimulation
-  * [ ] chi² computation should be tested
   * [ ] for chi-squared and LB
+    * [ ] implement chi² test as a pattern interestingness measure
     * [ ] ordered by increasing size of increment
     * [ ] ordered by decreasing length
     * [ ] ordered by decreasing interestingness measure
-* [ ] KeyDiscovery
-  * [ ] base class should be fully stored in main memory
+
+* [ ] Key Discovery
+  * [ ] implementing RDF version of HCA
+
 * [ ] Vim config
   * [ ] add swap list: ".", "->" for c++
 
+* [ ] Pattern Mining Problems
+  * [ ] mining patterns in the presence of a continuous target value
+  * [ ] inhibitor mining
+  * [ ] combining QSAR + toxicophores
+  * [ ] problems related to the super-imposition of patterns
+    * [ ] introducing a notion of distance between 2 fragments of a pattern
+    * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
+    * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
+
+* [ ] General
+  * [ ] coding
+    * [ ] firefox plugin to save link with englobing url
+    * [ ] script for mp3tagging
+    * [ ] new version of drj
+    * [ ] new version of free-hebergements
+  * [ ] install configuration on network home /home/personnels/rabatel/ (1h)
+    * [ ] configuration of local working environment
+  * [ ] Mails
+    * [ ] Using mutt for the mails
+    * [ ] transfer every mails to gmail?
+    * [ ] with mutt, how to send mails with different email addresses?
+
 == Daily TODO ==
 
+2012-10-22 Mon 09:02:10 CEST
+* [.] Jak2
+  * [X] obtain a working source code
+    * [X] delete test pre-generator
+  * [ ] install on /home/personnels/rabatel/
+  * [ ] implement new label type with frequent itemsets
+  * [ ] think about mining pairs of atoms
+  * [ ] test data from Ronan with current version
+  * [ ] list references about atom pairs
+  * [ ] run experiments
+  * [ ] find benchmark data for virtual screening
+  * [ ] Find datasets for evaluation
+    * [ ] in multi-conformations: data from paper ...
+* [ ] Post-Doc Project
+  * [ ] cahiers de labo
+  * [ ] study the Chi² test interestingness measure for patterns
+  * [ ] read documentation about statistical tests
+* [.] General
+  * [ ] write dr
+  * [ ] asus
+  * [X] SpiderOak
+    * [X] pay last bill
+    * [X] terminate contract
+  * [ ] Rails
+    * [ ] likeable generator
+      * [ ] partials
+        * [ ] like link
+        * [ ] unlike link
+        * [ ] ajax
+    * [ ] followable/favouritable generator
+      * [ ] partials
+        * [ ] follow form
+        * [ ] unfollow form
+        * [ ] ajax
+    * [ ] categorizable generator
+
+2012-10-19 Fri 09:42:57 CEST
+* [X] Jak2
+  * [X] write the current situation (2h)
+    * [X] source code update and installation on local workspace
+  * [X] Ruby scripts to convert the representations of 3D information into atom pairs (3h)
+    * [X] read protein data
+    * [X] read target values
+    * [X] generate different itemset representations
+      * [X] atoms and their labels
+    * [X] mine frequent patterns (or frequent closed patterns)
+    * [X] count multi-instance support of atoms
+      * [X] count support
+      * [X] store list of occurrences (list of ligands)
+    * [X] write obtained patterns and their occurrences
+    * [X] closed frequent atom pairs (CFAP)
+      * [X] write geometric discretizer
+* [X] General
+  * [X] download Coursera:
+    * [X] algorithms
+
+2012-10-18 Thu 09:48:32 CEST
+* [.] Post-Doc Project
+  * [X] read documentation provided by Jérémie Le Goff about the Ames test for mutagenecity and cancerogenicity of molecules (1h)
+    * link: /export/home/rabatel/Documents/Bibliography/ExpertDomainDocumentation/Ames test 10_2012.docx
+    * [X] answer Jérémie's email
+* [X] Jak2
+  * [X] write the current situation
+    * available data:
+      * multi-conformations with CDocker
+      * multi-conformations with Gold (but no way to have a score for one conformation!)
+    * to test:
+      * Gold data (on the whole dataset!)
+      * CDocker data on the topX conformations
+      * also test with random forests
+    * analyze results:
+      * gain compared with old data
+    * implement a virtual screening evaluation measure
+    * find benchmard datasets to compare with
+  * [X] experiments (2h)
+    * [X] find last data sent by Ronan
+    * [X] preprocess these data if necessary
+* [X] General
+  * [X] write dr
+  * [X] railscast
+  * [X] send sms Karim
+  * [X] confirm train tickets
+
+2012-10-17 Wed 12:09:51 CEST
+* [o] Post-Doc Project
+  * [X] meeting with Bertrand (2h)
+* [X] General
+  * [X] book train tickets
+  * [X] send information form to Arielle
+    * [X] fill the form
+    * [X] send
+
+2012-10-16 Tue 09:32:38 CEST
+* [X] Post-Doc Project
+  * [X] Chemoinformatics seminar (Willy Ugarte) (1h)
+  * [X] project starting meeting (Jeremie, Bertrand, Ronan, Alban, Bruno, Julien) (1H30)
+    * [X] read project
+    * [X] list possible future work
+      * [X] mining patterns with a continuous target attribute
+      * [X] mine conjunctions of patterns with other measures than growth rate
+        * [X] information gain, etc.
+        * [X] variance reduction
+      * [X] improve the results of toxicology prediction
+        * [X] prediction/classification based on rules (not only one jumping pattern)
+        * [X] statistical properties of such jumping patterns
+      * [X] study the problem of using a more elaborate representation of atoms (with disjunctions?)
+      * [X] pattern stimulation in other contexts than Bayes?
+      * [X] inhibitor mining
+        * [X] mining algorithm based on support-based definition of inhibitors
+          * [X] define different types of inhibitors
+          * [X] propose algorithms to mine them
+        * [X] definition based on stimulation?
+      * [X] combining QSAR + toxicophores
+      * [X] problems related to the super-imposition of patterns
+        * [X] introducing a notion of distance between 2 fragments of a pattern
+        * [X] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
+        * [X] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
+      * [X] Focusing on the different types of toxicity
+        * [X] contextual pattern extraction? --> what is common/different from different types of toxicities?
+        * [X] knowledge extraction: rather than only considering the high/low impact on toxicity of a toxicophore, study whether or not its impact is more or less general (power of generatlization of a toxicophore)
+* [X] PatternStimulation
+  * [X] submit paper
+  * [X] send sources to Bertrand and Ryan
+* [o] General
+  * [X] send email to Radu
+  * [X] answer Ryan's email
+
+2012-10-14 Sun 10:44:45 CEST
+* [.] PatternStimulation
+  * [O] Code
+    * [X] implement pattern selection on GR
+      * [X] interval computation
+      * [X] building the list of patterns to use
+    * [X] check what happens with degenerate odds
+    * [X] oblige p,q to be frequent as an option
+    * [X] measure traditional vs alternative classification
+    * [ ] make a test with considering the median value for tests that got rejected by the tests
+    * [X] implement naive bayes classification
+      * [X] select patterns of size one only
+      * [X] patterns to use are all the patterns of size 1! (seems to be implicit with previous)
+    * [X] write scripts to 
+      * [X] run lots of experiments
+      * [X] read and select the best results
+      * [X] not running an experiment if it has already be done
+    * [X] add to the log names
+      * [X] dataset
+      * [X] classifier type
+      * [X] minFreq
+      * [X] minInt
+      * [X] N
+      * [X] R
+      * [X] percentile
+* [ ] write dr
+
 2012-10-13 Sat 11:49:50 CEST
-* [ ] PatternStimulation
-  * [ ] Code
-    * [ ] check the median retrieval for slope values
-    * [ ] compute other measures for flagging
+* [X] PatternStimulation
+  * [X] Code
+    * [X] check the median retrieval for slope values
+    * [X] compute other measures for flagging
+      * [X] features of a flag
+        * [X] up or down compared to the reference value
+        * [X] ? - how to consider the flag of the median?
+      * [X] number of flags that are in the opposed way compared to the selected one
 
 2012-10-11 Thu 07:16:29 CEST
 * [.] PatternStimulation
