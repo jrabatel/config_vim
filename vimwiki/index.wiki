@@ -46,7 +46,7 @@
     * [ ] script for mp3tagging
     * [ ] new version of drj
     * [ ] new version of free-hebergements
-  * [ ] install configuration on network home /home/personnels/rabatel/ (1h)
+  * [ ] install configuration on network directory /home/personnels/rabatel/ (1h)
     * [ ] configuration of local working environment
   * [ ] Mails
     * [ ] Using mutt for the mails
@@ -54,6 +54,104 @@
     * [ ] with mutt, how to send mails with different email addresses?
 
 == Daily TODO ==
+
+2012-10-25 Thu 08:30:05 CEST
+* [ ] Jak2
+  * [ ] applications for the DT learner?
+    * [ ] protein-ligand binding site discovery
+    * [ ] Virtual Screening
+  * [ ] data for comparison with DT learner in VS
+    * [ ] Benchmark of active compounds and decoys DUD
+      * [ ] 40 targets with:
+        * [ ] active compounds and decoys
+        * [ ] 3D coordinates
+        * [ ] crystallographic conformation for the ligand! (except for a few targets)
+      * [ ] One paper JCIM2010 with results for those data on several approaches (2D, 3D)
+        * [ ] "A comprehensive comparison of ligand-based virtual screening tools against the DUD dataset reveals limitations of current 3D methods", JCIM2010
+      * [ ] Currently building and preprocessing the whole dataset
+      * [ ] Implementing the same quality measures
+      * [ ] Problem definition:
+        * [ ] integrate a ligand query --> from crystallographic ligand pose
+          * [ ] with DT: build DT on learning set, retrieve leaf for query, consider all the molecules from same leaf
+          * [ ] with RF: build RF and similarity measure with query is the fraction of trees in the forest where the molecule is in the same leaf as the query node
+          * [ ] Remark: the DT learning could be modified: we only need the branch for the query ligand --> faster tree construction
+          * [ ] how to split the datasets into learning / test data? the test dataset should be sufficiently large
+  * [ ] implement one or two quality measures for VS
+  * [ ] fix problem in printing random forest results
+  * [ ] analyse last results
+  * [ ] run experiments with jak2cdocker dataset (before multi conformations)
+  * [ ] run experiments with jak2goldMultiConformations--all
+  * [ ] Skype 14h (Jan, Bertran, Bruno)
+    * [ ] new version of atom typing
+    * [ ] virtual screening evaluation
+      * [ ] datasets from DUD
+        * [ ] intersection with Mohr's dataset
+        * [ ] currently building the datasets and preprocessing them (by adding the decoys)
+      * [ ] problem with multi-conformations
+        * [ ] ask Ronan to generate conformations for them?
+      * [ ] problem with block effect of DT
+    * [ ] data from Ronan
+* [ ] 
+
+2012-10-24 Wed 09:24:19 CEST
+* [.] Jak2
+  * [X] test atom itemsets on Mohr's data
+    * [X] preprocess Mohr's data
+      * [X] copy to ruby mining scripts
+      * [X] extract patterns for each dataset
+      * [X] copy resulting files into Mohr's datasets
+      * [X] copy preprocessed datasets into build/data directory
+    * [X] adapt ruby scripts for experiments
+      * [X] copy them from KULeuven to /home/personnels/rabatel/...
+      * [X] write the correct scripts for
+        * [X] Mohr data
+        * [X] jak2
+      * [X] copy the obtained file settings to the to_preprocess folder
+    * [X] run DT learner
+      * [X] with pattern-based atom typing
+      * [X] with classical atom typing
+  * [X] run jak2
+    * [X] with pattern-based atom typing
+    * [X] with classical atom typing
+  * [ ] use a sampling method on ligands?
+  * [ ] implement a virtual screening quality measure in addition
+  * [ ] find benchmark approaches for 3D virtual screening and corresponding data
+  * [ ] for large-scale experiments
+    * [ ] see group list in the FAQ
+* [X] General
+  * [X] eee pc
+    * [X] install ruby and RoR
+    * [X] install ssh server
+  * [ ] Karim's birthday
+
+2012-10-23 Tue 08:30:15 CEST
+* [X] Jak2
+  * [X] finish implementation of itemset labels (2h)
+* [ ] Post-Doc Project
+* [o] General
+  * [X] write dr
+  * [.] Rails
+    * [X] taggable generator
+    * [ ] Railscast
+      * [ ] Comments
+        * [ ] Convert into generator
+      * [ ] YAML config
+      * [ ] jQuery File Upload
+      * [ ] Cropping images
+      * [ ] Token Fields (revised)
+      * [ ] Calendars (revised)
+      * [ ] ActiveRecord Reputation System
+    * [ ] likeable generator
+      * [ ] partials
+        * [ ] like link
+        * [ ] unlike link
+        * [ ] ajax
+    * [ ] followable/favouritable generator
+      * [ ] partials
+        * [ ] follow form
+        * [ ] unfollow form
+        * [ ] ajax
+    * [ ] categorizable generator
 
 2012-10-22 Mon 09:02:10 CEST
 * [.] Jak2
@@ -63,12 +161,12 @@
     * [X] install code
     * [X] build it
     * [X] copy data
-  * [ ] implement new label type with frequent itemsets
-    * [ ] read itemset files and occurrences
-    * [ ] build an atom option with corresponding itemset
-      * [ ] with script: write on file mapping property->itemId
-      * [ ] read mapping of items
-      * [ ] transfer one atom into one itemset
+  * [X] implement new label type with frequent itemsets
+    * [X] read itemset file and occurrences
+    * [X] build an atom option with corresponding itemset
+      * [X] with script: write on file mapping property->itemId
+      * [X] read mapping of items
+      * [X] convert one atom into one itemset
   * [ ] think about mining pairs of atoms
   * [ ] test data from Ronan with current version
   * [ ] list references about atom pairs
@@ -80,9 +178,9 @@
   * [ ] cahiers de labo
   * [ ] study the Chi² test interestingness measure for patterns
   * [ ] read documentation about statistical tests
-* [.] General
-  * [ ] write dr
-  * [ ] asus
+* [O] General
+  * [X] write dr
+  * [X] asus
   * [X] SpiderOak
     * [X] pay last bill
     * [X] terminate contract

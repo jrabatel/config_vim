@@ -42,7 +42,8 @@ nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki<CR>
 " MAKE
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
-nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
+" nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
+nnoremap ,makj :silent make -C /home/personnels/rabatel/Documents/Code/build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaDataRandomForest/<CR>:redraw!<CR>
 nnoremap ,makbj :silent make -B -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
