@@ -55,27 +55,67 @@
 
 == Daily TODO ==
 
+2012-10-26 Fri 11:28:13 CEST
+* [.] Jak2
+  * [X] send meeting report
+    * [X] discussed
+    * [X] to do
+    * [X] paper to attach
+  * [ ] preprocess DUD datasets
+  * [ ] preprocess new JAK2 datasets
+* [X] General
+  * [X] install mails
+    * [X] unicaen
+    * [X] gmail
+    * [X] kuleuven
+    * [X] lirmm
+  * [ ] install oh my zsh
+
 2012-10-25 Thu 08:30:05 CEST
 * [ ] Jak2
   * [ ] applications for the DT learner?
     * [ ] protein-ligand binding site discovery
     * [ ] Virtual Screening
+
+* Skype 14h 
   * [ ] data for comparison with DT learner in VS
+    * [ ] Data from Ronan's data --> just received them with decoys and multi-conformations
     * [ ] Benchmark of active compounds and decoys DUD
       * [ ] 40 targets with:
         * [ ] active compounds and decoys
         * [ ] 3D coordinates
         * [ ] crystallographic conformation for the ligand! (except for a few targets)
-      * [ ] One paper JCIM2010 with results for those data on several approaches (2D, 3D)
+      * [ ] One paper JCIM2010 with results for those data on several approaches (2D, 3D, very limited in 4D)
         * [ ] "A comprehensive comparison of ligand-based virtual screening tools against the DUD dataset reveals limitations of current 3D methods", JCIM2010
       * [ ] Currently building and preprocessing the whole dataset
       * [ ] Implementing the same quality measures
       * [ ] Problem definition:
-        * [ ] integrate a ligand query --> from crystallographic ligand pose
+        * [ ] one is the framework that we currently use: building DT on the whole learning dataset and testing the resulting tree with test dataset --> directly feasible
+        * [ ] other possibility is to integrate a ligand query --> from crystallographic ligand pose
           * [ ] with DT: build DT on learning set, retrieve leaf for query, consider all the molecules from same leaf
-          * [ ] with RF: build RF and similarity measure with query is the fraction of trees in the forest where the molecule is in the same leaf as the query node
+          * [ ] with RF: build RF; similarity measure with query is the fraction of trees in the forest where the molecule is in the same leaf as the query node
           * [ ] Remark: the DT learning could be modified: we only need the branch for the query ligand --> faster tree construction
           * [ ] how to split the datasets into learning / test data? the test dataset should be sufficiently large
+
+    * [ ] To do 
+      * [ ] active learning settings
+        * [ ] what has been done in the literature?
+        * [ ] how to adapt it to our approach?
+        * [ ] 1. first screen a small part of the db
+        * [ ] 2. perform the tests
+      * [ ] toxicity and activity
+        * [ ] work done to combine two problems?
+        * [ ] try to find whether toxicity plays a role in the construction of inactive decoys (can a decoy be both active and toxic?)
+
+  * [ ] New atom typing refinement strategy
+    * [ ] old version: problem with non-sufficient steps to lead to interesting test patterns, a lot of prunable candidates generated
+    * [ ] integrated a frequent closed pattern mining step in preprocessing: mining sets of atom properties that are both frequent and closed
+      * [ ] interests: limited number of possibilities (around 350/400 patterns), some of those patterns are chemically significant
+      * [ ] results: systematically improved results in prediction / variance reduction even with a 1-step refiner, gain in processing time
+      * [ ] drawbacks: in current version, an atom can receive only one atom typing label
+
+  * [ ] Next skype meeting, 30/10/2012 at 10am
+
   * [ ] implement one or two quality measures for VS
   * [ ] fix problem in printing random forest results
   * [ ] analyse last results
@@ -91,7 +131,6 @@
         * [ ] ask Ronan to generate conformations for them?
       * [ ] problem with block effect of DT
     * [ ] data from Ronan
-* [ ] 
 
 2012-10-24 Wed 09:24:19 CEST
 * [.] Jak2
