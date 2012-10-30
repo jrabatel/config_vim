@@ -55,6 +55,17 @@
 
 == Daily TODO ==
 
+2012-10-30 Tue 09:09:49 CET
+* [ ] Jak2
+  * [ ] Skype
+    * [ ] progress on DUD datasets
+    * [ ] New atom typing refinement strategy
+      * [ ] old version: problem with non-sufficient steps to lead to interesting test patterns, a lot of prunable candidates generated
+      * [ ] integrated a frequent closed pattern mining step in preprocessing: mining sets of atom properties that are both frequent and closed
+        * [ ] interests: limited number of possibilities (around 350/400 patterns), some of those patterns are chemically significant
+        * [ ] results: systematically improved results in prediction / variance reduction even with a 1-step refiner, gain in processing time
+        * [ ] drawbacks: in current version, an atom can receive only one atom typing label
+
 2012-10-26 Fri 11:28:13 CEST
 * [.] Jak2
   * [X] send meeting report
@@ -62,6 +73,9 @@
     * [X] to do
     * [X] paper to attach
   * [ ] preprocess DUD datasets
+    * [ ] choose some datasets
+    * [ ] compute the union of active compounds and decoys
+    * [ ] run the openbabel preprocessing of resulting dataset
   * [ ] preprocess new JAK2 datasets
 * [X] General
   * [X] install mails
@@ -106,13 +120,6 @@
       * [ ] toxicity and activity
         * [ ] work done to combine two problems?
         * [ ] try to find whether toxicity plays a role in the construction of inactive decoys (can a decoy be both active and toxic?)
-
-  * [ ] New atom typing refinement strategy
-    * [ ] old version: problem with non-sufficient steps to lead to interesting test patterns, a lot of prunable candidates generated
-    * [ ] integrated a frequent closed pattern mining step in preprocessing: mining sets of atom properties that are both frequent and closed
-      * [ ] interests: limited number of possibilities (around 350/400 patterns), some of those patterns are chemically significant
-      * [ ] results: systematically improved results in prediction / variance reduction even with a 1-step refiner, gain in processing time
-      * [ ] drawbacks: in current version, an atom can receive only one atom typing label
 
   * [ ] Next skype meeting, 30/10/2012 at 10am
 
