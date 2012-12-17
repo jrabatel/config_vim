@@ -1,5 +1,9 @@
 General ideas
 
+Using the approach used by 4D atom pairs kernels (e.g., "Probabilistic modeling of conformational space for 3D machine learning approaches") and extend them:
+ - instead of considering atom pairs, we could consider fragment pairs (with the same exploitation of multi-conformations)
+ - we can also extend the atom typing description of such atoms
+
 Would it be possible to generate for each molecule a boolean vector of features, where each feature corresponds to a pattern used in a DT
 In order to obtain several features, we can rely on the random forest learner.
 

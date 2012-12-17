@@ -1,0 +1,25 @@
+Skype meeting: Jan, Bertrand, Bruno, Julien
+
+report
+  - Pattern-based atom typing
+    - collected and summarized experimental results on 4 Mohr's datasets
+      - using pattern-based atom typing leads to an average reduction of the RMSE of 9.5%
+      - this atom typing scheme will be used by default for the next experiments
+    - Allowing further refinements for pattern-based atom typing?
+  - Virtual Screening
+    - Literature work: how to evaluate VS approaches in our context?
+      - model learning, need for positive/negative examples, no natural similarity measure with query ligands
+    - Found a new and recent experimental framework defined by Muggleton et al., 2012
+    - Current work
+      - Preparing the dataset for this experimental framework
+        - very large test dataset: 95171
+        - small learning datasets: 52 at max (32 positive + 20 negative examples)
+
+to do
+  - Pattern-based atom typing
+    - implement a new version of the atom typing allowing further refinements of already labeled vertices
+      - requires building a pattern lattice and the corresponding operators
+  - Virtual Screening
+    - adopt and test the experimental framework defined by Muggleton et al. (Journal of Physical Chemistry B, 2012)
+
+Next meeting: 13/11/2012, 10.15am

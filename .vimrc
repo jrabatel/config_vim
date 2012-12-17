@@ -44,9 +44,10 @@ nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
 nnoremap ,makj :silent make -C /home/personnels/rabatel/Documents/Code/build/jak2/src/examples/mutaData/<CR>:redraw!<CR>
+" nnoremap ,makj :silent make -C /home/personnels/rabatel/Documents/Code/build/jak2/src/examples/virtualScreeningDUD/<CR>:redraw!<CR>
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/mutaDataRandomForest/<CR>:redraw!<CR>
-nnoremap ,makbj :silent make -B -C $build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
-nnoremap ,mako :silent make -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
+" nnoremap ,makbj :silent make -B -C /home/personnels/rabatel/Documents/Code/build/jak2/src/examples/crossValidation/<CR>:redraw!<CR>
+nnoremap ,mako :silent make -C /home/personnels/rabatel/Documents/Code/build/openbabel_preprocessing/src<CR>:redraw!<CR>
 nnoremap ,makbo :silent make -B -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 nnoremap ,maks :silent make -C $build/stimulation_classification/src<CR>:redraw!<CR>
 
@@ -97,7 +98,8 @@ nmap ,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,<C-e> :setlocal spell spelllang=en<CR>
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
-let g:tagbarautoclose = 0
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
 
 " Quickly remove other buffers
 nmap ,bufo :Bufonly<CR>
@@ -252,7 +254,7 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_GotoError=0
+let g:Tex_GotoError=1
 
 " Compiling rules to generate pdf from dvi
 let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'

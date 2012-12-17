@@ -1,0 +1,39 @@
+TODO
+
+* [ ] Add to general generator
+  * [ ] install gritter
+  * [ ] install rspec, capybara, guard-rspec, spork, guard-spork
+
+* [ ] Add Individual Generators
+  * [ ] taggable MODEL_NAME
+    * [ ] if it does not exist, run acts_as_taggable_on migrations
+    * [ ] add counter_cache column and migrations (http://www.igvita.com/2006/08/28/extending-acts_as_taggable/)
+    * [ ] add views, partials, helpers
+      * [ ] tags_helpers
+      * [ ] search field
+      * [ ] edit_tag_fields with 
+  * [ ] likeable MODEL_NAME
+    * [ ] install activerecord_reputation_system
+    * [ ] run migrations and install if not already installed (ask question to user)
+    * [ ] add views, partials, helpers
+      * [ ] form partials (one for like, one for unlike)
+      * [ ] like_general_form partial
+      * [ ] js views for ajax
+    * [ ] add controller actions like and unlike
+    * [ ] add method is_liked? to model
+    * [ ] add abilities 
+      * [ ] only logged in users can like/unlike
+      * [ ] a user can only like objects that are not owned by himself (or are himself)
+  * [ ] followable MODEL_NAME
+    * [ ] install activerecord_reputation_system
+    * [ ] run migrations and install if not already installed (ask question to user)
+    * [ ] add views, partials, helpers
+      * [ ] form partials (one for follow, one for unfollow)
+      * [ ] follow_general_form partial
+      * [ ] js views for ajax
+    * [ ] add controller actions follow and unfollow
+    * [ ] add method is_followed?(user) to model
+    * [ ] add abilities 
+      * [ ] only logged in users can follow/unfollow
+      * [ ] a user can only follow objects that are not owned by himself (or are himself)
+  * [ ] commentable MODEL_NAME

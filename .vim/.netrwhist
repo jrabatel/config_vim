@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='sftp://rabatel@rabatel.users.greyc.fr/'
+let g:netrw_dirhist_2='scp://fox/data/chercheurs/rabatel/Documents/'
+let g:netrw_dirhist_3='scp://fox//data/chercheurs/rabatel/Documents/'
+let g:netrw_dirhist_4='scp://fox//data/chercheurs/rabatel/Documents/Code/'
+let g:netrw_dirhist_5='scp://fox//data/chercheurs/rabatel/Documents/experiments/'
+let g:netrw_dirhist_6='scp://fox//data/chercheurs/rabatel/Documents/experiments/jak2/'
+let g:netrw_dirhist_7='scp://fox//data/chercheurs/rabatel/Documents/experiments/jak2/src/'

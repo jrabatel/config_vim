@@ -1,0 +1,45 @@
+Todo:
+ - directly retrieve images from:
+   - deviantart
+   - tumblr
+ - implement drj
+   - baseapp
+   - dr model
+
+UI
+ - how to use jQuery File Upload to:
+   - upload multiple tags with the same attributes
+   - upload multiple tags with the same attributes and the same
+ - chromium plugin
+ - firefox plugin
+ - in 'show' view:
+   - other pictures from the same gallery
+   - other pictures from the same domain?
+   - other pictures with close taggings?
+
+Model attributes:
+ - reputation
+   - likes (with an evaluation from 1 to 5)
+
+Abilities
+ - allow the rotation/cropping of images
+
+Different models of documents to tag:
+ - 
+
+API
+ - how images and tags can be used from a distant website?
+   - provide some json ways of doing it
+   - how to know how many times an image has been used outside of the website?
+   - Needs:
+     - use the url of an image in a website
+     - get a list of images through a request based on tags
+       - parameters:
+         - q: list of tag names (array or string?)
+         - order: like, created_on
+       - limitations:
+         - number of images to retrieve
+         - size of the retrieved images
+     - a user can log in from another website
+       - a user can upload images and use them from another website
+       - a user can look more conveniently for the images/tags he owns

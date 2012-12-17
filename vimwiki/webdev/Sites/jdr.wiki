@@ -11,23 +11,20 @@
     * [X] belongs_to user
     * [ ] acts_as_commentable
     * [ ] acts_as_taggable_on
-      * [ ] contexts: place, feelings, characters
+      * [ ] scopes: place, feelings, characters, general
+      * [ ] scopes for LD: same + TR + LD objectives
     * [ ] published:boolean
-    * [ ] Views
-      * [ ] forms as a partial (for new and update)
-      * [ ] _dream partial for lists (title, date, length, dreamer, tags...)
-      * [ ] _dream_links partial (update and destroy)
   * [ ] Controllers and views
   * [ ] authorisation and reforwarding
   * [ ] Actions on dreams?
-    * [ ] like
-    * [ ] in my favourites
+    * [ ] like --> ActiveRecord Reputation System
+    * [ ] favourite --> ActiveRecord Reputation System
     * [ ] share on facebook, twitter, google+
   * [ ] New and Edit
     * [ ] title should not be blank
     * [ ] content should not be blank
   * [ ] Show
-    * [ ] should be followable (the dream or the dreamer)
+    * [ ] Dreamer should be followable --> ActiveRecord Reputation System
 
 * [o] User
   * [X] Devise

@@ -1,0 +1,22 @@
+Skype meeting: Jan, Bertrand, Bruno, Julien
+
+report
+  - Pattern-based atom typing
+    - full version of the pattern-based atom typing refiner (allowing further refinements of already labeled vertices)
+  - Virtual Screening
+    - no results yet when using the experimental framework defined by Muggleton et al.
+    - Ronan should soon provide a multi-conformational version of the DUD datasets
+
+to do
+  - Pattern-based atom typing
+    - are the DT obtained with new refinement operator unbalanced?
+      - check it in the results
+      - if it is the case, then impose a constraint on the maximum cardinality of the increment of itemsets to use in labels
+  - Virtual Screening
+    - run tests on the one-conformation version of the DUD datasets and compute values of quality measures (enrichment factor, AUROC, BEDROC)
+    - study more precisely Muggleton's work
+  - Various
+    - updating the jak2 code so it will work with last mips repository version (deadline: end of November)
+    - proposing a stable pattern language definition for Jan's master student (deadline: end of November)
+
+Next meeting: 20/11/2012, 10.15am
