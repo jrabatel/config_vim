@@ -32,7 +32,7 @@ attr_writer :`cursor~
 ..XPT
 
 XPT out " puts `cursor~
-puts `cursor~
+puts "`cursor~"
 ..XPT
 
 XPT outvar " puts "`var~ = #{`var~}"

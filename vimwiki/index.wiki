@@ -11,26 +11,6 @@
 [[Web development]]
 [[Various]]
 
-== General TODO ==
-* [ ] Jak2
-  * [ ] change ruby scripts for the result summary
-  * [ ] create vertices based on depth-first search-space traversal
-  * [ ] run new tests (one for each new dataset)
-  * [ ] study and see whether it is possible to quickly use in a multi-conformation framework a representation of the density distribution of distances between pairs of atoms --> problem: how to exploit this when working with graphs? Find corresponding paper and see what is used to generate the density distance distributions (the paper is Boltzmann-Enhanced Flexible Atom-Pair Kernel with Dynamic Dimension Reduction, the method to represent density distribution is the Gaussian Mixture Models)
-
-* [ ] PatternStimulation
-  * [ ] for chi-squared and LB
-    * [ ] implement chi² test as a pattern interestingness measure
-    * [ ] ordered by increasing size of increment
-    * [ ] ordered by decreasing length
-    * [ ] ordered by decreasing interestingness measure
-
-* [ ] Key Discovery
-  * [ ] implementing RDF version of HCA
-
-* [ ] Vim config
-  * [ ] add swap list: ".", "->" for c++
-
 * [ ] Pattern Mining Problems
   * [ ] mining patterns in the presence of a continuous target value
   * [ ] inhibitor mining
@@ -41,25 +21,6 @@
     * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
 
 * [ ] General
-  * [ ] coding
-    * [ ] firefox plugin to save link with englobing url
-    * [ ] script for mp3tagging
-    * [ ] new version of drj
-    * [ ] new version of free-hebergements
-  * [ ] install configuration on network directory /home/personnels/rabatel/ (1h)
-    * [ ] configuration of local working environment
-  * [ ] Mails
-    * [ ] Using mutt for the mails
-    * [ ] transfer every mails to gmail?
-    * [ ] with mutt, how to send mails with different email addresses?
-
-TODO 
-* [ ] experiments for mutagenecity
-* [ ] select best settings for random learner on DUD
-* [ ] experiments for DUD with filters 'all' and 'non-hydrogens'
-* [ ] convert into an occurrence matrix
-
-* [ ] General
   * [ ] look for gifts
     * [ ] TV series 'Boardwalk Empire'
     * [ ] théorême du perroquet
@@ -67,34 +28,65 @@ TODO
 
 == Daily TODO ==
 
+2012-12-19 Wed 09:09:58 CET
+* [O] Jak2
+  * [ ] Write and send a document about pattern languages
+  * [X] Send an email to Ronan Bureau (1h)
+  * [X] Finish integration of molecular descriptors into SVM learning
+    * [X] when the occurrence matrix out of a random forest, also add molecular descriptors
+    * [X] test it
+      * [X] create a fake molecular_descriptors file
+      * [X] conversion of two existing files
+  * [X] Redo preprocessing of DUD datasets (uniconformational) to generate molecular descriptors
+  * [X] When a SVM model has been learnt, share the weight of apparently equivalent attributes
+    * [X] learn an example model
+    * [X] check how models look like
+    * => support vectors seem to contain all the attributes, with full weight (weight is on the vector, not on the attributes)
+* [.] Mutagenesis
+  * [o] Run preprocessing of multiconformational Mutagenesis dataset
+    * [X] create the input data folders (1 for each run)
+    * [X] read data segmentation (learning/test, folds)
+    * [ ] test it
+* [ ] Admin
+  * [ ] Send email for deleting unneeded account (ext-rabatel)
+* [ ] General
+  * [ ] write dr
+  * [ ] look for a gift for Rémi
+
+2012-12-18 Tue 09:04:47 CET
+* [X] Preprocessing of 3D data (6h)
+  * [X] source code under git
+  * [X] add a processor that compute and store molecular descriptors
+    * [X] implementing the computation of some molecular descriptors
+    * [X] writing the molecular descriptors on file
+    * [X] run the preprocessor during the global preprocessing of the input data file
+    * [X] testing it
+* [X] Jean-Philipe Métivier's seminary on Constraint Programming (1h)
+
 2012-12-17 Mon 08:07:38 CET
-* [ ] Jak2
-  * [ ] Run evaluation scripts for results of random forests dedicated to SVM (large size, low test sampling rate)
-* [o] Install
+* [X] Jak2
+  * [X] Run evaluation scripts for results of random forests dedicated to SVM (large size, low test sampling rate)
+    * [X] generated files (models, data files) should be removed after used (i.e., all files with '.dat' in the name
+  * [X] Check completed results obtained with old configuration of random forests
+* [X] Install
   * [X] install dropbox for synchronizing the data files
-  * [ ] link to the git folders for configuration (vim, ssh, general)
+  * [X] link to the git folders for configuration (vim, ssh, general)
 * [X] Admin
   * [X] fill time-sheets for KULeuven
   * [X] fill the forms on Wiki for Migrant project
   * [X] sign, scan and send the time-sheets
-* [ ] General
-  * [ ] write dr
+* [X] General
+  * [X] write dr
+  * [X] book train tickets!
 
 2012-12-14 Fri 09:21:58 CET
-* [o] Jak2
+* [X] Jak2
   * [X] Retrieving results
   * [X] re-run experiment evaluation scripts
   * [X] create summary of results
-  * [ ] move completed experiments
-  * [ ] Skype meeting (Bertrand Cuissart, Bruno Crémilleux, Jan Ramon, Julien Rabatel)
-    * [ ] comparison SVM / random forests
-    * [ ] next steps
-      * [ ] molecular features in SVM
-    * [ ] ICDM proceedings
-    * [ ] ILP-based approach: pattern language
-      * [ ] pattern structure
-      * [ ] atom/fragment typing
-      * [ ] higher-level background knowledge
+  * [X] move completed experiments
+  * [X] Skype meeting (Bertrand Cuissart, Bruno Crémilleux, Jan Ramon, Julien Rabatel) (1h)
+  * [X] Meeting with Bertrand Cuissart and Bruno Crémilleux (1h30)
   * [X] Run new experiments to give the SVM an advantage
     * [X] with large forest size (500)
     * [X] small tests sampling rate (1%)
@@ -102,9 +94,6 @@ TODO
     * [X] generate settings files
     * [X] copy the files
     * [X] compile them
-  * [ ] 
-* [ ] General
-  * [ ] write dr
 
 2012-12-13 Thu 10:30:13 CET
 * [o] Jak2
