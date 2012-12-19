@@ -1,0 +1,43 @@
+== OUTLINE ==
+
+INTRODUCTION
+- Drug design
+- Problem of lead compound discovery
+  - size of chemical space
+
+VIRTUAL SCREENING
+- Virtual Screening
+  - families of virtual screening approaches
+  - Ligand-based vs Structure-based VS
+- Need for expressivity (to describe a complex phenomenon)
+- Need for interpretability: opens a real opportunity for collaboration work (experts can understand results, modify rules, make suggestions, etc.)
+
+GEOMETRICAL PATTERNS
+- Goal
+  - describe biological activity phenomenon by considering both chemical and 3D information (both of importance when considering)
+- pattern language
+- extraction
+  - the atom typing problem: how to allow a rich expressivity and computationally reasonable solution?
+- decision trees
+  - expressivity, able to handle continuous target value, interpretability and explanations
+  - Warning: should detail the problems of generating/selecting tests
+  - random forest
+
+GEOMETRICAL PATTERNS AND VIRTUAL SCREENING
+- Experimental framework
+- DUD datasets
+- quality measures
+
+PRELIMINARY EXPERIMENTAL RESULTS
+- benchmark data: DUD
+- quality measures: based on ranking more than prediction
+- to use: "4D" representation of the data
+
+CONCLUSION
+- first experimental results to improve
+  - how to balance interpretability / accuracy?
+- applicability to other problems as well
+  - activity prediction
+  - toxicity prediction / description
+- a very flexible pattern language
+  - can merge multi-source information (protein side, chemical background knowledge, 3D/4D information, multi-targets, multi-ligands, etc.
