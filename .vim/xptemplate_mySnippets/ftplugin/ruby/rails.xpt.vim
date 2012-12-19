@@ -85,3 +85,7 @@ flash[:notice] = "`message~"`cursor~
 XPT fla_s
 flash[:success] = "`message~"`cursor~
 ..XPT
+
+XPT params
+params[:`field~]`cursor~
+..XPT

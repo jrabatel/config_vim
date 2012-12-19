@@ -16,24 +16,891 @@
   * [ ] change ruby scripts for the result summary
   * [ ] create vertices based on depth-first search-space traversal
   * [ ] run new tests (one for each new dataset)
+  * [ ] study and see whether it is possible to quickly use in a multi-conformation framework a representation of the density distribution of distances between pairs of atoms --> problem: how to exploit this when working with graphs? Find corresponding paper and see what is used to generate the density distance distributions (the paper is Boltzmann-Enhanced Flexible Atom-Pair Kernel with Dynamic Dimension Reduction, the method to represent density distribution is the Gaussian Mixture Models)
+
 * [ ] PatternStimulation
-  * [ ] chi² computation should be tested
   * [ ] for chi-squared and LB
+    * [ ] implement chi² test as a pattern interestingness measure
     * [ ] ordered by increasing size of increment
     * [ ] ordered by decreasing length
     * [ ] ordered by decreasing interestingness measure
-* [ ] KeyDiscovery
-  * [ ] base class should be fully stored in main memory
+
+* [ ] Key Discovery
+  * [ ] implementing RDF version of HCA
+
 * [ ] Vim config
   * [ ] add swap list: ".", "->" for c++
 
+* [ ] Pattern Mining Problems
+  * [ ] mining patterns in the presence of a continuous target value
+  * [ ] inhibitor mining
+  * [ ] combining QSAR + toxicophores
+  * [ ] problems related to the super-imposition of patterns
+    * [ ] introducing a notion of distance between 2 fragments of a pattern
+    * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
+    * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
+
+* [ ] General
+  * [ ] coding
+    * [ ] firefox plugin to save link with englobing url
+    * [ ] script for mp3tagging
+    * [ ] new version of drj
+    * [ ] new version of free-hebergements
+  * [ ] install configuration on network directory /home/personnels/rabatel/ (1h)
+    * [ ] configuration of local working environment
+  * [ ] Mails
+    * [ ] Using mutt for the mails
+    * [ ] transfer every mails to gmail?
+    * [ ] with mutt, how to send mails with different email addresses?
+
+TODO 
+* [ ] experiments for mutagenecity
+* [ ] select best settings for random learner on DUD
+* [ ] experiments for DUD with filters 'all' and 'non-hydrogens'
+* [ ] convert into an occurrence matrix
+
+* [ ] General
+  * [ ] look for gifts
+    * [ ] TV series 'Boardwalk Empire'
+    * [ ] théorême du perroquet
+    * [ ] Karim?
+
 == Daily TODO ==
 
+2012-12-17 Mon 08:07:38 CET
+* [ ] Jak2
+  * [ ] Run evaluation scripts for results of random forests dedicated to SVM (large size, low test sampling rate)
+* [o] Install
+  * [X] install dropbox for synchronizing the data files
+  * [ ] link to the git folders for configuration (vim, ssh, general)
+* [X] Admin
+  * [X] fill time-sheets for KULeuven
+  * [X] fill the forms on Wiki for Migrant project
+  * [X] sign, scan and send the time-sheets
+* [ ] General
+  * [ ] write dr
+
+2012-12-14 Fri 09:21:58 CET
+* [o] Jak2
+  * [X] Retrieving results
+  * [X] re-run experiment evaluation scripts
+  * [X] create summary of results
+  * [ ] move completed experiments
+  * [ ] Skype meeting (Bertrand Cuissart, Bruno Crémilleux, Jan Ramon, Julien Rabatel)
+    * [ ] comparison SVM / random forests
+    * [ ] next steps
+      * [ ] molecular features in SVM
+    * [ ] ICDM proceedings
+    * [ ] ILP-based approach: pattern language
+      * [ ] pattern structure
+      * [ ] atom/fragment typing
+      * [ ] higher-level background knowledge
+  * [X] Run new experiments to give the SVM an advantage
+    * [X] with large forest size (500)
+    * [X] small tests sampling rate (1%)
+    * [X] with a small and a large minimum leaf size (2,5,10)
+    * [X] generate settings files
+    * [X] copy the files
+    * [X] compile them
+  * [ ] 
+* [ ] General
+  * [ ] write dr
+
+2012-12-13 Thu 10:30:13 CET
+* [o] Jak2
+  * [X] move old experiments into another folder
+  * [.] SVM learning for virtual screening
+    * [.] use regression and ranking SVM in addition of classification
+      * [o] create the models with the same input data?
+        * [X] for ranking: add rank information to SVM input data files
+        * [X] test whether it still works with classification
+        * [ ] add creating regression model
+  * [.] run the interpretation of prediction results and computation of quality measures
+    * [ ] for random forests
+    * [ ] for SVM
+    * [X] parallelize the computation of quality measures
+  * [X] add experiment id to csv results file
+  * [ ] Check new experimental results
+
+2012-12-12 Wed 10:20:40 CET
+* [O] Jak2
+  * [X] Answer Leander's email
+  * [X] Look at the SVM learner proposed by Leander
+  * [X] Preparing data for completing DUD datasets and sending them to Ronan Bureau
+  * [X] Learning a SVM on the randopm forest features
+    * [X] locally install SVM-light
+    * [X] convert occurrence matrices into SVM-light data format
+    * [X] perform the learning and the classification
+    * [X] read SVM results
+    * [X] evaluate the results
+
+2012-12-11 Tue 10:00:34 CET
+* [X] Jak2
+  * [X] send email to Leander Schietgat about SVM libraries
+  * [X] Convert the random forest learned into an occurrence matrix
+    * [X] write a specific post-processor
+      * [X] read each decision tree in deterministic order
+      * [X] for each molecule
+        * [X] for each decision tree
+          * [X] look for the corresponding leaf (classification step) => '1'
+          * [X] for all other leaves, write a '0'
+      * [X] write the result as a csv file with ligand name and target value
+      * [X] integrate to the virtual screening framework
+      * [X] in the experimental framework, check whether resulting csv files are correctly moved to the right place
+  * [X] Prepare and run new experiments for DUD datasets
+* [X] Literature reading
+  * [X] read one paper
+* [X] Attending a PhD thesis defense (NLP domain) (1h)
+* [X] General
+  * [X] write dr
+  * [X] book train tickets
+
+2012-12-10 Mon 10:27:00 CET
+* [X] Jak2
+  * [X] work on update for mips new version
+    * [X] reorganize the settings file
+    * [X] write a new example with itemset-based atom typing
+    * [X] commit and push the current version
+    * [X] writing email
+* [X] Answer Bruno Cremilleux's email
+* [X] send ACM Computing Survey about Sequential pattern mining algorithms
+* [X] General
+  * [X] write dr
+
+2012-12-07 Fri 09:27:16 CET
+* [X] Jak2
+  * [X] work on update for mips new version
+    * [X] remove all examples that are not working
+    * [X] rename working example
+* [X] General
+  * [X] remove paiement SpiderOak
+
+2012-12-06 Thu 10:41:25 CET
+* [X] Jak2
+  * [X] work on update for mips new version
+    * [X] working example using last mips version
+
+2012-12-05 Wed 10:12:21 CET
+* [O] General
+  * [ ] write dr
+  * [X] book train tickets for end of month
+  * [X] print train tickets for today
+  * [.] move to netbook
+    * [X] some Chemoinformatics papers/lessons 
+  * [X] take a few papers
+    * [X] Arnaud Soulet's EGC paper
+    * [X] Muggleton's papers
+    * [X] Data-peeler paper
+  * [X] update ipod content
+  * [X] copy code from drj
+  * [X] to take in luggage
+    * [X] book
+    * [X] cables for phone/ipod
+
+2012-12-03 Mon 08:12:21 CET
+* [X] 'Groupe de Travail Chémoinformatique'
+  * [X] finish presentation
+    * [X] introduction
+    * [X] related work
+      * [X] add Muggleton's work
+      * [X] add Kernel methods, etc.
+    * [X] experiments
+    * [X] conclusion and future work
+
+2012-12-02 Sun 12:40:11 CET
+* [X] Experiments
+  * [X] Mutagenicity
+
+2012-12-01 Sat 14:32:20 CET
+* [X] Experiments
+  * [X] DUD datasets
+    * [X] mine frequent itemsets
+    * [X] copy datasets into $build/jak2/data
+    * [X] summarize results
+      * [X] copy file into local laptop
+      * [X] find best settings
+    * [X] write experiment scripts
+    * [X] generate and copy settings files
+    * [X] run compile
+
+2012-11-30 Fri 09:16:58 CET
+* [O] Virtual Screening
+  * [X] re-add learner log output file to jak2 code
+  * [X] create a script to regularly clear all 'learner-output.txt' files
+  * [X] re-run experiments
+    * [X] remove everything in 'done'
+    * [X] copy settings to 'to_preprocess'
+    * [X] clear 'waiting_list'
+    * [X] run compilation of each setting
+    * [X] run scripts
+* [ ] Chemoinformatics group meeting
+  * [ ] Introduction
+  * [ ] Virtual Screening
+  * [ ] Geometric patterns
+* [X] Mutagenicity experiments
+  * [X] check openbabel source code
+  * [X] preprocess mutagenecity datasets
+  * [X] modify files with itemsets
+  * [X] copy files to the experiment folders
+  * [ ] generate experiments
+    * [ ] write script
+* [o] Pre-process DUD datasets with non-hydrogens filter
+  * [X] modify openbabel source code
+  * [X] run scripts
+  * [ ] run itemset extraction
+  * [ ] copy files to the experiment folders
+* [X] General
+  * [X] write dr
+  * [X] book train tickets
+
+2012-11-29 Thu 09:08:31 CET
+* [O] Jak2
+  * [X] Writing/reading data segmentation for repeating experiments (1h30)
+  * [X] re-running experiments evaluating the random forest learner settings
+  * [o] generate new preprocessed datasets by filtering the Hydrogen atoms
+    * [ ] run preprocessing for
+      * [ ] DUD datasets
+        * [ ] openbabel-based preprocessing (2 times)
+        * [ ] itemset mining with low support (5)
+* [X] Chemoinformatics group meeting
+  * [X] write presentation outline skeleton
+  * [X] select slides from previous presentations
+* [X] Various tasks
+  * [X] Send email to Bertrand Cuissart for planning early-January
+* [X] General
+  * [X] write dr
+
+2012-11-28 Wed 10:17:02 CET
+* [o] Development environment
+  * [X] local install of ruby 1.9.3
+* [O] Jak2
+  * [X] multi-threading for post-processing experimental results (1h)
+  * [X] write new experiments with minimum leaf size parameters (2, 4, 8, 12) and run them
+  * [.] generate new preprocessed datasets by filtering the Hydrogen atoms
+    * [X] updating the preprocessing source code
+    * [o] run preprocessing for
+      * [X] mutagenesis
+        * [X] openbabel-based preprocessing
+        * [X] itemset mining
+          * [X] 2D, non-hydrogens
+          * [X] 4D, non-hydrogens
+      * [ ] DUD datasets
+        * [ ] openbabel-based preprocessing (2 times)
+        * [ ] itemset mining with low support (5)
+    * [ ] updating the scripts generating the experiments
+    * [ ] copy generated files into experimental code
+    * [ ] generating new experiments for
+      * [ ] mutagenesis datasets
+      * [ ] DUD datasets
+* [ ] Mips and Jak2 updating code
+  * [ ] test the compiling code
+* [ ] Mutagenesis
+  * [ ] write experiments (after obtaining first results for the random forest experiments)
+  * [ ] run experiments
+* [o] General
+  * [X] write dr
+  * [ ] 1&1: send payment documents and email
+
+2012-11-27 Tue 09:54:56 CET
+* [X] Jak2
+  * [X] Skype Meeting (Bertrand Cuissart, Jan Ramon) (2h30)
+    * [X] meeting preparation (summarizing experimental results)
+    * [X] meeting
+    * [X] write and send report meeting
+* [X] Preparation of 2012-12-04 Chemoinformatics Workshop (5h)
+  * [X] writing and sending a summary of presentation
+  * [X] retrieving useful documents for the presentation
+  * [X] outline for the presentation
+
+2012-11-26 Mon 09:29:07 CET
+* [X] Jak2
+  * [X] check experimental results (1h)
+  * [X] update Friday's results and put them online (30min)
+  * [X] run new experiments (2h)
+    * [X] evaluating the impact of random forest settings
+      * [X] write experiments
+      * [X] compile the experiments
+      * [X] run the experiments
+  * [X] multi-threading for post-processing experimental results (1h)
+* [X] Chemoinformatics workshop and project meeting preparation (1h30)
+  * [X] outline for presentation
+  * [X] meeting with Bertrand Cuissart and Alban Lepailleur
+* [X] mips and jak2 code (2h)
+  * [X] start the update of jak2 code to fit with mips code
+  * [X] mips code up and running
+* [X] General
+  * [X] Confirm train tickets for Montpellier next week
+
+2012-11-23 Fri 11:18:48 CET
+* [X] Geometric pattern mining
+  * [X] Adapting the source code to the mips library last version (4h)
+    * [X] pull jak2 last version
+    * [X] create a new git branch
+    * [X] pull mips last version
+    * [X] note errors at compile time
+    * [X] Skype meeting with Thomas Fannes
+    * [X] try to recompile after removing old install
+  * [X] retrieve and summarize experimental results and send email to Jan Ramon, Bertrand Cuissart and Bruno Crémilleux with main results (1h30)
+* [X] Finishing PAKDD 2013 review (2h30)
+
+2012-11-22 Thu 09:51:21 CET
+* [X] Jak2
+  * [X] implement and test BEDROC measure for evaluating virtual screening (4h)
+* [X] PAKDD 2012 paper review (1h)
+  * [X] algorithms
+* [X] Mutagenesis
+  * [X] preparing experiments on 2D and 4D data
+    * [X] preprocessing (3h)
+      * [X] 2D
+        * [X] converting into correct format
+        * [X] extracting frequent closed itemsets for atom-typing
+        * [X] copy preprocessed datasets to be used with learner
+      * [X] 4D
+        * [X] converting into correct format
+        * [X] extracting frequent closed itemsets for atom-typing
+        * [X] copy preprocessed datasets to be used with learner
+* [X] Post-doc project (30min)
+  * [X] read and modify Bertrand Cuissart's proposition of summary
+  * [X] send modified version
+
+2012-11-21 Wed 09:21:08 CET
+* [X] Jak2
+  * [X] implement the scripted creation of a summary over all the experiments (4h)
+  * [X] write new experiments for evaluating a 2-step refiner
+* [X] PAKDD 2012 paper review (1h)
+  * [X] finish reading
+    * [X] definitions and formalism
+  * [X] reading review form
+* [X] Post-doc project
+  * [X] read and modify Bertrand Cuissart's proposition of summary
+    * [X] reading and finding spelling mistakes
+  * [X] send email to Guillaume Poezevara to schedule a Skype meeting
+* [X] Skypatterns and 3D molecular data (1h)
+  * [X] look at how skypatterns have been used in the past with 2D molecular data
+  * [X] propose 3D information-based measures to use for sky-pattern mining
+  * [X] Discussion with Bruno Crémilleux about the definition of 3D-based measures for molecules
+* [X] General
+  * [X] book train tickets for Montpellier (5/12 -> 8/12)
+  * [X] option on booking train tickets for Montpellier (Christmas)
+
+2012-11-20 Tue 08:21:37 CET
+* [X] Jak2
+  * [X] Skype Meeting (Jan Ramon, Bertrand Cuissart) (1h30)
+    * [X] discussion about DUD benchmark data and DT learner for virtual screening
+  * [X] adapting evaluation measures to bags obtained with random forests (2h)
+  * [X] fixing problems with connection to servers for experiments (1h)
+* [X] CODAG group meeting: discussion about Constraint Programming and Itemset Mining (2h)
+* [X] Meeting with Bertrand Cuissart (1h30)
+  * [X] point about the different project aspects and progress
+
+2012-11-19 Mon 09:16:30 CET
+* [o] Jak2
+  * [X] run the tests for DUD and virtual screening (2h)
+    * [X] compiling all the tests
+    * [X] running the tests
+    * [X] check whether the settings files are fine
+  * [o] defining a richer refinement operator (adding a new edge AND a new atom-typing label)
+    * [X] implement it
+    * [ ] test it
+  * [ ] testing the balance of DT again
+  * [X] writing ruby scripts to compute quality measures for virtual screening 
+    * [X] find first version of scripts
+    * [X] check whether the prediction results reading works correctly
+* [X] Mutagenesis
+  * [X] download and start preprocessing of multi-conformational mutagenesis data
+  * [X] answer Ronan's email
+
+2012-11-16 Fri 09:53:22 CET
+* [X] Jak2
+  * [X] Virtual Screening
+    * [X] DUD dataset: check the data segmentation provided for experiments (2h)
+    * [X] add and test a constraint of maximum increment size in the itemsets used to label the atoms (2h)
+    * [X] fixing problem with distance refiner: no distance-based candidates are generated in the experiments (1h30)
+    * [X] write scripts for tests (1h)
+* [X] Meeting with Bruno Crémilleux (30min)
+* [X] Meeting with Winn Voravuthikunchai (30min)
+
+2012-11-15 Thu 09:37:32 CET
+* [X] Jak2
+  * [X] precisely measure whether decision trees obtained via pattern-based atom-typing are balanced (2h)
+    * [X] results: atom-typing itemsets segment the data in  45%/55% splits in average
+  * [X] Virtual Screening (4h30)
+    * [X] build and copy the data containing the union of all the decoys from all targets in DUD data
+    * [X] test the segmentation of data
+    * [X] run one experiment to test the framework feasability
+* [X] Post-doc project
+  * [X] Meeting with Guillaume Poezevara (about presentation preparation for the 04/12 and R integration in a C++ project) (1h30)
+* [X] General
+  * [X] write dr
+  * [X] train tickets (5/12 --> 9/12)
+
+2012-11-14 Wed 09:35:34 CET
+* [X] Jak2
+  * [X] Virtual Screening (6h)
+    * [X] in jak2 code, creating the learning / test datasets
+* [X] General
+  * [X] write dr
+  * [X] answer to Sandra's email
+
+2012-11-13 Tue 09:36:43 CET
+* [o] Jak2
+  * [X] Sype meeting (Jan Ramon, Bertrand Cuissart) (2h)
+    * [X] Pattern-based atom-typing
+    * [X] DUD benchmarking
+      * [X] no results yet
+      * [X] Ronan will prepare a set of conformations for each target
+    * [X] send meeting report
+  * [X] checking whether decision trees obtained with pattern-based atom typing are unbalanced or not (1h)
+* [X] François Rioult's seminar + CODAG group meeting (2h)
+* [X] General
+  * [X] write dr
+  * [X] check Spain for holidays
+  * [X] book train tickets for next week
+
+2012-11-12 Mon 15:14:30 CET
+* [X] Meeting with Ronan Bureau (CERMN) (2h30)
+* [X] Prepare and send DUD data to Ronan for multi-conformation generation for every target (1h)
+* [X] Continue preparation of DUD datasets and Virtual Screening (2h)
+  * [X] check whether all preprocessing has been done
+
+2012-11-09 Fri 09:35:36 CET
+* [.] Virtual Screening
+  * [o] Preparing the dataset
+    * [X] preprocess each DUD dataset individually
+    * [X] keeping only 1 conformation for each molecule in the decoys (other conformations actually are duplicates)
+    * [ ] for each target, build the learning datasets and corresponding test datasets
+* [ ] Jak2 experiments
+  * [ ] preprocessing last data sent by Ronan (cdocker + decoys + systematic conformation search)
+    * [ ] mining the atom typing itemsets in the preprocessed datasets
+  * [ ] run tests on laboratory servers
+    * [ ] run the tests
+* [o] Post-doc project
+  * [X] Mail to Ronan Bureau (about the benchmark dataset for mutagenesis)
+  * [o] Benchmark dataset
+    * [X] trying a first preprocessing on sdf data (with 2D coordinates)
+    * [X] mining atom-typing itemsets
+    * [ ] testing the decision tree learner on it
+* [X] General
+  * [X] write dr
+  * [X] sent 1&1 email with documents for paiment
+
+
+2012-11-08 Thu 09:22:12 CET
+* [X] Jak2 experiments
+  * [X] preprocessing last data sent by Ronan (cdocker + decoys + systematic conformation search) (2h30)
+    * [X] running preprocessing
+      * [X] fixing problems when reading input files
+      * [X] reinstalling openbabel on servers
+* [X] Pattern-based atom typing (5h30)
+  * [X] implement multiple refinements for atom typing
+    * [X] when reading the pattern list, create for each pattern a list of pointers to its specializations
+    * [X] itemset-based vertex labels are replaced by pointers to one itemset in the previously built pattern list
+    * [X] when a vertex is already labeled with atom typing, new candidates are specializations of the existing label itemset
+* [X] Post-doc project (30min)
+  * [X] Meeting with Guillaume Poezevara (preparing the next project meeting)
+* [X] General
+  * [X] write dr
+
+2012-11-07 Wed 09:52:14 CET
+* [X] Jak2
+  * [X] Improving the implementation: printing understandable values of atom typing, instead of item IDs (1h)
+  * [X] Jak2 experiments
+    * [X] preprocessing last data sent by Ronan (cdocker + decoys + systematic conformation search) (3h)
+      * [X] moving all preprocessing code and libraries to servers (for large scale experiments)
+    * [X] run tests on laboratory servers
+      * [X] write the scripts for preparing the tests (1h)
+* [X] Post-doc project
+  * [X] Meeting with Guillaume Poezevara (2h)
+
+2012-11-06 Tue 09:01:55 CET
+* [X] Jak2
+  * [X] Preparing the Skype meeting (1h)
+  * [X] Skype meeting Jan, Bertrand and Bruno (1h)
+    * [X] write and send the meeting report
+  * [X] Short post-skype discussion with Bertrand and Bruno (30min)
+  * [X] Pattern-based atom typing
+    * [X] collected and summarized experimental results on 4 Mohr's datasets (1h)
+  * [X] Meeting with Bertrand (2h30)
+    * [X] Atom pairs and line graphs
+  * [X] Jak2 experiments
+    * [X] preprocessing last data sent by Ronan (cdocker + decoys + systematic conformation search) (1h30)
+* [X] Post-Doc Project
+  * [X] mail to Guillaume
+  * [X] Planning a meeting with Ronan 
+    * [X] answer Ronan's email (30 min)
+
+2012-11-05 Mon 09:33:12 CET
+* [X] Jak2
+  * [X] Virtual Screening
+    * [X] preprocess data for virtual screening experimental framework from Muggleton et al. (3h)
+      * [X] retrieve the set of negative examples from ZINC and integrate them
+    * [X] Atom Typing based on frequent itemsets (4h)
+      * [X] write the experiment scripts
+      * [X] run systematic experiments with several minimum leaf sizes on Mohr datasets
+* [X] General
+  * [X] write dr
+  * [X] payment for Les Doges
+  * [X] payment for 1&1
+
+2012-11-02 Fri 09:50:36 CET
+* [.] Jak2
+  * [.] Virtual Screening
+    * [ ] pre-processing the DUD datasets
+      * [ ] extract frequent patterns for atom typing in 3 datasets cox2, trypsin, pdgfrb
+      * [ ] extract frequent patterns for other datasets
+    * [.] run experiments on datasets
+      * [X] list datasets to use for first experiments
+      * [ ] write tests for the datasets
+        * [ ] how to determine correct leaf size? --> 20
+        * [ ] only with random forests to obtain an ordering of molecules
+          * [ ] forest size: 100
+        * [ ] with pattern-based atom typing
+        * [ ] with/without bonds? -> firstly without
+  * [ ] General refinement strategy
+    * [ ] write different refiners
+      * [ ] a refiner with pattern-based atom typing and distance 
+  * [ ] Optimization in code
+    * [ ] when matching atom typing itemset, if one itemset is not supported by the conformation, return false for the entire ligand
+  * [ ] Send email about the experimental framework
+    * [ ] Problem definition in the reference paper
+      * [ ] LBVS
+    * [ ] Evaluation methods
+      * [ ] quality measures
+    * [ ] How to adapt the DT learner for this problem definition?
+      * [ ] Considering the query ligand
+        * [ ] Similarity measure
+      * [ ] Changes in DT heuristic?
+  * [ ] Send email to Ronan
+  * [ ] Literature
+    * [ ] summary of virtual screening and active learning
+    * [ ] summary of activity prediction and toxicity
+
+2012-10-31 Thu 10:09:05 CET
+* [X] Jak2
+  * [X] Virtual screening
+    * [X] finish preprocessing of DUD
+      * [X] do and check the conversion of files mol2 -> sdf via OpenBabel
+      * [X] read sdf files and assign correct target values
+      * [X] the molecule name for decoys is not unique! --> use an id instead corresponding to the index in source file
+      * [X] script for preprocessing each of the DUD datasets
+      * [X] copy preprocessed data into fox
+
+2012-10-30 Tue 09:09:49 CET
+* [ ] Jak2
+  * [ ] Skype
+    * [ ] progress on DUD datasets
+    * [ ] New atom typing refinement strategy
+      * [ ] old version: problem with non-sufficient steps to lead to interesting test patterns, a lot of prunable candidates generated
+      * [ ] integrated a frequent closed pattern mining step in preprocessing: mining sets of atom properties that are both frequent and closed
+        * [ ] interests: limited number of possibilities (around 350/400 patterns), some of those patterns are chemically significant
+        * [ ] results: systematically improved results in prediction / variance reduction even with a 1-step refiner, gain in processing time
+        * [ ] drawbacks: in current version, an atom can receive only one atom typing label
+
+2012-10-26 Fri 11:28:13 CEST
+* [.] Jak2
+  * [X] send meeting report
+    * [X] discussed
+    * [X] to do
+    * [X] paper to attach
+  * [ ] preprocess DUD datasets
+    * [ ] choose some datasets
+    * [ ] compute the union of active compounds and decoys
+    * [ ] run the openbabel preprocessing of resulting dataset
+  * [ ] preprocess new JAK2 datasets
+* [X] General
+  * [X] install mails
+    * [X] unicaen
+    * [X] gmail
+    * [X] kuleuven
+    * [X] lirmm
+  * [ ] install oh my zsh
+
+2012-10-25 Thu 08:30:05 CEST
+* [ ] Jak2
+  * [ ] applications for the DT learner?
+    * [ ] protein-ligand binding site discovery
+    * [ ] Virtual Screening
+
+* Skype 14h 
+  * [ ] data for comparison with DT learner in VS
+    * [ ] Data from Ronan's data --> just received them with decoys and multi-conformations
+    * [ ] Benchmark of active compounds and decoys DUD
+      * [ ] 40 targets with:
+        * [ ] active compounds and decoys
+        * [ ] 3D coordinates
+        * [ ] crystallographic conformation for the ligand! (except for a few targets)
+      * [ ] One paper JCIM2010 with results for those data on several approaches (2D, 3D, very limited in 4D)
+        * [ ] "A comprehensive comparison of ligand-based virtual screening tools against the DUD dataset reveals limitations of current 3D methods", JCIM2010
+      * [ ] Currently building and preprocessing the whole dataset
+      * [ ] Implementing the same quality measures
+      * [ ] Problem definition:
+        * [ ] one is the framework that we currently use: building DT on the whole learning dataset and testing the resulting tree with test dataset --> directly feasible
+        * [ ] other possibility is to integrate a ligand query --> from crystallographic ligand pose
+          * [ ] with DT: build DT on learning set, retrieve leaf for query, consider all the molecules from same leaf
+          * [ ] with RF: build RF; similarity measure with query is the fraction of trees in the forest where the molecule is in the same leaf as the query node
+          * [ ] Remark: the DT learning could be modified: we only need the branch for the query ligand --> faster tree construction
+          * [ ] how to split the datasets into learning / test data? the test dataset should be sufficiently large
+
+    * [ ] To do 
+      * [ ] active learning settings
+        * [ ] what has been done in the literature?
+        * [ ] how to adapt it to our approach?
+        * [ ] 1. first screen a small part of the db
+        * [ ] 2. perform the tests
+      * [ ] toxicity and activity
+        * [ ] work done to combine two problems?
+        * [ ] try to find whether toxicity plays a role in the construction of inactive decoys (can a decoy be both active and toxic?)
+
+  * [ ] Next skype meeting, 30/10/2012 at 10am
+
+  * [ ] implement one or two quality measures for VS
+  * [ ] fix problem in printing random forest results
+  * [ ] analyse last results
+  * [ ] run experiments with jak2cdocker dataset (before multi conformations)
+  * [ ] run experiments with jak2goldMultiConformations--all
+  * [ ] Skype 14h (Jan, Bertran, Bruno)
+    * [ ] new version of atom typing
+    * [ ] virtual screening evaluation
+      * [ ] datasets from DUD
+        * [ ] intersection with Mohr's dataset
+        * [ ] currently building the datasets and preprocessing them (by adding the decoys)
+      * [ ] problem with multi-conformations
+        * [ ] ask Ronan to generate conformations for them?
+      * [ ] problem with block effect of DT
+    * [ ] data from Ronan
+
+2012-10-24 Wed 09:24:19 CEST
+* [.] Jak2
+  * [X] test atom itemsets on Mohr's data
+    * [X] preprocess Mohr's data
+      * [X] copy to ruby mining scripts
+      * [X] extract patterns for each dataset
+      * [X] copy resulting files into Mohr's datasets
+      * [X] copy preprocessed datasets into build/data directory
+    * [X] adapt ruby scripts for experiments
+      * [X] copy them from KULeuven to /home/personnels/rabatel/...
+      * [X] write the correct scripts for
+        * [X] Mohr data
+        * [X] jak2
+      * [X] copy the obtained file settings to the to_preprocess folder
+    * [X] run DT learner
+      * [X] with pattern-based atom typing
+      * [X] with classical atom typing
+  * [X] run jak2
+    * [X] with pattern-based atom typing
+    * [X] with classical atom typing
+  * [ ] use a sampling method on ligands?
+  * [ ] implement a virtual screening quality measure in addition
+  * [ ] find benchmark approaches for 3D virtual screening and corresponding data
+  * [ ] for large-scale experiments
+    * [ ] see group list in the FAQ
+* [X] General
+  * [X] eee pc
+    * [X] install ruby and RoR
+    * [X] install ssh server
+  * [ ] Karim's birthday
+
+2012-10-23 Tue 08:30:15 CEST
+* [X] Jak2
+  * [X] finish implementation of itemset labels (2h)
+* [ ] Post-Doc Project
+* [o] General
+  * [X] write dr
+  * [.] Rails
+    * [X] taggable generator
+    * [ ] Railscast
+      * [ ] Comments
+        * [ ] Convert into generator
+      * [ ] YAML config
+      * [ ] jQuery File Upload
+      * [ ] Cropping images
+      * [ ] Token Fields (revised)
+      * [ ] Calendars (revised)
+      * [ ] ActiveRecord Reputation System
+    * [ ] likeable generator
+      * [ ] partials
+        * [ ] like link
+        * [ ] unlike link
+        * [ ] ajax
+    * [ ] followable/favouritable generator
+      * [ ] partials
+        * [ ] follow form
+        * [ ] unfollow form
+        * [ ] ajax
+    * [ ] categorizable generator
+
+2012-10-22 Mon 09:02:10 CEST
+* [.] Jak2
+  * [X] obtain a working source code
+    * [X] delete test pre-generator
+  * [X] install on /home/personnels/rabatel/
+    * [X] install code
+    * [X] build it
+    * [X] copy data
+  * [X] implement new label type with frequent itemsets
+    * [X] read itemset file and occurrences
+    * [X] build an atom option with corresponding itemset
+      * [X] with script: write on file mapping property->itemId
+      * [X] read mapping of items
+      * [X] convert one atom into one itemset
+  * [ ] think about mining pairs of atoms
+  * [ ] test data from Ronan with current version
+  * [ ] list references about atom pairs
+  * [ ] run experiments
+  * [ ] find benchmark data for virtual screening
+  * [ ] Find datasets for evaluation
+    * [ ] in multi-conformations: data from paper ...
+* [ ] Post-Doc Project
+  * [ ] cahiers de labo
+  * [ ] study the Chi² test interestingness measure for patterns
+  * [ ] read documentation about statistical tests
+* [O] General
+  * [X] write dr
+  * [X] asus
+  * [X] SpiderOak
+    * [X] pay last bill
+    * [X] terminate contract
+  * [.] Rails
+    * [X] taggable generator
+    * [ ] likeable generator
+      * [ ] partials
+        * [ ] like link
+        * [ ] unlike link
+        * [ ] ajax
+    * [ ] followable/favouritable generator
+      * [ ] partials
+        * [ ] follow form
+        * [ ] unfollow form
+        * [ ] ajax
+    * [ ] categorizable generator
+
+2012-10-19 Fri 09:42:57 CEST
+* [X] Jak2
+  * [X] write the current situation (2h)
+    * [X] source code update and installation on local workspace
+  * [X] Ruby scripts to convert the representations of 3D information into atom pairs (3h)
+    * [X] read protein data
+    * [X] read target values
+    * [X] generate different itemset representations
+      * [X] atoms and their labels
+    * [X] mine frequent patterns (or frequent closed patterns)
+    * [X] count multi-instance support of atoms
+      * [X] count support
+      * [X] store list of occurrences (list of ligands)
+    * [X] write obtained patterns and their occurrences
+    * [X] closed frequent atom pairs (CFAP)
+      * [X] write geometric discretizer
+* [X] General
+  * [X] download Coursera:
+    * [X] algorithms
+
+2012-10-18 Thu 09:48:32 CEST
+* [.] Post-Doc Project
+  * [X] read documentation provided by Jérémie Le Goff about the Ames test for mutagenecity and cancerogenicity of molecules (1h)
+    * link: /export/home/rabatel/Documents/Bibliography/ExpertDomainDocumentation/Ames test 10_2012.docx
+    * [X] answer Jérémie's email
+* [X] Jak2
+  * [X] write the current situation
+    * available data:
+      * multi-conformations with CDocker
+      * multi-conformations with Gold (but no way to have a score for one conformation!)
+    * to test:
+      * Gold data (on the whole dataset!)
+      * CDocker data on the topX conformations
+      * also test with random forests
+    * analyze results:
+      * gain compared with old data
+    * implement a virtual screening evaluation measure
+    * find benchmard datasets to compare with
+  * [X] experiments (2h)
+    * [X] find last data sent by Ronan
+    * [X] preprocess these data if necessary
+* [X] General
+  * [X] write dr
+  * [X] railscast
+  * [X] send sms Karim
+  * [X] confirm train tickets
+
+2012-10-17 Wed 12:09:51 CEST
+* [o] Post-Doc Project
+  * [X] meeting with Bertrand (2h)
+* [X] General
+  * [X] book train tickets
+  * [X] send information form to Arielle
+    * [X] fill the form
+    * [X] send
+
+2012-10-16 Tue 09:32:38 CEST
+* [X] Post-Doc Project
+  * [X] Chemoinformatics seminar (Willy Ugarte) (1h)
+  * [X] project starting meeting (Jeremie, Bertrand, Ronan, Alban, Bruno, Julien) (1H30)
+    * [X] read project
+    * [X] list possible future work
+      * [X] mining patterns with a continuous target attribute
+      * [X] mine conjunctions of patterns with other measures than growth rate
+        * [X] information gain, etc.
+        * [X] variance reduction
+      * [X] improve the results of toxicology prediction
+        * [X] prediction/classification based on rules (not only one jumping pattern)
+        * [X] statistical properties of such jumping patterns
+      * [X] study the problem of using a more elaborate representation of atoms (with disjunctions?)
+      * [X] pattern stimulation in other contexts than Bayes?
+      * [X] inhibitor mining
+        * [X] mining algorithm based on support-based definition of inhibitors
+          * [X] define different types of inhibitors
+          * [X] propose algorithms to mine them
+        * [X] definition based on stimulation?
+      * [X] combining QSAR + toxicophores
+      * [X] problems related to the super-imposition of patterns
+        * [X] introducing a notion of distance between 2 fragments of a pattern
+        * [X] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
+        * [X] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
+      * [X] Focusing on the different types of toxicity
+        * [X] contextual pattern extraction? --> what is common/different from different types of toxicities?
+        * [X] knowledge extraction: rather than only considering the high/low impact on toxicity of a toxicophore, study whether or not its impact is more or less general (power of generatlization of a toxicophore)
+* [X] PatternStimulation
+  * [X] submit paper
+  * [X] send sources to Bertrand and Ryan
+* [o] General
+  * [X] send email to Radu
+  * [X] answer Ryan's email
+
+2012-10-14 Sun 10:44:45 CEST
+* [.] PatternStimulation
+  * [O] Code
+    * [X] implement pattern selection on GR
+      * [X] interval computation
+      * [X] building the list of patterns to use
+    * [X] check what happens with degenerate odds
+    * [X] oblige p,q to be frequent as an option
+    * [X] measure traditional vs alternative classification
+    * [ ] make a test with considering the median value for tests that got rejected by the tests
+    * [X] implement naive bayes classification
+      * [X] select patterns of size one only
+      * [X] patterns to use are all the patterns of size 1! (seems to be implicit with previous)
+    * [X] write scripts to 
+      * [X] run lots of experiments
+      * [X] read and select the best results
+      * [X] not running an experiment if it has already be done
+    * [X] add to the log names
+      * [X] dataset
+      * [X] classifier type
+      * [X] minFreq
+      * [X] minInt
+      * [X] N
+      * [X] R
+      * [X] percentile
+* [ ] write dr
+
 2012-10-13 Sat 11:49:50 CEST
-* [ ] PatternStimulation
-  * [ ] Code
-    * [ ] check the median retrieval for slope values
-    * [ ] compute other measures for flagging
+* [X] PatternStimulation
+  * [X] Code
+    * [X] check the median retrieval for slope values
+    * [X] compute other measures for flagging
+      * [X] features of a flag
+        * [X] up or down compared to the reference value
+        * [X] ? - how to consider the flag of the median?
+      * [X] number of flags that are in the opposed way compared to the selected one
 
 2012-10-11 Thu 07:16:29 CEST
 * [.] PatternStimulation
@@ -1383,3 +2250,10 @@ mardi 28 février 2012, 10:36:49 (UTC+0100)
   * [X] book + usb key
   * [X] data to tag
   * [X] H-bond donor / acceptor?
+
+* [o] Maison
+  * [X] poubelle salon
+  * [X] poubelle salle de bain
+  * [ ] nettoyer table
+  * [ ] nettoyer douche
+  * [ ] nettoyer sol?
