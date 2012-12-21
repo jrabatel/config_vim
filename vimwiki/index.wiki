@@ -20,17 +20,37 @@
     * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
     * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
 
-* [ ] General
-  * [ ] look for gifts
-    * [ ] TV series 'Boardwalk Empire'
-    * [ ] théorême du perroquet
-    * [ ] Karim?
-
 == Daily TODO ==
 
+* [ ] Jak2
+  * [ ] Write and send a document about pattern languages?
+  * [ ] write experiment scripts for Mutagenesis 4D dataset
+  * [ ] DUD
+* [ ] Skype meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux, Julien Rabatel)
+    * [ ] report
+    * [ ] pattern language discussion
+* [ ] Admin
+* [ ] General
+  * [ ] print train tickets
+
+2012-12-20 Thu 08:49:39 CET
+* [o] Jak2
+  * [X] copy molecular descriptors into experiments datasets
+  * [X] run post-processor for learning SVM with molecular descriptors
+* [X] Mutagenesis
+  * [X] Run preprocessing of multiconformational Mutagenesis dataset
+* [ ] Muggleton's work
+  * [ ] create list of molecular descriptors
+  * [ ] send the list to Ronan
+* [ ] Admin
+  * [ ] Send email for deleting unneeded account (ext-rabatel)
+* [o] General
+  * [X] write dr
+  * [ ] look for a gift for Rémi
+  * [ ] send Rémi an email about gift
+
 2012-12-19 Wed 09:09:58 CET
-* [O] Jak2
-  * [ ] Write and send a document about pattern languages
+* [X] Jak2
   * [X] Send an email to Ronan Bureau (1h)
   * [X] Finish integration of molecular descriptors into SVM learning
     * [X] when the occurrence matrix out of a random forest, also add molecular descriptors
@@ -42,16 +62,11 @@
     * [X] learn an example model
     * [X] check how models look like
     * => support vectors seem to contain all the attributes, with full weight (weight is on the vector, not on the attributes)
-* [.] Mutagenesis
-  * [o] Run preprocessing of multiconformational Mutagenesis dataset
+* [X] Mutagenesis
+  * [X] Run preprocessing of multiconformational Mutagenesis dataset
     * [X] create the input data folders (1 for each run)
     * [X] read data segmentation (learning/test, folds)
-    * [ ] test it
-* [ ] Admin
-  * [ ] Send email for deleting unneeded account (ext-rabatel)
-* [ ] General
-  * [ ] write dr
-  * [ ] look for a gift for Rémi
+    * [X] test it
 
 2012-12-18 Tue 09:04:47 CET
 * [X] Preprocessing of 3D data (6h)
