@@ -22,16 +22,22 @@
 
 == Daily TODO ==
 
+2012-12-21 Fri 08:48:47 CET
 * [ ] Jak2
-  * [ ] Write and send a document about pattern languages?
   * [ ] write experiment scripts for Mutagenesis 4D dataset
   * [ ] DUD
-* [ ] Skype meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux, Julien Rabatel)
-    * [ ] report
-    * [ ] pattern language discussion
+  * [ ] in preprocessing code, add the dipole moment (in 3D)
+  * [ ] add the calculation of the dipole moment and add it to the molecular descriptors: x,y,z and length
+* [X] Skype meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux, Julien Rabatel) (1h)
+* [X] Meeting with Bertrand Cuissart and Bruno Crémilleux (4h)
+* [ ] Muggleton's work
+  * [ ] create list of molecular descriptors
+  * [ ] send the list to Ronan
 * [ ] Admin
-* [ ] General
+  * [ ] Send email for deleting unneeded account (ext-rabatel)
+* [o] General
   * [ ] print train tickets
+  * [X] send email to Rémi
 
 2012-12-20 Thu 08:49:39 CET
 * [o] Jak2
@@ -39,15 +45,8 @@
   * [X] run post-processor for learning SVM with molecular descriptors
 * [X] Mutagenesis
   * [X] Run preprocessing of multiconformational Mutagenesis dataset
-* [ ] Muggleton's work
-  * [ ] create list of molecular descriptors
-  * [ ] send the list to Ronan
-* [ ] Admin
-  * [ ] Send email for deleting unneeded account (ext-rabatel)
 * [o] General
   * [X] write dr
-  * [ ] look for a gift for Rémi
-  * [ ] send Rémi an email about gift
 
 2012-12-19 Wed 09:09:58 CET
 * [X] Jak2
