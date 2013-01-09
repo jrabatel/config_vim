@@ -1,0 +1,38 @@
+Bonjour Ronan,
+
+Voici comme promis quelques nouvelles un peu plus complètes.
+
+J'ai continué à travailler avec la version uniconformationnelle des données DUD pour le screening virtuel.
+Comme je l'avais présenté lors du dernier groupe chémoinformatique, je souhaitais assez rapidement exploiter les arbres extraits (les forêts pour être plus précis) pour créer un modèle de type SVM.
+
+C'est chose faite depuis la semaine dernière, et j'ai pu lancer les premiers tests sur les données DUD.
+Cela donne effectivement un gain en screening en moyenne de 4 à 5% sur les différentes mesures de qualité. Gain intéressant donc, mais pas suffisant pour atteindre les scores de l'approche de Muggleton.
+
+La piste suivante est donc l'intégration de descripteurs moléculaires, comme le fait Muggleton. Le problème est que son article pour le screening virtuel [1] est très peu précis concernant ceux utilisés, la seule information disponible est : "they relate to shape, weight, symmetry, log P, graph topology and complexity, atom connectivity, polarizability, atom type, rotatable bonds, ionization potential, and aromaticity".
+De plus, cet article ne permet en aucun cas d'avoir une idée de l'impact des descripteurs moléculaires sur le résultat final, par rapport à celui des motifs.
+
+Par conséquent, je suis en ce moment dans une recherche des divers articles publiés par Muggleton récemment, afin de recouper les informations et d'obtenir finalement une liste plus précise des descripteurs moléculaires (en effet, les mêmes travaux ont été publiés plusieurs fois, avec des buts applicatifs différents, et avec parfois plus de détails).
+Un de ces articles (qui concerne la prédiction de toxicité!) [2] contient un peu plus de détails dans les expérimentations et montre les résultats acquis avec les motifs uniquement, les descripteurs moléculaires uniquement, puis la combinaison des deux. Résultat : les descripteurs moléculaires seuls obtiennent de meilleurs résultats que les motifs seuls (il ne s'agit pas de screening virtuel, mais de classification, mais ça ne devrait pas changer grand chose).
+Ceci m'amène donc à penser que l'intégration de tels descripteurs est en effet la piste à suivre en tout premier lieu.
+
+Je tente donc de continuer ce travail de recherche des descripteurs moléculaires réellement utilisés par Muggleton afin de t'en envoyer une liste (ou au pire les articles et les passages concernés) pour que nous puissions discuter de ceux que l'on peut obtenir et de leur pertinence.
+En parallèle, je fais un premier travail d'intégration d'une petite dizaine de descripteurs moléculaires faciles à obtenir via OpenBabel (e.g., LogP, poids, nombre d'atomes lourds, nombre de "rotatable bonds", etc.). Ceci n'est pas dans le but d'obtenir de meilleurs résultats, mais dans celui de préparer le code à l'intégration des descripteurs sans perdre de temps (il faut en effet pour cela que je modifie le code du prétraitement, mais également celui lié à l'apprentissage du SVM et ça peut donc être un peu long).
+
+En ce qui concerne les données DUD en multi-conformations, je ne les utilise pas pour l'instant en raison des deux choses que je mentionnais dans les mails précédents (i.e., le manque de trois fichiers pour les ligands et le besoin des exemples négatifs en multi-conformations). En effet, il vaut mieux que je lance les tests sur l'ensemble complet des données pour profiter du protocole expérimental défini.
+
+En ce qui concerne les données mutagénèse multiconformationnelles, il y a peu de chance d'obtenir des résultats avant la période de Noël (en effet, les premiers tests en uni-conformation étaient déjà longs) alors mon objectif est de lancer les expérimentations en multi-conformations pour les laisser tourner pendant les vacances tout en les surveillant.
+
+[1]
+  title={Assessment of a Rule-Based Virtual Screening Technology (INDDEx) on a Benchmark Data Set},
+  author={Reynolds, C.R. and Amini, A.C. and Muggleton, S.H. and Sternberg, M.J.E.},
+  journal={The Journal of Physical Chemistry B},
+  year={2012},
+
+[2]
+  title={A novel logic-based approach for quantitative toxicology prediction},
+  author={Amini, A. and Muggleton, S.H. and Lodhi, H. and Sternberg, M.J.E.},
+  journal={Journal of chemical information and modeling},
+  year={2007}
+
+Cordialement,
+Julien
