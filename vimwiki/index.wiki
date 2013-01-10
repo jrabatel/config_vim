@@ -23,20 +23,30 @@
 == Daily TODO ==
 
 2013-01-10 Thu 10:49:37 CET
-* [ ] Preprocesing mutagenesis data
-  * [ ] fix problems with disk usage on servers
-  * [ ] run preprocessing of DUD 4D data
-    * [ ] building the merged decoys data
-    * [ ] building the data for each individual target
-  * [ ] run preprocessing of jak2 data
-* [ ] New candidate generation strategy for patterns
-  * [ ] work on size-2 patterns
-    * [ ] mining closed frequent itemsets in vertex labels
-    * [ ] building the pattern lattice with them
-      * [ ] first a pattern tree
-      * [ ] then adding the links for the lattice
-* [ ] General
-  * [ ] write dr
+* [o] Preprocesing mutagenesis data
+  * [o] fix problems with disk usage on servers
+    * [X] compressing results of old experiments
+    * [ ] removing old experiments folders
+  * [X] run preprocessing of DUD 4D data
+    * [X] building the merged decoys data
+    * [X] building the data for each individual target
+    * [X] copy gpm_bench to fox server disk
+    * [X] re-run a test with minimum frequency of 10%
+  * [ ] run preprocessing of jak2 data?
+* [.] New candidate generation strategy for patterns
+  * [.] work on size-2 patterns
+    * [o] mining closed frequent itemsets in vertex labels from jak2 code
+      * [X] after reading the db, create the input file for LCM
+        * [X] keep in memory the transaction ID corresponding to each molecule (with min-max bounds)
+      * [X] run LCM
+      * [ ] read itemsets mined by LCM
+        * [ ] compute real support of itemsets
+        * [ ] keep real extension of frequent closed itemsets
+    * [ ] building the pattern lattice with frequent closed itemsets
+      * [ ] build the pattern tree first
+      * [ ] then adding the links for completing the lattice
+* [X] General
+  * [X] write dr
 
 2013-01-09 Wed 09:54:13 CET
 * [X] Read emails
