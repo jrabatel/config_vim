@@ -22,6 +22,33 @@
 
 == Daily TODO ==
 
+2013-01-10 Thu 10:49:37 CET
+* [ ] Preprocesing mutagenesis data
+  * [ ] fix problems with disk usage on servers
+  * [ ] run preprocessing of DUD 4D data
+    * [ ] building the merged decoys data
+    * [ ] building the data for each individual target
+  * [ ] run preprocessing of jak2 data
+* [ ] New candidate generation strategy for patterns
+  * [ ] work on size-2 patterns
+    * [ ] mining closed frequent itemsets in vertex labels
+    * [ ] building the pattern lattice with them
+      * [ ] first a pattern tree
+      * [ ] then adding the links for the lattice
+* [ ] General
+  * [ ] write dr
+
+2013-01-09 Wed 09:54:13 CET
+* [X] Read emails
+* [X] Summarize what has to be done with experiments
+* [X] DUD virtual screening
+  * [X] preprocess the 4D version of the DUD datasets
+    * [X] write and execute a script for building folders for each target
+    * [X] copy the obtained data to the preprocessing code
+* [X] Mining emerging patterns
+  * [X] Discussion with Guillaume Poezevara and compiling the bench source code for quick testing
+  * [X] first tests with Mutagenesis data
+
 2012-12-21 Fri 08:48:47 CET
 * [ ] Jak2
   * [ ] write experiment scripts for Mutagenesis 4D dataset
