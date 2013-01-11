@@ -22,29 +22,55 @@
 
 == Daily TODO ==
 
+2013-01-11 Fri 09:34:35 CET
+* [.] New candidate generation strategy for geometric patterns
+  * [o] work on size-2 patterns
+    * [X] mining closed frequent itemsets in vertex labels from jak2 code
+      * [X] read itemsets mined by LCM
+        * [X] create a list of itemsets in main memory
+        * [X] create the extension of patterns in main memory
+        * [X] compute real support of itemsets
+        * [X] keep real extension of frequent closed itemsets
+    * [ ] building the pattern lattice with frequent closed itemsets
+      * [ ] build the pattern tree first
+      * [ ] then adding the links for completing the lattice
+* [ ] Run experiments on Mutagenesis datasets with 4D information
+  * [ ] write some experiments scripts
+  * [ ] run the experiments
+* [ ] Jak2 data
+  * [ ] check the preprocessing with itemsets
+  * [ ] preprocessing for adding molecular descriptors to the data
+  * [ ] integrate the itemsets extraction to the current labeling scheme (refinement, etc.)
+  * [ ] study how to integrate itemsets with protein atoms as well
+* [ ] Meeting with Bertrand Cuissart
+  * [ ] Jak2
+    * [ ] to run new experiments with protein side, itemset-based labels
+    * [ ] new strategy for generating size 2 graph patterns
+  * [ ] Mutagenesis
+    * [ ] 4D version, run some tests
+  * [ ] Pattern Stimulation
+    * [ ] set a Skype time slot
+    * [ ] implement Naive Bayes and other classifiers
+  * [ ] Next year
+* [X] General
+  * [X] write dr
+
 2013-01-10 Thu 10:49:37 CET
 * [o] Preprocesing mutagenesis data
-  * [o] fix problems with disk usage on servers
+  * [X] fix problems with disk usage on servers
     * [X] compressing results of old experiments
-    * [ ] removing old experiments folders
+    * [X] removing old experiments folders
   * [X] run preprocessing of DUD 4D data
     * [X] building the merged decoys data
     * [X] building the data for each individual target
     * [X] copy gpm_bench to fox server disk
     * [X] re-run a test with minimum frequency of 10%
-  * [ ] run preprocessing of jak2 data?
-* [.] New candidate generation strategy for patterns
-  * [.] work on size-2 patterns
-    * [o] mining closed frequent itemsets in vertex labels from jak2 code
+* [X] New candidate generation strategy for geometric patterns
+  * [X] work on size-2 patterns
+    * [X] mining closed frequent itemsets in vertex labels from jak2 code
       * [X] after reading the db, create the input file for LCM
         * [X] keep in memory the transaction ID corresponding to each molecule (with min-max bounds)
       * [X] run LCM
-      * [ ] read itemsets mined by LCM
-        * [ ] compute real support of itemsets
-        * [ ] keep real extension of frequent closed itemsets
-    * [ ] building the pattern lattice with frequent closed itemsets
-      * [ ] build the pattern tree first
-      * [ ] then adding the links for completing the lattice
 * [X] General
   * [X] write dr
 

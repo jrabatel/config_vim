@@ -158,3 +158,7 @@ std::stringstream `var~_out;
 `var~_out << `var~;
 std::string `var~_str = `var~_out.str();
 ..XPT
+
+XPT exit " exit with success code
+exit(0);
+..XPT
