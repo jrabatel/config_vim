@@ -48,6 +48,10 @@ XPT ' " 'text'
 '`text~'`cursor~
 ..XPT
 
+XPT ` " `text`
+\``text~\``cursor~
+..XPT
+
 XPT ( " (text)
 (`text~)`cursor~
 ..XPT
@@ -71,6 +75,10 @@ XPT "" " " text "
 
 XPT '' " ' text '
 ' `text~ '`cursor~
+..XPT
+
+XPT `` " ` text `
+\` `text~ \``cursor~
 ..XPT
 
 XPT (( " ( text )

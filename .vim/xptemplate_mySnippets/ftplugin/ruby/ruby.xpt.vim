@@ -35,6 +35,10 @@ XPT out " puts `cursor~
 puts `cursor~
 ..XPT
 
+XPT outs " puts "`cursor~"
+puts "`cursor~"
+..XPT
+
 XPT outvar " puts "`var~ = #{`var~}"
 puts "`var~ = #{`var~}"
 ..XPT
