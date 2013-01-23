@@ -411,3 +411,6 @@ nmap ,rgs :!rails g scaffold
 nmap ,rdbm :!rake db:migrate<CR>
 nmap ,rdbs :!rake db:seed<CR>
 nmap ,rc :!rails console<CR>
+
+" Various
+imap ,jr Julien Rabatel

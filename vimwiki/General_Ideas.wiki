@@ -1,1 +1,17 @@
-* [ ] Pattern-based regression? (by similarity with pattern-based classifiers)
+* [ ] *Pattern-based regression? (by similarity with pattern-based classifiers)*
+
+* [ ] *Mining discriminative subgraphs with DAG-based vertex labels (looking at paper on )*
+  * main reference "Taxonomy-Superimposed Graph Mining"
+  * adapt the problem to a discriminative subgraph mining problem (based on which measure?)
+  * problem with geometric patterns: without labeling vertices, almost every topological-only subgraph is frequent!
+    * impossible to store all the occurrences, as required by the reference approach
+    * patterns to enumerate are simply too much numerous
+  * could be based on frequent closed 2-sets (or 3-sets, when integrating the edge label)
+  * we could even compare with reference paper, when input graphs are particularly dense
+
+* [ ] *How to mine more complex geometric patterns?*
+  * [ ] based on frequent closed 2-sets (to represent candidate edges)
+    * should propose a data structure to store candidate edges and quickly find the relevant ones
+      * the main operators are the following:
+        * given one labeled vertex, find the pointing edges (i.e., targetting a possibly labeled vertex) that are candidates
+        * given two labeled vertices, find the edges that are compatible to link the two vertices (i.e., by simply adding a distance, or by adding a distance and refining the vertices' labels)

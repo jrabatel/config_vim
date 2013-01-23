@@ -11,25 +11,14 @@
 [[Web development]]
 [[Various]]
 
-== General TODO ==
-* [ ] Jak2
-  * [ ] change ruby scripts for the result summary
-  * [ ] create vertices based on depth-first search-space traversal
-  * [ ] run new tests (one for each new dataset)
-  * [ ] study and see whether it is possible to quickly use in a multi-conformation framework a representation of the density distribution of distances between pairs of atoms --> problem: how to exploit this when working with graphs? Find corresponding paper and see what is used to generate the density distance distributions (the paper is Boltzmann-Enhanced Flexible Atom-Pair Kernel with Dynamic Dimension Reduction, the method to represent density distribution is the Gaussian Mixture Models)
-
-* [ ] PatternStimulation
-  * [ ] for chi-squared and LB
-    * [ ] implement chi² test as a pattern interestingness measure
-    * [ ] ordered by increasing size of increment
-    * [ ] ordered by decreasing length
-    * [ ] ordered by decreasing interestingness measure
-
 * [ ] Key Discovery
-  * [ ] implementing RDF version of HCA
-
-* [ ] Vim config
-  * [ ] add swap list: ".", "->" for c++
+  * [ ] project
+    * [ ] attributes
+      * [ ] Attribute
+      * [ ] AttributeSet
+      * [ ] AttributeSetTree
+    * [ ] algorithm
+      * [ ] CandidateGeneration
 
 * [ ] Pattern Mining Problems
   * [ ] mining patterns in the presence of a continuous target value
@@ -38,63 +27,281 @@
   * [ ] problems related to the super-imposition of patterns
     * [ ] introducing a notion of distance between 2 fragments of a pattern
     * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
-    * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
-
-* [ ] General
-  * [ ] coding
-    * [ ] firefox plugin to save link with englobing url
-    * [ ] script for mp3tagging
-    * [ ] new version of drj
-    * [ ] new version of free-hebergements
-  * [ ] install configuration on network directory /home/personnels/rabatel/ (1h)
-    * [ ] configuration of local working environment
-  * [ ] Mails
-    * [ ] Using mutt for the mails
-    * [ ] transfer every mails to gmail?
-    * [ ] with mutt, how to send mails with different email addresses?
-
-TODO 
-* [ ] experiments for mutagenecity
-* [ ] select best settings for random learner on DUD
-* [ ] experiments for DUD with filters 'all' and 'non-hydrogens'
-* [ ] convert into an occurrence matrix
-
-* [ ] General
-  * [ ] look for gifts
-    * [ ] TV series 'Boardwalk Empire'
-    * [ ] théorême du perroquet
-    * [ ] Karim?
+     [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
 
 == Daily TODO ==
 
-2012-12-17 Mon 08:07:38 CET
+2013-01-23 Wed 10:28:10 CET
+* [X] Jak2 code
+  * [X] add to the mutaDataRandomForest example a converter to csv file
+* [ ] Jak2 data (with decoys)
+  * [ ] run the preprocessing of the data in order to compute molecular descriptors
+  * [ ] write experiment scripts (with and without molecular descriptors)
+  * [ ] run the experiments
+* [ ] DUD datasets
+  * [ ] run the whole set of experiments
+* [ ] Mining geometrical patterns
+  * [ ] work on size-2 patterns
+    * [ ] create the couples of itemsets that can lead to frequent patterns
+      * [ ] generate the distances for connecting a couple of vertices
+      * [ ] build and testing the corresponding graphs
+    * [ ] adding some links to the pattern tree for creating a pattern lattice (with a greedy approach)
+* [ ] Answer Ryan Siders's email
+* [.] Preparing departure
+  * [X] put new version of code on dropbox
+  * [X] update gpodder
+  * [X] install eclipse on netbook
+  * [X] install eclim on netbook
+  * [X] update vim config and general config
+  * [o] check experiments (jak2, Mutagenesis, and DUD VS result analysis)
+    * [X] for analysing the DUD results, block the removing of unused files and segment the process into two steps: learning and testing
+    * [ ] what should be done for jak2 and Mutagenesis?
+      * [ ] run the preprocessing of jak2 data with decoys
+  * [X] Carte week-end: add a photo
+* [ ] General
+  * [ ] write dr
+
+2013-01-22 Tue 08:53:21 CET
+* [X] Jak2 code
+    * [X] copy the necessary jak2 data
+      * [X] preprocess the data on fox
+      * [X] compress data
+      * [X] move the archives to appo
+      * [X] extract the data
+* [X] Jak2 data (without any decoys)
+  * [X] run the preprocessing of the data in order to compute molecular descriptors
+  * [X] write experiment scripts (with and without molecular descriptors)
+  * [X] run the experiments
+* [X] Run experiments on Mutagenesis datasets with 4D information
+  * [X] is the preprocessing OK?
+  * [X] write some experiment scripts
+  * [X] run the experiments
+* [X] DUD datasets
+  * [X] run the analysis of all experiments globally
+  * [X] run with 32 positive examples instead of 8
+* [X] Send an email to Guillaume Poezevara
+* [X] General
+  * [X] Carte week-end
+
+2013-01-21 Mon 10:58:18 CET
+* [X] Jak2 code
+  * [X] write a working example containing simple cross validation
+  * [X] move the experimental framework to the appo server
+    * [X] create a jak2 build folder
+    * [X] copy the necessary Mutagenesis data
+      * [X] compress data
+      * [X] move the archives to appo
+      * [X] extract the data
+* [X] Run experiments on Mutagenesis datasets with 4D information
+  * [X] is the preprocessing OK?
+* [X] General
+  * [X] starting HCA implementation
+    * [X] write attributes and attribute sets classes
+  * [X] booking train tickets
+
+2013-01-18 Fri 09:24:22 CET
+* [X] DUD experiments (5h)
+  * [X] run the testing of the SVM models with and without the integration of molecular descriptors
+  * [X] summarize the results
+* [X] Skype Meeting with Jan Ramon, Bertrand Cuissart, Bruno Crémilleux (3h30)
+  * [X] Molecular descriptors + Patterns
+    * [X] list of used molecular descriptors: logp, #heavy atoms, #rotors, #residues, energy, molecular weight, total charge, #HBD, #HBA, dipole moment
+    * [X] results (AUROC, BEDROC): 
+      * [X] molecular descriptors only:       0.85, 0.39
+      * [X] patterns only:                    0.87, 0.57
+      * [X] patterns + molecular descriptors: 0.88, 0.48
+  * [X] Extending the pattern language
+    * [X] several possibilities:
+      * [X] emerging conjunctions of fragments
+      * [X] frequent closed fragments
+  * [X] Jak2
+  * [X] Geometrical pattern miner
+    * [X] integrated the closed frequent itemset mining to the jak2 code
+    * [X] mining size-2 patterns with a pattern miner strategy
+  * [X] Future work
+    * [X] build a set of molecular descriptors with Ronan Bureau
+    * [X] finish experiments for the whole DUD dataset and comparing results with Muggleton
+
+2013-01-17 Thu 10:07:03 CET
+* [X] DUD experiments
+  * [X] find the last version of experiment analysis scripts
+  * [X] select 5 targets
+  * [X] copy experiments results to new destination
+  * [X] copy the files containing the molecular descriptors
+  * [X] run experiment analysis scripts on those results
+    * [X] molecular descriptors only
+    * [X] molecular descriptors + patterns
+    * [X] patterns only
+  * [X] run with a very limited amount of data (only k=8)
+    * [X] copy the data
+    * [X] filter the data
+    * [X] run the scripts
+* [X] Mining geometrical patterns
+  * [X] work on size-2 patterns
+    * [X] create the couples of itemsets that can lead to frequent patterns
+      * [X] compute the intersection of the extensions for calculating the support
+      * [X] adding a patternMining package with options, traits, etc.
+      * [X] refining the generation strategy
+        * [X] if a couple is unfrequent, do not consider the super-patterns of the second vertex
+
+2013-01-16 Wed 10:26:17 CET
+* [X] Run experiments for DUD datasets with molecular descriptors
+  * [X] test an independent experiment
+  * [X] compile all the experiments
+  * [X] run the random forest learners
+* [X] Mining geometrical patterns
+  * [X] work on size-2 patterns
+    * [X] create the couples of itemsets that can lead to frequent patterns
+      * [X] loop over the itemsets in a depth-first order
+      * [X] compute the intersection of the extensions for calculating the support
+* [X] General
+  * [X] write dr
+
+2013-01-15 Tue 09:50:57 CET
+* [X] Mining geometrical patterns
+  * [X] work on size-2 patterns
+    * [X] write the skeleton of the pattern miner
+* [X] Fixing problems with preprocessed data
+  * [X] re-run DUD datasets preprocessing
+  * [X] re-run multi-conformation (MC) DUD datasets preprocessing
+  * [X] re-run Decoys preprocessing for MC data
+
+2013-01-14 Mon 10:30:18 CET
+* [X] Jak2
+  * [X] integrate the mined itemsets to the existing refiners
+    * [X] reading and creating itemset for each atom (input option)
+    * [X] replacing the itemsets in atomItemset refinement option with the dynamically created itemsets
+    * [X] testing the new version of itemset mining and refinement
+* [X] New candidate generation strategy for geometric patterns
+  * [X] work on size-2 patterns
+    * [X] build the pattern tree first
+* [X] Meeting with Bertrand Cuissart (1h)
+  * [X] planning experiments on main current topics
+* [X] General
+  * [X] write dr
+
+2013-01-11 Fri 09:34:35 CET
+* [X] New candidate generation strategy for geometric patterns
+  * [X] work on size-2 patterns
+    * [X] mining closed frequent itemsets in vertex labels from jak2 code
+      * [X] read itemsets mined by LCM
+        * [X] create a list of itemsets in main memory
+        * [X] create the extension of patterns in main memory
+        * [X] compute real support of itemsets
+        * [X] keep real extension of frequent closed itemsets
+* [X] Meeting with Bertrand Cuissart (2h30)
+* [X] General
+  * [X] write dr
+
+2013-01-10 Thu 10:49:37 CET
+* [X] Preprocesing mutagenesis data
+  * [X] fix problems with disk usage on servers
+    * [X] compressing results of old experiments
+    * [X] removing old experiments folders
+  * [X] run preprocessing of DUD 4D data
+    * [X] building the merged decoys data
+    * [X] building the data for each individual target
+    * [X] copy gpm_bench to fox server disk
+    * [X] re-run a test with minimum frequency of 10%
+* [X] New candidate generation strategy for geometric patterns
+  * [X] work on size-2 patterns
+    * [X] mining closed frequent itemsets in vertex labels from jak2 code
+      * [X] after reading the db, create the input file for LCM
+        * [X] keep in memory the transaction ID corresponding to each molecule (with min-max bounds)
+      * [X] run LCM
+* [X] General
+  * [X] write dr
+
+2013-01-09 Wed 09:54:13 CET
+* [X] Read emails
+* [X] Summarize what has to be done with experiments
+* [X] DUD virtual screening
+  * [X] preprocess the 4D version of the DUD datasets
+    * [X] write and execute a script for building folders for each target
+    * [X] copy the obtained data to the preprocessing code
+* [X] Mining emerging patterns
+  * [X] Discussion with Guillaume Poezevara and compiling the bench source code for quick testing
+  * [X] first tests with Mutagenesis data
+
+2012-12-21 Fri 08:48:47 CET
 * [ ] Jak2
-  * [ ] Run evaluation scripts for results of random forests dedicated to SVM (large size, low test sampling rate)
-* [o] Install
+  * [ ] write experiment scripts for Mutagenesis 4D dataset
+  * [ ] DUD
+  * [ ] in preprocessing code, add the dipole moment (in 3D)
+  * [ ] add the calculation of the dipole moment and add it to the molecular descriptors: x,y,z and length
+* [X] Skype meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux, Julien Rabatel) (1h)
+* [X] Meeting with Bertrand Cuissart and Bruno Crémilleux (4h)
+* [ ] Muggleton's work
+  * [ ] create list of molecular descriptors
+  * [ ] send the list to Ronan
+* [ ] Admin
+  * [ ] Send email for deleting unneeded account (ext-rabatel)
+* [o] General
+  * [ ] print train tickets
+  * [X] send email to Rémi
+
+2012-12-20 Thu 08:49:39 CET
+* [o] Jak2
+  * [X] copy molecular descriptors into experiments datasets
+  * [X] run post-processor for learning SVM with molecular descriptors
+* [X] Mutagenesis
+  * [X] Run preprocessing of multiconformational Mutagenesis dataset
+* [o] General
+  * [X] write dr
+
+2012-12-19 Wed 09:09:58 CET
+* [X] Jak2
+  * [X] Send an email to Ronan Bureau (1h)
+  * [X] Finish integration of molecular descriptors into SVM learning
+    * [X] when the occurrence matrix out of a random forest, also add molecular descriptors
+    * [X] test it
+      * [X] create a fake molecular_descriptors file
+      * [X] conversion of two existing files
+  * [X] Redo preprocessing of DUD datasets (uniconformational) to generate molecular descriptors
+  * [X] When a SVM model has been learnt, share the weight of apparently equivalent attributes
+    * [X] learn an example model
+    * [X] check how models look like
+    * => support vectors seem to contain all the attributes, with full weight (weight is on the vector, not on the attributes)
+* [X] Mutagenesis
+  * [X] Run preprocessing of multiconformational Mutagenesis dataset
+    * [X] create the input data folders (1 for each run)
+    * [X] read data segmentation (learning/test, folds)
+    * [X] test it
+
+2012-12-18 Tue 09:04:47 CET
+* [X] Preprocessing of 3D data (6h)
+  * [X] source code under git
+  * [X] add a processor that compute and store molecular descriptors
+    * [X] implementing the computation of some molecular descriptors
+    * [X] writing the molecular descriptors on file
+    * [X] run the preprocessor during the global preprocessing of the input data file
+    * [X] testing it
+* [X] Jean-Philipe Métivier's seminary on Constraint Programming (1h)
+
+2012-12-17 Mon 08:07:38 CET
+* [X] Jak2
+  * [X] Run evaluation scripts for results of random forests dedicated to SVM (large size, low test sampling rate)
+    * [X] generated files (models, data files) should be removed after used (i.e., all files with '.dat' in the name
+  * [X] Check completed results obtained with old configuration of random forests
+* [X] Install
   * [X] install dropbox for synchronizing the data files
-  * [ ] link to the git folders for configuration (vim, ssh, general)
+  * [X] link to the git folders for configuration (vim, ssh, general)
 * [X] Admin
   * [X] fill time-sheets for KULeuven
   * [X] fill the forms on Wiki for Migrant project
   * [X] sign, scan and send the time-sheets
-* [ ] General
-  * [ ] write dr
+* [X] General
+  * [X] write dr
+  * [X] book train tickets!
 
 2012-12-14 Fri 09:21:58 CET
-* [o] Jak2
+* [X] Jak2
   * [X] Retrieving results
   * [X] re-run experiment evaluation scripts
   * [X] create summary of results
-  * [ ] move completed experiments
-  * [ ] Skype meeting (Bertrand Cuissart, Bruno Crémilleux, Jan Ramon, Julien Rabatel)
-    * [ ] comparison SVM / random forests
-    * [ ] next steps
-      * [ ] molecular features in SVM
-    * [ ] ICDM proceedings
-    * [ ] ILP-based approach: pattern language
-      * [ ] pattern structure
-      * [ ] atom/fragment typing
-      * [ ] higher-level background knowledge
+  * [X] move completed experiments
+  * [X] Skype meeting (Bertrand Cuissart, Bruno Crémilleux, Jan Ramon, Julien Rabatel) (1h)
+  * [X] Meeting with Bertrand Cuissart and Bruno Crémilleux (1h30)
   * [X] Run new experiments to give the SVM an advantage
     * [X] with large forest size (500)
     * [X] small tests sampling rate (1%)
@@ -102,9 +309,6 @@ TODO
     * [X] generate settings files
     * [X] copy the files
     * [X] compile them
-  * [ ] 
-* [ ] General
-  * [ ] write dr
 
 2012-12-13 Thu 10:30:13 CET
 * [o] Jak2
