@@ -33,8 +33,7 @@
 
 2013-01-23 Wed 10:28:10 CET
 * [X] Jak2 code
-    * [ ] Write a csv converter for one decision tree only and add it to the mutaData example
-    * [ ] add the traditional random forest converter to the mutaDataRandomForest example also
+  * [X] add to the mutaDataRandomForest example a converter to csv file
 * [ ] Jak2 data (with decoys)
   * [ ] run the preprocessing of the data in order to compute molecular descriptors
   * [ ] write experiment scripts (with and without molecular descriptors)
@@ -48,13 +47,17 @@
       * [ ] build and testing the corresponding graphs
     * [ ] adding some links to the pattern tree for creating a pattern lattice (with a greedy approach)
 * [ ] Answer Ryan Siders's email
-* [ ] Preparing departure
-  * [ ] dropbox
-    * [ ] put new version of code
-    * [ ] update the code on netbook
-    * [ ] update gpodder and ipod
-    * [ ] update vim config and general config
-    * [ ] check experiments (jak2 and Mutagenesis)
+* [.] Preparing departure
+  * [X] put new version of code on dropbox
+  * [X] update gpodder
+  * [X] install eclipse on netbook
+  * [X] install eclim on netbook
+  * [X] update vim config and general config
+  * [o] check experiments (jak2, Mutagenesis, and DUD VS result analysis)
+    * [X] for analysing the DUD results, block the removing of unused files and segment the process into two steps: learning and testing
+    * [ ] what should be done for jak2 and Mutagenesis?
+      * [ ] run the preprocessing of jak2 data with decoys
+  * [X] Carte week-end: add a photo
 * [ ] General
   * [ ] write dr
 
