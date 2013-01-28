@@ -31,35 +31,69 @@
 
 == Daily TODO ==
 
-2013-01-23 Wed 10:28:10 CET
-* [X] Jak2 code
-  * [X] add to the mutaDataRandomForest example a converter to csv file
-* [ ] Jak2 data (with decoys)
-  * [ ] run the preprocessing of the data in order to compute molecular descriptors
-  * [ ] write experiment scripts (with and without molecular descriptors)
-  * [ ] run the experiments
-* [ ] DUD datasets
-  * [ ] run the whole set of experiments
+2013-01-28 Mon 09:14:49 CET
+* [X] Meeting with Bertrand Cuissart (1h)
+* [X] Virtual Screening
+  * [X] summarize the last experimental results with and without molecular descriptors
 * [ ] Mining geometrical patterns
   * [ ] work on size-2 patterns
     * [ ] create the couples of itemsets that can lead to frequent patterns
       * [ ] generate the distances for connecting a couple of vertices
       * [ ] build and testing the corresponding graphs
     * [ ] adding some links to the pattern tree for creating a pattern lattice (with a greedy approach)
+  * [ ] Perform experiments with the multi-conformational version of DUD datasets
+    * [ ] Random forest size: 50, Test sampling rate: 0.1
+* [ ] Jak2 data (with decoys)
+  * [ ] check whether the jak2cdockerDecoysSystematicSearch1 and jak2cdockerDecoysSystematicSearch2 have been correctly preprocessed
+  * [ ] write experiment scripts
+  * [ ] run the experiments
+* [X] Send an email to Ronan to plan a meeting together
 * [ ] Answer Ryan Siders's email
-* [.] Preparing departure
+* [ ] General
+  * [ ] write dr
+  * [ ] update configurations on machines
+  * [ ] send a message to the bank
+  * [ ] update ipod
+
+2013-01-25 Fri 10:00:29 CET
+* [X] Write some scripts to analyse and test the obtained DT in a classical regression context
+  * [X] add the molecular descriptors
+  * [X] run the svm learning for a regression task
+  * [X] analyse the results
+    * [X] compute a RMSE value for each possible pattern language
+* [X] Jak2 data (with decoys)
+  * [X] run the preprocessing of the data in order to compute molecular descriptors
+    * [X] for jak2cdockerDecoysSystematicSearch 1 and 2
+
+2013-01-24 Thu 11:04:25 CET
+* [X] Jak2 data (with decoys)
+  * [X] run the preprocessing of the data in order to compute molecular descriptors
+    * [X] for jak2cdockerDecoysSystematicSearch1
+    * [X] for jak2cdockerDecoysSystematicSearch2
+* [X] Jak2 experiments
+  * [X] let the size of random forests vary (only with itemsets and anchor atoms)
+    * [X] size=1,   samplingRate=1
+    * [X] size=10,  samplingRate=0.2
+    * [X] size=50,  samplingRate=0.1
+    * [X] size=100, samplingRate=0.05
+  * [X] run the experiments
+* [X] DUD datasets
+  * [X] run the analysis of the whole set of experiments on appo
+
+2013-01-23 Wed 10:28:10 CET
+* [X] Jak2 code
+  * [X] add to the mutaDataRandomForest example a converter to csv file
+* [X] Preparing departure
   * [X] put new version of code on dropbox
   * [X] update gpodder
   * [X] install eclipse on netbook
   * [X] install eclim on netbook
   * [X] update vim config and general config
-  * [o] check experiments (jak2, Mutagenesis, and DUD VS result analysis)
+  * [X] check experiments (jak2, Mutagenesis, and DUD VS result analysis)
     * [X] for analysing the DUD results, block the removing of unused files and segment the process into two steps: learning and testing
-    * [ ] what should be done for jak2 and Mutagenesis?
-      * [ ] run the preprocessing of jak2 data with decoys
+    * [X] what should be done for jak2 and Mutagenesis?
+      * [X] run the preprocessing of jak2 data with decoys
   * [X] Carte week-end: add a photo
-* [ ] General
-  * [ ] write dr
 
 2013-01-22 Tue 08:53:21 CET
 * [X] Jak2 code
