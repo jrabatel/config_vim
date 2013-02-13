@@ -1,3 +1,53 @@
+= TODO =
+
+== HCA ==
+* [X] Implementing the statistics-based pruning
+  * [X] what about the support measure?
+* [X] Adding the discriminability measure
+  * [X] computation for FAK
+* [ ] Functional dependencies with FAK
+  * [ ] several possibilities
+    * [ ] try to take into consideration the instances that are not covered by a FD, but it is difficult (impossible?) to agregate the measures (support, distinct value count) without rescanning everything or storing additional information. 
+    * [ ] retrieve different types of FD of the form X->A, considering whether they will help generating uniques or non-uniques (c is the initial AttributeSet and c' the one obtained via the application of the FD)
+      * [ ] if supp(X) = supp(X,A)
+        * [ ] replacing X by A: if c was non-unique, c' is non-unique as well
+        * [ ] replacing A by X: if c was unique, c' is unique as well
+* [ ] Adding the SK
+  * [ ] Functional dependencies
+  * [ ] Discriminability
+  * [ ] Using the distinct values and histograms
+* [ ] Adding a mechanism for writing the data on disk
+* [ ] if possible, consider the discriminability measure with functional dependency (i.e., a FD holds for a certain discriminability).
+* [ ] implement a sampling mechanism, in order to call Gordian and prune some non-uniques
+
+== Gordian ==
+* [ ] Implementing the FAK principles
+* [ ] Adding the discriminability measure
+* [ ] Adding the SK
+
+== General ==
+* [X] Adding the connection to Jena
+* [X] Loading the data from Jena
+  * [X] via a datafile
+  * [X] via an indexed database
+* [X] Installing Jérôme David's code
+* [X] Integrate the Abes dataset and test it
+* [ ] How to quickly compute the support of an AttributeSet ?
+  * [ ] represent each instance with a bitmap corresponding to covered attributes?
+    * [ ] then, computing the support simply will not require to scan all the instances:
+      * [ ] create the bitmap corresponding to an AttributeSet
+      * [ ] for each instance, check whether the AttributeSet is included
+* [ ] Profiling time consumption
+  * [ ] candidate generation
+  * [ ] candidate checking
+  * [ ] FD retrieval
+  * [ ] FD checking
+  * [ ] sorting the lists of instances to check
+* [X] Speed-up
+  * [X] When mining FAK, we should store the data in main memory directly in single-valued version, it would reduce time consumption
+* [X] Memory efficiency
+  * [X] consider one class at a time, and then remove all the instances, attributes, and values related to the past class
+
 = KD2R =
 
 == Basic definitions ==

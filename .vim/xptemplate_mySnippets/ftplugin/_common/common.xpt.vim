@@ -31,6 +31,14 @@ XPT wrt " w.r.t.
 w.r.t. `cursor~
 ..XPT
 
+XPT st " s.t.
+s.t. `cursor~
+..XPT
+
+XPT of " of the form 
+of the form `cursor~
+..XPT
+
 XPT /t " \t (tabulation)
 \t
 ..XPT
