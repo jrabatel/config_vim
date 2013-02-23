@@ -130,6 +130,10 @@ nnoremap ,q :ccl<CR>
 nnoremap ,s :cprev<CR>
 nnoremap ,d :cnext<CR>
 
+" Location list
+nnoremap ,sl :lne<CR>
+
+
 " Capitalize/uncapitalize the first character of all words on a line
 nmap ,cap :s/\<[a-z]/\u&/g<CR>:nohls<CR>
 nmap ,ucap :s/\<[A-Z]/\l&/g<CR>:nohls<CR>
@@ -424,3 +428,4 @@ nmap ,rc :!rails console<CR>
 
 " Various
 imap ,jr Julien Rabatel
+
