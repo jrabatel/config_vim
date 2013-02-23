@@ -29,13 +29,189 @@
 
 == Daily TODO ==
 
+2013-02-22 Fri 09:52:47 CET
+* [.] Mutagenicity
+  * [ ] Run some tests on each source of the benchmark data
+    * [ ] build a different dataset for each source
+    * [ ] run some experiments on them
+    * [ ] compare the results
+  * [X] Study the correlation of the leaves' p-value with their real quality
+    * [X] generate a plot with individual error rate of leaves according to their p-value
+    * [X] add a linear regression fitting model
+    * [X] compute a correlation coefficient between the p-value and the generalization power of leaves
+* [ ] Geometrical pattern mining
+  * [ ] how to mine closed patterns?
+    * [ ] when reaching a leaf?
+    * [ ] at each best test selection?
+      * [ ] a best test is selected and we want to extend it with every refinements that do not modify its extension
+  * [ ] progress on the generation of size-2 patterns
+    * [ ] generate the distances
+* [X] Experiments
+    * [X] work on why some experiments do not compile
+    * [X] re-run the tests
+* [ ] General
+  * [ ] write dr
+
+2013-02-21 Thu 09:14:07 CET
+* [X] Mutagenicity
+  * [X] write and send a document presenting the results obtained with Mutagenicity data
+    * [X] presentation of the p-value computation
+    * [X] presentation of the performed studies
+    * [X] presentation of the prediction strategies
+  * [X] progress on the generation of size-2 patterns
+* [ ] Geometrical pattern mining
+  * [ ] how to mine closed patterns?
+
+2013-02-20 Wed 10:36:51 CET
+* [X] Mutagenicity
+  * [X] send to Jérémie the papers describing the benchmark data sources
+  * [X] write and send a Skype meeting report
+  * [X] write a document presenting the results obtained with Mutagenicity data
+* [X] Geometrical pattern mining
+  * [X] progress on the generation of size-2 patterns
+    * [X] generate the distances
+* [X] Experiments
+    * [X] run new tests with a larger minimum leaf size and a larger test sampling rate
+* [X] General
+  * [X] write dr
+
+2013-02-19 Tue 09:07:51 CET
+* [X] Project Meeting (2h15)
+* [X] Skype Meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux) (1h)
+* [X] Project Meeting presentation
+  * [X] quickly read the Ames test description
+  * [X] print the paper related to the benchmark dataset
+  * [X] print the project description
+  * [X] copy files locally
+  * [X] to do to finish the presentation
+    * [X] modify title slide
+      * [X] find a title
+    * [X] for decision tree examples, replace ic50 by Mutagenicity
+    * [X] for RPMP, add some remarks about what has been done
+    * [X] add colors to the text
+    * [X] change 'forêt décisionnelle' for 'forêt aléatoire'
+    * [X] add a sub-section about pattern explanations
+  * [X] copy the presentation on USB key
+
+2013-02-18 Mon 08:20:08 CET
+* [X] Send an email to Alban Lepailleur about his presentation in the Chemoinformatics work group
+* [X] RPMP mining
+  * [X] use LCM via Guillaume Poezevara's work
+    * [X] use an infinite growth rate
+  * [X] give examples 
+* [X] Project Meeting presentation
+  * [X] write down the plan of the presentation
+    * [X] Geometrical patterns
+      * [X] explanations
+        * [X] geometrical + chemical features
+        * [X] random forests
+      * [X] first results on Mutagenicity data
+        * [X] quantitative results
+        * [X] in-depth analysis and examples of plots
+        * [X] examples of patterns extracted
+    * [X] RPMP
+      * [X] explanations
+      * [X] first results on Mutagenicity data
+      * [X] pattern examples (or not)
+    * [X] Future work
+      * [X] combination of the two pattern languages
+      * [X] improving with molecular descriptors (some are provided with the Benchmark dataset)
+  * [X] to do to finish the presentation
+    * [X] modify title slide
+      * [X] find a title
+      * [X] add the logos for CERMN and ADNTox
+    * [X] modify the real example to show the odds
+    * [X] add source for the RPMP slides
+    * [X] modify the generated plots
+      * [X] add the axis labels
+      * [X] generate a new plots on the best experiment
+      * [X] generate a new plot with histogram with p-value between 0 and 0.1 
+      * [X] integrate the new plots into the presentation
+      * [X] add a density plot for good leaves
+      * [X] add the error rate plot
+    * [X] put the 'data description' slide right before the real example
+    * [X] remove the additional 'conclusion' section
+* [X] General
+  * [X] send PhD thesis latex template to Hai and Hugo
+  * [X] answer parents' email
+
+2013-02-17 Sun 11:02:21 CET
+* [X] RPMP mining
+  * [X] find datasets of frequent subgraphs as provided by Guillaume Poezevara's code
+  * [X] manually try to run the DDPMine algorithm on these data
+    * [X] convert the data into DDPMine format
+    * [X] run the python code --> does not work properly
+* [X] Mutagenesis data analysis
+  * [X] compute the various plots and measures by aggregating all the experiments
+    * [X] read the experiments having the same settings but being part of a different cross-validation fold
+      * [X] compute the mean and standard deviation for each measure
+    * [X] read the experiments corresponding to the same settings but different random forest size
+    * [X] write the global results in a csv file
+* [X] General
+  * [X] write dr
+
+2013-02-16 Sat 16:39:24 CET
+* [X] Mutagenesis data analysis
+  * [X] compute predictions over the random forests
+    * [X] average value
+    * [X] average with a p-value maximum treshold
+    * [X] average with a p-value maximum treshold on the leaves covering each molecule
+  * [X] compute AUROC measure over the random forests
+  * [X] test different computations of the prediction for a test molecule
+
+2013-02-15 Fri 10:06:51 CET
+* [X] Mutagenesis data analysis
+  * [X] run new experiments with a test sampling rate of 10% rather than 5%
+  * [X] run new experiments with a minimum leaf size of 20 rather than 10
+  * [X] fix problem with storage of learning and test occurrences
+  * [X] generate some plots:
+    * [X] histogram of the number of leaves compared w.r.t. the p-value
+    * [X] plot the coverage rate against the p-value maximum treshold
+    * [X] plot the error rate against the p-value maximum treshold
+    * [X] plot the multi-coverage of the molecules according to a p-value maximum threshold
+    * [X] operations to perform for computing the plots
+      * [X] calculate, for each molecule, how many times it is covered by a good leaf
+  * [X] test on a chosen experiment (id 251)
+  * [X] fix issues in computing the various measures
+    * [X] the molecules seem to be counted two times instead of once (e.g., the maximum value in the learning dataset is around 12000 instead of around 6000)
+    * [X] the multi-coverage seems wrong
+      * [X] with a pvalue of 1, the count of should be around 6500
+
+2013-02-14 Thu 10:22:40 CET
+* [X] Jak2 code
+  * [X] should fix a problem when looking for the molecules falling into a node
+* [X] Answer Jan Ramon's email
+* [X] Mutagenesis data analysis
+  * [X] run the experiments again with finer information about the embeddings
+* [X] General
+  * [X] write dr
+
 2013-02-13 Wed 10:04:49 CET
-* [ ] Results analysis
-  * [ ] put new decision trees online for Ronan Bureau
-    * [ ] for each experiment, create a file containing the decision trees and a file containing the occurrences
-  * [ ] send an email to Ronan
-    * [ ] explaining the principle
-* [ ] Send an email to Bertrand in order to ask what to send to Ryan Siders
+* [X] Results analysis
+  * [X] put new decision trees online for Ronan Bureau
+    * [X] for each experiment, create a file containing the decision trees and a file containing the occurrences
+  * [X] send an email to Ronan and write some explanations about how to read the results (1h)
+* [X] Jak2 code
+  * [X] in the decision forests, fix the fact that the predicted values are wrong because of the weighting of the individual values
+* [X] Mutagenesis data analysis
+  * [X] learn some random forests with parameters:
+    * [X] minimum leaf size: 10
+    * [X] random forest size: 25, 50, 75, 100
+  * [X] find a way to compute p-values in ruby scripts
+  * [X] generate some plots:
+    * [X] operations to perform for computing the plots
+      * [X] read a random forest
+      * [X] for each node, calculate a p-value
+        * [X] need the number of molecules in class 0 and in class 1 (in the learning set)
+        * [X] need the number of molecules in a leaf with class 0 and class 1
+      * [X] filter the read nodes in order to have only the leaves
+      * [X] print the leaves, sorted by the descending p-value
+      * [X] for each leaf, consider the number of classification errors
+      * [X] compute the error rate for the global decision tree
+* [X] General
+  * [X] copy public key to mobile phone
+  * [X] change password for KULeuven
+  * [X] write dr
 
 2013-02-12 Tue 09:25:06 CET
 * [X] Skype Meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux) (1h)

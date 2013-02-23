@@ -1,3 +1,14 @@
+* [o] Mining size-2 patterns efficiently
+  * [X] Generating itemset pairs and their extensions
+  * [ ] Generating the itemset pairs with
+    * [ ] for each possible AtDistance label value, we store the extension (i.e., an extension element is a pair with a molecule pointer and a conformation iterator pointing to the first conformation where this distance has been encountered)
+    * [ ] 2 possible strategies:
+      * [ ] 1. for each generated pair, iterate over the molecules (from the pair extension)
+      * [ ] 2. for each molecule (from the pair extension), generate the pairs
+        * (+) We can store, for each distance, two iterators pointing to the atoms that allowed a matching from the parent itemset pair. will be more efficient because we can expect that, quite often, this atom pair will still match for the child. And when it will not match anymore, we will have a lot of atom pairs not being useful to re-test
+        * (+) we could also store, for each distance, all the atom pairs that match for the parent. Advantage is that we won't have to generate new atom pairs, because for the children, the matching atom pairs will be included in this set. The disadvantage is that those lists of atom pairs could be quite memory-consummers. However, it should in the end be more time-efficient.
+      * [ ] We should surely use the second strategy, with the second variant (if memory consumption is okay on Mutagenecity data)
+
 * [ ] *Pattern-based regression? (by similarity with pattern-based classifiers)*
 
 * [ ] *Mining discriminative subgraphs with DAG-based vertex labels (looking at paper on )*
