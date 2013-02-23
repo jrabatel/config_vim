@@ -10,15 +10,7 @@
 [[Paper Writing]]
 [[Web development]]
 [[Various]]
-
-* [ ] Key Discovery
-  * [ ] project
-    * [ ] attributes
-      * [ ] Attribute
-      * [ ] AttributeSet
-      * [ ] AttributeSetTree
-    * [ ] algorithm
-      * [ ] CandidateGeneration
+[[Key Discovery]]
 
 * [ ] Pattern Mining Problems
   * [ ] mining patterns in the presence of a continuous target value
@@ -29,12 +21,149 @@
     * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
      [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
 
+* [ ] RPMP improving
+  * [ ] could be interesting to mine closed itemsets by taking into account an existing order over the items
+    * [ ] e.g., we do not want to output itemsets of the form {i1,i2...,in} where there exist j and k s.t. j < k
+    * [ ] with growth rate computation, those patterns are redundant with their minimal version
+    * [ ] the main principle would be: 
+
 == Daily TODO ==
 
-2013-01-28 Mon 09:14:49 CET
+2013-02-13 Wed 10:04:49 CET
+* [ ] Results analysis
+  * [ ] put new decision trees online for Ronan Bureau
+    * [ ] for each experiment, create a file containing the decision trees and a file containing the occurrences
+  * [ ] send an email to Ronan
+    * [ ] explaining the principle
+* [ ] Send an email to Bertrand in order to ask what to send to Ryan Siders
+
+2013-02-12 Tue 09:25:06 CET
+* [X] Skype Meeting (Jan Ramon, Bertrand Cuissart, Bruno Crémilleux) (1h)
+* [X] Meeting with Bertrand Cuissart (1h30)
+  * [X] defining some quality measures for trees and patterns
+* [X] Chemoinformatics meeting (1h30)
+* [o] Ronan
+  * [X] save the extension of leaves in training and test sets
+  * [X] run specific experiments for obtaining new trees on jak2 and Mutagenicity datasets
+  * [ ] put new trees on dropbox
+  * [ ] Jak2 data
+    * [ ] use the decoys in a 3-class problem
+      * [ ] run as a regression problem and use a script to compute interesting statistics
+  * [ ] generate html files for summarizing a decision tree
+    * [ ] main page is the tree description
+    * [ ] each leaf node points to a file describing the pattern and its extensions (in training and test sets)
+      * [ ] how to fully describe a pattern?
+        * [ ] from the node
+          * [ ] find the ancestors
+            * [ ] for each "no" node...
+            * [ ] for each "yes" node...
+* [ ] General
+  * [ ] write dr
+
+2013-02-11 Mon 09:24:17 CET
+* [X] Meeting with Bertrand Cuissart (2h)
+* [ ] Various learning methods from Weka
+  * [ ] summarize the results
+    * [ ] show why methods are the best
+  * [ ] for the best learners
+    * [ ] manually test attribute selection methods
+    * [ ] implement a test with grid-search for parameter setting
+* [ ] Ronan Bureau
+  * [ ] put online some new decision trees
+    * [ ] for jak2 data
+      * [ ] without partial charge
+    * [ ] for Mutagenicity data
+* [.] RPMP
+  * [ ] only extract and filter frequent subgraphs in Mutagenicity data
+  * [ ] run DDPMine on those patterns
+  * [ ] perform the classification with the remaining patterns
+    * [ ] build a binary matrix where descriptors are the found patterns
+    * [ ] call any classification method on it (e.g., via Weka)
+  * [X] what are the other possibilities?
+    * [X] CIMCP
+* [ ] General
+  * [ ] write dr
+
+2013-02-08 Fri 09:56:59 CET
+* [o] Experiments
+  * [X] change the scripts so that we give as a parameter a string (or an list of strings) that correspond to the datasets to process
+  * [X] disable SVM learning on the data (only weka methods are tested)
+  * [o] analyse the results so far and pick the best Weka methods
+    * [X] run the regression scripts for each Mohr's dataset separately
+    * [X] analyse the results for each dataset (dhfr is missing for now)
+      * [X] find the best methods
+      * [X] compare with other datasets
+* [.] RPMP in Mutagenicity data
+  * [X] convert the mined subgraphs into the DDPMine format
+
+
+2013-02-07 Thu 10:29:13 CET
+* [o] Experimental scripts
+  * [X] run on Mohr's datasets, with a test sampling rate of 10% and 20% (with the same other settings)
+  * [X] run on Jak2 data, with a test sampling rate of 10% and 20% (with the same other settings)
+  * [X] run on Jak2 data, with a larger minimum leaf size (30)
+  * [X] for classification methods, remove the DTNB algorithm (it is too slow for learning)
+* [o] Ronan Bureau
+  * [X] How to remove the partial charge from itemsets?
+    * [X] in jak2 source code, do not add the partial charge item to the itemsets
+* [X] Read document about classification of molecules
+
+2013-02-06 Wed 10:12:08 CET
+* [X] Write and send email for reporting the last results (1h)
+* [X] Write and send an email to Bertrand Cuissart
+* [X] Run experiments on Mutagenesis, with very high minimum leaf sizes
+
+2013-02-05 Tue 09:34:36 CET
+* [X] Skype Meeting (Jan Ramon, Bertrand Cuissart) (30 min)
+* [ ] Weka usage in learning
+  * [ ] How to use weka for the virtual screening problem as well?
+    * [ ] should obtain the actual predictions and write them into a file
+    * [ ] do some regression on the class labels (i.e., +1 and -1)?
+* [ ] New clues for geometrical pattern mining
+  * [ ] is it possible to integrate the target-ligand interactions as new items in itemsets?
+* [ ] New clues for RPMP
+  * [ ] Check the output format of Gaston
+  * [ ] Try to use DDPMine
+  * [ ] think about the problem of mining closed patterns when there exists an order on the item alphabet
+    * [ ] main principle: when a pattern including A has been computed, do not generate any super-patterns containing subgraphs of A
+
+2013-02-04 Mon 09:39:57 CET
 * [X] Meeting with Bertrand Cuissart (1h)
-* [X] Virtual Screening
-  * [X] summarize the last experimental results with and without molecular descriptors
+* [X] Jak2 code
+  * [X] weighting the decisions made by each decision tree in a forest with the size of the used leaf
+* [X] Prepare Tuesday's Skype meeting
+  * [X] Mohr and Jak2 datasets: run the scripts for computing the performances of each Weka learning method
+  * [X] Mutagenicity: run the scripts for computing the classification results
+* [X] Mohr datasets
+  * [X] perform the prediction with various Weka learners
+* [o] General
+  * [X] Key Discovery
+    * [X] finish implementation of HCA for FAK
+      * [X] implement minimality check in candidate generation
+
+
+2013-02-01 Fri 09:54:01 CET
+* [X] Write a meeting report for yesterday's meeting
+  * [X] copy the document from netbook
+  * [X] write the document
+* [X] Mutagenicity
+  * [X] run new experiments, by reducing the minimum leaf size
+
+2013-01-31 Thu 09:32:50 CET
+* [X] Jak2 code
+  * [X] add the searching for occurrences in the leaves
+  * [X] Finish the scripts to automatically tests the methods and write the results (for regression and classification)
+    * [X] regression
+      * [X] read the predictions and write the average values in a csv file
+    * [X] classification
+      * [X] adapt the script that is supposed to compute the predictions with weka
+      * [X] adapt the script that is supposed to summarize the obtained results
+  * [X] Mohr's datasets
+    * [X] check the preprocessing or run it if necessary
+    * [X] copy the data to appo
+    * [X] write some scripts to prepare the experiments
+    * [X] run some experiments with random forests
+* [X] Send an email to Bertrand
 * [ ] Mining geometrical patterns
   * [ ] work on size-2 patterns
     * [ ] create the couples of itemsets that can lead to frequent patterns
@@ -43,17 +172,68 @@
     * [ ] adding some links to the pattern tree for creating a pattern lattice (with a greedy approach)
   * [ ] Perform experiments with the multi-conformational version of DUD datasets
     * [ ] Random forest size: 50, Test sampling rate: 0.1
-* [ ] Jak2 data (with decoys)
-  * [ ] check whether the jak2cdockerDecoysSystematicSearch1 and jak2cdockerDecoysSystematicSearch2 have been correctly preprocessed
-  * [ ] write experiment scripts
-  * [ ] run the experiments
+  * [ ] Could we also use itemset mining to represent the interactions between target binding site and the ligand?
+    * [ ] which representation of the data?
+* [X] General
+  * [X] Key Discovery
+    * [X] for attributes, create a static data structure that stores all the attributes indexed by their local id and their class id
+
+2013-01-30 Wed 09:21:52 CET
+* [X] Preparing meeting with Ronan Bureau
+  * [X] Run new experiments
+    * [X] on Jak2 with decoys
+      * [X] check how is the preprocessing
+      * [X] copy the data if necessary
+    * [X] on DUD with multiconformational version
+      * [X] check how is the preprocessing
+      * [X] copy the data
+  * [X] Mutagenicity
+    * [X] Also obtain results with other classifiers
+    * [X] Compare those results with referenced results from the Benchmark website
+  * [X] Jak2
+    * [X] Check how to obtain some tests used with protein-ligand interactions
+    * [X] Run one test by learning a decision tree on the whole dataset (no segmentation into learning/test)
+  * [X] Documents to prepare/take
+    * [X] Molecular descriptors
+      * [X] used by Muggleton
+      * [X] used by us
+    * [X] Mutagenicity results and comparison
+      * [X] obtain results with and without molecular descriptors
+        * [X] copy molecular descriptors file to the experiment folders
+        * [X] ensure the conversion to the SVMLight format
+        * [X] compute results manually for a selection of learning approaches
+      * [X] compare with given results from http://doc.ml.tu-berlin.de/toxbenchmark/results.html
+    * [X] Jak2 results
+      * [X] decision trees
+      * [X] quantitative results
+* [X] Jak2 code
+  * [X] Start some scripts to automatically tests the methods and write the results (in regression only)
+* [X] General
+  * [X] update configurations on machines
+
+2013-01-29 Tue 10:10:57 CET
+* [X] Preparing meeting with Ronan Bureau
+  * [X] Run new experiments
+    * [X] on Jak2 with decoys
+      * [X] check how is the preprocessing
+      * [X] copy the data if necessary
+* [X] Jak2 code
+  * [X] Start some scripts to automatically tests the methods and write the results (in regression only)
+* [X] General
+  * [X] update configurations on machines
+
+2013-01-28 Mon 09:14:49 CET
+* [X] Meeting with Bertrand Cuissart (1h30)
+* [X] Preparing meeting with Ronan Bureau
+  * [X] Mutagenicity
+    * [X] Look for results from the literature
+* [X] Jak2 code
+  * [X] Test a variety of regression methods from Weka to study their general behaviors
+* [X] Virtual Screening
+  * [X] summarize the last experimental results with and without molecular descriptors
 * [X] Send an email to Ronan to plan a meeting together
-* [ ] Answer Ryan Siders's email
-* [ ] General
-  * [ ] write dr
-  * [ ] update configurations on machines
-  * [ ] send a message to the bank
-  * [ ] update ipod
+* [X] General
+  * [X] update configurations on machines
 
 2013-01-25 Fri 10:00:29 CET
 * [X] Write some scripts to analyse and test the obtained DT in a classical regression context
