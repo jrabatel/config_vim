@@ -21,10 +21,33 @@
       * [ ] add a partial for the global form
     * [ ] routes
 
-  * [X] add likeable as a functionality
+  * [O] add likeable as a functionality
     * [X] controller actions
     * [X] model
     * [X] views
       * [X] add partials
       * [X] add a partial for the global form
     * [X] routes
+    * [ ] tests
+      * [ ] views
+        * [ ] like form only appears if the user is logged in
+        * [ ] with javascript enabled
+          * [ ] if click on like, the form should change to the unlike form
+          * [ ] if click on unlike, the form should change to the like form
+        * [ ] without javascript enabled
+          * [ ] if click on like, the form should change to the unlike form after a refresh of the page
+          * [ ] if click on unlike, the form should change to the like form after a refresh of the page
+      * [ ] model
+        * [ ] the number of likes for the object should be incremented after a new like
+        * [ ] the number of likes for the object should be decremented after a new unlike
+      * [ ] controller
+        * [ ] when a user is destroyed, all his evaluations are also destroyed
+        * [ ] when an object is destroyed, all its evaluations are also destroyed
+
+  * [ ] add commentable as a functionality
+    * [ ] tests
+      * [ ] model
+      * [ ] controller
+      * [ ] views
+      * [ ] if comments are not open
+        * [ ] a user should be logged in to be able to comment
