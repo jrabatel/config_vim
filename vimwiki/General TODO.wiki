@@ -1,10 +1,30 @@
-== Administrative ==
-* [ ] Impôts: modify address!
-* [ ] SFR
+* [X] rails configuration
+  * [X] add a railsrc file
+    * [X] should contain
+      * [X] postgresql database by default
+      * [X] skip test unit
+  * [X] add to the default app generator
+    * [X] enable the rubyracer gem by default
+    * [X] git creation and init
+    * [X] setting the postgresql databases
+    * [X] add rspec, spork and guard
+      * [X] perform the gem install and init
+      * [X] copy correct Guardfile and spec_helper files
+  * [X] create an application builder instead of a generator
+  * [X] add the better_errors / binding_of_caller / meta_request
 
-== Profesional ==
-* [X] AKDM for 30/04/2012
-* [ ] DMKD
-* [ ] Thesis final version!!
+  * [ ] add taggable
+    * [ ] controller actions
+    * [ ] model
+    * [ ] views
+      * [ ] add partials
+      * [ ] add a partial for the global form
+    * [ ] routes
 
-== Config ==
+  * [X] add likeable as a functionality
+    * [X] controller actions
+    * [X] model
+    * [X] views
+      * [X] add partials
+      * [X] add a partial for the global form
+    * [X] routes

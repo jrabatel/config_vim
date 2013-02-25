@@ -89,3 +89,10 @@ flash[:success] = "`message~"`cursor~
 XPT params
 params[:`field~]`cursor~
 ..XPT
+
+" RSPEC
+XPT it " it "..." do end
+it "`descr~" do
+  `cursor~
+end
+..XPT
