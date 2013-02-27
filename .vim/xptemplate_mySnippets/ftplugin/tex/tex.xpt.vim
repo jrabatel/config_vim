@@ -135,7 +135,7 @@ XPT mcal "\mathcal{..}
 ..XPT
 
 XPT $mcal "$ \mathcal{..} $
-$ \mathcal{`X~} $`cursor~
+$\mathcal{`X~}$`cursor~
 ..XPT
 
 XPT cinred " \inred{...}
@@ -163,9 +163,10 @@ XPT cinbor_ wraponly=wrapped " \inbor{...}
 XPT cingreen " \ingreen{...}
 \ingreen{`text~}`cursor~
 ..XPT
-XPT cingreen_ wraponly=wrapped " \ingreen{...}
-\ingreen{`wrapped~}`cursor~
+XPT cinmag_ wraponly=wrapped " \inmag{...}
+\inmag{`wrapped~}`cursor~
 ..XPT
+
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Useful environment for figures, tables, math mode
@@ -378,7 +379,7 @@ XPT sqrt " sqrt[..]{..}
 ..XPT
 
 XPT sum " sum{..}~..{}
-\sum_{`init~}^`end~{`cursor~}
+\sum\limits_{`init~}^`end~{`cursor~}
 ..XPT
 
 XPT slide " begin{slide} .. end{slide}

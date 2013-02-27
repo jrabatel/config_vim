@@ -130,6 +130,10 @@ nnoremap ,q :ccl<CR>
 nnoremap ,s :cprev<CR>
 nnoremap ,d :cnext<CR>
 
+" Location list
+nnoremap ,sl :lne<CR>
+
+
 " Capitalize/uncapitalize the first character of all words on a line
 nmap ,cap :s/\<[a-z]/\u&/g<CR>:nohls<CR>
 nmap ,ucap :s/\<[A-Z]/\l&/g<CR>:nohls<CR>
@@ -254,13 +258,20 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_GotoError=1
+let g:Tex_GotoError=0
+let g:Tex_ShowErrorContext=0
 
 " Compiling rules to generate pdf from dvi
-let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+" when first compiling into dvi
+" let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+" let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+" let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+" let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+" when first compiling into pdf
+" let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
 let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
 let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode $*'
 
 " Quickly find code markers in a project (should be modified to use vimgrep)
 nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>:redraw!<CR>
@@ -331,6 +342,9 @@ nmap ,al: :Tab /:\w*<CR>
 nmap ,al, :Tab /,<CR>
 nmap ,al; :Tab /;<CR>
 
+" FOR PSEARCH
+nmap ,f/ :PSearch<CR>
+nmap ,fw :PSearchw<CR>
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR XPTEMPLATE
@@ -414,3 +428,4 @@ nmap ,rc :!rails console<CR>
 
 " Various
 imap ,jr Julien Rabatel
+

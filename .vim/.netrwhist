@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/data/chercheurs/rabatel/Documents/Code/build/openbabel_preprocessing/src/output/AllDecoysFromDud'
-let g:netrw_dirhist_2='/data/chercheurs/rabatel/Documents/experiments/jak2/src/output/settings'
-let g:netrw_dirhist_3='/data/chercheurs/rabatel/Documents/Code/build/jak2/data/MCDUDada--all'
-let g:netrw_dirhist_4='/data/chercheurs/rabatel/Documents/Code/build/openbabel_preprocessing/src/output/jak2cdockerDecoysSystematicSearch1--all'
-let g:netrw_dirhist_5='/data/chercheurs/rabatel/Documents/Code/build/gpm_bench'
-let g:netrw_dirhist_6='/data/chercheurs/rabatel/Documents/experiments/jak2/done/197'
-let g:netrw_dirhist_7='/home/personnels/rabatel/Documents/Code/build/jak2/src/examples/mutaDataRandomForest/CMakeFiles'

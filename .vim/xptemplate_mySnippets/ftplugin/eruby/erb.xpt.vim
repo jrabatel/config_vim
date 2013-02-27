@@ -31,6 +31,10 @@ XPT <lt " <%= link_to "text", "link" %>
 <%= link_to "`text~", `link~ %>
 ..XPT
 
+XPT lt " link_to "text", "link"
+link_to "`text~", `link~
+..XPT
+
 XPT <img " image_tag "img.png", alt: "text"
 image_tag("`img_location~", alt: "`text~")
 ..XPT
@@ -57,3 +61,11 @@ XPT fsub " form submit field
 <%= f.submit "`attr~" %>
 ..XPT
 
+" I18N
+XPT <t " <%= t "..." %>
+<%= t "`cursor~" %>
+..XPT
+
+XPT t " t "..."
+t "`cursor~"
+..XPT

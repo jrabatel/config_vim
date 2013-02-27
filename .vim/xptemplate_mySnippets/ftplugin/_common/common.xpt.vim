@@ -35,8 +35,16 @@ XPT st " s.t.
 s.t. `cursor~
 ..XPT
 
+XPT stt " such that 
+such that `cursor~
+..XPT
+
 XPT of " of the form 
 of the form `cursor~
+..XPT
+
+XPT iot " in order to
+in order to `cursor~
 ..XPT
 
 XPT /t " \t (tabulation)
