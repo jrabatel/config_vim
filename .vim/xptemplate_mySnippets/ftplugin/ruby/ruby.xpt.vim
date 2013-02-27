@@ -47,8 +47,8 @@ XPT outval " puts "`exp~ = #{`var~}"
 puts "`exp~ = #{`var~}"
 ..XPT
 
-XPT defs " def method ... end
-def `method~
+XPT defs " def self.method ... end
+def self.`method~
 `cursor~
 end
 ..XPT

@@ -1,10 +1,53 @@
-== Administrative ==
-* [ ] Impôts: modify address!
-* [ ] SFR
+* [X] rails configuration
+  * [X] add a railsrc file
+    * [X] should contain
+      * [X] postgresql database by default
+      * [X] skip test unit
+  * [X] add to the default app generator
+    * [X] enable the rubyracer gem by default
+    * [X] git creation and init
+    * [X] setting the postgresql databases
+    * [X] add rspec, spork and guard
+      * [X] perform the gem install and init
+      * [X] copy correct Guardfile and spec_helper files
+  * [X] create an application builder instead of a generator
+  * [X] add the better_errors / binding_of_caller / meta_request
 
-== Profesional ==
-* [X] AKDM for 30/04/2012
-* [ ] DMKD
-* [ ] Thesis final version!!
+  * [ ] add taggable
+    * [ ] controller actions
+    * [ ] model
+    * [ ] views
+      * [ ] add partials
+      * [ ] add a partial for the global form
+    * [ ] routes
 
-== Config ==
+  * [O] add likeable as a functionality
+    * [X] controller actions
+    * [X] model
+    * [X] views
+      * [X] add partials
+      * [X] add a partial for the global form
+    * [X] routes
+    * [ ] tests
+      * [ ] views
+        * [ ] like form only appears if the user is logged in
+        * [ ] with javascript enabled
+          * [ ] if click on like, the form should change to the unlike form
+          * [ ] if click on unlike, the form should change to the like form
+        * [ ] without javascript enabled
+          * [ ] if click on like, the form should change to the unlike form after a refresh of the page
+          * [ ] if click on unlike, the form should change to the like form after a refresh of the page
+      * [ ] model
+        * [ ] the number of likes for the object should be incremented after a new like
+        * [ ] the number of likes for the object should be decremented after a new unlike
+      * [ ] controller
+        * [ ] when a user is destroyed, all his evaluations are also destroyed
+        * [ ] when an object is destroyed, all its evaluations are also destroyed
+
+  * [ ] add commentable as a functionality
+    * [ ] tests
+      * [ ] model
+      * [ ] controller
+      * [ ] views
+      * [ ] if comments are not open
+        * [ ] a user should be logged in to be able to comment
