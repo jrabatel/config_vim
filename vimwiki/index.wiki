@@ -29,28 +29,61 @@
 
 == Daily TODO ==
 
-2013-02-22 Fri 09:52:47 CET
+2013-02-27 Wed 10:25:28 CET
+* [ ] Mutagenicity
+  * [ ] segmenting the dataset according to the source
+  * [ ] using the smiles code for identifying the molecules
+  * [ ] check the number of molecules in the new datasets
+* [ ] Geometrical pattern mining
+  * [ ] selecting a quality measure
+    * [ ] try to find a reference for the 'centered confidence' measure
+    * [ ] look at the references for the main measures satisfying the selected criteria
+  * [ ] run tests for the different quality measures (if several were selected)
+
+2013-02-26 Tue 09:17:40 CET
+* [ ] Mutagenicity
+* [X] Skype Meeting (Bertrand Cuissart, Jan Ramon, Julien Rabatel)
+
+2013-02-25 Mon 10:24:02 CET
 * [.] Mutagenicity
-  * [ ] Run some tests on each source of the benchmark data
-    * [ ] build a different dataset for each source
+  * [.] Run some tests on each source of the benchmark data
+    * [X] build a different dataset for each source
     * [ ] run some experiments on them
     * [ ] compare the results
-  * [X] Study the correlation of the leaves' p-value with their real quality
-    * [X] generate a plot with individual error rate of leaves according to their p-value
-    * [X] add a linear regression fitting model
-    * [X] compute a correlation coefficient between the p-value and the generalization power of leaves
-* [ ] Geometrical pattern mining
+  * [ ] Update the document with
+    * [ ] correlation coefficient between 
+* [.] Geometrical pattern mining
   * [ ] how to mine closed patterns?
     * [ ] when reaching a leaf?
     * [ ] at each best test selection?
       * [ ] a best test is selected and we want to extend it with every refinements that do not modify its extension
   * [ ] progress on the generation of size-2 patterns
     * [ ] generate the distances
+  * [X] fix a problem with KULeuven emails
+* [.] General
+  * [.] rails
+    * [X] init baseapp_builder git repository
+    * [ ] how to add some generic tests?
+      * [ ] suppose that a factory exists and define a default instance for the 'likeable' model
+    * [ ] start taggable
+    * [ ] read rails.vim documentation
+    * [ ] init a rails_config repository for global rails configuration
+      * [ ] .railsrc
+  * [X] dropbox
+    * [X] free some space
+  * [ ] vim
+    * [ ] install vmux and related plugins
+  * [ ] write dr
+
+2013-02-22 Fri 09:52:47 CET
+* [X] Mutagenicity
+  * [X] Study the correlation of the leaves' p-value with their real quality
+    * [X] generate a plot with individual error rate of leaves according to their p-value
+    * [X] add a linear regression fitting model
+    * [X] compute a correlation coefficient between the p-value and the generalization power of leaves
 * [X] Experiments
     * [X] work on why some experiments do not compile
     * [X] re-run the tests
-* [ ] General
-  * [ ] write dr
 
 2013-02-21 Thu 09:14:07 CET
 * [X] Mutagenicity
