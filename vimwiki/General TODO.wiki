@@ -12,6 +12,8 @@
       * [X] copy correct Guardfile and spec_helper files
   * [X] create an application builder instead of a generator
   * [X] add the better_errors / binding_of_caller / meta_request
+  * [ ] add draper to the gems
+    * [ ] generate a user decorator
 
   * [ ] add taggable
     * [ ] controller actions
@@ -20,6 +22,10 @@
       * [ ] add partials
       * [ ] add a partial for the global form
     * [ ] routes
+
+  * [ ] tests
+    * [ ] factories
+      * [ ] create a user
 
   * [O] add likeable as a functionality
     * [X] controller actions
@@ -38,6 +44,7 @@
           * [ ] if click on like, the form should change to the unlike form after a refresh of the page
           * [ ] if click on unlike, the form should change to the like form after a refresh of the page
       * [ ] model
+        * [ ] it should respond_to some methods (related to evaluations)
         * [ ] the number of likes for the object should be incremented after a new like
         * [ ] the number of likes for the object should be decremented after a new unlike
       * [ ] controller
