@@ -18,6 +18,9 @@ XPTinclude
 
 
 " ================================= Snippets ===================================
+XPT block " { |`var~| `cursor~ }
+{ |`var~| `cursor~ }
+..XPT
 
 XPT ata " attr_accessor :`cursor~
 attr_accessor :`cursor~
@@ -47,8 +50,16 @@ XPT outval " puts "`exp~ = #{`var~}"
 puts "`exp~ = #{`var~}"
 ..XPT
 
-XPT defs " def method ... end
-def `method~
+XPT map " `var~ = {}
+`var~ = {}
+..XPT
+
+XPT list " `var~ = []
+`var~ = []
+..XPT
+
+XPT init " def initialize
+def initialize
 `cursor~
 end
 ..XPT
