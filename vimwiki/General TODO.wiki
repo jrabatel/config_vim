@@ -6,6 +6,8 @@
   * [X] add to the default app generator
     * [X] enable the rubyracer gem by default
     * [X] git creation and init
+    * [ ] git copy into the dropbox remote repository
+      * [ ] ask if the user wants it
     * [X] setting the postgresql databases
     * [X] add rspec, spork and guard
       * [X] perform the gem install and init
@@ -18,10 +20,12 @@
   * [ ] add taggable
     * [ ] controller actions
     * [ ] model
+      * [ ] what are the useful methods?
     * [ ] views
       * [ ] add partials
       * [ ] add a partial for the global form
     * [ ] routes
+    * [ ] javascript
 
   * [ ] tests
     * [ ] factories
@@ -50,11 +54,11 @@
       * [ ] controller
         * [ ] when a user is destroyed, all his evaluations are also destroyed
         * [ ] when an object is destroyed, all its evaluations are also destroyed
+    * [ ] use concerns
 
-  * [ ] add commentable as a functionality
-    * [ ] tests
-      * [ ] model
-      * [ ] controller
-      * [ ] views
-      * [ ] if comments are not open
-        * [ ] a user should be logged in to be able to comment
+= VIM CONFIGURATION =
+* [ ] Testing
+  * [ ] add a complex xptemplate for each test pattern presented in the TDD lecture on Youtube
+    * [ ] model
+      * [ ] validation
+      * [ ] association
