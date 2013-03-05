@@ -29,16 +29,35 @@
 
 == Daily TODO ==
 
+2013-03-05 Tue 09:23:32 CET
+* [ ] Skype Meeting
+  * [ ] Results
+    * [ ] with confidence measure
+    * [ ] with information gain measure
+    * [ ] analysing the results
+  * [ ] to do
+    * [ ] discussing with the experts
+
 2013-02-27 Wed 10:25:28 CET
 * [ ] Mutagenicity
   * [ ] segmenting the dataset according to the source
   * [ ] using the smiles code for identifying the molecules
   * [ ] check the number of molecules in the new datasets
-* [ ] Geometrical pattern mining
-  * [ ] selecting a quality measure
-    * [ ] try to find a reference for the 'centered confidence' measure
-    * [ ] look at the references for the main measures satisfying the selected criteria
+  * [ ] send an email to experts (Ronan Bureau and Jérémie Le Goff) to ask them for measures to apply on the datasets
+* [o] Geometrical pattern mining
+  * [X] selecting a quality measure
+    * [X] try to find a reference for the 'centered confidence' measure
+    * [X] look at the references for the main measures satisfying the selected criteria
   * [ ] run tests for the different quality measures (if several were selected)
+    * [ ] should test how previous values were selected (p-value was good when value was low)
+* [o] General
+  * [X] print train tickets
+  * [X] print some chapters from the rails tutorial
+  * [X] update configuration on laptop
+  * [ ] update configuration on netbook
+    * [ ] put rails baseapp_builder as a remote dropbox repository 
+    * [ ] include the test_baseapp creation script within
+  * [ ] download the video version of the rails tutorial
 
 2013-02-26 Tue 09:17:40 CET
 * [ ] Mutagenicity
