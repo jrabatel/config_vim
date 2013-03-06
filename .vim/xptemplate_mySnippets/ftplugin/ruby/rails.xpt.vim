@@ -96,3 +96,31 @@ it "`descr~" do
   `cursor~
 end
 ..XPT
+
+XPT itp " itpending 
+it "`cursor~"
+..XPT
+
+XPT sh " should 
+should
+..XPT
+
+XPT shn " should_not
+should_not
+..XPT
+
+" FACTORIES
+XPT fact " FactoryGirl.define do ... end
+FactoryGirl.define do
+  factory :`model~ do |f|
+    f.`cursor~
+  end
+end
+..XPT
+
+XPT facc " Factory.create :model
+FactoryGirl.create(:`model~)`cursor~
+..XPT
+XPT facb " Factory.build :model
+FactoryGirl.build(:`model~)`cursor~
+..XPT

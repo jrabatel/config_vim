@@ -29,14 +29,92 @@
 
 == Daily TODO ==
 
+2013-03-06 Wed 09:19:28 CET
+* [ ] send to Jan Ramon the Mutagenesis dataset
+* [X] General
+  * [X] send an email to Yoann
+
 2013-03-05 Tue 09:23:32 CET
-* [ ] Skype Meeting
+* [ ] Meeting with Sergei Kutznetsov (3h) participants: Betrand Cuissart, Bruno Crémilleux, Sergei Kutznetsov, Julien Rabatel
+* [.] Skype Meeting (1h)
+  * [ ] Measure selection
+    * [ ] for test selection in the DT
+      * [ ] information gain
+      * [ ] not done yet, because it needs to re-run a whole set of random forest learning experiments
+    * [ ] for leaf post-selection
+      * [ ] confidence and information gain
   * [ ] Results
-    * [ ] with confidence measure
     * [ ] with information gain measure
+      * [ ] slightly better results when selecting the best leaves (25% is the best top so far)
+    * [ ] with confidence measure
+      * [ ] very slightly better results (to be completed)
     * [ ] analysing the results
+      * [ ] missing compilation of the results over the different random forest settings for significativity evaluation
+      * [ ] in terms of correlation between individual error rate and quality measure, it seems to be clearer
   * [ ] to do
+    * [ ] testing the information gain as the test selection measure
+    * [ ] generating some leaf selection with the different measure, and for different forest settings in order to get a reliable set of experiments
+      * [ ] measure also the recall and precision
     * [ ] discussing with the experts
+  * [.] General
+    * [ ] send an email to Yoann
+    * [X] send call for papers GKR
+    * [ ] download coursera videos about game theory
+
+2013-02-28 jeu. 09:48:22 CET
+* [.] General
+  * [.] Rails
+    * [o] todo
+      * [ ] refactor the likeable model functions as shared_example spec
+      * [ ] testing likeable controller actions
+      * [ ] refactoring controller actions into a module
+      * [ ] put the new model implementation into the likeable generator
+        * [ ] copy the Likeable model module
+        * [ ] copy the Likeable model specs
+      * [ ] also use the specific routes for concerns
+        * [ ] should first install the routes concern plugin
+      * [X] read rails.vim help
+      * [ ] read marvim help
+      * [X] read ruby vim plugin help
+      * [X] read railscast 'InheritedResources'
+      * [X] read railscast about service objects
+      * [ ] list first acceptance/request specs for drj app
+        * [ ] a logged in user can write a dr
+        * [ ] home page list last drs
+        * [ ] user page list his last drs
+        * [ ] a dr can be liked/unliked by a user
+        * [ ] a user can be followed/unfollowed by a user
+        * [ ] a visitor/user can search dr
+        * [ ] a user can comment a dr
+      * [ ] later on
+        * [ ] install dbext vim plugin
+        * [ ] add a logo helper in the baseapp_builder
+
+      * [ ] Next complete features to propose
+        * [ ] Commentable
+        * [ ] Followable
+          * [ ] same thing as likeable but with different semantics
+          * [ ] can propose some recommending system for other things to follow
+        * [ ] Taggable
+          * [ ] comes with all the javascript methods for finding, handling scopes, etc.
+          * [ ] tag_controller index action can show all the objects for some given tags
+          * [ ] also add a tagged action on controller of a taggable class
+          * [ ] authorizations:
+            * [ ] is the object taggable by everybody, or only by the owner of the object?
+        * [ ] Trashable
+        * [ ] Votable
+          * [ ] can be seen as an extension of the likeable feature (where the 'like' is weighted)
+          * [ ] propose the view partials for that
+        * [ ] Publishable
+          * [ ] has a publication_date which says whether it is visible for other people
+            * [ ] if the publication_date is <= Time.now then it is visible
+            * [ ] otherwise, it's not
+          * [ ] can also set a fixed date for publication
+        * [ ] Offensivable
+          * [ ] users can vote to consider it as too much explicit for all the public
+          * [ ] contains a flag for setting the state of the object: potentially offensive or not
+        * [ ] SpamMarkable
+          * [ ] can be marked as spam by users
 
 2013-02-27 Wed 10:25:28 CET
 * [ ] Mutagenicity
