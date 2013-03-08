@@ -19,7 +19,7 @@
   * [ ] problems related to the super-imposition of patterns
     * [ ] introducing a notion of distance between 2 fragments of a pattern
     * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
-     [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
+    * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
 
 * [ ] RPMP improving
   * [ ] could be interesting to mine closed itemsets by taking into account an existing order over the items
@@ -27,15 +27,69 @@
     * [ ] with growth rate computation, those patterns are redundant with their minimal version
     * [ ] the main principle would be: 
 
+* [ ] find ebooks about
+  * [ ] Git
+  * [ ] Vimscript
+  * [ ] jQuery
+  * [ ] Sass / Compass
+  * [ ] HTML5?
+  * [ ] http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0
+  * [ ] Agile Web Development with Rails (4th edition), for Rails 4
+
 == Daily TODO ==
 
+2013-03-08 Fri 09:56:45 CET
+* [O] failure of server hard disk
+  * [X] retrieve last version of experiment scripts and see what is missing
+  * [X] copy it to general home and version it
+  * [X] copy the Mutagenesis datasets into the right place
+  * [X] have to run new experiments on Mutagenesis data
+  * [ ] write new ruby scripts in order to analyse the results
+    * [ ] read random forests from ...
+    * [ ] read occurrences for 
+    * [ ] measure for each leaf:
+      * [ ] 1 - p-value
+      * [ ] (information gain)
+* [ ] Geometrical Patterns
+  * [ ] how to integrate molecular fragments?
+    * [ ] they should be defined in a file (which format?)
+    * [ ] we should first (as a preprocessing) find all the occurrences of those fragments in the data
+      * [ ] needs a subgraph isomorphism test for topological graphs (see how it works in GPM code?)
+    * [ ] how to generate dummy atoms standing for those fragments?
+    * [ ] dummy atoms can also be represented with an itemset, where items are, e.g., 
+      * [ ] fragment id
+      * [ ] fragment type
+      * [ ] other fragment-level descriptors
+    * [ ] how to generalize the jak2 source code so that building patterns with those fragments is easy? 
+* [ ] Mutagenicity
+  * [ ] RPMP mining 
+    * [ ] check the results
+    * [ ] perform the classification?
+* [ ] Read a paper from Sergei Kuznetsov
+* [o] Put resources online about the meetings between Sergei and the GREYC
+  * [X] preparing the files
+  * [ ] put them online
+  * [ ] send an email to everyone
+* [ ] General
+  * [ ] write dr
+
+2013-03-07 Thu 09:38:52 CET
+* [ ] Preparing and sending a report about discussion with the experts
+  * [ ] Retrieving the description of a pattern when reading the logs of the random forest learner
+  * [ ] generate a summary file containing the full description of best leaves only
+* [ ] compiling all the papers provided by P. Sergei Kuznetsov in one place
+* [X] General
+  * [ ] write dr
+
 2013-03-06 Wed 09:19:28 CET
-* [ ] send to Jan Ramon the Mutagenesis dataset
+* [X] Sending to Jan Ramon the Mutagenesis dataset
+* [ ] Retrieving the description of a pattern when reading the logs of the random forest learner (3h)
+* [X] Meeting with Sergei Kuznetsov (5h)
 * [X] General
   * [X] send an email to Yoann
 
 2013-03-05 Tue 09:23:32 CET
-* [ ] Meeting with Sergei Kutznetsov (3h) participants: Betrand Cuissart, Bruno Crémilleux, Sergei Kutznetsov, Julien Rabatel
+* [ ] Meeting with Sergei Kuznetsov (3h) participants: Betrand Cuissart, Bruno Crémilleux, Sergei Kuznetsov, Julien Rabatel
 * [.] Skype Meeting (1h)
   * [ ] Measure selection
     * [ ] for test selection in the DT
@@ -65,6 +119,16 @@
 * [.] General
   * [.] Rails
     * [o] todo
+      * [ ] write some tests for the user model and authentication mechanism
+        * [ ] user has username
+        * [ ] user has email
+        * [ ] user has password
+        * [ ] sign up
+          * [ ] must have username
+          * [ ] must have password
+          * [ ] must have email
+        * [ ] sign in
+          * [ ] 
       * [ ] refactor the likeable model functions as shared_example spec
       * [ ] testing likeable controller actions
       * [ ] refactoring controller actions into a module
