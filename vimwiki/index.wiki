@@ -27,16 +27,18 @@
     * [ ] with growth rate computation, those patterns are redundant with their minimal version
     * [ ] the main principle would be: 
 
-* [ ] find ebooks about
-  * [ ] Git
-  * [ ] Vimscript
-  * [ ] jQuery
-  * [ ] Sass / Compass
-  * [ ] HTML5?
+* [O] find ebooks about
   * [ ] http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0
-  * [ ] Agile Web Development with Rails (4th edition), for Rails 4
 
 == Daily TODO ==
+
+2013-03-11 Mon 09:59:07 CET
+* [ ] Mutagenesis
+  * [ ] 
+* [ ] General
+  * [ ] installing ruby 2.0.0 and rails 4 on local machine
+  * [ ] create a GitHub account and push current version of agile web development book
+  * [ ] clone repository on local machine
 
 2013-03-08 Fri 09:56:45 CET
 * [O] failure of server hard disk
