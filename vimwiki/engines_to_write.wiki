@@ -1,0 +1,57 @@
+= BaseApp =
+* [ ] gem install
+  * [ ] bootstrap
+
+= Likeable =
+* [ ] models
+  * [ ] likeable model
+    * [ ] class method can_be_liked
+    * [ ] settings
+      * [ ] can be liked by owner?
+  * [ ] like model
+* [ ] migration
+  * [ ] a table for like model
+* [ ] controller
+  * [ ] a polymorphic controller
+* [ ] views
+  * [ ] partials for
+    * [ ] like and unlike forms
+    * [ ] general form (conditional appearance of like/unlike form)
+  * [ ] templates
+    * [ ] html template for like/unlike controller action
+    * [ ] javascript template for like/unlike controller action
+  * [ ] helpers?
+  * [ ] I18n
+    * [ ] yaml file
+* [ ] tests
+  * [ ] unit tests
+  * [ ] controller tests
+  * [ ] view tests
+* [ ] generators
+  * [ ] model name M as argument
+  * [ ] migrate if needed
+  * [ ] add can_be_liked method to M
+  * [ ] add general form partial to the show html template for M
+
+= Owned =
+* [ ] models
+  * [ ] owned model
+    * [ ] class method is_owned_by to add the belongs_to association
+* [ ] migration
+  * [ ] add a column to model table with a owner_id
+* [ ] abilities
+  * [ ] is created by an owner
+  * [ ] can be modified by owner or admin
+  * [ ] can be destroyed by admin
+  * [ ] can be destroyed by owner depending on settings
+* [ ] views
+* [ ] tests
+  * [ ] unit tests
+  * [ ] ability tests?
+* [ ] generators
+  * [ ] model name M as argument
+  * [ ] migrate
+  * [ ] add is_owned_by method to M
+
+= Commentable =
+= Trackable =
