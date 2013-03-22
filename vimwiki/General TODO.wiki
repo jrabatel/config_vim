@@ -1,3 +1,5 @@
+[[engines_to_write]]
+
 * [X] rails configuration
   * [X] add a railsrc file
     * [X] should contain
@@ -6,20 +8,30 @@
   * [X] add to the default app generator
     * [X] enable the rubyracer gem by default
     * [X] git creation and init
+    * [ ] git copy into the dropbox remote repository
+      * [ ] ask if the user wants it
     * [X] setting the postgresql databases
     * [X] add rspec, spork and guard
       * [X] perform the gem install and init
       * [X] copy correct Guardfile and spec_helper files
   * [X] create an application builder instead of a generator
   * [X] add the better_errors / binding_of_caller / meta_request
+  * [ ] add draper to the gems
+    * [ ] generate a user decorator
 
   * [ ] add taggable
     * [ ] controller actions
     * [ ] model
+      * [ ] what are the useful methods?
     * [ ] views
       * [ ] add partials
       * [ ] add a partial for the global form
     * [ ] routes
+    * [ ] javascript
+
+  * [ ] tests
+    * [ ] factories
+      * [ ] create a user
 
   * [O] add likeable as a functionality
     * [X] controller actions
@@ -38,16 +50,17 @@
           * [ ] if click on like, the form should change to the unlike form after a refresh of the page
           * [ ] if click on unlike, the form should change to the like form after a refresh of the page
       * [ ] model
+        * [ ] it should respond_to some methods (related to evaluations)
         * [ ] the number of likes for the object should be incremented after a new like
         * [ ] the number of likes for the object should be decremented after a new unlike
       * [ ] controller
         * [ ] when a user is destroyed, all his evaluations are also destroyed
         * [ ] when an object is destroyed, all its evaluations are also destroyed
+    * [ ] use concerns
 
-  * [ ] add commentable as a functionality
-    * [ ] tests
-      * [ ] model
-      * [ ] controller
-      * [ ] views
-      * [ ] if comments are not open
-        * [ ] a user should be logged in to be able to comment
+= VIM CONFIGURATION =
+* [ ] Testing
+  * [ ] add a complex xptemplate for each test pattern presented in the TDD lecture on Youtube
+    * [ ] model
+      * [ ] validation
+      * [ ] association

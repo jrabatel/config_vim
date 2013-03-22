@@ -19,7 +19,7 @@
   * [ ] problems related to the super-imposition of patterns
     * [ ] introducing a notion of distance between 2 fragments of a pattern
     * [ ] need for extracting emerging patterns with a variable growth-rate (or other measures) given the coverage --> see approaches with branch-and-bound search (Direct Discriminative Pattern Mining for Effective Classification)
-     [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
+    * [ ] mine the correlation between the toxicity (or other target attribute) and the number of occurrences of a fragment
 
 * [ ] RPMP improving
   * [ ] could be interesting to mine closed itemsets by taking into account an existing order over the items
@@ -27,18 +27,330 @@
     * [ ] with growth rate computation, those patterns are redundant with their minimal version
     * [ ] the main principle would be: 
 
+* [O] find ebooks about
+  * [ ] http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0
+
+* [ ] Agnes Zani
+  * [ ] prepare all planning / trains
+  * [ ] see with her about the hotels
+
 == Daily TODO ==
+
+2013-03-22 Fri 10:10:02 CET
+* [O] Geometrical pattern mining
+  * [ ] fix problem with test occurrences that do not appear
+  * [X] remove logs for query engine
+  * [X] fix the multi-conformations problems
+  * [X] jak2 source code: implementing an exact embedding finder for all the nodes
+* [.] Best pattern output
+  * [X] copy last experiment logs
+  * [ ] fix problem with empty descriptions
+  * [ ] add some global features
+    * [ ] total number of patterns in the forests
+    * [ ] average size (i.e., constraints count) of the patterns in the entire forests vs. in the top list
+    * [ ] average quality measure (whole forests vs. top list)
+    * [ ] a help text block
+  * [ ] add some local (i.e., pattern-specific) features
+    * [ ] corrected p-value
+    * [ ] occurrences in test data as well
+    * [ ] visualization of the graphs via javascrit libraries
+* [X] Experimental scripts
+  * [ ] add a way for molecules to be loaded with their real target value
+* [ ] Administrative
+  * [ ] check dates and trains for mission to Lyon / St Etienne
+  * [ ] see Agnes Zani
+* [o] General
+  * [ ] write dr
+  * [X] train tickets
+
+2013-03-21 Thu 09:16:40 CET
+* [X] Geometrical pattern mining
+  * [X] fix the multi-conformations problems
+  * [X] jak2 source code: implementing an exact embedding finder for all the nodes
+  * [X] modification of the existing features
+    * [X] pattern description from root to leaf rather than  positive / negative constraints
+* [X] Experimental scripts
+  * [X] add a pattern_selector with methods
+    * [X] select top_percentile
+    * [X] select top_k
+
+2013-03-20 Wed 09:57:55 CET
+* [X] Experimental scripts
+  * [X] write calculation of the information gain
+  * [X] add a prediction_maker object with methods
+    * [X] average
+  * [X] add a pattern_selector with methods
+    * [X] select top_percentile
+    * [X] select top_k
+  * [ ] add a way for molecules to be loaded with their real target value
+* [X] General
+  * [X] write dr
+
+2013-03-19 Tue 09:30:43 CET
+* [ ] Work meeting with Bertrand Cuissart (1h)
+* [ ] Work meeting with Bertrand Cuissart and Bruno Crémilleux (2h)
+* [ ] Seminar: Florent Domenach, FCA applications (1h)
+* [X] Skype meeting (participants: Bertrand Cuissart, Jan Ramon, Julien Rabatel) (1h)
+  * [X] experiments
+    * [X] various issues with servers recently
+    * [X] moved everything to another server
+  * [X] format
+    * [X] since yesterday
+      * [X] added the occurrence conformations
+      * [X] cleaned the description of patterns by removing redundancy in negative constraints
+      * [X] added an HTML output
+  * [X] additions?
+    * [X] a javascript library to display the patterns?
+* [X] prepare and send meeting report
+* [X] prepare and send HTML output for best patterns
+  * [X] generate the output for the entire logs
+* [X] Send an email to Arnaud Lallouet about the next mission in Lyon / St Etienne
+* [X] General
+  * [X] write dr
+
+2013-03-18 Mon 09:24:14 CET
+* [X] Mutagenesis
+  * [X] check last experiments results
+  * [X] write the list of patterns in a readable format
+    * [X] write for each pattern
+      * [X] the full description
+      * [X] the mean value
+      * [X] the variance
+      * [X] the involved counts
+  * [X] send the list to Jan and others
+  * [X] fix problem with reading and writing conformations
+  * [X] remove redundancy when writing the patterns (i.e., the negative constraints should not be redundant with the positive ones)
+  * [X] html output
+
+2013-03-15 Fri 09:32:49 CET
+* [X] Mutagenesis
+  * [X] write new ruby scripts in order to analyse the results
+    * [X] read random forests from ...
+    * [X] read occurrences for 
+    * [X] measure for each leaf:
+      * [X] 1 - p-value
+      * [X] (information gain)
+* [X] send an email to Jan and others
+
+2013-03-14 Thu 10:36:21 CET
+* [o] Mutagenesis
+  * [X] copy everything on rex
+    * [X] build the jak2 code
+    * [X] build the jak2 data from appo
+    * [X] clone experimental framework scripts
+    * [X] copy some small data for test purpose
+    * [X] run a test with small data
+      * [X] change the value of the dataset in jak2 code
+      * [X] change the settings if needed in example src code
+  * [X] re-run complete experiments with mutagenesis data
+    * [X] generate the needed settings
+    * [X] run with N processes
+* [o] General
+  * [ ] write dr
+  * [ ] move vimwiki files into another git repository
+  * [ ] create a github account
+    * [ ] put my .vromerc file
+    * [ ] put my put my vim config?
+  * [ ] study autojump functionality
+  * [ ] for .oh-my-zsh folder, solve issue with empty git directory the (data are not passed to the git remote repository)
+  * [ ] mail to Karim
+
+2013-03-13 Thu 10:45:55 CET
+
+2013-03-12 Tue 09:26:32 CET
+* [X] Mutagenesis
+  * [X] re-run some experiments with very large minimum leaf size
+  * [X] write new ruby scripts in order to analyse the results
+    * [X] read random forests from ...
+    * [X] read occurrences for 
+  * [X] run new experiments
+* [X] Skype
+  * [X] read last email
+  * [X] add some new things to the email
+* [X] General
+  * [X] write dr
+  * [X] answer personal emails
+  * [X] 2 chapters of AWDR
+  * [X] zsh
+    * [X] update the plugins
+    * [X] create a specific folder in general_config
+
+2013-03-11 Mon 09:59:07 CET
+* [X] Mutagenesis
+  * [X] copy scripts for experiments on appo
+    * [X] copy scripts
+    * [X] copy the jak2 code
+  * [X] re-run some experiments with very large minimum leaf size
+  * [X] write new ruby scripts in order to analyse the results
+    * [X] read random forests from ...
+    * [X] read occurrences for 
+* [X] General
+  * [X] installing
+    * [X] ruby 2.0.0
+    * [X] rails 4 on local machine
+  * [X] zsh
+    * [X] on cortizone
+    * [X] on greyc general home
+    * [X] on laptop
+  * [X] create a git repository and push current version of agile web development book application
+  * [X] clone repository on local machine
+
+2013-03-08 Fri 09:56:45 CET
+* [O] failure of server hard disk
+  * [X] retrieve last version of experiment scripts and see what is missing
+  * [X] copy it to general home and version it
+  * [X] copy the Mutagenesis datasets into the right place
+  * [X] have to run new experiments on Mutagenesis data
+* [ ] Geometrical Patterns
+  * [ ] how to integrate molecular fragments?
+    * [ ] they should be defined in a file (which format?)
+    * [ ] we should first (as a preprocessing) find all the occurrences of those fragments in the data
+      * [ ] needs a subgraph isomorphism test for topological graphs (see how it works in GPM code?)
+    * [ ] how to generate dummy atoms standing for those fragments?
+    * [ ] dummy atoms can also be represented with an itemset, where items are, e.g., 
+      * [ ] fragment id
+      * [ ] fragment type
+      * [ ] other fragment-level descriptors
+    * [ ] how to generalize the jak2 source code so that building patterns with those fragments is easy? 
+* [ ] Mutagenicity
+  * [ ] RPMP mining 
+    * [ ] check the results
+    * [ ] perform the classification?
+* [ ] Read a paper from Sergei Kuznetsov
+* [o] Put resources online about the meetings between Sergei and the GREYC
+  * [X] preparing the files
+  * [ ] put them online
+  * [ ] send an email to everyone
+* [ ] General
+  * [ ] write dr
+
+2013-03-07 Thu 09:38:52 CET
+* [ ] Preparing and sending a report about discussion with the experts
+  * [ ] Retrieving the description of a pattern when reading the logs of the random forest learner
+  * [ ] generate a summary file containing the full description of best leaves only
+* [ ] compiling all the papers provided by P. Sergei Kuznetsov in one place
+* [X] General
+  * [ ] write dr
+
+2013-03-06 Wed 09:19:28 CET
+* [X] Sending to Jan Ramon the Mutagenesis dataset
+* [ ] Retrieving the description of a pattern when reading the logs of the random forest learner (3h)
+* [X] Meeting with Sergei Kuznetsov (5h)
+* [X] General
+  * [X] send an email to Yoann
+
+2013-03-05 Tue 09:23:32 CET
+* [ ] Meeting with Sergei Kuznetsov (3h) participants: Betrand Cuissart, Bruno Crémilleux, Sergei Kuznetsov, Julien Rabatel
+* [.] Skype Meeting (1h)
+  * [ ] Measure selection
+    * [ ] for test selection in the DT
+      * [ ] information gain
+      * [ ] not done yet, because it needs to re-run a whole set of random forest learning experiments
+    * [ ] for leaf post-selection
+      * [ ] confidence and information gain
+  * [ ] Results
+    * [ ] with information gain measure
+      * [ ] slightly better results when selecting the best leaves (25% is the best top so far)
+    * [ ] with confidence measure
+      * [ ] very slightly better results (to be completed)
+    * [ ] analysing the results
+      * [ ] missing compilation of the results over the different random forest settings for significativity evaluation
+      * [ ] in terms of correlation between individual error rate and quality measure, it seems to be clearer
+  * [ ] to do
+    * [ ] testing the information gain as the test selection measure
+    * [ ] generating some leaf selection with the different measure, and for different forest settings in order to get a reliable set of experiments
+      * [ ] measure also the recall and precision
+    * [ ] discussing with the experts
+  * [.] General
+    * [ ] send an email to Yoann
+    * [X] send call for papers GKR
+    * [ ] download coursera videos about game theory
+
+2013-02-28 jeu. 09:48:22 CET
+* [.] General
+  * [.] Rails
+    * [o] todo
+      * [ ] write some tests for the user model and authentication mechanism
+        * [ ] user has username
+        * [ ] user has email
+        * [ ] user has password
+        * [ ] sign up
+          * [ ] must have username
+          * [ ] must have password
+          * [ ] must have email
+        * [ ] sign in
+          * [ ] 
+      * [ ] refactor the likeable model functions as shared_example spec
+      * [ ] testing likeable controller actions
+      * [ ] refactoring controller actions into a module
+      * [ ] put the new model implementation into the likeable generator
+        * [ ] copy the Likeable model module
+        * [ ] copy the Likeable model specs
+      * [ ] also use the specific routes for concerns
+        * [ ] should first install the routes concern plugin
+      * [X] read rails.vim help
+      * [ ] read marvim help
+      * [X] read ruby vim plugin help
+      * [X] read railscast 'InheritedResources'
+      * [X] read railscast about service objects
+      * [ ] list first acceptance/request specs for drj app
+        * [ ] a logged in user can write a dr
+        * [ ] home page list last drs
+        * [ ] user page list his last drs
+        * [ ] a dr can be liked/unliked by a user
+        * [ ] a user can be followed/unfollowed by a user
+        * [ ] a visitor/user can search dr
+        * [ ] a user can comment a dr
+      * [ ] later on
+        * [ ] install dbext vim plugin
+        * [ ] add a logo helper in the baseapp_builder
+
+      * [ ] Next complete features to propose
+        * [ ] Commentable
+        * [ ] Followable
+          * [ ] same thing as likeable but with different semantics
+          * [ ] can propose some recommending system for other things to follow
+        * [ ] Taggable
+          * [ ] comes with all the javascript methods for finding, handling scopes, etc.
+          * [ ] tag_controller index action can show all the objects for some given tags
+          * [ ] also add a tagged action on controller of a taggable class
+          * [ ] authorizations:
+            * [ ] is the object taggable by everybody, or only by the owner of the object?
+        * [ ] Trashable
+        * [ ] Votable
+          * [ ] can be seen as an extension of the likeable feature (where the 'like' is weighted)
+          * [ ] propose the view partials for that
+        * [ ] Publishable
+          * [ ] has a publication_date which says whether it is visible for other people
+            * [ ] if the publication_date is <= Time.now then it is visible
+            * [ ] otherwise, it's not
+          * [ ] can also set a fixed date for publication
+        * [ ] Offensivable
+          * [ ] users can vote to consider it as too much explicit for all the public
+          * [ ] contains a flag for setting the state of the object: potentially offensive or not
+        * [ ] SpamMarkable
+          * [ ] can be marked as spam by users
 
 2013-02-27 Wed 10:25:28 CET
 * [ ] Mutagenicity
   * [ ] segmenting the dataset according to the source
   * [ ] using the smiles code for identifying the molecules
   * [ ] check the number of molecules in the new datasets
-* [ ] Geometrical pattern mining
-  * [ ] selecting a quality measure
-    * [ ] try to find a reference for the 'centered confidence' measure
-    * [ ] look at the references for the main measures satisfying the selected criteria
+  * [ ] send an email to experts (Ronan Bureau and Jérémie Le Goff) to ask them for measures to apply on the datasets
+* [o] Geometrical pattern mining
+  * [X] selecting a quality measure
+    * [X] try to find a reference for the 'centered confidence' measure
+    * [X] look at the references for the main measures satisfying the selected criteria
   * [ ] run tests for the different quality measures (if several were selected)
+    * [ ] should test how previous values were selected (p-value was good when value was low)
+* [o] General
+  * [X] print train tickets
+  * [X] print some chapters from the rails tutorial
+  * [X] update configuration on laptop
+  * [ ] update configuration on netbook
+    * [ ] put rails baseapp_builder as a remote dropbox repository 
+    * [ ] include the test_baseapp creation script within
+  * [ ] download the video version of the rails tutorial
 
 2013-02-26 Tue 09:17:40 CET
 * [ ] Mutagenicity
