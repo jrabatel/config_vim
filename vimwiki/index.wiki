@@ -30,15 +30,170 @@
 * [O] find ebooks about
   * [ ] http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0
 
+* [ ] Agnes Zani
+  * [ ] prepare all planning / trains
+  * [ ] see with her about the hotels
+
 == Daily TODO ==
 
+2013-03-22 Fri 10:10:02 CET
+* [O] Geometrical pattern mining
+  * [ ] fix problem with test occurrences that do not appear
+  * [X] remove logs for query engine
+  * [X] fix the multi-conformations problems
+  * [X] jak2 source code: implementing an exact embedding finder for all the nodes
+* [.] Best pattern output
+  * [X] copy last experiment logs
+  * [ ] fix problem with empty descriptions
+  * [ ] add some global features
+    * [ ] total number of patterns in the forests
+    * [ ] average size (i.e., constraints count) of the patterns in the entire forests vs. in the top list
+    * [ ] average quality measure (whole forests vs. top list)
+    * [ ] a help text block
+  * [ ] add some local (i.e., pattern-specific) features
+    * [ ] corrected p-value
+    * [ ] occurrences in test data as well
+    * [ ] visualization of the graphs via javascrit libraries
+* [X] Experimental scripts
+  * [ ] add a way for molecules to be loaded with their real target value
+* [ ] Administrative
+  * [ ] check dates and trains for mission to Lyon / St Etienne
+  * [ ] see Agnes Zani
+* [o] General
+  * [ ] write dr
+  * [X] train tickets
+
+2013-03-21 Thu 09:16:40 CET
+* [X] Geometrical pattern mining
+  * [X] fix the multi-conformations problems
+  * [X] jak2 source code: implementing an exact embedding finder for all the nodes
+  * [X] modification of the existing features
+    * [X] pattern description from root to leaf rather than  positive / negative constraints
+* [X] Experimental scripts
+  * [X] add a pattern_selector with methods
+    * [X] select top_percentile
+    * [X] select top_k
+
+2013-03-20 Wed 09:57:55 CET
+* [X] Experimental scripts
+  * [X] write calculation of the information gain
+  * [X] add a prediction_maker object with methods
+    * [X] average
+  * [X] add a pattern_selector with methods
+    * [X] select top_percentile
+    * [X] select top_k
+  * [ ] add a way for molecules to be loaded with their real target value
+* [X] General
+  * [X] write dr
+
+2013-03-19 Tue 09:30:43 CET
+* [ ] Work meeting with Bertrand Cuissart (1h)
+* [ ] Work meeting with Bertrand Cuissart and Bruno Crémilleux (2h)
+* [ ] Seminar: Florent Domenach, FCA applications (1h)
+* [X] Skype meeting (participants: Bertrand Cuissart, Jan Ramon, Julien Rabatel) (1h)
+  * [X] experiments
+    * [X] various issues with servers recently
+    * [X] moved everything to another server
+  * [X] format
+    * [X] since yesterday
+      * [X] added the occurrence conformations
+      * [X] cleaned the description of patterns by removing redundancy in negative constraints
+      * [X] added an HTML output
+  * [X] additions?
+    * [X] a javascript library to display the patterns?
+* [X] prepare and send meeting report
+* [X] prepare and send HTML output for best patterns
+  * [X] generate the output for the entire logs
+* [X] Send an email to Arnaud Lallouet about the next mission in Lyon / St Etienne
+* [X] General
+  * [X] write dr
+
+2013-03-18 Mon 09:24:14 CET
+* [X] Mutagenesis
+  * [X] check last experiments results
+  * [X] write the list of patterns in a readable format
+    * [X] write for each pattern
+      * [X] the full description
+      * [X] the mean value
+      * [X] the variance
+      * [X] the involved counts
+  * [X] send the list to Jan and others
+  * [X] fix problem with reading and writing conformations
+  * [X] remove redundancy when writing the patterns (i.e., the negative constraints should not be redundant with the positive ones)
+  * [X] html output
+
+2013-03-15 Fri 09:32:49 CET
+* [X] Mutagenesis
+  * [X] write new ruby scripts in order to analyse the results
+    * [X] read random forests from ...
+    * [X] read occurrences for 
+    * [X] measure for each leaf:
+      * [X] 1 - p-value
+      * [X] (information gain)
+* [X] send an email to Jan and others
+
+2013-03-14 Thu 10:36:21 CET
+* [o] Mutagenesis
+  * [X] copy everything on rex
+    * [X] build the jak2 code
+    * [X] build the jak2 data from appo
+    * [X] clone experimental framework scripts
+    * [X] copy some small data for test purpose
+    * [X] run a test with small data
+      * [X] change the value of the dataset in jak2 code
+      * [X] change the settings if needed in example src code
+  * [X] re-run complete experiments with mutagenesis data
+    * [X] generate the needed settings
+    * [X] run with N processes
+* [o] General
+  * [ ] write dr
+  * [ ] move vimwiki files into another git repository
+  * [ ] create a github account
+    * [ ] put my .vromerc file
+    * [ ] put my put my vim config?
+  * [ ] study autojump functionality
+  * [ ] for .oh-my-zsh folder, solve issue with empty git directory the (data are not passed to the git remote repository)
+  * [ ] mail to Karim
+
+2013-03-13 Thu 10:45:55 CET
+
+2013-03-12 Tue 09:26:32 CET
+* [X] Mutagenesis
+  * [X] re-run some experiments with very large minimum leaf size
+  * [X] write new ruby scripts in order to analyse the results
+    * [X] read random forests from ...
+    * [X] read occurrences for 
+  * [X] run new experiments
+* [X] Skype
+  * [X] read last email
+  * [X] add some new things to the email
+* [X] General
+  * [X] write dr
+  * [X] answer personal emails
+  * [X] 2 chapters of AWDR
+  * [X] zsh
+    * [X] update the plugins
+    * [X] create a specific folder in general_config
+
 2013-03-11 Mon 09:59:07 CET
-* [ ] Mutagenesis
-  * [ ] 
-* [ ] General
-  * [ ] installing ruby 2.0.0 and rails 4 on local machine
-  * [ ] create a GitHub account and push current version of agile web development book
-  * [ ] clone repository on local machine
+* [X] Mutagenesis
+  * [X] copy scripts for experiments on appo
+    * [X] copy scripts
+    * [X] copy the jak2 code
+  * [X] re-run some experiments with very large minimum leaf size
+  * [X] write new ruby scripts in order to analyse the results
+    * [X] read random forests from ...
+    * [X] read occurrences for 
+* [X] General
+  * [X] installing
+    * [X] ruby 2.0.0
+    * [X] rails 4 on local machine
+  * [X] zsh
+    * [X] on cortizone
+    * [X] on greyc general home
+    * [X] on laptop
+  * [X] create a git repository and push current version of agile web development book application
+  * [X] clone repository on local machine
 
 2013-03-08 Fri 09:56:45 CET
 * [O] failure of server hard disk
@@ -46,12 +201,6 @@
   * [X] copy it to general home and version it
   * [X] copy the Mutagenesis datasets into the right place
   * [X] have to run new experiments on Mutagenesis data
-  * [ ] write new ruby scripts in order to analyse the results
-    * [ ] read random forests from ...
-    * [ ] read occurrences for 
-    * [ ] measure for each leaf:
-      * [ ] 1 - p-value
-      * [ ] (information gain)
 * [ ] Geometrical Patterns
   * [ ] how to integrate molecular fragments?
     * [ ] they should be defined in a file (which format?)

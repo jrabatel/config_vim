@@ -1,3 +1,5 @@
+[[engines_to_write]]
+
 * [X] rails configuration
   * [X] add a railsrc file
     * [X] should contain
