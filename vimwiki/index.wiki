@@ -30,19 +30,16 @@
 == Daily TODO ==
 
 2013-02-28 jeu. 09:48:22 CET
-* [.] General
-  * [.] Rails
-    * [o] todo
-      * [ ] refactor the likeable model functions as shared_example spec
-      * [ ] testing likeable controller actions
-      * [ ] refactoring controller actions into a module
-      * [ ] put the new model implementation into the likeable generator
-        * [ ] copy the Likeable model module
-        * [ ] copy the Likeable model specs
-      * [ ] also use the specific routes for concerns
-        * [ ] should first install the routes concern plugin
+* [X] General
+  * [X] Rails
+    * [X] install steak
+    * [X] install shoulda_matchers
+    * [X] install routing_concerns
+    * [X] install InheritedResources
+
+    * [O] todo
       * [X] read rails.vim help
-      * [ ] read marvim help
+      * [X] read marvim help
       * [X] read ruby vim plugin help
       * [X] read railscast 'InheritedResources'
       * [X] read railscast about service objects
