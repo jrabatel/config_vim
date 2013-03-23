@@ -1,0 +1,40 @@
+= Mining closed frequent itemsets with a partial order over the items =
+- look at generalised itemset mining
+
+= Mining the lattice of frequent graphs (structured patterns) =
+- look at the paper of Sergei Kuznetsov about enumerating closed graphs
+
+= RPMP and contextual information =
+- 
+
+= Mining inhibitors in graph data =
+- what measure should be used?
+- intuitive definition of an inhibitor
+  - given an interest measure for a pattern p in the database DB, noted as int(p, DB)
+  - given the pattern _p, and a pattern p containing _p
+  - _p is an inhibitor pattern iff int(p,DB) < int(p, DB\ext(_p)), where ext(_p) is the extent of the pattern _p in DB
+
+- when a pattern p is found, we can compute:
+  - supp(p,DB)
+  - int(p,DB)
+
+- intuitive remarks
+  - problem with a straightforward approach is that pattern have very small supports (we're looking at patterns that are frequent in the extension of other patterns)
+  - a way of seeing it would be to study the negation of patterns but only for very frequent patterns
+
+= Distance-augmented RPMP =
+- First, need a program:
+  - input
+    - a (topological) graph g
+    - a graph database DB (both with topological and 3D information)
+  - output
+    - all the occurrences of g in DB (for each occurrence, we should add, some (x,y,z)-coordinates), as well as other information if needed (volume, generalization of the type of fragment, etc.)
+      - first test the topological matching of g in G \in DB
+        - for each mapping
+          - compute the coordinates of one representative point in the fragment
+
+- Then, enrich a conjunction of fragments {f1,f2,...,fn} with distance constraints only when needed (i.e., when it improves the discriminative power of the global pattern)
+  - distances intervals should be generated on-the-fly, depending on the occurrences
+  - we should exploit a generalization/specialization order over the global patterns to be used to reduce the amount of possible distances to test and extents
+    - in order to explicitely define such an ordering relation over the graph patterns
+  - the discrimative power of a global pattern should measured through IG (for instance) which will allow us not to try to enrich patterns that have a small support and a high discriminative power

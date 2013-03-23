@@ -31,6 +31,18 @@ XPT <lt " <%= link_to "text", "link" %>
 <%= link_to "`text~", `link~ %>
 ..XPT
 
+XPT lt " link_to "text", "link"
+link_to "`text~", `link~
+..XPT
+
+XPT bt " button_to "text", "link"
+button_to `text~, `link~
+..XPT
+
+XPT <img " image_tag "img.png", alt: "text"
+image_tag("`img_location~", alt: "`text~")
+..XPT
+
 XPT <p " <% provide (:var, 'value') %>
 <% provide (:`var~, '`value~') %>
 ..XPT
