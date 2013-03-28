@@ -1,6 +1,11 @@
 [[engines_to_write]]
 
 * [X] rails configuration
+  * [ ] I18n
+    * [ ] create an initializer as in agile book
+    * [ ] 
+  * [ ] add the gem figaro to the baseapp_builder and install it
+    * [ ] add a mail configuration by default for development environment
   * [X] add a railsrc file
     * [X] should contain
       * [X] postgresql database by default
@@ -34,6 +39,20 @@
       * [ ] create a user
 
   * [O] add likeable as a functionality
+    * [ ] from scratch
+      * [ ] models
+        * [ ] like model
+        * [ ] user
+      * [ ] association
+        * [ ] like model
+          * [ ] belongs_to :user
+          * [ ] belongs_to :likeable, polymorphic: true
+        * [ ] user model
+          * [ ] has_many :likeable, through: :likes
+        * [ ] likeable model
+          * [ ] has_many :users, through: likes
+      * [ ] migration
+      * [ ] methods
     * [X] controller actions
     * [X] model
     * [X] views

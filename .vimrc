@@ -181,7 +181,7 @@ cmap ,; <Esc>
 " Manipulating windows, tabs and buffers
 " Buffers
 noremap ,bd :bd<CR>
-noremap ,rr :e<CR>
+noremap ,;r :e<CR>
 
 " exit insert mode and undo last change
 imap ,: <Esc>u
@@ -422,10 +422,9 @@ nmap sk :SplitjoinJoin<cr>
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
-nmap ,rdbm :!rake db:migrate<CR>
-nmap ,rdbs :!rake db:seed<CR>
 nmap ,rc :!rails console<CR>
+nmap ,rr :silent Rake<CR>
+nmap ,r! :silent Rake!<CR>
 
 " Various
 imap ,jr Julien Rabatel
-

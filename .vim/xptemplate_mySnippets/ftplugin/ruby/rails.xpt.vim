@@ -22,16 +22,19 @@ XPTinclude
 XPT hm " has_many
 has_many :`cursor~
 ..XPT
+XPT hmt " has_many ... through: :
+has_many :`items~, through: :`relation~
+..XPT
 XPT bt " belongs_to
 belongs_to :`cursor~
 ..XPT
 
 XPT vac " validates complete
-validates :`attr~, :`crit~ => { :`key~ => `val~ }
+validates :`attr~, `crit~: { `key~: `val~ }
 ..XPT
 
 XPT va " validates
-validates :`attr~, :`crit~
+validates :`attr~, `crit~:
 ..XPT
 
 XPT val " validates length
@@ -89,6 +92,9 @@ flash[:success] = "`message~"`cursor~
 XPT params
 params[:`field~]`cursor~
 ..XPT
+XPT session
+session[:`field~]`cursor~
+..XPT
 
 " RSPEC
 XPT it " it "..." do end
@@ -109,6 +115,16 @@ XPT shn " should_not
 should_not
 ..XPT
 
+XPT expect " expect...
+expect {
+  `action~
+}.to change { `tobechanged~ }.`whichdifference~
+..XPT
+
+XPT let " let :var { expr }
+let (:`var~) { `expr~ }
+..XPT
+
 " FACTORIES
 XPT fact " FactoryGirl.define do ... end
 FactoryGirl.define do
@@ -123,4 +139,20 @@ FactoryGirl.create(:`model~)`cursor~
 ..XPT
 XPT facb " Factory.build :model
 FactoryGirl.build(:`model~)`cursor~
+..XPT
+
+" I18N AND VIEWS
+XPT t " t "..."
+t('`cursor~')
+..XPT
+XPT tt " t "..."
+t('`cursor~')
+..XPT
+
+XPT lt " link_to "text", "link"
+link_to '`text~', `link~
+..XPT
+
+XPT img " image_tag "img.png", alt: "text"
+image_tag('`img_location~', alt: '`text~')
 ..XPT
