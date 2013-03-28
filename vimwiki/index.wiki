@@ -344,7 +344,7 @@
       * [ ] also use the specific routes for concerns
         * [ ] should first install the routes concern plugin
       * [X] read rails.vim help
-      * [ ] read marvim help
+      * [X] read marvim help
       * [X] read ruby vim plugin help
       * [X] read railscast 'InheritedResources'
       * [X] read railscast about service objects

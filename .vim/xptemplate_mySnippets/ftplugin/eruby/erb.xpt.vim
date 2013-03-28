@@ -67,9 +67,5 @@ XPT fsub " form submit field
 
 " I18N
 XPT <t " <%= t "..." %>
-<%= t "`cursor~" %>
-..XPT
-
-XPT t " t "..."
-t "`cursor~"
+<%= t '`cursor~' %>
 ..XPT
