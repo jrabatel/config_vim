@@ -1,8 +1,3 @@
-====== General table of content ======
-[[General TODO]]
-[[Mails]]
-[[To learn and read]]
-[[JAK2]]
 [[General_Ideas]]
 [[PaperReading]]
 [[KULeuven information]]
