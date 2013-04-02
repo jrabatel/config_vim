@@ -1,4 +1,0 @@
-DISK SPACE:
-/cw/dtaitrantor/NoCsBack/dtai/
-/cw/dtailocal/
-/export/home1/NoCsBack/dtai/
