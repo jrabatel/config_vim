@@ -30,18 +30,51 @@
 * [O] find ebooks about
   * [ ] http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0
 
-* [ ] Agnes Zani
+* [ ] Agnes Zannier
   * [ ] prepare all planning / trains
   * [ ] see with her about the hotels
 
 == Daily TODO ==
 
+2013-03-29 Fri 10:49:14 CET
+* [.] Mutagenesis
+  * [O] prepare pattern report
+    * [X] use patterns from last experiments
+    * [X] problem when calculating the information gain for the patterns
+    * [X] make the support information clearer within the report
+    * [X] translate the support in a relative support
+    * [X] format the information gain
+    * [X] some problems with the pattern description: sometimes, the step description contains two constraints
+    * [ ] remains a problem when the constraint appears not in the direct parent, but in another ancestor
+    * [ ] graph visualization
+      * [ ] fix problem with the description of the vertices
+        * [ ] use the pattern_path_serializer to generate the vertices description
+    * [ ] are the right nodes correctly considered when computing the IG for the negative class patterns?
+    * [X] for each step in the description of a pattern, add some information about the count, mean and variance
+      * [X] retrieve the information
+      * [X] display it
+      * [X] display the mean as a percentage of active compounds
+    * [ ] create a table for the occurrences
+    * [X] display the steps in a table and use bootstrap classes to highlight positive and negative steps
+    * [X] copy one experimental file into the experimental framework
+* [ ] Project Meeting preparation
+  * [ ] plan for the presentation
+  * [ ] demo
+* [ ] Read paper from Jérémie Legolff
+* [ ] Write and send a meeting report for last Tuesday's Skype meeting
+* [o] General
+  * [X] answer Hugo's email
+    * [X] vpn connection to lirmm
+    * [X] remove unnecessary files
+  * [ ] dr
+
 2013-03-28 Thu 08:17:58 CET
-* [ ] Administrative
-  * [ ] trip to Lyon / St Etienne
-  * [ ] sign-up for the GDRI3
-  * [ ] have form signed for CNRS
+* [X] Administrative
+  * [X] trip to Lyon / St Etienne
+  * [X] sign-up for the GDRI3
+  * [X] have form signed for CNRS
 * [ ] Pattern report
+  * [ ] copy from experimental results to netbook
   * [X] add help block
   * [ ] add some global features
     * [ ] total number of patterns in the forests
@@ -50,22 +83,22 @@
     * [ ] a help text block
   * [ ] add some local (i.e., pattern-specific) features
     * [ ] visualization of the graphs via javascript libraries
-* [ ] Read paper from Jérémie Legolff
-* [ ] Write and send a meeting report for last Tuesday's Skype meeting
-* [.] General
-  * [ ] print work proposition
-  * [ ] update laptop and netbook
-    * [ ] fix issues with dropbox git
-    * [ ] install rails 4 and ruby 2.0
-    * [ ] copy rails projects
-  * [ ] print and take:
-    * [ ] paper from Jérémie Legolff
-  * [X] clean laptop
-  * [ ] clean phone
+* [X] General
+  * [X] update laptop and netbook
+    * [X] fix issues with dropbox git
+    * [X] install rails 4 and ruby 2.0 on netbook
+    * [X] copy rails projects on netbook
+      * [X] version them on laptop
+      * [X] clone them on netbook
+      * [X] run bundle install for each repository
+    * [X] check whether rails books are copied to netbook via dropbox
+  * [X] print and take:
+    * [X] paper from Jérémie Legolff
+    * [X] work proposition
 
 2013-03-27 Wed 10:13:30 CET
-* [.] Geometric patterns
-  * [o] pattern report
+* [X] Geometric patterns
+  * [X] pattern report
   * [X] source code
     * [X] is there an issue with test occurrences?
     * [X] experiments
