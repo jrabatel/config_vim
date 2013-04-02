@@ -31,29 +31,84 @@
 
 == Daily TODO ==
 
-2013-03-22 Fri 10:10:02 CET
-* [O] Geometrical pattern mining
-  * [ ] fix problem with test occurrences that do not appear
-  * [X] remove logs for query engine
-  * [X] fix the multi-conformations problems
-  * [X] jak2 source code: implementing an exact embedding finder for all the nodes
-* [.] Best pattern output
-  * [X] copy last experiment logs
-  * [ ] fix problem with empty descriptions
+2013-03-28 Thu 08:17:58 CET
+* [ ] Administrative
+  * [ ] trip to Lyon / St Etienne
+  * [ ] sign-up for the GDRI3
+  * [ ] have form signed for CNRS
+* [ ] Pattern report
+  * [X] add help block
   * [ ] add some global features
     * [ ] total number of patterns in the forests
     * [ ] average size (i.e., constraints count) of the patterns in the entire forests vs. in the top list
     * [ ] average quality measure (whole forests vs. top list)
     * [ ] a help text block
   * [ ] add some local (i.e., pattern-specific) features
-    * [ ] corrected p-value
-    * [ ] occurrences in test data as well
-    * [ ] visualization of the graphs via javascrit libraries
+    * [ ] visualization of the graphs via javascript libraries
+* [ ] Read paper from Jérémie Legolff
+* [ ] Write and send a meeting report for last Tuesday's Skype meeting
+* [.] General
+  * [ ] print work proposition
+  * [ ] update laptop and netbook
+    * [ ] fix issues with dropbox git
+    * [ ] install rails 4 and ruby 2.0
+    * [ ] copy rails projects
+  * [ ] print and take:
+    * [ ] paper from Jérémie Legolff
+  * [X] clean laptop
+  * [ ] clean phone
+
+2013-03-27 Wed 10:13:30 CET
+* [.] Geometric patterns
+  * [o] pattern report
+  * [X] source code
+    * [X] is there an issue with test occurrences?
+    * [X] experiments
+      * [X] compute the prediction
+      * [X] evaluate via the AUROC measure
+      * [X] evaluate the global classifier by considering the multiple runs for corss-validation
+* [X] General
+  * [X] print train tickets
+  * [X] send email to parents
+  * [X] WD
+    * [X] switch back to rails 3 (because of devise) or try to use the devise rails 4 branch
+
+2013-03-26 Tue 08:15:36 CET
+* [X] Geometric patterns
+  * [X] pattern report
+    * [X] run new experiments in order to get results quickly (1h)
+      * [X] write new settings
+      * [X] run experiments
+    * [X] add help block
+* [X] Write a plan for next paper on geometric patterns
+* [X] Skype meeting with Bertrand Cuissart, Bruno Crémilleux and Jan Ramon (1h)
+* [X] Meeting with Bertrand Cuissart (30min)
+* [X] Seminar Aurélie Bertaux (1h)
+
+2013-03-25 Mon 09:00:13 CET
+* [X] Geometric patterns
+  * [X] pattern report
+    * [X] add help block
+    * [X] visualization of the graphs via javascript libraries
+  * [X] source code
+    * [X] work on experiments
+      * [X] compute the prediction
+      * [X] evaluate via the AUROC measure
+      * [X] evaluate the global classifier by considering the multiple runs for corss-validation
+    * [X] problem with time for experiments
+      * [X] removing logs
+* [o] General
+  * [X] read Nicolas's document
+
+2013-03-22 Fri 10:10:02 CET
+* [X] Geometrical pattern mining
+  * [X] remove logs for query engine
+  * [X] fix the multi-conformations problems
+  * [X] jak2 source code: implementing an exact embedding finder for all the nodes
+* [X] Best pattern output
+  * [X] copy last experiment logs
 * [X] Experimental scripts
-  * [ ] add a way for molecules to be loaded with their real target value
-* [ ] Administrative
-  * [ ] check dates and trains for mission to Lyon / St Etienne
-  * [ ] see Agnes Zani
+  * [X] add a way for molecules to be loaded with their real target value
 * [o] General
   * [ ] write dr
   * [X] train tickets

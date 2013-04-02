@@ -2,49 +2,92 @@
 * [ ] gem install
   * [ ] bootstrap
 
-= Likeable =
-* [ ] models
-  * [ ] likeable model
-    * [ ] class method can_be_liked
-    * [ ] settings
-      * [ ] can be liked by owner?
-  * [ ] like model
-* [ ] migration
-  * [ ] a table for like model
-* [ ] controller
-  * [ ] a polymorphic controller
+= Dashboard =
+Generate a simple controller with one action called dashboard
+ could use http://shopify.github.com/dashing/
+
+= BaseUser =
+How to handle migrations for the base_user?
+- adding all possible attributes by default and leaving them null if they are not use
+- preparing migrations and add them with a generator when they are needed
+  - by groups
+    - username
+    - extended information
+
+* [ ] model and migrations
+  * [ ] acts_as_user method with options
+    * [ ] :login_field => username or password
+      * [ ] when username, then change the devise option, and change the views (with a helper)
+    * [ ] :personal_information as a hash
+      * [ ] gender, country, city, birthdate
+      * [ ] address
+    * [ ] portrait
+    * [ ] general_configuration_options (to store various things)
+  * [ ] which detail_level?
+    * [ ] basic (username, email, password) or (email, password)
+  * [ ] migrations
+    * [ ] from devise: how to integrate those migrations? => by writing a generator that will call the devise generator
+    * [ ] for all the additional fields, add a migration that add all the possible fields and will let them empty (null) if they are not used by the model...
 * [ ] views
-  * [ ] partials for
-    * [ ] like and unlike forms
-    * [ ] general form (conditional appearance of like/unlike form)
-  * [ ] templates
-    * [ ] html template for like/unlike controller action
-    * [ ] javascript template for like/unlike controller action
-  * [ ] helpers?
-  * [ ] I18n
-    * [ ] yaml file
-* [ ] tests
-  * [ ] unit tests
-  * [ ] controller tests
-  * [ ] view tests
-* [ ] generators
-  * [ ] model name M as argument
-  * [ ] migrate if needed
-  * [ ] add can_be_liked method to M
-  * [ ] add general form partial to the show html template for M
+  * [ ] helpers
+    * [ ] profile_for
+    * [ ] reduced_profile_for
+    * [ ] profile_links_for
+    * [ ] sign_up_form
+      * [ ] shoul take into account which attribute should be used as a key for the sign_in/up forms
+    * [ ] sign_in_form (:reduced?, :inline?, :popup?)
+    * [ ] reset_password_form
+  * [ ] presenter / decorator?
+* [ ] mailers
+  * [ ] when signing up
+  * [ ] when resetting password
+  * [ ] for a news-letter
+  * [ ] for a given event
+
+= BaseLayout =
+* [ ] shared partials
+* [ ] sass for common classes mentioned in other engines
+
+= Likeable =
+* [o] controller
+  * [ ] javascript response
+* [ ] views
+  * [ ] helpers
+    * [ ] like_form (finds the @variable with name corresponding to the controller and use it as the main object for the form)
+    * [ ] likers_list_for (if not given, search for a correct @variable) (take a boolean option :include_owner which is true by default)
+    * [ ] liked_list_for (if not given, search for a correct @variable) (can take an option: :type if the liked objects have to be of a certain Class)
+* [ ] options
+  * [ ] use acts_as_votable...
+  * [ ] style options
+    * [ ] images vs. text links for like actions
+  * [ ] insert a yaml file for the configuration
+
+= Commentable =
+* [ ] model
+  * [ ] gem acts_as_commentable_with_threading
+* [ ] controller
+  * [ ] polymorphic controller
+* [ ] views
+* [ ] options
+  * [ ] threadable?
+  * [ ] upvotable?
+  * [ ] downvotable?
+  * [ ] editable_for_owner?
+  * [ ] editable_for_commented_owner?
+  * [ ] style options (for partials to be used)
 
 = Owned =
 * [ ] models
-  * [ ] owned model
-    * [ ] class method is_owned_by to add the belongs_to association
+  * [ ] is_owned
+    * [ ] :can [:read, :update, :delete]
+    * [ ] :can [:read, :update, :delete]
+    * [ ] :others_can [:read, :update, :delete]
+    * [ ] how to update cancan abilities?
 * [ ] migration
-  * [ ] add a column to model table with a owner_id
-* [ ] abilities
-  * [ ] is created by an owner
-  * [ ] can be modified by owner or admin
-  * [ ] can be destroyed by admin
-  * [ ] can be destroyed by owner depending on settings
+  * [ ] add a column to model table with a owner_id and an index
 * [ ] views
+  * [ ] helpers
+    * [ ] actions_for (provides a list of links for the action :update, :delete only if they are available)
 * [ ] tests
   * [ ] unit tests
   * [ ] ability tests?
