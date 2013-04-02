@@ -25,11 +25,26 @@
 * [O] find ebooks about
   * [ ] http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0
 
-* [ ] Agnes Zannier
-  * [ ] prepare all planning / trains
-  * [ ] see with her about the hotels
-
 == Daily TODO ==
+
+2013-04-02 Tue 07:46:43 CEST
+* [.] Project Meeting
+  * [o] pattern report
+    * [O] add the code for the graph visualization to the pattern report
+      * [X] copy code from laptop
+      * [X] integrate it in the old code
+      * [X] placement of popover: bottom
+      * [X] change size of popover
+    * [X] make a table with the occurrences
+  * [ ] presentation
+    * [ ] introduction
+    * [ ] present the process
+      * [ ] slide with schema
+    * [ ] demonstration
+      * [ ] what do you need?
+* [ ] General
+  * [ ] write dr
+  * [ ] extract wiki from vim_config and put it in another repository
 
 2013-03-29 Fri 10:49:14 CET
 * [.] Mutagenesis
