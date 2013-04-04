@@ -403,6 +403,10 @@ let g:clang_complete_macros     = 1
 
 let g:session_autoload = 'no'
 
+" FOR VIM-EXPAND-REGION
+vmap K <Plug>(expand_region_expand)
+vmap J <Plug>(expand_region_shrink)
+
 " FOR EASYMOTIONS
 nmap f <leader><leader>f
 nmap F <leader><leader>F
