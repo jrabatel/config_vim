@@ -32,6 +32,8 @@ nnoremap zz zR
 " GRAPHICAL OPTIONS
 colorscheme skittles_berry
 set t_Co=256
+" set powerline for vim
+set rtp+=$PYTHON_LOCAL_INSTALL/powerline/bindings/vim
 
 " Mapping to open vimrc config file
 nmap ,vim :edit ~/.vimrc<CR>
