@@ -425,6 +425,9 @@ nmap E <leader><leader>E
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
+" FOR FUGITIVE
+nmap <leader>gs :Gstatus<CR>
+
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
