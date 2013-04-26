@@ -30,8 +30,13 @@ set foldmethod=manual
 nnoremap zz zR
 
 " GRAPHICAL OPTIONS
-colorscheme skittles_berry
+syntax enable
+set background=dark
+set t_ut=
 set t_Co=256
+" let g:solarized_termcolors=16
+colorscheme skittles_berry
+" colorscheme solarized
 " set powerline for vim
 set rtp+=$PYTHON_LOCAL_INSTALL/powerline/bindings/vim
 
@@ -427,6 +432,11 @@ nmap sk :SplitjoinJoin<cr>
 
 " FOR FUGITIVE
 nmap <leader>gs :Gstatus<CR>
+nmap <leader>gp :Git push<CR>
+nmap <leader>gl :Git pull<CR>
+nmap <leader>gw :Gwrite<CR>
+nmap <leader>gr :Gread<CR>
+nmap <leader>gd :Gremove<CR>
 
 " Ruby on rails
 " Mappings
