@@ -437,6 +437,8 @@ nmap <leader>gl :Git pull<CR>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gd :Gremove<CR>
+" FOR GITLOG
+nmap <leader>gitl :GitLog<CR>
 
 " Ruby on rails
 " Mappings
