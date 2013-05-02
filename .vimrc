@@ -440,6 +440,11 @@ nmap <leader>gd :Gremove<CR>
 " FOR GITLOG
 nmap <leader>gitl :GitLog<CR>
 
+" FOR TBONE
+" for rails development
+" create a 3 windows environment
+nmap <leader>trails :Tmux split-window -h<CR>:Tmux swap-pane -R<CR>:Tmux split-window -v<CR>
+
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
