@@ -8,3 +8,4 @@ nnoremap <leader>LD :r!date +\%d/\%m/\%Y<CR>
 
 " to automatically start a new line and indent it
 nmap <leader>oo o<ESC>>>A
+nmap <leader>oO o<ESC><<A
