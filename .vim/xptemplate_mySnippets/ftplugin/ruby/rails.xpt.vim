@@ -98,13 +98,16 @@ session[:`field~]`cursor~
 
 " RSPEC
 XPT it " it "..." do end
-it "`descr~" do
+it '`descr~' do
   `cursor~
 end
 ..XPT
 
 XPT itp " itpending 
 it "`cursor~"
+..XPT
+XPT its " itsimple 
+it { `cursor~ }
 ..XPT
 
 XPT sh " should 
