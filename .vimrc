@@ -320,6 +320,11 @@ let g:yankring_window_width = 50 " Size used in a vertical split
 " FOR CtrlP
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_working_path_mode = 0
+" FOR CtrlPFunky
+let g:ctrlp_extensions = ['funky']
+nnoremap <Leader><c-f> :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap gd :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 "FOR COMMAND-T
 " nnoremap <silent> <C-f>f     :CommandT<CR>
