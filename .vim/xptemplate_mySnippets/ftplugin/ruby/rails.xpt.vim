@@ -89,11 +89,21 @@ XPT fla_s
 flash[:success] = "`message~"`cursor~
 ..XPT
 
-XPT params
+XPT par
 params[:`field~]`cursor~
 ..XPT
 XPT session
 session[:`field~]`cursor~
+..XPT
+
+XPT opt
+options[:`opt~]`cursor~
+..XPT
+XPT nopt
+options = {}
+..XPT
+XPT iopt
+`opt~ = options[:`opt~] || `default~
 ..XPT
 
 " RSPEC
