@@ -101,8 +101,8 @@ nmap ,O O<Esc>j
 " Mapping to enable/disable the spelling
 nmap ,,s :set spell<CR>
 nmap ,,S :set nospell<CR>
-nmap ,<C-f> :setlocal spell spelllang=fr<CR>
-nmap ,<C-e> :setlocal spell spelllang=en<CR>
+nmap ,,<C-f> :setlocal spell spelllang=fr<CR>
+nmap ,,<C-e> :setlocal spell spelllang=en<CR>
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1

@@ -100,7 +100,7 @@ XPT opt
 options[:`opt~]`cursor~
 ..XPT
 XPT nopt
-options = {}
+options={}
 ..XPT
 XPT iopt
 `opt~ = options[:`opt~] || `default~

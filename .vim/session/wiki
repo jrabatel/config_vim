@@ -1,0 +1,899 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <Plug>ZenCodingAnchorizeSummary :call zencoding#anchorizeURL(1)a
+inoremap <Plug>ZenCodingAnchorizeURL :call zencoding#anchorizeURL(0)a
+inoremap <Plug>ZenCodingRemoveTag :call zencoding#removeTag()a
+inoremap <Plug>ZenCodingSplitJoinTagInsert :call zencoding#splitJoinTag()
+inoremap <Plug>ZenCodingToggleComment :call zencoding#toggleComment()a
+inoremap <Plug>ZenCodingImageSize :call zencoding#imageSize()a
+inoremap <Plug>ZenCodingPrev :call zencoding#moveNextPrev(1)
+inoremap <Plug>ZenCodingNext :call zencoding#moveNextPrev(0)
+inoremap <Plug>ZenCodingBalanceTagOutwardInsert :call zencoding#balanceTag(-1)
+inoremap <Plug>ZenCodingBalanceTagInwardInsert :call zencoding#balanceTag(1)
+inoremap <Plug>ZenCodingExpandWord u:call zencoding#expandAbbr(1,"")a
+inoremap <Plug>ZenCodingExpandAbbr u:call zencoding#expandAbbr(0,"")a
+inoremap <silent> <SNR>151_yrrecord =YRRecord3()
+inoremap <silent> <Plug>XPTrawKey 
+imap <silent> <Plug>XPTfallback <Plug>XPTrawKey
+imap <silent> <Plug>IMAP_JumpBack =IMAP_Jumpfunc('b', 0)
+imap <silent> <Plug>IMAP_JumpForward =IMAP_Jumpfunc('', 0)
+imap <S-Tab> <Plug>SuperTabBackward
+inoremap <C-Tab> 	
+cmap <C-BS> <Plug>CmdPathUp
+imap <F4> <F4>a
+imap <F3> <F3>a
+imap <F2> <F2>a
+vnoremap <silent>  "dy:call SwapWord(@d,'forward','yes')
+nnoremap <silent>  :call SwapWord(expand("<cword>"),'forward', 'no')
+nnoremap  :WinResizerStartResize
+nnoremap <silent>  :CtrlP
+noremap  h
+vmap <NL> <Plug>IMAP_JumpForward
+nmap <NL> <Plug>IMAP_JumpForward
+onoremap <NL> j
+snoremap <silent>  `>a=XPTemplateStart(0,{'k':'<C-k++'})
+xnoremap <silent>  "0s=XPTemplatePreWrap(@0)
+nnoremap  k
+onoremap  k
+noremap  l
+nnoremap <silent>  :YRReplace '1', 'p'
+nnoremap <silent>  :YRReplace '-1', 'P'
+vnoremap  "hy:%s/h//gc<Left><Left><Left>
+nmap o <Plug>ZoomWin
+vnoremap <silent>  "dy:call SwapWord(@d,'backward','yes')
+nnoremap <silent>  :call SwapWord(expand("<cword>"),'backward','no')
+vmap c <Plug>ZenCodingCodePretty
+nmap A <Plug>ZenCodingAnchorizeSummary
+nmap a <Plug>ZenCodingAnchorizeURL
+nmap k <Plug>ZenCodingRemoveTag
+nmap j <Plug>ZenCodingSplitJoinTagNormal
+vmap m <Plug>ZenCodingMergeLines
+nmap / <Plug>ZenCodingToggleComment
+nmap i <Plug>ZenCodingImageSize
+nmap N <Plug>ZenCodingPrev
+nmap n <Plug>ZenCodingNext
+vmap D <Plug>ZenCodingBalanceTagOutwardVisual
+nmap D <Plug>ZenCodingBalanceTagOutwardNormal
+vmap d <Plug>ZenCodingBalanceTagInwardVisual
+nmap d <Plug>ZenCodingBalanceTagInwardNormal
+nmap , <Plug>ZenCodingExpandNormal
+vmap , <Plug>ZenCodingExpandVisual
+nnoremap  5
+noremap s :TCommentAs =&ft_
+noremap n :TCommentAs =&ft 
+noremap a :TCommentAs 
+noremap b :TCommentBlock
+vnoremap <silent> r :TCommentRight
+vnoremap <silent> i :TCommentInline
+nnoremap <silent> r :TCommentRight
+onoremap <silent> r :TCommentRight
+noremap   :TComment 
+noremap <silent> p m`vip:TComment``
+vnoremap <silent>  :TCommentMaybeInline
+nnoremap <silent>  :TComment
+onoremap <silent>  :TComment
+nnoremap '' `.
+nnoremap ' `
+nmap ,oO o<<A
+nmap ,oo o>>A
+nnoremap ,LD :r!date +\%d/\%m/\%Y
+nnoremap ,D :r!date +'\%Y-\%m-\%d \%a \%H:\%M:\%S \%Z'
+nmap <silent> ,w,t <Plug>VimwikiTabMakeDiaryNote
+nmap <silent> ,w,w <Plug>VimwikiMakeDiaryNote
+nmap <silent> ,w,i <Plug>VimwikiDiaryGenerateLinks
+nmap <silent> ,wi <Plug>VimwikiDiaryIndex
+nmap <silent> ,ws <Plug>VimwikiUISelect
+nmap <silent> ,wt <Plug>VimwikiTabIndex
+nmap <silent> ,ww <Plug>VimwikiIndex
+xnoremap <silent> ,ms "my:TxSend(@m)
+nnoremap <silent> ,mt :TxSetRunCmd
+nnoremap <silent> ,ms :TxSend
+nnoremap <silent> ,mr :TxRun
+nnoremap <silent> ,mq :TxKill
+nnoremap <silent> ,mp :TxSetPane
+nnoremap <silent> ,mn :TxCreate
+nnoremap <silent> ,mc :TxClear
+nnoremap <silent> ,mb :TxSigInt
+vnoremap ,rem :RExtractMethod
+vnoremap ,rriv :RRenameInstanceVariable
+vnoremap ,rrlv :RRenameLocalVariable
+vnoremap ,relv :RExtractLocalVariable
+vnoremap ,rec :RExtractConstant
+nnoremap ,riv :RIntroduceVariable
+nnoremap ,rcpc :RConvertPostConditional
+nnoremap ,rel :RExtractLet
+nnoremap ,rit :RInlineTemp
+nnoremap ,rapn :RAddParameterNB
+nnoremap ,rap :RAddParameter
+vnoremap ,e :python debugger.handle_visual_eval()
+nmap <silent> ,cv <Plug>VCSVimDiff
+nmap <silent> ,cu <Plug>VCSUpdate
+nmap <silent> ,cU <Plug>VCSUnlock
+nmap <silent> ,cs <Plug>VCSStatus
+nmap <silent> ,cr <Plug>VCSReview
+nmap <silent> ,cq <Plug>VCSRevert
+nmap <silent> ,cn <Plug>VCSAnnotate
+nmap <silent> ,cN <Plug>VCSSplitAnnotate
+nmap <silent> ,cl <Plug>VCSLog
+nmap <silent> ,cL <Plug>VCSLock
+nmap <silent> ,ci <Plug>VCSInfo
+nmap <silent> ,cg <Plug>VCSGotoOriginal
+nmap <silent> ,cG <Plug>VCSClearAndGotoOriginal
+nmap <silent> ,cd <Plug>VCSDiff
+nmap <silent> ,cD <Plug>VCSDelete
+nmap <silent> ,cc <Plug>VCSCommit
+nmap <silent> ,ca <Plug>VCSAdd
+noremap ,_s :TCommentAs =&ft_
+noremap ,_n :TCommentAs =&ft 
+noremap ,_a :TCommentAs 
+noremap ,_b :TCommentBlock
+xnoremap <silent> ,_r :TCommentRight
+nnoremap <silent> ,_r :TCommentRight
+snoremap <silent> ,_r :TCommentRight
+onoremap <silent> ,_r :TCommentRight
+xnoremap <silent> ,_i :TCommentInline
+noremap ,_  :TComment 
+noremap <silent> ,_p vip:TComment
+xnoremap <silent> ,__ :TCommentMaybeInline
+nnoremap <silent> ,__ :TComment
+snoremap <silent> ,__ :TComment
+onoremap <silent> ,__ :TComment
+map <silent> ,mm :ShowMarksPlaceMark
+map <silent> ,ma :ShowMarksClearAll
+map <silent> ,mh :ShowMarksClearMark
+map <silent> ,mo :ShowMarksOn
+vmap <silent> ,mt :ShowMarksToggle
+omap <silent> ,mt :ShowMarksToggle
+map ,mbt <Plug>TMiniBufExplorer
+map ,mbu <Plug>UMiniBufExplorer
+map ,mbc <Plug>CMiniBufExplorer
+map ,mbe <Plug>MiniBufExplorer
+nmap <silent> ,n <Plug>MarkClear
+vmap <silent> ,r <Plug>MarkRegex
+nmap <silent> ,r <Plug>MarkRegex
+vmap <silent> ,m <Plug>MarkSet
+nmap <silent> ,m <Plug>MarkSet
+vnoremap <silent> ,,w :call EasyMotion#WB(1, 0)
+onoremap <silent> ,,w :call EasyMotion#WB(0, 0)
+nnoremap <silent> ,,w :call EasyMotion#WB(0, 0)
+vnoremap <silent> ,,t :call EasyMotion#T(1, 0)
+onoremap <silent> ,,t :call EasyMotion#T(0, 0)
+nnoremap <silent> ,,t :call EasyMotion#T(0, 0)
+vnoremap <silent> ,,n :call EasyMotion#Search(1, 0)
+onoremap <silent> ,,n :call EasyMotion#Search(0, 0)
+nnoremap <silent> ,,n :call EasyMotion#Search(0, 0)
+vnoremap <silent> ,,k :call EasyMotion#JK(1, 1)
+onoremap <silent> ,,k :call EasyMotion#JK(0, 1)
+nnoremap <silent> ,,k :call EasyMotion#JK(0, 1)
+vnoremap <silent> ,,j :call EasyMotion#JK(1, 0)
+onoremap <silent> ,,j :call EasyMotion#JK(0, 0)
+nnoremap <silent> ,,j :call EasyMotion#JK(0, 0)
+vnoremap <silent> ,,gE :call EasyMotion#EW(1, 1)
+onoremap <silent> ,,gE :call EasyMotion#EW(0, 1)
+nnoremap <silent> ,,gE :call EasyMotion#EW(0, 1)
+vnoremap <silent> ,,f :call EasyMotion#F(1, 0)
+onoremap <silent> ,,f :call EasyMotion#F(0, 0)
+nnoremap <silent> ,,f :call EasyMotion#F(0, 0)
+vnoremap <silent> ,,e :call EasyMotion#E(1, 0)
+onoremap <silent> ,,e :call EasyMotion#E(0, 0)
+nnoremap <silent> ,,e :call EasyMotion#E(0, 0)
+vnoremap <silent> ,,b :call EasyMotion#WB(1, 1)
+onoremap <silent> ,,b :call EasyMotion#WB(0, 1)
+nnoremap <silent> ,,b :call EasyMotion#WB(0, 1)
+vnoremap <silent> ,,W :call EasyMotion#WBW(1, 0)
+onoremap <silent> ,,W :call EasyMotion#WBW(0, 0)
+nnoremap <silent> ,,W :call EasyMotion#WBW(0, 0)
+vnoremap <silent> ,,T :call EasyMotion#T(1, 1)
+onoremap <silent> ,,T :call EasyMotion#T(0, 1)
+nnoremap <silent> ,,T :call EasyMotion#T(0, 1)
+vnoremap <silent> ,,N :call EasyMotion#Search(1, 1)
+onoremap <silent> ,,N :call EasyMotion#Search(0, 1)
+nnoremap <silent> ,,N :call EasyMotion#Search(0, 1)
+vnoremap <silent> ,,ge :call EasyMotion#E(1, 1)
+onoremap <silent> ,,ge :call EasyMotion#E(0, 1)
+nnoremap <silent> ,,ge :call EasyMotion#E(0, 1)
+vnoremap <silent> ,,F :call EasyMotion#F(1, 1)
+onoremap <silent> ,,F :call EasyMotion#F(0, 1)
+nnoremap <silent> ,,F :call EasyMotion#F(0, 1)
+vnoremap <silent> ,,E :call EasyMotion#EW(1, 0)
+onoremap <silent> ,,E :call EasyMotion#EW(0, 0)
+nnoremap <silent> ,,E :call EasyMotion#EW(0, 0)
+vnoremap <silent> ,,B :call EasyMotion#WBW(1, 1)
+onoremap <silent> ,,B :call EasyMotion#WBW(0, 1)
+nnoremap <silent> ,,B :call EasyMotion#WBW(0, 1)
+nnoremap <silent> ,T :BuffergatorTabsClose
+nnoremap <silent> ,t :BuffergatorTabsOpen
+nnoremap <silent> ,B :BuffergatorClose
+nnoremap <silent> ,b :BuffergatorOpen
+nmap ,ihn :IHN
+nmap ,is :IHS:A
+nmap ,ih :IHS
+map ,rwp <Plug>RestoreWinPosn
+map ,swp <Plug>SaveWinPosn
+map ,tt <Plug>AM_tt
+map ,tsq <Plug>AM_tsq
+map ,tsp <Plug>AM_tsp
+map ,tml <Plug>AM_tml
+map ,tab <Plug>AM_tab
+map ,m= <Plug>AM_m=
+map ,t@ <Plug>AM_t@
+map ,t~ <Plug>AM_t~
+map ,t? <Plug>AM_t?
+map ,w= <Plug>AM_w=
+map ,ts= <Plug>AM_ts=
+map ,ts< <Plug>AM_ts<
+map ,ts; <Plug>AM_ts;
+map ,ts: <Plug>AM_ts:
+map ,ts, <Plug>AM_ts,
+map ,t= <Plug>AM_t=
+map ,t< <Plug>AM_t<
+map ,t; <Plug>AM_t;
+map ,t: <Plug>AM_t:
+map ,t, <Plug>AM_t,
+map ,t# <Plug>AM_t#
+map ,t| <Plug>AM_t|
+map ,T~ <Plug>AM_T~
+map ,Tsp <Plug>AM_Tsp
+map ,Tab <Plug>AM_Tab
+map ,T@ <Plug>AM_T@
+map ,T? <Plug>AM_T?
+map ,T= <Plug>AM_T=
+map ,T< <Plug>AM_T<
+map ,T; <Plug>AM_T;
+map ,T: <Plug>AM_T:
+map ,Ts, <Plug>AM_Ts,
+map ,T, <Plug>AM_T,o
+map ,T# <Plug>AM_T#
+map ,T| <Plug>AM_T|
+map ,Htd <Plug>AM_Htd
+map ,anum <Plug>AM_aunum
+map ,aunum <Plug>AM_aenum
+map ,afnc <Plug>AM_afnc
+map ,adef <Plug>AM_adef
+map ,adec <Plug>AM_adec
+map ,ascom <Plug>AM_ascom
+map ,aocom <Plug>AM_aocom
+map ,adcom <Plug>AM_adcom
+map ,acom <Plug>AM_acom
+map ,abox <Plug>AM_abox
+map ,a( <Plug>AM_a(
+map ,a= <Plug>AM_a=
+map ,a< <Plug>AM_a<
+map ,a, <Plug>AM_a,
+map ,a? <Plug>AM_a?
+nmap ,f :call RecentFilesList()
+nmap ,r! :silent Rake!
+nmap ,rr :silent Rake
+nmap ,rc :!rails console
+nmap ,rgs :!rails g scaffold 
+nmap ,trails :Tmux split-window -h:Tmux swap-pane -R:Tmux split-window -v
+nmap ,gitl :GitLog
+nmap ,gd :Gremove
+nmap ,gr :Gread
+nmap ,gw :Gwrite
+nmap ,gl :Git pull
+nmap ,gp :Git push
+nmap ,gs :Gstatus
+nmap ,xpt :XPTreload
+nmap ,fw :PSearchw
+nmap ,f/ :PSearch
+nmap ,al; :Tab /;
+nmap ,al, :Tab /,
+nmap ,al: :Tab /:\w*
+nmap ,al= :Tab /=
+nmap ,alc :Tab /\s\S\+;
+nmap ,an :AN
+nmap ,av :AV
+nmap ,as :AS
+nmap ,aa :A
+nnoremap <silent> ,ob :ConqueTerm bash
+nnoremap <silent> ,,c :YRShow
+nmap ,note :silent grep -r '\*\*NOTE' **/*:redraw!
+nmap ,todo :silent grep -r '\*\*TODO' **/*:redraw!
+nmap ,add :silent grep -r '\*\*ADDED' **/*:redraw!
+nmap ,  I  
+nmap ,wc c
+nmap ,red :redraw!
+nmap ,noh :nohls
+nmap ,j :e#
+nmap ,k :bp
+nmap ,l :bn
+nmap ,c gcc
+vmap ,c gc
+noremap ,;r :e
+noremap ,bd :bd
+vmap ,; 
+nmap ,;w :w
+nmap ,;qw :wq
+nmap ,;qq :qall!
+nmap ,Fc :silent grep! -R [^[:alnum:]_]<cword>[[:space:]]*\( *:redraw!
+nmap ,Fl /\/\//
+vmap ,al :Tab /
+nmap ,repa :%Subvert```g<Left><Left><Left>
+nmap ,repl :Subvert```g<Left><Left><Left>
+nmap ,agrep :silent grepa -r '' **/*<Left><Left><Left><Left><Left><Left>
+nmap ,grep :silent grep -r '' **/*<Left><Left><Left><Left><Left><Left>
+nmap ,FFW :silent grep! -w -R <cword> %:p:h/*:redraw!
+nmap ,FW :silent grep! -w -R <cword> *:redraw!
+nmap ,FFw :silent grep! -R <cword> %:p:h/*:redraw!
+nmap ,Fw :silent grep! -R <cword> *:redraw!
+nmap ,ucap :s/\<[A-Z]/\l&/g:nohls
+nmap ,cap :s/\<[a-z]/\u&/g:nohls
+nnoremap ,sl :lne
+nnoremap ,d :cnext
+nnoremap ,s :cprev
+nnoremap ,q :ccl
+nnoremap ,Q :cw
+nmap <silent> ,nb :NERDTreeToggleB
+nmap <silent> ,nn :NERDTreeToggle
+nmap ,bufo :Bufonly
+nmap , :setlocal spell spelllang=en
+nnoremap , :CtrlPFunky
+nmap ,,S :set nospell
+nmap ,,s :set spell
+nmap ,O Oj
+nmap ,o ok
+nnoremap ,maks :silent make -C $build/stimulation_classification/src:redraw!
+nnoremap ,makbo :silent make -B -C $build/openbabel_preprocessing/src:redraw!
+nnoremap ,mako :silent make -C /home/personnels/rabatel/Documents/Code/build/openbabel_preprocessing/src:redraw!
+nnoremap ,makj :silent make -C /home/personnels/rabatel/Documents/Code/build/jak2/src/examples/mutaData/:redraw!
+nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki
+nmap ,wjdr :edit ~/vimwiki/JDR.wiki
+nmap ,vim :edit ~/.vimrc
+nnoremap / :call SearchCompleteStart()/
+vnoremap / :call SearchCompleteStart()/
+nmap @ :YRMapsMacro
+nmap B ,,B
+inoremap ï o
+nmap E ,,E
+nmap F ,,F
+vmap J <Plug>(expand_region_shrink)
+vmap K <Plug>(expand_region_expand)
+xnoremap <silent> P :YRPaste 'P', 'v'
+nnoremap <silent> P :YRPaste 'P'
+xmap S <Plug>VSurround
+nmap T ,,T
+nmap W ,,W
+vmap [% [%m'gv``
+nmap <silent> \s :set nolist!
+vmap ]% ]%m'gv``
+nnoremap ` '
+vmap a% [%v]%
+nmap b ,,b
+nmap cs <Plug>Csurround
+xnoremap <silent> d :YRDeleteRange 'v'
+nmap ds <Plug>Dsurround
+nmap d<F3> lF d2f"
+nmap d<F2> lF<df>
+nmap e ,,e
+nmap f ,,f
+nnoremap <silent> gp :YRPaste 'gp'
+nnoremap <silent> gP :YRPaste 'gP'
+xnoremap <silent> gC :TCommentMaybeInline
+nnoremap <silent> gCc :let w:tcommentPos = getpos(".") | set opfunc=tcomment#OperatorLineAnywayg@$
+nnoremap <silent> gC :let w:tcommentPos = getpos(".") | set opfunc=tcomment#OperatorAnywayg@
+xnoremap <silent> gc :TCommentMaybeInline
+nnoremap <silent> gcc :let w:tcommentPos = getpos(".") | set opfunc=tcomment#OperatorLineg@$
+nnoremap <silent> gc :let w:tcommentPos = getpos(".") | set opfunc=tcomment#Operatorg@
+xmap gS <Plug>VgSurround
+nmap gx <Plug>NetrwBrowseX
+nnoremap gd :execute 'CtrlPFunky ' . expand('<cword>')
+xnoremap <silent> p :YRPaste 'p', 'v'
+nnoremap <silent> p :YRPaste 'p'
+xmap s <Plug>Vsurround
+nmap sk :SplitjoinJoin
+nmap sj :SplitjoinSplit
+nmap t ,,t
+nmap w ,,w
+xnoremap <silent> x :YRDeleteRange 'v'
+xnoremap <silent> y :YRYankRange 'v'
+nmap ySS <Plug>YSsurround
+nmap ySs <Plug>YSsurround
+nmap yss <Plug>Yssurround
+nmap yS <Plug>YSurround
+nmap ys <Plug>Ysurround
+nnoremap zz zR
+vnoremap <Plug>ZenCodingCodePretty :call zencoding#codePretty()
+nnoremap <Plug>ZenCodingAnchorizeSummary :call zencoding#anchorizeURL(1)
+nnoremap <Plug>ZenCodingAnchorizeURL :call zencoding#anchorizeURL(0)
+nnoremap <Plug>ZenCodingRemoveTag :call zencoding#removeTag()
+nnoremap <Plug>ZenCodingSplitJoinTagNormal :call zencoding#splitJoinTag()
+vnoremap <Plug>ZenCodingMergeLines :call zencoding#mergeLines()
+nnoremap <Plug>ZenCodingToggleComment :call zencoding#toggleComment()
+nnoremap <Plug>ZenCodingImageSize :call zencoding#imageSize()
+nnoremap <Plug>ZenCodingPrev :call zencoding#moveNextPrev(1)
+nnoremap <Plug>ZenCodingNext :call zencoding#moveNextPrev(0)
+vnoremap <Plug>ZenCodingBalanceTagOutwardVisual :call zencoding#balanceTag(-2)
+nnoremap <Plug>ZenCodingBalanceTagOutwardNormal :call zencoding#balanceTag(-1)
+vnoremap <Plug>ZenCodingBalanceTagInwardVisual :call zencoding#balanceTag(2)
+nnoremap <Plug>ZenCodingBalanceTagInwardNormal :call zencoding#balanceTag(1)
+nnoremap <Plug>ZenCodingExpandWord :call zencoding#expandAbbr(1,"")
+nnoremap <Plug>ZenCodingExpandNormal :call zencoding#expandAbbr(3,"")
+vnoremap <Plug>ZenCodingExpandVisual :call zencoding#expandAbbr(2,"")
+nnoremap <silent> <SNR>151_yrrecord :call YRRecord3()
+snoremap <Plug>selectToInsert d<BS>
+vmap <silent> <Plug>IMAP_JumpBack `<i=IMAP_Jumpfunc('b', 0)
+vmap <silent> <Plug>IMAP_JumpForward i=IMAP_Jumpfunc('', 0)
+vmap <silent> <Plug>IMAP_DeleteAndJumpBack "_<Del>i=IMAP_Jumpfunc('b', 0)
+vmap <silent> <Plug>IMAP_DeleteAndJumpForward "_<Del>i=IMAP_Jumpfunc('', 0)
+nmap <silent> <Plug>IMAP_JumpBack i=IMAP_Jumpfunc('b', 0)
+nmap <silent> <Plug>IMAP_JumpForward i=IMAP_Jumpfunc('', 0)
+map <F10> :python debugger.set_breakpoint()
+map <F7> :python debugger.detach()
+map <F6> :python debugger.close()
+map <F5> :python debugger.run()
+map <F1> :python debugger.run_to_cursor()
+nnoremap <silent> <Plug>VCSVimDiff :VCSVimDiff
+nnoremap <silent> <Plug>VCSUpdate :VCSUpdate
+nnoremap <silent> <Plug>VCSUnlock :VCSUnlock
+nnoremap <silent> <Plug>VCSStatus :VCSStatus
+nnoremap <silent> <Plug>VCSSplitAnnotate :VCSAnnotate!
+nnoremap <silent> <Plug>VCSReview :VCSReview
+nnoremap <silent> <Plug>VCSRevert :VCSRevert
+nnoremap <silent> <Plug>VCSLog :VCSLog
+nnoremap <silent> <Plug>VCSLock :VCSLock
+nnoremap <silent> <Plug>VCSInfo :VCSInfo
+nnoremap <silent> <Plug>VCSClearAndGotoOriginal :VCSGotoOriginal!
+nnoremap <silent> <Plug>VCSGotoOriginal :VCSGotoOriginal
+nnoremap <silent> <Plug>VCSDiff :VCSDiff
+nnoremap <silent> <Plug>VCSDelete :VCSDelete
+nnoremap <silent> <Plug>VCSCommit :VCSCommit
+nnoremap <silent> <Plug>VCSAnnotate :VCSAnnotate
+nnoremap <silent> <Plug>VCSAdd :VCSAdd
+nnoremap <Plug>SwapItFallbackDecrement 
+nnoremap <Plug>SwapItFallbackIncrement 
+nnoremap <M-F9> :call NextColor(0)
+nnoremap <S-F9> :call NextColor(-1)
+nnoremap <F9> :call NextColor(1)
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+noremap <C-Right> l
+noremap <C-Left> h
+noremap <C-Up> k
+noremap <C-Down> j
+map <F2> :python debugger.step_over()
+map <F3> :python debugger.step_into()
+map <F11> :python debugger.get_context()
+nmap <silent> <Plug>RestoreWinPosn :call RestoreWinPosn()
+nmap <silent> <Plug>SaveWinPosn :call SaveWinPosn()
+nmap <SNR>43_WE <Plug>AlignMapsWrapperEnd
+map <SNR>43_WS <Plug>AlignMapsWrapperStart
+nmap <silent> <S-F8> <Plug>GoldenViewSwitchToggle
+nnoremap <Plug>GoldenViewSwitchWithSmallest :call GoldenView#zl#window#switch_buffer_with_smallest()
+nnoremap <Plug>GoldenViewSwitchWithLargest :call GoldenView#zl#window#switch_buffer_with_largest()
+nnoremap <Plug>GoldenViewSwitchToggle :call GoldenView#zl#window#switch_buffer_toggle()
+nnoremap <Plug>GoldenViewSwitchMain :call GoldenView#SwitchMain()
+nnoremap <Plug>GoldenViewPrevious :call GoldenView#zl#window#previous_window_or_tab()
+nnoremap <Plug>GoldenViewNext :call GoldenView#zl#window#next_window_or_tab()
+nnoremap <Plug>GoldenViewSplit :call GoldenView#Split()
+nnoremap <Plug>GoldenViewResize :GoldenViewResize
+nnoremap <Plug>ToggleGoldenViewAutoResize :ToggleGoldenViewAutoResize
+map <F4> :python debugger.step_out()
+nmap <C-S-Right> d<F3>/ \|>:nohlP
+nmap <C-S-Left> d<F3>
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+nmap <silent> <C-F11> :NERDTreeToggle
+nmap <silent> <F8> <Plug>GoldenViewSwitchMain
+vmap <Down> xp`[V`]
+vmap <Up> xkP`[V`]
+imap S <Plug>ISurround
+imap s <Plug>Isurround
+imap 	 <Plug>SuperTabForward
+imap <NL> <Plug>IMAP_JumpForward
+inoremap <silent>  =XPTemplateStart(0,{'k':'<C-k++'})
+imap  <Plug>SuperTabForward
+imap  <Plug>SuperTabBackward
+inoremap <silent>  =XPTemplateStart(0,{'k':'<C-r++<C-k++','forcePum':1})
+inoremap <silent>  =XPTemplateStart(0,{'k':'<C-r++<C-r++<C-k++','popupOnly':1})
+imap  <Plug>Isurround
+imap  <Plug>AlwaysEnd
+imap A <Plug>ZenCodingAnchorizeSummary
+imap a <Plug>ZenCodingAnchorizeURL
+imap k <Plug>ZenCodingRemoveTag
+imap j <Plug>ZenCodingSplitJoinTagInsert
+imap / <Plug>ZenCodingToggleComment
+imap i <Plug>ZenCodingImageSize
+imap N <Plug>ZenCodingPrev
+imap n <Plug>ZenCodingNext
+imap D <Plug>ZenCodingBalanceTagOutwardInsert
+imap d <Plug>ZenCodingBalanceTagInwardInsert
+imap ; <Plug>ZenCodingExpandWord
+imap , <Plug>ZenCodingExpandAbbr
+inoremap s :TCommentAs =&ft_
+inoremap n :TCommentAs =&ft 
+inoremap a :TCommentAs 
+inoremap b :TCommentBlock
+inoremap <silent> r :TCommentRight
+inoremap   :TComment 
+inoremap <silent> p :norm! m`vip:TComment``
+inoremap <silent>  :TComment
+imap ,ihn :IHN
+imap ,is :IHS:A
+imap ,ih :IHS
+imap ,jr Julien Rabatel
+imap ,;  I  A
+imap ,;= ==
+imap ,c gcc
+inoremap ,p $
+inoremap ,a 0
+inoremap ,b b
+inoremap ,w w
+inoremap ,e e
+imap ,: u
+cmap ,; 
+imap ,;w :w
+imap ,; 
+vnoremap é ~
+nnoremap é ~
+vnoremap à 0
+nnoremap à 0
+vnoremap ù %
+nnoremap ù %
+let &cpo=s:cpo_save
+unlet s:cpo_save
+set autowriteall
+set backspace=indent,eol,start
+set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set balloonexpr=eclim#util#Balloon(eclim#util#GetLineError(line('.')))
+set directory=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set eadirection=ver
+set expandtab
+set fileencodings=ucs-bom,utf-8,default,latin1
+set grepprg=grep\ -nH\ $*
+set helplang=fr
+set hidden
+set ignorecase
+set incsearch
+set laststatus=2
+set listchars=tab:>-,trail:·,eol:$
+set mouse=a
+set printoptions=paper:a4
+set ruler
+set rulerformat=%-14.(%l,%c%V%)%=%P%{XPMautoUpdate(\"ruler\")}
+set runtimepath=~/.vim,~/.vim/bundle/BufOnly,~/.vim/bundle/EasyHtml,~/.vim/bundle/GoldenView.Vim,~/.vim/bundle/HybridText,~/.vim/bundle/IndexedSearch,~/.vim/bundle/RecentFiles,~/.vim/bundle/TailMinusF,~/.vim/bundle/VOoM,~/.vim/bundle/ZoomWin,~/.vim/bundle/align,~/.vim/bundle/autocomplpop,~/.vim/bundle/avim,~/.vim/bundle/browser.vim,~/.vim/bundle/buffergator,~/.vim/bundle/clang_complete,~/.vim/bundle/cmdpathup,~/.vim/bundle/conque_term,~/.vim/bundle/ctrlp,~/.vim/bundle/ctrlp-funky,~/.vim/bundle/easycolour,~/.vim/bundle/easymotion,~/.vim/bundle/endwise,~/.vim/bundle/genutils,~/.vim/bundle/googletranslate,~/.vim/bundle/haml,~/.vim/bundle/libList,~/.vim/bundle/mark,~/.vim/bundle/marvim,~/.vim/bundle/matchit,~/.vim/bundle/matrix,~/.vim/bundle/minibufexpl,~/.vim/bundle/nerdtree,~/.vim/bundle/netrw.vim,~/.vim/bundle/psearch.vim,~/.vim/bundle/rails,~/.vim/bundle/rainbow,~/.vim/bundle/ruby,~/.vim/bundle/searchcomplete,~/.vim/bundle/session,~/.vim/bundle/setcolors,~/.vim/bundle/showmarks,~/.vim/bundle/splitjoin,~/.vim/bundle/supertab,~/.vim/bundle/surround,~/.vim/bundle/swapit,~/.vim/bundle/syntastic,~/.vim/bundle/tabular,~/.vim/bundle/tagbar,~/.vim/bundle/taghighlight,~/.vim/bundle/taglist,~/.vim/bundle/tasklist,~/.vim/bundle/tcomment,~/.vim/bundle/undotree,~/.vim/bundle/vcscommand,~/.vim/bundle/vdebug,~/.vim/bundle/vim-abolish,~/.vim/bundle/vim-afterimage,~/.vim/bundle/vim-coffee-script,~/.vim/bundle/vim-colors-solarized,~/.vim/bundle/vim-emacscommandline,~/.vim/bundle/vim-eunuch,~/.vim/bundle/vim-expand-region,~/.vim/bundle/vim-fugitive,~/.vim/bundle/vim-g,~/.vim/bundle/vim-gf-ext,~/.vim/bundle/vim-git-log,~/.vim/bundle/vim-indent-guides,~/.vim/bundle/vim-l9,~/.vim/bundle/vim-latex,~/.vim/bundle/vim-markdown,~/.vim/bundle/vim-plugin-show-git-log,~/.vim/bundle/vim-ragtag,~/.vim/bundle/vim-ruby-doc,~/.vim/bundle/vim-ruby-refactoring,~/.vim/bundle/vim-startify,~/.vim/bundle/vim-tbone,~/.vim/bundle/vim-tmuxify,~/.vim/bundle/vim-vividchalk,~/.vim/bundle/vim-yaml,~/.vim/bundle/vimpanel,~/.vim/bundle/vimwiki,~/.vim/bundle/viske,~/.vim/bundle/webBrowser,~/.vim/bundle/winresizer,~/.vim/bundle/xptemplate,~/.vim/bundle/yankring_140,~/.vim/bundle/zencoding,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/bundle/swapit/after,~/.vim/bundle/tabular/after,~/.vim/after,~/.local/lib/python2.7/site-packages/powerline/bindings/vim,~/.vim/eclim,~/.vim/eclim/after,~/.my-config/vim_config/.vim/bundle/xptemplate/personal,$HOME/.vim/xptemplate_mySnippets
+set scrolloff=3
+set shiftwidth=2
+set smartcase
+set statusline=%!PowerlinePyeval('powerline.new_window()')
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set tabstop=2
+set viminfo='100,<50,s10,h,!
+set wildmenu
+set wildmode=list:longest
+set winheight=6
+set winminheight=6
+set winminwidth=14
+set winwidth=14
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/.my-config/wiki/vimwiki
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +54 index.wiki
+badd +0 ~/.my-config/wiki/.git/index
+silent! argdel *
+edit ~/.my-config/wiki/.git/index
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 12 + 26) / 53)
+exe '2resize ' . ((&lines * 38 + 26) / 53)
+argglobal
+nnoremap <buffer> <silent> C :Gcommit
+nnoremap <buffer> <silent> R :edit
+nnoremap <buffer> <silent> cvc :Gcommit --verbose
+nnoremap <buffer> <silent> cva :Gcommit --amend --verbose
+nnoremap <buffer> <silent> ca :Gcommit --amend
+nnoremap <buffer> <silent> cA :Gcommit --amend --reuse-message=HEAD
+nnoremap <buffer> <silent> cc :Gcommit
+nnoremap <buffer> <silent> q :bdelete
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=delete
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+set conceallevel=2
+setlocal conceallevel=2
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+set cursorline
+setlocal cursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'gitcommit'
+setlocal filetype=gitcommit
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+set foldlevel=1
+setlocal foldlevel=1
+setlocal foldmarker={{{,}}}
+set foldmethod=syntax
+setlocal foldmethod=syntax
+setlocal foldminlines=1
+setlocal foldnestmax=20
+set foldtext=fugitive#foldtext()
+setlocal foldtext=fugitive#foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=substitute(v:fname,'^[^/]\\+/','','')
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=git\ --git-dir='/home/rabatel/.my-config/wiki/.git'\ show
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal nomodifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=~/.my-config/wiki/.git,~/.my-config/wiki,
+setlocal nopreserveindent
+setlocal previewwindow
+setlocal quoteescape=\\
+setlocal readonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!PowerlinePyeval('powerline.statusline(2)')
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'gitcommit'
+setlocal syntax=gitcommit
+endif
+setlocal tabstop=2
+setlocal tags=~/.my-config/wiki/.git/conf.tags,~/.my-config/wiki/.git/tags,./tags,./TAGS,tags,TAGS
+setlocal textwidth=72
+setlocal thesaurus=
+setlocal noundofile
+setlocal winfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+let s:l = 1 - ((0 * winheight(0) + 6) / 12)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/.my-config/wiki/vimwiki
+wincmd w
+argglobal
+edit ~/.my-config/wiki/vimwiki/index.wiki
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <buffer> <expr> <S-Tab> vimwiki#tbl#kbd_shift_tab()
+nmap <buffer> <silent> 	 <Plug>VimwikiNextLink
+vmap <buffer> <silent>  <Plug>VimwikiNormalizeLinkVisualCR
+nmap <buffer> <silent>  <Plug>VimwikiFollowLink
+vmap <buffer> <silent> + <Plug>VimwikiNormalizeLinkVisual
+nmap <buffer> <silent> + <Plug>VimwikiNormalizeLink
+nmap <buffer> <silent> ,wr <Plug>VimwikiRenameLink
+nmap <buffer> <silent> ,wd <Plug>VimwikiDeleteLink
+nmap <buffer> ,whh <Plug>Vimwiki2HTMLBrowse
+nmap <buffer> ,wh <Plug>Vimwiki2HTML
+nmap <buffer> <silent> - <Plug>VimwikiRemoveHeaderLevel
+nmap <buffer> <silent> <D-CR> <Plug>VimwikiTabnewLink
+nmap <buffer> <silent> = <Plug>VimwikiAddHeaderLevel
+nnoremap <buffer> O :call vimwiki#lst#kbd_oO('O')
+vnoremap <buffer> <silent> ac :call vimwiki#base#TO_table_col(0, 1)
+onoremap <buffer> <silent> ac :call vimwiki#base#TO_table_col(0, 0)
+vnoremap <buffer> <silent> a\ :call vimwiki#base#TO_table_cell(0, 1)
+onoremap <buffer> <silent> a\ :call vimwiki#base#TO_table_cell(0, 0)
+vnoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 1)
+onoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0)
+nnoremap <buffer> gww :VimwikiTableAlignW
+nnoremap <buffer> gqq :VimwikiTableAlignQ
+nnoremap <buffer> gl3 :VimwikiListChangeLevel #
+nnoremap <buffer> gl# :VimwikiListChangeLevel #
+nnoremap <buffer> gl- :VimwikiListChangeLevel -
+nnoremap <buffer> gl8 :VimwikiListChangeLevel *
+nnoremap <buffer> gl* :VimwikiListChangeLevel *
+nnoremap <buffer> glm :VimwikiListChangeLevel >>
+nnoremap <buffer> gll :VimwikiListChangeLevel <<
+vnoremap <buffer> <silent> ic :call vimwiki#base#TO_table_col(1, 1)
+onoremap <buffer> <silent> ic :call vimwiki#base#TO_table_col(1, 0)
+vnoremap <buffer> <silent> i\ :call vimwiki#base#TO_table_cell(1, 1)
+onoremap <buffer> <silent> i\ :call vimwiki#base#TO_table_cell(1, 0)
+vnoremap <buffer> <silent> ih :call vimwiki#base#TO_header(1, 1)
+onoremap <buffer> <silent> ih :call vimwiki#base#TO_header(1, 0)
+nnoremap <buffer> o :call vimwiki#lst#kbd_oO('o')
+nnoremap <buffer> <silent> <Plug>VimwikiRemoveHeaderLevel :call vimwiki#base#RemoveHeaderLevel()
+nnoremap <buffer> <silent> <Plug>VimwikiAddHeaderLevel :call vimwiki#base#AddHeaderLevel()
+nmap <buffer> <silent> <M-Right> <Plug>VimwikiTableMoveColumnRight
+nmap <buffer> <silent> <M-Left> <Plug>VimwikiTableMoveColumnLeft
+nmap <buffer> <silent> <C-Up> <Plug>VimwikiDiaryPrevDay
+nmap <buffer> <silent> <C-Down> <Plug>VimwikiDiaryNextDay
+nmap <buffer> <silent> <Nul> <Plug>VimwikiToggleListItem
+vmap <buffer> <silent> <C-Space> <Plug>VimwikiToggleListItem
+nmap <buffer> <silent> <C-Space> <Plug>VimwikiToggleListItem
+nmap <buffer> <silent> <S-Tab> <Plug>VimwikiPrevLink
+nmap <buffer> <silent> <BS> <Plug>VimwikiGoBackLink
+nmap <buffer> <silent> <C-S-CR> <Plug>VimwikiTabnewLink
+nmap <buffer> <silent> <C-CR> <Plug>VimwikiVSplitLink
+nmap <buffer> <silent> <S-CR> <Plug>VimwikiSplitLink
+inoremap <buffer> <expr> 	 vimwiki#tbl#kbd_tab()
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=b:*,b:#,b:-
+setlocal commentstring=%%%s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+set conceallevel=2
+setlocal conceallevel=2
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+set cursorline
+setlocal cursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'vimwiki'
+setlocal filetype=vimwiki
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tnro
+setlocal formatlistpat=^\\s*[*#-]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!PowerlinePyeval('powerline.statusline(1)')
+setlocal suffixesadd=.wiki
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'vimwiki'
+setlocal syntax=vimwiki
+endif
+setlocal tabstop=2
+setlocal tags=~/.my-config/wiki/.git/tags,./tags,./TAGS,tags,TAGS
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 54 - ((15 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+54
+normal! 0
+lcd ~/.my-config/wiki/vimwiki
+wincmd w
+2wincmd w
+exe '1resize ' . ((&lines * 12 + 26) / 53)
+exe '2resize ' . ((&lines * 38 + 26) / 53)
+tabnext 1
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=6 winwidth=14 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
