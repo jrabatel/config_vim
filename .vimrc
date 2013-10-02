@@ -114,6 +114,7 @@ nmap ,bufo :Bufonly<CR>
 nmap <silent> <C-F11> :NERDTreeToggle<CR>
 nmap <silent> ,nn :NERDTreeToggle<CR>
 nmap <silent> ,nb :NERDTreeToggle<CR><S-b><CR>
+nmap <silent> <A-n> :NERDTreeToggle<CR>
 let mapleader=","
 
 " map <C-F9> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
