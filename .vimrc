@@ -326,6 +326,9 @@ let g:ctrlp_extensions = ['funky']
 nnoremap <Leader><c-f> :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap gd :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+" FOR CtrlPCmdPalette
+nnoremap <c-c> :CtrlPCmdPalette<Cr>
+
 
 "FOR COMMAND-T
 " nnoremap <silent> <C-f>f     :CommandT<CR>
