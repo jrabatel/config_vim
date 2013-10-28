@@ -104,7 +104,7 @@ nmap ,,S :set nospell<CR>
 nmap ,,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,,<C-e> :setlocal spell spelllang=en<CR>
 
-nnoremap <silent> <F8> :TagbarToggle<CR>
+nmap <C-m> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
@@ -442,12 +442,12 @@ nmap sk :SplitjoinJoin<cr>
 " FOR FUGITIVE
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gp :Git push<CR>
-nmap <leader>gl :Git pull<CR>
+" nmap <leader>gl :Git pull<CR>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gd :Gremove<CR>
 " FOR GITLOG
-nmap <leader>gitl :GitLog<CR>
+nmap <leader>gl :GitLog<CR>
 
 " FOR TBONE
 " for rails development
