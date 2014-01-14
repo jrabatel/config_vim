@@ -103,6 +103,8 @@ nmap ,,s :set spell<CR>
 nmap ,,S :set nospell<CR>
 nmap ,,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,,<C-e> :setlocal spell spelllang=en<CR>
+" automatically correct word under cursor
+nmap <silent> <C-z> z=1<CR>
 
 nmap <C-m> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -453,6 +455,18 @@ nmap <leader>gl :GitLog<CR>
 " for rails development
 " create a 3 windows environment
 nmap <leader>trails :Tmux split-window -h<CR>:Tmux swap-pane -R<CR>:Tmux split-window -v<CR>
+
+" FOR SEEING-IS-BELIEVING
+nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+xmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+imap <buffer> <F5> <Plug>(seeing-is-believing-run)
+
+nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+
+" FOR SELECT-AND-SEARCH
+let g:select_and_search_active = 1
 
 " Ruby on rails
 " Mappings

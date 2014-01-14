@@ -102,6 +102,10 @@ XPT tbf " \textbf{..}
 \textbf{`text~}`cursor~
 ..XPT
 
+XPT " " ``...''
+```text~''`cursor~
+..XPT
+
 XPT tit " \textit{..}
 \textit{`text~}`cursor~
 ..XPT
@@ -119,7 +123,8 @@ XPT tbf_ wraponly=wrapped " \textbf{..}
 ..XPT
 
 XPT tit_ wraponly=wrapped " \textit{..}
-\textit{`wrapped~}`cursor~
+      \textit{`wrapped
+      \ ~}`cursor~
 ..XPT
 
 XPT ttt_ wraponly=wrapped " \texttt{..}
@@ -128,6 +133,11 @@ XPT ttt_ wraponly=wrapped " \texttt{..}
 
 XPT tsc_ wraponly=wrapped " \textsc{..}
 \textsc{`wrapped~}`cursor~
+..XPT
+
+XPT "_ wraponly=wrapped " ``...''
+      ```wrapped~''`cursor~
+      \ ~
 ..XPT
 
 XPT mcal "\mathcal{..}
