@@ -123,8 +123,7 @@ XPT tbf_ wraponly=wrapped " \textbf{..}
 ..XPT
 
 XPT tit_ wraponly=wrapped " \textit{..}
-      \textit{`wrapped
-      \ ~}`cursor~
+\textit{`wrapped~}`cursor~
 ..XPT
 
 XPT ttt_ wraponly=wrapped " \texttt{..}
@@ -389,7 +388,7 @@ XPT sqrt " sqrt[..]{..}
 ..XPT
 
 XPT sum " sum{..}~..{}
-\sum\limits_{`init~}^`end~{`cursor~}
+\sum\limits_{`init~}^{`end~}`cursor~
 ..XPT
 
 XPT slide " begin{slide} .. end{slide}

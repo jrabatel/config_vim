@@ -43,8 +43,9 @@ set rtp+=$PYTHON_LOCAL_INSTALL/powerline/bindings/vim
 " Mapping to open vimrc config file
 nmap ,vim :edit ~/.vimrc<CR>
 " Mapping to open wikifiles
-nmap ,wjdr :edit ~/vimwiki/JDR.wiki<CR>
 nmap ,wsit :edit ~/vimwiki/webdev/ListOfWebsites.wiki<CR>
+nmap ,wjdr :edit ~/vimwiki/ld/JDR.wiki<CR>
+nmap ,web :edit ~/vimwiki/webdev.wiki<CR>
 
 " MAKE
 " nnoremap ,makj :silent make -C $build/jak2/src/examples/decisionForest/<CR>:redraw!<CR>
