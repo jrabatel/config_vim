@@ -1,0 +1,12 @@
+:WritableSearch	writable_search.txt	/*:WritableSearch*
+g:writable_search_command_type	writable_search.txt	/*g:writable_search_command_type*
+g:writable_search_confirm_file_rename	writable_search.txt	/*g:writable_search_confirm_file_rename*
+g:writable_search_context_lines	writable_search.txt	/*g:writable_search_context_lines*
+g:writable_search_new_buffer_command	writable_search.txt	/*g:writable_search_new_buffer_command*
+writable_search	writable_search.txt	/*writable_search*
+writable_search-contents	writable_search.txt	/*writable_search-contents*
+writable_search-installation	writable_search.txt	/*writable_search-installation*
+writable_search-issues	writable_search.txt	/*writable_search-issues*
+writable_search-settings	writable_search.txt	/*writable_search-settings*
+writable_search-usage	writable_search.txt	/*writable_search-usage*
+writable_search.txt	writable_search.txt	/*writable_search.txt*

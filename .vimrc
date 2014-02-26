@@ -58,6 +58,7 @@ nnoremap ,makj :silent make -C /home/personnels/rabatel/Documents/Code/build/jak
 nnoremap ,mako :silent make -C /home/personnels/rabatel/Documents/Code/build/openbabel_preprocessing/src<CR>:redraw!<CR>
 nnoremap ,makbo :silent make -B -C $build/openbabel_preprocessing/src<CR>:redraw!<CR>
 nnoremap ,maks :silent make -C $build/stimulation_classification/src<CR>:redraw!<CR>
+nnoremap ,makg :silent make -C Release<CR>:redraw!<CR>
 
 " Change the place where swap files are stored
 set backupdir=~/.vim/_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
