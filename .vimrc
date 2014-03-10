@@ -476,6 +476,7 @@ nmap ,rgs :!rails g scaffold
 nmap ,rc :!rails console<CR>
 nmap ,rr :silent Rake<CR>
 nmap ,r! :silent Rake!<CR>
+nmap ,rbi :silent bundle install<CR>
 
 " Various
 imap ,jr Julien Rabatel
