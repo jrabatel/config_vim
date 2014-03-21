@@ -109,6 +109,7 @@ nmap ,,<C-e> :setlocal spell spelllang=en<CR>
 nmap <silent> <C-z> z=1<CR>
 
 nmap <F8> :TagbarToggle<CR>
+nmap <leader><leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
