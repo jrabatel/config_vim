@@ -106,10 +106,9 @@ nmap ,,S :set nospell<CR>
 nmap ,,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,,<C-e> :setlocal spell spelllang=en<CR>
 " automatically correct word under cursor
-nmap <silent> <C-z> z=1<CR>
+" nmap <silent> <C-z> z=1<CR>
 
-nmap <F8> :TagbarToggle<CR>
-nmap <leader><leader>t :TagbarToggle<CR>
+nnoremap ,<CR> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 

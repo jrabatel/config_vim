@@ -50,7 +50,7 @@ XPT outval " puts "`exp~ = #{`var~}"
 puts "`exp~ = #{`var~}"
 ..XPT
 
-XPT map " `var~ = {}
+XPT hash " `var~ = {}
 `var~ = {}
 ..XPT
 
@@ -78,4 +78,46 @@ XPT ++ " += 1
 
 XPT -- " -= 1
  -= 1
+..XPT
+
+XPT b " { |el| }
+{ |`el~| `cursor~ }
+..XPT
+
+XPT select " select { |el|  }
+select { |`el~| `cursor~ }
+..XPT
+
+XPT reject " reject { |el|  }
+reject { |`el~| `cursor~ }
+..XPT
+
+XPT find " find { |el|  }
+find { |`el~| `cursor~ }
+..XPT
+
+XPT dir " Dir["str"]
+Dir["`str~"]`cursor~
+..XPT
+
+XPT direach " Dir["str"].each { |file_path| }
+Dir["`str~"].each { |`file_path~| `cursor~ }
+..XPT
+
+XPT fopenline " open\(..) { |..| .. }.each_line
+File.open(`input_file_path~, 'r').each_line { |`l~| `cursor~ }
+
+XPT time " time = Benchmark.measure...
+`time~ = Benchmark.measure do
+  `cursor~
+end
+puts "`Time:~ #{`time~}"
+..XPT
+
+XPT time_ wraponly=wrapped " time = Benchmark.measure...
+`time~ = Benchmark.measure do
+  `wrapped~
+end
+puts "`Time:~ #{`time~}"
+`cursor~
 ..XPT

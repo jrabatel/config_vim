@@ -202,7 +202,7 @@ XPT <=> " \Leftrightarrow
 ..XPT
 
 XPT <= " \Lefttarrow
-\Lightarrow`cursor~
+\Leftarrow`cursor~
 ..XPT
 
 XPT -> " \rightarrow
@@ -210,7 +210,7 @@ XPT -> " \rightarrow
 ..XPT
 
 XPT <- " \lefttarrow
-\lightarrow`cursor~
+\leftarrow`cursor~
 ..XPT
 
 XPT $=> " $\Rightarrow$
@@ -218,7 +218,7 @@ $\Rightarrow$`cursor~
 ..XPT
 
 XPT $<= " $\Lefttarrow$
-$\Lightarrow$`cursor~
+$\Leftarrow$`cursor~
 ..XPT
 
 XPT $<=> " $\Leftrightarrow$
@@ -230,7 +230,7 @@ $\rightarrow$`cursor~
 ..XPT
 
 XPT $<- " $\lefttarrow$
-$\lightarrow$`cursor~
+$\leftarrow$`cursor~
 ..XPT
 
 """"""""""""""""""""""""""""""""""""""""""""
