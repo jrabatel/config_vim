@@ -50,6 +50,22 @@ XPT outval " puts "`exp~ = #{`var~}"
 puts "`exp~ = #{`var~}"
 ..XPT
 
+XPT warn " puts `cursor~
+puts "`cursor~"
+..XPT
+
+XPT warns " puts "`cursor~"
+puts "`cursor~"
+..XPT
+
+XPT warnvar " puts "`var~ = #{`var~}"
+puts "`var~ = #{`var~}"
+..XPT
+
+XPT warnval " puts "`exp~ = #{`var~}"
+puts "`exp~ = #{`var~}"
+..XPT
+
 XPT hash " `var~ = {}
 `var~ = {}
 ..XPT

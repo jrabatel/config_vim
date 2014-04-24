@@ -454,9 +454,9 @@ nmap <leader>gd :Gremove<CR>
 nmap <leader>gl :GitLog<CR>
 
 " FOR TBONE
-" for rails development
-" create a 3 windows environment
-nmap <leader>trails :Tmux split-window -h<CR>:Tmux swap-pane -R<CR>:Tmux split-window -v<CR>
+" for development
+" create a 3 window environment
+nmap <leader>tdev :Tmux split-window -h<CR>:Tmux swap-pane -R<CR>:Tmux split-window -v<CR>
 
 " FOR SEEING-IS-BELIEVING
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
