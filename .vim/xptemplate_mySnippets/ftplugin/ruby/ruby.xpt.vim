@@ -50,20 +50,20 @@ XPT outval " puts "`exp~ = #{`var~}"
 puts "`exp~ = #{`var~}"
 ..XPT
 
-XPT warn " puts `cursor~
-puts "`cursor~"
+XPT warn " warn `cursor~
+warn "`cursor~"
 ..XPT
 
-XPT warns " puts "`cursor~"
-puts "`cursor~"
+XPT warns " warn "`cursor~"
+warn "`cursor~"
 ..XPT
 
-XPT warnvar " puts "`var~ = #{`var~}"
-puts "`var~ = #{`var~}"
+XPT warnvar " warn "`var~ = #{`var~}"
+warn "`var~ = #{`var~}"
 ..XPT
 
-XPT warnval " puts "`exp~ = #{`var~}"
-puts "`exp~ = #{`var~}"
+XPT warnval " warn "`exp~ = #{`var~}"
+warn "`exp~ = #{`var~}"
 ..XPT
 
 XPT hash " `var~ = {}
