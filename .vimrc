@@ -189,6 +189,13 @@ nmap ,;w :w<CR>
 vmap ,; <Esc>
 cmap ,; <Esc>
 
+" same mappings for mobile keyboard
+imap ,' <Esc>
+imap ,'w <Esc>:w<CR>
+nmap ,'w :w<CR>
+vmap ,' <Esc>
+cmap ,' <Esc>
+
 """""""""""""""""""""""""""""""""""""""""
 " Manipulating windows, tabs and buffers
 " Buffers
