@@ -452,8 +452,8 @@ nmap sk :SplitjoinJoin<cr>
 
 " FOR FUGITIVE
 nmap <leader>gs :Gstatus<CR>
-nmap <leader>gp :Git push<CR>
-" nmap <leader>gl :Git pull<CR>
+nmap <leader>gp :Git push<cr>
+nmap <leader>gu :Git pull<cr>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gd :Gremove<CR>
