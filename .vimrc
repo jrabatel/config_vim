@@ -195,6 +195,10 @@ imap ,'w <Esc>:w<CR>
 nmap ,'w :w<CR>
 vmap ,' <Esc>
 cmap ,' <Esc>
+" other convenient mappings for mobile keyboard
+" iterate over suggestions in insert mode
+imap <Up> <C-N>
+imap <Down> <C-P>
 
 """""""""""""""""""""""""""""""""""""""""
 " Manipulating windows, tabs and buffers
