@@ -1,0 +1,6 @@
+merginal	merginal.txt	/*merginal*
+merginal-branch-list	merginal.txt	/*merginal-branch-list*
+merginal-merge-conflicts	merginal.txt	/*merginal-merge-conflicts*
+merginal-requirements	merginal.txt	/*merginal-requirements*
+merginal-usage	merginal.txt	/*merginal-usage*
+merginal.txt	merginal.txt	/*merginal.txt*
