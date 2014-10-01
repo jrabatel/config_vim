@@ -33,3 +33,25 @@ _`text~_`cursor~
 XPT / " /text/ 
 /`text~/`cursor~
 ..XPT
+
+XPT com " Commentaires:
+Commentaires:
+
+..XPT
+
+XPT h " heure: ...
+heure: `hh~h`cursor~
+..XPT
+
+XPT int " intérêt: ...
+intérêt: `int~
+rappel: `rappel~
+..XPT
+
+XPT luc " intérêt: ...
+intérêt: `int~
+lucidité: `luc~
+stabilité: `stab~
+durée `dur~
+rappel: `rappel~
+..XPT
