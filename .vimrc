@@ -481,6 +481,9 @@ imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
 " FOR SELECT-AND-SEARCH
 let g:select_and_search_active = 1
 
+" FOR NerdtreePluginOpen
+let g:nerdtree_plugin_open_cmd = 'xdg-open'
+
 " Ruby on rails
 " Mappings
 nmap ,rgs :!rails g scaffold 
