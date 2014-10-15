@@ -39,3 +39,9 @@ XPT ngresource " resource factory
 app.factory '`Model~', ($resource) ->
   $resource('/`models~/:id', {id: '@id'})
 ..XPT
+
+XPT ngfilter " filter
+app.filter '`name~', () ->
+  (`param~) ->
+    `cursor~
+..XPT
