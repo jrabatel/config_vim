@@ -74,10 +74,9 @@ XPT list " `var~ = []
 `var~ = []
 ..XPT
 
-XPT init " def initialize
-def initialize
-`cursor~
-end
+XPT createaddcollection
+`collection~ ||= `[]~
+`collection~ << `item~
 ..XPT
 
 XPT cmi " @member = expr
