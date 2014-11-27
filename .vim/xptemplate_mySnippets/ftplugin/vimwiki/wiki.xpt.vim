@@ -55,3 +55,10 @@ stabilité: `stab~
 durée `dur~
 rappel: `rappel~
 ..XPT
+
+XPT ld wraponly=wrapped " [LD]...[/LD]
+[LD]`wrapped~[/LD]
+..XPT
+XPT ds wraponly=wrapped " [DS=]...[/DS]
+[DS=`sign~]`wrapped~[/DS]
+..XPT

@@ -138,6 +138,12 @@ XPT let " let :var { expr }
 let (:`var~) { `expr~ }
 ..XPT
 
+XPT context "
+context "`context~~" do
+  `cursor~
+end
+..XPT
+
 " FACTORIES
 XPT fact " FactoryGirl.define do ... end
 FactoryGirl.define do

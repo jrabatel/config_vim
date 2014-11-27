@@ -107,7 +107,7 @@ nmap ,,S :set nospell<CR>
 nmap ,,<C-f> :setlocal spell spelllang=fr<CR>
 nmap ,,<C-e> :setlocal spell spelllang=en<CR>
 " automatically correct word under cursor
-" nmap <silent> <C-z> z=1<CR>
+nmap <silent> <C-z> z=1<CR><CR>
 
 nnoremap ,<CR> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -481,6 +481,9 @@ imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
 
 " FOR SELECT-AND-SEARCH
 let g:select_and_search_active = 1
+
+" FOR NerdtreePluginOpen
+let g:nerdtree_plugin_open_cmd = 'xdg-open'
 
 " Ruby on rails
 " Mappings
