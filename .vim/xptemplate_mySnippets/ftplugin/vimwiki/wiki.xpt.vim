@@ -57,8 +57,11 @@ rappel: `rappel~
 ..XPT
 
 XPT ld wraponly=wrapped " [LD]...[/LD]
-[LD]`wrapped~[/LD]
+[lucid]`wrapped~[/lucid]
 ..XPT
 XPT ds wraponly=wrapped " [DS=]...[/DS]
-[DS=`sign~]`wrapped~[/DS]
+[ds=`sign~]`wrapped~[/ds]
+..XPT
+XPT com wraponly=wrapped " [com]...[/com]
+[com]`wrapped~[/com]
 ..XPT
