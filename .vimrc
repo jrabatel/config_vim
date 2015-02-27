@@ -418,7 +418,7 @@ let g:xptemplate_pum_tab_nav = 1
 nmap ,xpt :XPTreload<CR>
 
 let g:xptemplate_vars="$author=Julien Rabatel"
-let g:xptemplate_vars="$email=julien.rabatel@cs.kuleuven.be"
+let g:xptemplate_vars="$email=jrabatel@gmail.com"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR MINIBUFEXPL
 let g:miniBufExplMapWindowNavVim = 1
@@ -500,3 +500,15 @@ nmap ,rbi :silent bundle install<CR>
 
 " Various
 imap ,jr Julien Rabatel
+
+" FUNCTIONS
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>mv :call RenameFile()<cr>
