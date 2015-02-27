@@ -212,6 +212,11 @@ imap qqe quelque
 noremap ,bd :bd<CR>
 noremap ,;r :e<CR>
 
+" noremap <c-j> <c-w>j
+" noremap <c-k> <c-w>k
+" noremap <c-l> <c-w>l
+" noremap <c-h> <c-w>h
+
 " exit insert mode and undo last change
 imap ,: <Esc>u
 " allows motions in insert mode
