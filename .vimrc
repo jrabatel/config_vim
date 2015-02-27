@@ -201,6 +201,11 @@ cmap ,. <Esc>
 imap <Up> <C-N>
 imap <Down> <C-P>
 
+" text writing mappings
+imap qqch quelque chose
+imap qqun quelqu'un
+imap qqe quelque
+
 """""""""""""""""""""""""""""""""""""""""
 " Manipulating windows, tabs and buffers
 " Buffers

@@ -56,12 +56,18 @@ durée `dur~
 rappel: `rappel~
 ..XPT
 
-XPT ld wraponly=wrapped " [LD]...[/LD]
+XPT ld_ wraponly=wrapped " [LD]...[/LD]
 [lucid]`wrapped~[/lucid]
 ..XPT
-XPT ds wraponly=wrapped " [DS=]...[/DS]
+XPT ds_ wraponly=wrapped " [DS=]...[/DS]
 [ds=`sign~]`wrapped~[/ds]
 ..XPT
-XPT com wraponly=wrapped " [com]...[/com]
+XPT com_ wraponly=wrapped " [com]...[/com]
 [com]`wrapped~[/com]
+..XPT
+XPT i_ wraponly=wrapped " [i]...[/i]
+[i]`wrapped~[/i]
+..XPT
+XPT b_ wraponly=wrapped " [b]...[/b]
+[b]`wrapped~[/b]
 ..XPT
