@@ -34,7 +34,11 @@ XPT / " /text/
 /`text~/`cursor~
 ..XPT
 
-XPT com " Commentaires:
+XPT com " [com]...[/com]
+[com]`text~[/com]`cursor~
+..XPT
+
+XPT Com " Commentaires:
 Commentaires:
 
 ..XPT
@@ -55,6 +59,25 @@ stabilité: `stab~
 durée `dur~
 rappel: `rappel~
 ..XPT
+
+""""""""""""""""""""""""
+" shortcuts for text
+XPT Js " Je suis
+Je suis `cursor~
+..XPT
+
+XPT Pt " Plus tard
+Plus tard
+..XPT
+
+XPT pt " plus tard
+plus tard
+..XPT
+
+XPT Upt " Un peu plus tard
+Un peu plus tard
+..XPT
+
 
 XPT ld_ wraponly=wrapped " [LD]...[/LD]
 [lucid]`wrapped~[/lucid]
