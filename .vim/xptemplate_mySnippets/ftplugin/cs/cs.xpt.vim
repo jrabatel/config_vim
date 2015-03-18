@@ -5,6 +5,14 @@ XPTinclude
       \ _common/personal
 
 " ================================= Snippets ===================================
+XPT cmi " Constructor member initilization
+this.`member~ = `val~;
+..XPT
+
+XPT cmis " Constructor member initilization (simple)
+this.`val~ = `val~;
+..XPT
+
 XPT out " Console.WriteLine
 Console.WriteLine(`cursor~);
 ..XPT
@@ -15,4 +23,19 @@ Console.WriteLine("`var~ = " + `var~);
 
 XPT outval
 Console.WriteLine("`exp~ = " + `var~);
+..XPT
+
+XPT nlist
+var `var~ = new List<`type~>();
+
+..XPT
+
+XPT adds
+`elt~s.Add(`elt~);
+
+..XPT
+
+XPT add
+`list~.Add(`elt~);
+
 ..XPT
