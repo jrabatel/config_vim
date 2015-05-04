@@ -39,3 +39,11 @@ XPT add
 `list~.Add(`elt~);
 
 ..XPT
+
+
+XPT psm " public static method
+public static `void~ `method~(`args~)
+{
+`cursor~
+}
+..XPT
