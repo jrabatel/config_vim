@@ -2,14 +2,14 @@ import sys
 import os
 import inspect
 
-dir = os.path.dirname(inspect.getfile(inspect.currentframe()))
-sys.path.append(dir)
+directory = os.path.dirname(inspect.getfile(inspect.currentframe()))
+sys.path.append(directory)
 
 import socket
-import vim
 import traceback
 import vdebug.runner
 import vdebug.event
+import vim
 
 class DebuggerInterface:
     """Acts as a facade layer to the debugger client.
@@ -22,14 +22,14 @@ class DebuggerInterface:
         self.event_dispatcher = vdebug.event.Dispatcher(self.runner)
 
     def __del__(self):
-        self.runner.close()
+        self.runner.close_connection()
 
     def run(self):
         """Tell the debugger to run, until the next breakpoint or end of script.
         """
         try:
             self.runner.run()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def run_to_cursor(self):
@@ -37,7 +37,7 @@ class DebuggerInterface:
         """
         try:
             self.runner.run_to_cursor()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def step_over(self):
@@ -45,7 +45,7 @@ class DebuggerInterface:
         """
         try:
             self.runner.step_over()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def step_into(self):
@@ -53,7 +53,7 @@ class DebuggerInterface:
         """
         try:
             self.runner.step_into()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def step_out(self):
@@ -61,15 +61,31 @@ class DebuggerInterface:
         """
         try:
             self.runner.step_out()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
+
+    def handle_opt(self,option,value = None):
+        """Set an option, overwriting the existing value.
+        """
+        try:
+            if value is None:
+                return self.runner.ui.say(vdebug.opts.Options.get(option))
+            else:
+                self.runner.ui.say("Setting vdebug option '%s' to: %s"\
+                                    %(option,value))
+                vim.command('let g:vdebug_options["%s"] = "%s"' %(option,value))
+                return vdebug.opts.Options.overwrite(option,value)
+
+        except Exception as e:
+            self.handle_exception(e)
+
 
     def handle_return_keypress(self):
         """React to a <enter> keypress event.
         """
         try:
             return self.event_dispatcher.by_position()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def handle_double_click(self):
@@ -77,7 +93,7 @@ class DebuggerInterface:
         """
         try:
             return self.event_dispatcher.by_position()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def handle_visual_eval(self):
@@ -85,7 +101,7 @@ class DebuggerInterface:
         """
         try:
             return self.event_dispatcher.visual_eval()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def handle_eval(self,args):
@@ -93,7 +109,15 @@ class DebuggerInterface:
         """
         try:
             return self.runner.eval(args)
-        except Exception, e:
+        except Exception as e:
+            self.handle_exception(e)
+
+    def eval_under_cursor(self):
+        """Evaluate the property under the cursor.
+        """
+        try:
+            return self.event_dispatcher.eval_under_cursor()
+        except Exception as e:
             self.handle_exception(e)
 
     def toggle_breakpoint_window(self):
@@ -101,7 +125,7 @@ class DebuggerInterface:
         """
         try:
             return self.runner.toggle_breakpoint_window()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def set_breakpoint(self,args = None):
@@ -109,7 +133,7 @@ class DebuggerInterface:
         """
         try:
             self.runner.set_breakpoint(args)
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def remove_breakpoint(self,args = None):
@@ -117,7 +141,7 @@ class DebuggerInterface:
         """
         try:
             self.runner.remove_breakpoint(args)
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
     def get_context(self):
@@ -125,7 +149,7 @@ class DebuggerInterface:
         """
         try:
             self.runner.get_context()
-        except Exception, e:
+        except Exception as e:
             self.handle_exception(e)
 
 
@@ -134,7 +158,8 @@ class DebuggerInterface:
         """
         try:
             self.runner.detach()
-        except Exception, e:
+            self.runner.close_connection()
+        except Exception as e:
             self.handle_exception(e)
 
     def close(self):
@@ -152,6 +177,12 @@ class DebuggerInterface:
         """
         self.runner.close()
         self.runner.ui.say("No connection was made")
+
+    def handle_interrupt(self):
+        """Handle a user interrupt, which is pretty normal. 
+        """
+        self.runner.close()
+        self.runner.ui.say("Connection cancelled")
 
     def handle_socket_end(self):
         """Handle a socket closing, which is pretty normal.
@@ -173,6 +204,11 @@ class DebuggerInterface:
         """
         self.runner.ui.error(str(e))
 
+    def handle_dbgp_error(self,e):
+        """Simply print an error, since it is human readable enough.
+        """
+        self.runner.ui.error(str(e.args[0]))
+
     def handle_general_exception(self):
         """Handle an unknown error of any kind.
         """
@@ -185,12 +221,19 @@ class DebuggerInterface:
         """
         if isinstance(e,vdebug.dbgp.TimeoutError):
             self.handle_timeout()
+        elif isinstance(e,vdebug.util.UserInterrupt):
+            try:
+                self.handle_interrupt()
+            except:
+                pass
         elif isinstance(e,vdebug.event.EventError):
             self.handle_readable_error(e)
         elif isinstance(e,vdebug.breakpoint.BreakpointError):
             self.handle_readable_error(e)
         elif isinstance(e,vdebug.log.LogError):
             self.handle_readable_error(e)
+        elif isinstance(e,vdebug.dbgp.DBGPError):
+            self.handle_dbgp_error(e)
         elif isinstance(e,(EOFError,socket.error)):
             self.handle_socket_end()
         elif isinstance(e,KeyboardInterrupt):
