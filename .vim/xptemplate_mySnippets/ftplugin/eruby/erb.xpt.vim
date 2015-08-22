@@ -27,6 +27,21 @@ XPT <= " <%= `cursor~ %>
 <%= `cursor~ %>
 ..XPT
 
+
+XPT <if " <% if ... %> <% end %>
+<%= if `condition~ %>
+  `cursor~
+<%= end %>
+..XPT
+
+XPT <ife " <% if ... %> <% else %> <% end %>
+<%= if `condition~ %>
+  `cursor~
+<%= else %>
+
+<%= end %>
+..XPT
+
 XPT <lt " <%= link_to "text", "link" %>
 <%= link_to "`text~", `link~ %>
 ..XPT
@@ -67,5 +82,5 @@ XPT fsub " form submit field
 
 " I18N
 XPT <t " <%= t "..." %>
-<%= t '`cursor~' %>
+<%= t('`cursor~') %>
 ..XPT
