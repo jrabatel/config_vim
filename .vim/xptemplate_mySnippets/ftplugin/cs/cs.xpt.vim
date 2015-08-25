@@ -47,3 +47,17 @@ public static `void~ `method~(`args~)
 `cursor~
 }
 ..XPT
+
+XPT /// " documentation comments
+/// <summary>
+/// `cursor~
+/// </summary>
+..XPT
+
+XPT param " /// <param name...
+<param name="`param~">`cursor~</param>
+..XPT
+
+XPT ret " /// <returns>...
+<returns>`cursor~</returns>
+..XPT
