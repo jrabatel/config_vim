@@ -29,17 +29,17 @@ XPT <= " <%= `cursor~ %>
 
 
 XPT <if " <% if ... %> <% end %>
-<%= if `condition~ %>
+<% if `condition~ %>
   `cursor~
-<%= end %>
+<% end %>
 ..XPT
 
 XPT <ife " <% if ... %> <% else %> <% end %>
-<%= if `condition~ %>
+<% if `condition~ %>
   `cursor~
-<%= else %>
+<% else %>
 
-<%= end %>
+<% end %>
 ..XPT
 
 XPT <lt " <%= link_to "text", "link" %>
