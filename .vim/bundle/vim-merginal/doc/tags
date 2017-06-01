@@ -1,6 +1,11 @@
 merginal	merginal.txt	/*merginal*
 merginal-branch-list	merginal.txt	/*merginal-branch-list*
+merginal-cherry-pick-conflicts	merginal.txt	/*merginal-cherry-pick-conflicts*
+merginal-diff-files	merginal.txt	/*merginal-diff-files*
+merginal-history-log	merginal.txt	/*merginal-history-log*
 merginal-merge-conflicts	merginal.txt	/*merginal-merge-conflicts*
+merginal-rebase-amend	merginal.txt	/*merginal-rebase-amend*
+merginal-rebase-conflicts	merginal.txt	/*merginal-rebase-conflicts*
 merginal-requirements	merginal.txt	/*merginal-requirements*
 merginal-usage	merginal.txt	/*merginal-usage*
 merginal.txt	merginal.txt	/*merginal.txt*

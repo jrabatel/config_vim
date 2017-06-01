@@ -1,3 +1,102 @@
+" SET UP VUNDLE
+set nocompatible
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" GUI
+Plugin 'mru.vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'vim-scripts/BufOnly.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'duggiefresh/vim-easydir'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'henrik/vim-indexed-search' " Show Match 123 of 456 /search term/ in searches
+Plugin 'vim-scripts/Conque-Shell'
+Plugin 'majutsushi/tagbar'
+Plugin 'TagHighlight'
+Plugin 'TailMinusF'
+Plugin 'joonty/vdebug'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'idanarye/vim-merginal'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'cohama/agit.vim'
+Plugin 'laurentgoudet/vim-howdoi'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-vinegar'
+Plugin 'YankRing.vim'
+Plugin 'bling/vim-airline'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+
+" EDITOR
+Plugin 'luochen1990/rainbow'
+Plugin 'matchit.zip'
+Plugin 'godlygeek/tabular'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'andrewradev/splitjoin.vim'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'mjbrownie/swapit'
+Plugin 'scrooloose/syntastic'
+Plugin 'myint/syntastic-extras'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-eunuch'
+Plugin 'terryma/vim-expand-region'
+Plugin 'vimwiki/vimwiki'
+Plugin 'gcmt/wildfire.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-repeat'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'derekwyatt/vim-fswitch'
+
+" LANGUAGE / FRAMEWORK
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'nginx.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'lucapette/vim-ruby-doc'
+Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'ap/vim-css-color'
+Plugin 'othree/html5.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-jdaddy'
+Plugin 'vim-latex/vim-latex'
+Plugin 'tpope/vim-markdown'
+" Plugin 'stephpy/vim-yaml'
+
+" UTILS
+Plugin 'genutils'
+Plugin 'libList.vim'
+Plugin 'L9'
+
+call vundle#end()
+filetype plugin indent on
+" END OF VUNDLE SETUP
+
 " VERY GENERAL OPTIONS
 set nocompatible
 set hidden
@@ -8,7 +107,7 @@ set mouse=a
 " set showmatch  " montre les correspondance entre les paranthèses ouvrantes et fermantes
 set ignorecase " ignore case in search
 set smartcase  " case-sensitive only if there is a capital letter
-" set hlsearch
+set hlsearch
 set incsearch
 filetype on
 set history=1000
@@ -35,11 +134,10 @@ syntax enable
 set background=dark
 set t_ut=
 set t_Co=256
-" let g:solarized_termcolors=16
+"let g:solarized_termcolors=16
+" let g:solarized_termcolors=256
 colorscheme skittles_berry
-" colorscheme solarized
-" set powerline for vim
-set rtp+=$PYTHON_LOCAL_INSTALL/powerline/bindings/vim
+"colorscheme solarized
 
 " Mapping to open vimrc config file
 nmap ,vim :edit ~/.vimrc<CR>
@@ -83,12 +181,20 @@ set viminfo+=!
 
 " """"""""""""""""""""""""""""""""""""""""""
 " MAPPINGS
-"
+
+"explorer mappings
+nnoremap <f1> :BufExplorer<cr>
+nnoremap <f2> :NERDTreeToggle<cr>
+nnoremap <f3> :TagbarToggle<cr>
+
 " Mappings to insert empty lines in normal mode (respectively below and above
 " the cursor)
 nmap ,o o<Esc>k
 nmap ,O O<Esc>j
 
+"make <c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
 
 " Search for the selected text in Google or Wikipedia
 " vmap ,g :<C-U>!firefox "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" &gt;& /dev/null<CR><CR>
@@ -229,10 +335,10 @@ inoremap ,w <C-o>w
 inoremap ,b <C-o>b
 inoremap ,a <C-o>0
 inoremap ,p <C-o>$
+
 " allows quick commenting of a line or a selected block
-imap ,c <Esc>gcc
-vmap ,c gc
-nmap ,c gcc
+let NERDSpaceDelims=1
+
 " allows quick indenting of a ling or a selected bloc (does not work
 " correctly)
 imap ,;= <Esc>==
@@ -312,44 +418,26 @@ nmap ,add :silent grep -r '\*\*ADDED' **/*<CR>:redraw!<CR>
 nmap ,todo :silent grep -r '\*\*TODO' **/*<CR>:redraw!<CR>
 nmap ,note :silent grep -r '\*\*NOTE' **/*<CR>:redraw!<CR>
 
-" FOR FuzzyFinder:
-" nnoremap <silent> <C-f>b      :FufBuffer<CR>
-" nnoremap <silent> <C-p>      :FufFileWithCurrentBufferDir<CR>
-" nnoremap <silent> <C-f><C-p> :FufFileWithFullCwd<CR>
-" nnoremap <silent> <C-f>p     :FufFile<CR>
-" nnoremap <silent> <C-f><C-d> :FufDirWithCurrentBufferDir<CR>
-" nnoremap <silent> <C-f>d     :FufDirWithFullCwd<CR>
-" nnoremap <silent> <C-f>D     :FufDir<CR>
-" nnoremap <silent> <C-f>mf    :FufMruFile<CR>
-" nnoremap <silent> <C-k>      :FufMruCmd<CR>
-" nnoremap <silent> <C-b>      :FufBookmarkDir<CR>
-" nnoremap <silent> <C-f><C-t> :FufTag<CR>
-" nnoremap <silent> <C-f>t     :FufTag!<CR>
-" noremap  <silent> g]         :FufTagWithCursorWord!<CR>
-" nnoremap <silent> <C-f><C-f> :FufTaggedFile<CR>
-" nnoremap <silent> <C-f><C-j> :FufJumpList<CR>
-" nnoremap <silent> <C-f><C-g> :FufChangeList<CR>
-" nnoremap <silent> <C-f><C-q> :FufQuickfix<CR>
-" nnoremap <silent> <C-f><C-l> :FufLine<CR>
-" nnoremap <silent> <C-f><C-h> :FufHelp<CR>
-" nnoremap <silent> <C-f><C-b> :FufAddBookmark<CR>
-" vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
-" nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
-" nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
-
 " FOR Show YankRing window:
 nnoremap <silent> ,,c :YRShow<CR>
 let g:yankring_window_use_horiz = 0  " Use vertical split
 let g:yankring_min_element_length = 2 " Do not put simple characters in the yankring
 let g:yankring_window_width = 50 " Size used in a vertical split
 
+" FOR MULTIPLE-CURSORS
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-i>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_start_key='<C-i>'
 
 " FOR CtrlP
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_working_path_mode = 0
 " FOR CtrlPFunky
 let g:ctrlp_extensions = ['funky']
-nnoremap <Leader><c-f> :CtrlPFunky<Cr>
+nnoremap <Leader><c-f> :CtrlPMRUFiles<Cr>
 " narrow the list down with a word under cursor
 nnoremap gd :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 " FOR CtrlPCmdPalette
@@ -368,14 +456,6 @@ let g:ConqueTerm_ReadUnfocused = 1
 let g:ConqueTerm_InsertOnEnter = 0
 let g:ConqueTerm_StartMessages = 0
 
-" FOR a.vim
-let g:alternateExtensions_hxx = "hpp"
-let g:alternateExtensions_hpp = "hxx"
-nmap ,aa :A<CR>
-nmap ,as :AS<CR>
-nmap ,av :AV<CR>
-nmap ,an :AN<CR>
-
 " FOR TABULAR
 " for aligning the last column in lines of code
 nmap ,alc :Tab /\s\S\+;<CR>
@@ -384,46 +464,15 @@ nmap ,al: :Tab /:\w*<CR>
 nmap ,al, :Tab /,<CR>
 nmap ,al; :Tab /;<CR>
 
-" FOR PSEARCH
-nmap ,f/ :PSearch<CR>
-nmap ,fw :PSearchw<CR>
+" FOR ULTISNIPS
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-n>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
-" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FOR XPTEMPLATE
-" Set personal snippet folder location:
-let g:xptemplate_snippet_folders=['$HOME/.vim/xptemplate_mySnippets']
-"
-" Automatic closing of quotes and braces:
-let g:xptemplate_brace_complete = 0
-" "
-" Snippet triggering key:
-let g:xptemplate_key = '<C-k>'
-" "
-" " open the pop-up menu:
-" let g:xptemplate_key_pum_only = '<Leader><Tab>'
-" "
-" " Clear current placeholder and jump to the next:
-" imap <C-d> <Tab>
-let g:xptemplate_nav_cancel = '<C-d>'
-" "
-" " Move to the next placeholder in a snippet:
-let g:xptemplate_nav_next = '<C-l>'
-" "
-" " Go to the end of the current placeholder and in to insert mode:
-" " <C-_> is actually CONTROL-/ on my keyboard.
-let g:xptemplate_to_right = '<C-_>'
-" "
-" " Move cursor back to last placeholder:
-" let g:xptemplate_goback = '<C-g>'
-" "
-" Use TAB/S-TAB to navigate through the pop-up menu:
-let g:xptemplate_pum_tab_nav = 1
-" "
-" " Reload xptemplate snippets without quitting vim.
-nmap ,xpt :XPTreload<CR>
-
-let g:xptemplate_vars="$author=Julien Rabatel"
-let g:xptemplate_vars="$email=jrabatel@gmail.com"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FOR MINIBUFEXPL
 let g:miniBufExplMapWindowNavVim = 1
@@ -461,6 +510,22 @@ nmap B <leader><leader>B
 nmap e <leader><leader>e
 nmap E <leader><leader>E
 
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+
 " FOR SPLITJOIN
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
@@ -472,28 +537,25 @@ nmap <leader>gu :Git pull<cr>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gd :Gremove<CR>
-" FOR GITLOG
-nmap <leader>gl :GitLog<CR>
-
-" FOR TBONE
-" for development
-" create a 3 window environment
-nmap <leader>tdev :Tmux split-window -h<CR>:Tmux swap-pane -R<CR>:Tmux split-window -v<CR>
-
-" FOR SEEING-IS-BELIEVING
-nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-xmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-imap <buffer> <F5> <Plug>(seeing-is-believing-run)
-
-nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-
-" FOR SELECT-AND-SEARCH
-let g:select_and_search_active = 1
+" FOR AGIT
+nmap <leader>gl :Agit<CR>
 
 " FOR NerdtreePluginOpen
 let g:nerdtree_plugin_open_cmd = 'xdg-open'
+
+" FOR FSWITCH
+" 1st type
+nmap <leader>fs<space> :execute "b:fswitchdst=".g:fswitchdst1<CR>:let b:fswitchfnames = g:fswitchfnames1<CR>:let b:fswitchlocs = g:fswitchlocs1<CR>:FSHere<CR>
+nmap <leader>fsh :FSLeft<CR>
+nmap <leader>fsj :FSBelow<CR>
+nmap <leader>fsk :FSAbove<CR>
+nmap <leader>fsl :FSRight<CR>
+" 2nd type
+nmap <leader>fss<space> :FSHere<CR>
+nmap <leader>fssh :FSLeft<CR>
+nmap <leader>fssj :FSBelow<CR>
+nmap <leader>fssk :FSAbove<CR>
+nmap <leader>fssl :FSRight<CR>
 
 " Ruby on rails
 " Mappings

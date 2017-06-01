@@ -7,7 +7,6 @@
 " Description: insert mode template expander with cursor placement
 "              while preserving filetype indentation.
 "
-"     $Id: imaps.vim 997 2006-03-20 09:45:45Z srinathava $
 "
 " Documentation: {{{
 "
@@ -85,15 +84,11 @@
 "	call IMAP ('date`', "\<c-r>=strftime('%b %d %Y')\<cr>", '')
 "
 " sets up the map for date` to insert the current date.
-"
-"--------------------------------------%<--------------------------------------
-" Bonus: This script also provides a command Snip which puts tearoff strings,
-" '----%<----' above and below the visually selected range of lines. The
-" length of the string is chosen to be equal to the longest line in the range.
-" Recommended Usage:
-"   '<,'>Snip
-"--------------------------------------%<--------------------------------------
 " }}}
+
+if exists('b:suppress_latex_suite') && b:suppress_latex_suite == 1
+	finish
+endif
 
 " line continuation used here.
 let s:save_cpo = &cpo
@@ -108,6 +103,9 @@ if !exists('g:Imap_StickyPlaceHolders')
 endif
 if !exists('g:Imap_DeleteEmptyPlaceHolders')
 	let g:Imap_DeleteEmptyPlaceHolders = 1
+endif
+if !exists('g:Imap_GoToSelectMode')
+	let g:Imap_GoToSelectMode = 1
 endif
 " }}}
 " Variables {{{
@@ -170,23 +168,33 @@ function! IMAP(lhs, rhs, ft, ...)
 	let s:phe_{a:ft}_{hash} = phe
 
 	" Add a:lhs to the list of left-hand sides that end with lastLHSChar:
-	let lastLHSChar = a:lhs[strlen(a:lhs)-1]
+	let lastLHSChar = s:MultiByteLastCharacter(a:lhs)
 	let hash = s:Hash(lastLHSChar)
 	if !exists("s:LHS_" . a:ft . "_" . hash)
 		let s:LHS_{a:ft}_{hash} = escape(a:lhs, '\')
 	else
-		let s:LHS_{a:ft}_{hash} = escape(a:lhs, '\') .'\|'.  s:LHS_{a:ft}_{hash}
+		" Check whether this lhs is already mapped.
+		if s:LHS_{a:ft}_{hash} !~# "\\V" . escape(a:lhs, '\')
+			let s:LHS_{a:ft}_{hash} = escape(a:lhs, '\') .'\|'.  s:LHS_{a:ft}_{hash}
+		endif
 	endif
 
 	" map only the last character of the left-hand side.
 	if lastLHSChar == ' '
-		let lastLHSChar = '<space>'
-	end
-	exe 'inoremap <silent>'
-				\ escape(lastLHSChar, '|')
-				\ '<C-r>=<SID>LookupCharacter("' .
-				\ escape(lastLHSChar, '\|"') .
-				\ '")<CR>'
+		for lastLHSChar in ['<space>', '<s-space>', '<c-space>', '<cs-space>']
+			exe 'inoremap <silent>'
+						\ escape(lastLHSChar, '|')
+						\ '<C-r>=<SID>LookupCharacter("' .
+						\ escape(lastLHSChar, '\|"') .
+						\ '")<CR>'
+		endfor
+	else
+		exe 'inoremap <silent>'
+					\ escape(lastLHSChar, '|')
+					\ '<C-r>=<SID>LookupCharacter("' .
+					\ escape(lastLHSChar, '\|"') .
+					\ '")<CR>'
+	endif
 endfunction
 
 " }}}
@@ -194,7 +202,7 @@ endfunction
 "
 " Added mainly for debugging purposes, but maybe worth keeping.
 function! IMAP_list(lhs)
-	let char = a:lhs[strlen(a:lhs)-1]
+	let char = s:MultiByteLastCharacter(a:lhs)
 	let charHash = s:Hash(char)
 	if exists("s:LHS_" . &ft ."_". charHash) && a:lhs =~ s:LHS_{&ft}_{charHash}
 		let ft = &ft
@@ -204,8 +212,39 @@ function! IMAP_list(lhs)
 		return ""
 	endif
 	let hash = s:Hash(a:lhs)
-	return "rhs = " . s:Map_{ft}_{hash} . " place holders = " .
+	return "rhs = " . strtrans( s:Map_{ft}_{hash} ) . " place holders = " .
 				\ s:phs_{ft}_{hash} . " and " . s:phe_{ft}_{hash}
+endfunction
+" }}}
+" IMAP_list_all:  list all the rhs and place holders with lhs ending in a:char {{{
+function! IMAP_list_all(char)
+	let result = ''
+	let charHash = s:Hash(a:char)
+	if &ft == ''
+		let ft_list = ['']
+	else
+		let ft_list = [&ft, '']
+	endif
+
+	" Loop over current file type and global IMAPs
+	for ft in ft_list
+		if ft == ''
+			let ft_display = 'global: '
+		else
+			let ft_display = ft . ': '
+		endif
+		if exists("s:LHS_" . ft ."_". charHash)
+			for lhs in split( s:LHS_{ft}_{charHash}, '\\|' )
+				" Undo the escaping of backslashes in lhs
+				let lhs = substitute(lhs, '\\\\', '\', 'g')
+				let hash = s:Hash(lhs)
+				" echohl WarningMsg
+				let result .= ft_display . lhs . " => " . strtrans( s:Map_{ft}_{hash} ) . "\n"
+				" echohl None
+			endfor
+		endif
+	endfor
+	return result
 endfunction
 " }}}
 " LookupCharacter: inserts mapping corresponding to this character {{{
@@ -227,10 +266,10 @@ function! s:LookupCharacter(char)
 	" Use '\V' (very no-magic) so that only '\' is special, and it was already
 	" escaped when building up s:LHS_{&ft}_{charHash} .
 	if exists("s:LHS_" . &ft . "_" . charHash)
-				\ && text =~ "\\C\\V\\(" . s:LHS_{&ft}_{charHash} . "\\)\\$"
+				\ && text =~ "\\C\\V\\%(" . s:LHS_{&ft}_{charHash} . "\\)\\$"
 		let ft = &ft
 	elseif exists("s:LHS__" . charHash)
-				\ && text =~ "\\C\\V\\(" . s:LHS__{charHash} . "\\)\\$"
+				\ && text =~ "\\C\\V\\%(" . s:LHS__{charHash} . "\\)\\$"
 		let ft = ""
 	else
 		" If this is a character which could have been used to trigger an
@@ -239,21 +278,14 @@ function! s:LookupCharacter(char)
 			let lastword = matchstr(getline('.'), '\k\+$', '')
 			call IMAP_Debug('getting lastword = ['.lastword.']', 'imap')
 			if lastword != ''
-				" An extremeley wierd way to get around the fact that vim
-				" doesn't have the equivalent of the :mapcheck() function for
-				" abbreviations.
-				let _a = @a
-				exec "redir @a | silent! iab ".lastword." | redir END"
-				let abbreviationRHS = matchstr(@a."\n", "\n".'i\s\+'.lastword.'\s\+@\?\zs.*\ze'."\n")
+				let abbreviationRHS = maparg( lastword, 'i', 1 )
 
 				call IMAP_Debug('getting abbreviationRHS = ['.abbreviationRHS.']', 'imap')
 
-				if @a =~ "No abbreviation found" || abbreviationRHS == ""
-					let @a = _a
+				if abbreviationRHS == ''
 					return a:char
 				endif
 
-				let @a = _a
 				let abbreviationRHS = escape(abbreviationRHS, '\<"')
 				exec 'let abbreviationRHS = "'.abbreviationRHS.'"'
 
@@ -272,7 +304,7 @@ function! s:LookupCharacter(char)
 	" matchstr() returns the match that starts first. This automatically
 	" ensures that the longest LHS is used for the mapping.
 	if !exists('lhs') || !exists('rhs')
-		let lhs = matchstr(text, "\\C\\V\\(" . s:LHS_{ft}_{charHash} . "\\)\\$")
+		let lhs = matchstr(text, "\\C\\V\\%(" . s:LHS_{ft}_{charHash} . "\\)\\$")
 		let hash = s:Hash(lhs)
 		let rhs = s:Map_{ft}_{hash}
 		let phs = s:phs_{ft}_{hash} 
@@ -282,10 +314,19 @@ function! s:LookupCharacter(char)
 	if strlen(lhs) == 0
 		return a:char
 	endif
-	" enough back-spaces to erase the left-hand side; -1 for the last
-	" character typed:
-	let bs = substitute(strpart(lhs, 1), ".", "\<bs>", "g")
-	return bs . IMAP_PutTextWithMovement(rhs, phs, phe)
+
+	" enough back-spaces to erase the left-hand side
+	let bs = repeat("\<bs>", s:MultiByteStrlen(lhs))
+
+	" \<c-g>u inserts an undo point
+	let result = a:char . "\<c-g>u" . bs . IMAP_PutTextWithMovement(rhs, phs, phe)
+
+	if a:char !~? '[a-z0-9]'
+		" If 'a:char' is not a letter or number, insert it literally.
+		let result = "\<c-v>" . result
+	endif
+
+	return result
 endfunction
 
 " }}}
@@ -316,52 +357,26 @@ function! IMAP_PutTextWithMovement(str, ...)
 	let phsUser = IMAP_GetPlaceHolderStart()
 	let pheUser = IMAP_GetPlaceHolderEnd()
 
-	" Problem:  depending on the setting of the 'encoding' option, a character
-	" such as "\xab" may not match itself.  We try to get around this by
-	" changing the encoding of all our strings.  At the end, we have to
-	" convert text back.
-	let phsEnc     = s:Iconv(phs, "encode")
-	let pheEnc     = s:Iconv(phe, "encode")
-	let phsUserEnc = s:Iconv(phsUser, "encode")
-	let pheUserEnc = s:Iconv(pheUser, "encode")
-	let textEnc    = s:Iconv(text, "encode")
-	if textEnc != text
-		let textEncoded = 1
-	else
-		let textEncoded = 0
-	endif
-
 	let pattern = '\V\(\.\{-}\)' .phs. '\(\.\{-}\)' .phe. '\(\.\*\)'
 	" If there are no placeholders, just return the text.
-	if textEnc !~ pattern
-		call IMAP_Debug('Not getting '.phs.' and '.phe.' in '.textEnc, 'imap')
+	if text !~ pattern
+		call IMAP_Debug('Not getting '.phs.' and '.phe.' in '.text, 'imap')
 		return text
 	endif
 	" Break text up into "initial <+template+> final"; any piece may be empty.
-	let initialEnc  = substitute(textEnc, pattern, '\1', '')
-	let templateEnc = substitute(textEnc, pattern, '\2', '')
-	let finalEnc    = substitute(textEnc, pattern, '\3', '')
+	let initial  = substitute(text, pattern, '\1', '')
+	let template = substitute(text, pattern, '\2', '')
+	let final    = substitute(text, pattern, '\3', '')
 
 	" If the user does not want to use placeholders, then remove all but the
 	" first placeholder.
 	" Otherwise, replace all occurences of the placeholders here with the
 	" user's choice of placeholder settings.
 	if exists('g:Imap_UsePlaceHolders') && !g:Imap_UsePlaceHolders
-		let finalEnc = substitute(finalEnc, '\V'.phs.'\.\{-}'.phe, '', 'g')
+		let final = substitute(final, '\V'.phs.'\.\{-}'.phe, '', 'g')
 	else
-		let finalEnc = substitute(finalEnc, '\V'.phs.'\(\.\{-}\)'.phe,
-					\ phsUserEnc.'\1'.pheUserEnc, 'g')
-	endif
-
-	" The substitutions are done, so convert back, if necessary.
-	if textEncoded
-		let initial = s:Iconv(initialEnc, "decode")
-		let template = s:Iconv(templateEnc, "decode")
-		let final = s:Iconv(finalEnc, "decode")
-	else
-		let initial = initialEnc
-		let template = templateEnc
-		let final = finalEnc
+		let final = substitute(final, '\V'.phs.'\(\.\{-}\)'.phe,
+					\ phsUser.'\1'.pheUser, 'g')
 	endif
 
 	" Build up the text to insert:
@@ -425,29 +440,38 @@ function! IMAP_Jumpfunc(direction, inclusive)
 	" description.
 	let template = 
 		\ matchstr(strpart(getline('.'), col('.')-1),
-		\          '\V\^'.phsUser.'\zs\.\{-}\ze\('.pheUser.'\|\$\)')
+		\          '\V\^'.phsUser.'\zs\.\{-}\ze\%('.pheUser.'\|\$\)')
 	let placeHolderEmpty = !strlen(template)
+
+	" Search for the end placeholder.
+	let end_pos = searchpos('\V'.pheUser, 'ne')
+	" How many characters should be selected?
+	let nmove = virtcol(end_pos) - virtcol('.')
 
 	" If we are selecting in exclusive mode, then we need to move one step to
 	" the right
-	let extramove = ''
 	if &selection == 'exclusive'
-		let extramove = 'l'
+		let nmove += 1
 	endif
 
 	" Select till the end placeholder character.
-	let movement = "\<C-o>v/\\V".pheUser."/e\<CR>".extramove
+	let movement = "\<C-o>v".nmove."l"
 
-	" First remember what the search pattern was. s:RemoveLastHistoryItem will
-	" reset @/ to this pattern so we do not create new highlighting.
-	let g:Tex_LastSearchPattern = @/
+	" Leave (insert)-visual mode and reselect.
+	let movement .= "\<C-\>\<C-N>gv"
 
 	" Now either goto insert mode or select mode.
 	if placeHolderEmpty && g:Imap_DeleteEmptyPlaceHolders
-		" delete the empty placeholder into the blackhole.
-		return movement."\"_c\<C-o>:".s:RemoveLastHistoryItem."\<CR>"
+		" Delete the empty placeholder into the blackhole.
+		return movement . '"_c'
 	else
-		return movement."\<C-\>\<C-N>:".s:RemoveLastHistoryItem."\<CR>gv\<C-g>"
+		if g:Imap_GoToSelectMode
+			" Go to select mode
+			return movement . "\<C-g>"
+		else
+			" Do not go to select mode
+			return movement
+		endif
 	endif
 	
 endfunction
@@ -462,20 +486,20 @@ endfunction
 " etc.
 
 " jumping forward and back in insert mode.
-imap <silent> <Plug>IMAP_JumpForward    <c-r>=IMAP_Jumpfunc('', 0)<CR>
-imap <silent> <Plug>IMAP_JumpBack       <c-r>=IMAP_Jumpfunc('b', 0)<CR>
+inoremap <silent> <Plug>IMAP_JumpForward    <c-r>=IMAP_Jumpfunc('', 0)<CR>
+inoremap <silent> <Plug>IMAP_JumpBack       <c-r>=IMAP_Jumpfunc('b', 0)<CR>
 
 " jumping in normal mode
-nmap <silent> <Plug>IMAP_JumpForward        i<c-r>=IMAP_Jumpfunc('', 0)<CR>
-nmap <silent> <Plug>IMAP_JumpBack           i<c-r>=IMAP_Jumpfunc('b', 0)<CR>
+nnoremap <silent> <Plug>IMAP_JumpForward        i<c-r>=IMAP_Jumpfunc('', 0)<CR>
+nnoremap <silent> <Plug>IMAP_JumpBack           i<c-r>=IMAP_Jumpfunc('b', 0)<CR>
 
 " deleting the present selection and then jumping forward.
-vmap <silent> <Plug>IMAP_DeleteAndJumpForward       "_<Del>i<c-r>=IMAP_Jumpfunc('', 0)<CR>
-vmap <silent> <Plug>IMAP_DeleteAndJumpBack          "_<Del>i<c-r>=IMAP_Jumpfunc('b', 0)<CR>
+vnoremap <silent> <Plug>IMAP_DeleteAndJumpForward       "_<Del>i<c-r>=IMAP_Jumpfunc('', 0)<CR>
+vnoremap <silent> <Plug>IMAP_DeleteAndJumpBack          "_<Del>i<c-r>=IMAP_Jumpfunc('b', 0)<CR>
 
 " jumping forward without deleting present selection.
-vmap <silent> <Plug>IMAP_JumpForward       <C-\><C-N>i<c-r>=IMAP_Jumpfunc('', 0)<CR>
-vmap <silent> <Plug>IMAP_JumpBack          <C-\><C-N>`<i<c-r>=IMAP_Jumpfunc('b', 0)<CR>
+vnoremap <silent> <Plug>IMAP_JumpForward       <C-\><C-N>i<c-r>=IMAP_Jumpfunc('', 0)<CR>
+vnoremap <silent> <Plug>IMAP_JumpBack          <C-\><C-N>`<i<c-r>=IMAP_Jumpfunc('b', 0)<CR>
 
 " }}}
 " Default maps for IMAP_Jumpfunc {{{
@@ -500,7 +524,7 @@ else
 endif
 " }}}
 
-nmap <silent> <script> <plug><+SelectRegion+> `<v`>
+nnoremap <silent> <script> <plug><+SelectRegion+> `<v`>
 
 " ============================================================================== 
 " enclosing selected region.
@@ -561,7 +585,7 @@ function! VEnclose(vstart, vend, VStart, VEnd)
 
 		silent! exe normcmd
 		" this is to restore the r register.
-		let @r = _r
+		call setreg("r", _r, "c")
 		" and finally, this is to restore the search history.
 		execute s:RemoveLastHistoryItem
 
@@ -603,7 +627,7 @@ function! ExecMap(prefix, mode)
 		let char = getchar()
 		if char !~ '^\d\+$'
 			if char == "\<BS>"
-				let mapCmd = strpart(mapCmd, 0, strlen(mapCmd) - 1)
+				let mapCmd = s:MultiByteWOLastCharacter(mapCmd)
 			endif
 		else " It is the ascii code.
 			let char = nr2char(char)
@@ -615,7 +639,7 @@ function! ExecMap(prefix, mode)
 					let foundMap = 1
 					let breakLoop = 1
 				elseif mapcheck(mapCmd, a:mode) == ""
-					let mapCmd = strpart(mapCmd, 0, strlen(mapCmd) - 1)
+					let mapCmd = s:MultiByteWOLastCharacter(mapCmd)
 				endif
 			endif
 		endif
@@ -641,13 +665,6 @@ endfunction
 " ============================================================================== 
 " helper functions
 " ============================================================================== 
-" Strntok: extract the n^th token from a list {{{
-" example: Strntok('1,23,3', ',', 2) = 23
-fun! <SID>Strntok(s, tok, n)
-	return matchstr( a:s.a:tok[0], '\v(\zs([^'.a:tok.']*)\ze['.a:tok.']){'.a:n.'}')
-endfun
-
-" }}}
 " s:RemoveLastHistoryItem: removes last search item from search history {{{
 " Description: Execute this string to clean up the search history.
 let s:RemoveLastHistoryItem = ':call histdel("/", -1)|let @/=g:Tex_LastSearchPattern'
@@ -681,38 +698,6 @@ function! IMAP_GetPlaceHolderEnd()
 		return "+>"
 endfun
 " }}}
-" s:Iconv:  a wrapper for iconv()" {{{
-" Problem:  after
-" 	let text = "\xab"
-" (or using the raw 8-bit ASCII character in a file with 'fenc' set to
-" "latin1") if 'encoding' is set to utf-8, then text does not match itself:
-" 	echo text =~ text
-" returns 0.
-" Solution:  When this happens, a re-encoded version of text does match text:
-" 	echo iconv(text, "latin1", "utf8") =~ text
-" returns 1.  In this case, convert text to utf-8 with iconv().
-" TODO:  Is it better to use &encoding instead of "utf8"?  Internally, vim
-" uses utf-8, and can convert between latin1 and utf-8 even when compiled with
-" -iconv, so let's try using utf-8.
-" Arguments:
-" 	a:text = text to be encoded or decoded
-" 	a:mode = "encode" (latin1 to utf8) or "decode" (utf8 to latin1)
-" Caution:  do not encode and then decode without checking whether the text
-" has changed, becuase of the :if clause in encoding!
-function! s:Iconv(text, mode)
-	if a:mode == "decode"
-		return iconv(a:text, "utf8", "latin1")
-	endif
-	if a:text =~ '\V\^' . escape(a:text, '\') . '\$'
-		return a:text
-	endif
-	let textEnc = iconv(a:text, "latin1", "utf8")
-	if textEnc !~ '\V\^' . escape(a:text, '\') . '\$'
-		call IMAP_Debug('Encoding problems with text '.a:text.' ', 'imap')
-	endif
-	return textEnc
-endfun
-"" }}}
 " IMAP_Debug: interface to Tex_Debug if available, otherwise emulate it {{{
 " Description: 
 " Do not want a memory leak! Set this to zero so that imaps always
@@ -790,41 +775,19 @@ function! IMAP_GetVal(name, ...)
 		return default
 	endif
 endfunction " }}}
-
-" ============================================================================== 
-" A bonus function: Snip()
-" ============================================================================== 
-" Snip: puts a scissor string above and below block of text {{{
-" Desciption:
-"-------------------------------------%<-------------------------------------
-"   this puts a the string "--------%<---------" above and below the visually
-"   selected block of lines. the length of the 'tearoff' string depends on the
-"   maximum string length in the selected range. this is an aesthetically more
-"   pleasing alternative instead of hardcoding a length.
-"-------------------------------------%<-------------------------------------
-function! <SID>Snip() range
-	let i = a:firstline
-	let maxlen = -2
-	" find out the maximum virtual length of each line.
-	while i <= a:lastline
-		exe i
-		let length = virtcol('$')
-		let maxlen = (length > maxlen ? length : maxlen)
-		let i = i + 1
-	endwhile
-	let maxlen = (maxlen > &tw && &tw != 0 ? &tw : maxlen)
-	let half = maxlen/2
-	exe a:lastline
-	" put a string below
-	exe "norm! o\<esc>".(half - 1)."a-\<esc>A%<\<esc>".(half - 1)."a-"
-	" and above. its necessary to put the string below the block of lines
-	" first because that way the first line number doesnt change...
-	exe a:firstline
-	exe "norm! O\<esc>".(half - 1)."a-\<esc>A%<\<esc>".(half - 1)."a-"
-endfunction
-
-com! -nargs=0 -range Snip :<line1>,<line2>call <SID>Snip()
-" }}}
+" s:MultiByteStrlen: Same as strlen() but counts multibyte characters {{{
+" instead of bytes.
+function! s:MultiByteStrlen(str)
+	return strlen(substitute(a:str, ".", "x", "g"))
+endfunction " }}}
+" s:MultiByteLastCharacter: Return last multibyte characters {{{
+function! s:MultiByteLastCharacter(str)
+	return matchstr(a:str, ".$")
+endfunction " }}}
+" s:MultiByteWOLastCharacter: Return string without last multibyte character {{{
+function! s:MultiByteWOLastCharacter(str)
+	return substitute(a:str, ".$", "", "")
+endfunction " }}}
 
 let &cpo = s:save_cpo
 

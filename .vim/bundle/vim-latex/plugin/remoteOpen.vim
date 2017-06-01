@@ -1,6 +1,5 @@
 " File: remoteOpen.vim
 " Author: Srinath Avadhanula <srinath AT fastmail DOT fm>
-" $Id: remoteOpen.vim 1080 2010-01-26 22:02:34Z tmaas $
 " 
 " Description:
 " Often times, an external program needs to open a file in gvim from the
@@ -28,6 +27,10 @@
 "
 " Ofcourse, this requires vim with +clientserver. If not, then RemoteOpen just
 " opens in the present session.
+
+if exists('b:suppress_latex_suite') && b:suppress_latex_suite == 1
+	finish
+endif
 
 " Enclose <args> in single quotes so it can be passed as a function argument.
 com! -nargs=1 RemoteOpen :call RemoteOpen('<args>')

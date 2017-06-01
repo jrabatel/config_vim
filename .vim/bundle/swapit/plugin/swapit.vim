@@ -77,20 +77,6 @@
 "               with custom execs eg.
 "               exec "SwapList function_scope private protected public"
 "
-"               For this alpha version multi word swap list is a bit trickier
-"               to to define. You can add to the swap list directly using .
-"
-"                 call add(g:swap_lists, {'name':'Multi Word Example',
-"                             \'options': ['swap with spaces',
-"                             \'swap with  @#$@# chars in it' , \
-"                             \'running out of ideas here...']})
-"
-"               Future versions will make this cleaner
-"
-"               Also if you have a spur of the moment Idea type
-"               :SwapIdea
-"               To get to the current filetypes swapit file
-"
 "               4. Insert mode completion
 "
 "               You can use a swap list in insert mode by typing the list name
@@ -149,11 +135,7 @@
 "    finish
 "endif
 let g:loaded_swapit = 1
-let g:swap_xml_matchit = []
 
-if !exists('g:swap_lists')
-    let g:swap_lists = []
-endif
 if !exists('g:swap_list_dont_append')
     let g:swap_list_dont_append = 'no'
 endif
@@ -170,26 +152,63 @@ endif
 "Command/AutoCommand Configuration {{{1
 "
 " For executing the listing
-nnoremap <silent><c-a> :<c-u>call SwapWord(expand("<cword>"),'forward', 'no')<cr>
-nnoremap <silent><c-x> :<c-u>call SwapWord(expand("<cword>"),'backward','no')<cr>
-vnoremap <silent><c-a> "dy:call SwapWord(@d,'forward','yes')<cr>
-vnoremap <silent><c-x> "dy:call SwapWord(@d,'backward','yes')<cr>
+nnoremap <silent><Plug>SwapIncrement :<c-u>let swap_count = v:count<Bar>
+            \call SwapWord(expand("<cword>"), swap_count, 'forward', 'no')<Bar>
+            \silent! call repeat#set("\<Plug>SwapIncrement", swap_count)<Bar>
+            \unlet swap_count<CR>
+nnoremap <silent><Plug>SwapDecrement :<c-u>let swap_count = v:count<Bar>
+            \call SwapWord(expand("<cword>"), swap_count, 'backward','no')<Bar>
+            \silent! call repeat#set("\<Plug>SwapDecrement", swap_count)<Bar>
+            \unlet swap_count<CR>
+nmap <silent><c-a> <Plug>SwapIncrement
+nmap <silent><c-x> <Plug>SwapDecrement
+vnoremap <silent><c-a> :<c-u>let swap_count = v:count<Bar>call SwapWord(<SID>GetSelection(), swap_count, 'forward', 'yes')<Bar>unlet swap_count<cr>
+vnoremap <silent><c-x> :<c-u>let swap_count = v:count<Bar>call SwapWord(<SID>GetSelection(), swap_count, 'backward','yes')<Bar>unlet swap_count<cr>
 "inoremap <silent><c-b> <esc>b"sdwi <c-r>=SwapInsert()<cr>
 "inoremap <expr> <c-b> SwapInsert()
 
 " For adding lists
 com! -nargs=* SwapList call AddSwapList(<q-args>)
-com! ClearSwapList let g:swap_lists = []
-com! SwapIdea call OpenSwapFileType()
-com! -range -nargs=1 SwapWordVisual call SwapWord(getline('.'),<f-args>,'yes')
-"au BufEnter call LoadFileTypeSwapList()
-com! SwapListLoadFT call LoadFileTypeSwapList()
+com! -bar ClearSwapList let b:swap_lists = []
+com! -bar SwapIdea call OpenSwapFileType()
+com! -range -nargs=1 SwapWordVisual call SwapWord(getline('.'), 1, <f-args>,'yes')
 com! -nargs=+ SwapXmlMatchit call AddSwapXmlMatchit(<q-args>)
 "Swap Processing Functions {{{1
 "
 "
+" <SID>GetSelection() retrieves the selected text without clobbering a register {{{2
+fun! s:GetSelection()
+    let save_clipboard = &clipboard
+    set clipboard= " Avoid clobbering the selection and clipboard registers.
+        let save_reg = getreg('"')
+        let save_regmode = getregtype('"')
+            execute 'silent! normal! gvy'
+            let selection = @"
+        call setreg('"', save_reg, save_regmode)
+    let &clipboard = save_clipboard
+    return selection
+endfun
+
+" <SID>GetLists() accessor for swap lists {{{2
+fun! s:GetLists()
+    if g:swap_list_dont_append == 'yes'
+        return exists('b:swap_lists') ? b:swap_lists : []
+    elseif exists('b:swap_lists')
+        let lists = copy(b:swap_lists)
+        let names = map(copy(b:swap_lists), 'v:val.name')
+        for swap_list in g:default_swap_list
+            if index(names, swap_list.name) == -1
+                call add(lists, swap_list)
+            endif
+        endfor
+        return lists
+    else
+        return g:default_swap_list
+    endif
+endfun
+
 "SwapWord() main processiong event function {{{2
-fun! SwapWord (word, direction, is_visual)
+fun! SwapWord (word, count, direction, is_visual)
 
     let comfunc_result = 0
     "{{{3 css omnicomplete property swapping
@@ -200,17 +219,11 @@ fun! SwapWord (word, direction, is_visual)
         endif
     endif
 
-    if g:swap_list_dont_append == 'yes'
-        let test_lists =  g:swap_lists
-    else
-        let test_lists =  g:swap_lists + g:default_swap_list
-    endif
-
     let cur_word = a:word
     let match_list = []
 
     " Main for loop over each swaplist {{{3
-    for swap_list  in test_lists
+    for swap_list in s:GetLists()
         let word_options = swap_list['options']
         let word_index = index(word_options, cur_word)
 
@@ -221,26 +234,26 @@ fun! SwapWord (word, direction, is_visual)
 
     "}}}
 
-    let out =  ProcessMatches(match_list, cur_word , a:direction, a:is_visual)
+    let out =  ProcessMatches(match_list, cur_word , a:count, a:direction, a:is_visual)
     return ''
 endfun
 
 "ProcessMatches() handles various result {{{2
-fun! ProcessMatches(match_list, cur_word, direction, is_visual)
+fun! ProcessMatches(match_list, cur_word, count, direction, is_visual)
 
     if len(a:match_list) == 0
         let visual_prefix = (a:is_visual == 'yes' ? 'gv' : '')
         if a:direction == 'forward'
-            exec 'normal' visual_prefix . (v:count ? v:count : '') . "\<Plug>SwapItFallbackIncrement"
+            exec 'normal' visual_prefix . (a:count ? a:count : '') . "\<Plug>SwapItFallbackIncrement"
         else
-            exec 'normal' visual_prefix . (v:count ? v:count : '') . "\<Plug>SwapItFallbackDecrement"
+            exec 'normal' visual_prefix . (a:count ? a:count : '') . "\<Plug>SwapItFallbackDecrement"
         endif
         return ''
     endif
 
     if len(a:match_list) == 1
         let swap_list = a:match_list[0]
-        call SwapMatch(swap_list, a:cur_word, a:direction, a:is_visual)
+        call SwapMatch(swap_list, a:cur_word, (a:count ? a:count : 1), a:direction, a:is_visual)
         return ''
     endif
 
@@ -251,86 +264,109 @@ fun! ProcessMatches(match_list, cur_word, direction, is_visual)
     endif
 
     if len(a:match_list) > 1
-        call ShowSwapChoices(a:match_list, a:cur_word, a:direction, a:is_visual)
+        call ShowSwapChoices(a:match_list, a:cur_word, (a:count ? a:count : 1), a:direction, a:is_visual)
     endif
 
 endfun
 
 " SwapMatch()  handles match {{{2
-fun! SwapMatch(swap_list, cur_word, direction, is_visual)
+fun! SwapMatch(swap_list, cur_word, count, direction, is_visual)
 
     let word_options = a:swap_list['options']
     let word_index = index(word_options, a:cur_word)
 
     if a:direction == 'forward'
-        let word_index = ( word_index + 1 ) % len(word_options)
+        let word_index = ( word_index + a:count ) % len(word_options)
     else
-        let word_index = ( word_index - 1 ) % len(word_options)
+        let word_index = ( word_index - a:count ) % len(word_options)
     endif
 
     let next_word = word_options[word_index]
 
-    let temp_reg = @s
-    let @s = next_word
+    let save_clipboard = &clipboard
+    set clipboard= " Avoid clobbering the selection and clipboard registers.
+    let save_reg = @"
+    let save_regmode = getregtype('"')
+    let @" = next_word
     let in_visual = 0
 
-    "XML matchit handling  {{{3
-    if index(g:swap_xml_matchit, a:swap_list['name']) != -1
+    try
+        let temp_mark = (v:version < 702 ? 'a' : '"')
 
-        if match(getline("."),"<\\(\\/".a:cur_word."\\|".a:cur_word."\\)[^>]*>" ) == -1
-            return 0
-        endif
+        "XML matchit handling  {{{3
+        if exists('b:swap_xml_matchit') && index(b:swap_xml_matchit, a:swap_list['name']) != -1 && exists('g:loaded_matchit') && g:loaded_matchit " We need the matchit.vim plugin for this.
 
-        exec "norm T<ma%"
-
-        "If the cursor is on a / then jump to the front and mark
-
-        if getline(".")[col(".") -1] != "/"
-            exec "norm ma%"
-        endif
-
-        exec "norm lviw\"sp`aviw\"sp"
-    " Regular swaps {{{3
-    else
-
-        if a:is_visual == 'yes'
-            if next_word =~ '\W'
-                let in_visual = 1
-                exec 'norm! gv"sp`[v`]' . (&selection ==# 'exclusive' ? 'l' : '')
-            else
-                exec 'norm! gv"spb'
+            if match(getline("."),"<\\(\\/".a:cur_word."\\|".a:cur_word."\\)[^>]*>" ) == -1
+                return 0
             endif
+
+            let save_foldenable = &l:foldenable
+            setlocal nofoldenable
+
+            exec 'norm! T<m' . temp_mark
+            norm %
+            let on_start_tag = 1
+
+            "Always mark the start tag, and put the cursor on the end tag.
+
+            if getline(".")[col(".") -1] != "/"
+                exec 'norm! m' . temp_mark
+                norm %
+                let on_start_tag = 0
+            endif
+
+            norm! lviw""p
+            let @" = next_word  " Paste in visual mode clobbers the contents of the default register.
+            exec "norm! g`" . temp_mark . "viw\"\"p"
+
+            if !on_start_tag
+                "Return to the (end) tag the swap was triggered on.
+                norm %
+            endif
+        " Regular swaps {{{3
         else
-            if next_word =~ '\W'
-                let in_visual = 1
-                exec 'norm! maviw"sp`[v`]' . (&selection ==# 'exclusive' ? 'l' : '')
+
+            if a:is_visual == 'yes'
+                if next_word =~ '\W'
+                    let in_visual = 1
+                    exec 'norm! gv""pg`[vg`]' . (&selection ==# 'exclusive' ? 'l' : '')
+                else
+                    exec 'norm! gv""pg`['
+                endif
             else
-                exec 'norm! maviw"spb`a'
+                if next_word =~ '\W'
+                    let in_visual = 1
+                    exec 'norm! m' . temp_mark . 'viw""pg`[vg`]' . (&selection ==# 'exclusive' ? 'l' : '')
+                else
+                    exec 'norm! m' . temp_mark . 'viw""pg`' . temp_mark
+                endif
             endif
         endif
-    endif
-    " 3}}}
+        " 3}}}
 
-    "TODO VISHACK This is a silly hack to fix the visual range. if the v ends with
-    "a word character the visual range is onw column over but not for
-    "non word characters.
+        "TODO VISHACK This is a silly hack to fix the visual range. if the v ends with
+        "a word character the visual range is onw column over but not for
+        "non word characters.
 
-"    if in_visual == 1 && next_word =~ "\\w$" && &selection == 'inclusive'
-"        exec 'norm! h'
-"    endif
+"       if in_visual == 1 && next_word =~ "\\w$" && &selection == 'inclusive'
+"           exec 'norm! h'
+"       endif
 
-"    if in_visual == 1 && (next_word =~  "\\W$") && &selection == 'exclusive'
-"        exec 'norm! l'
-"    endif
-
-    let @s = temp_reg
-    "    echo "Swap: " . a:swap_list['name'] .' '. a:cur_word . " > " . next_word
-    "\. ' ' . word_index . ' ' . a:direction . ' ' . len(word_options)
-    return 1
+"       if in_visual == 1 && (next_word =~  "\\W$") && &selection == 'exclusive'
+"           exec 'norm! l'
+"       endif
+        return 1
+    finally
+        call setreg('"', save_reg, save_regmode)
+        let &clipboard = save_clipboard
+        if exists('save_foldenable') | let &l:foldenable = save_foldenable | endif
+        "    echo "Swap: " . a:swap_list['name'] .' '. a:cur_word . " > " . next_word
+        "\. ' ' . word_index . ' ' . a:direction . ' ' . len(word_options)
+    endtry
 endfun
 "
 "ShowSwapChoices() shows alternative swaps {{{2
-fun! ShowSwapChoices(match_list, cur_word, direction, is_visual)
+fun! ShowSwapChoices(match_list, cur_word, count, direction, is_visual)
 
     let a_opts = ['A','B','C','D','E','F','G']
     let con_index = 0
@@ -339,8 +375,9 @@ fun! ShowSwapChoices(match_list, cur_word, direction, is_visual)
 
     "Generate the prompt {{{3
     for swap_list in a:match_list
+        let next_index = (index(swap_list['options'], a:cur_word) + (a:direction == 'forward' ? 1 : -1)) % len(swap_list['options'])
         let confirm_options =  confirm_options . ' ' . a_opts[con_index] . " . " . swap_list['name'] . ' (' .
-                    \a:cur_word . ' > ' . swap_list['options'][index(swap_list['options'], a:cur_word) + 1] . ') '
+                    \a:cur_word . ' > ' . swap_list['options'][next_index] . ') '
 
         "        For some reason concatenating stuffs up the string, using an
         "        if con_index > 0
@@ -370,7 +407,7 @@ fun! ShowSwapChoices(match_list, cur_word, direction, is_visual)
     endif
     "   }}}
     if choice != 0
-        call SwapMatch(a:match_list[choice -1], a:cur_word, a:direction, a:is_visual)
+        call SwapMatch(a:match_list[choice -1], a:cur_word, a:count, a:direction, a:is_visual)
     else
         echo "Swap: Cancelled"
     endif
@@ -379,7 +416,7 @@ endfun
 "
 "SwapInsert() call a swap list from insert mode
 fun! SwapInsert()
-    for swap_list  in (g:swap_lists + g:default_swap_list)
+    for swap_list in s:GetLists()
         if swap_list['name'] == @s
             call complete(col('.'), swap_list['options'])
             return ''
@@ -401,30 +438,13 @@ fun! AddSwapList(s_list)
 
     let list_name = remove (word_list,0)
 
-    call add(g:swap_lists,{'name':list_name, 'options':word_list})
+    if !exists('b:swap_lists') | let b:swap_lists = [] | endif
+    call add(b:swap_lists,{'name':list_name, 'options':word_list})
 endfun
 
 fun! AddSwapXmlMatchit(s_list)
-    let g:swap_xml_matchit = split(a:s_list,'\s\+')
+    let b:swap_xml_matchit = split(a:s_list,'\s\+')
 endfun
-"LoadFileTypeSwapList() "{{{2
-"sources .vim/after/ftplugins/<file_type>_swapit.vim
-fun! LoadFileTypeSwapList()
-
-    "Initializing  the list {{{3
-"    call ClearSwapList()
-    let g:swap_lists = []
-    let g:swap_list = []
-    let g:swap_xml_matchit = []
-
-    let ftpath = "~/.vim/after/ftplugin/". &filetype ."_swapit.vim"
-    let g:swap_lists = []
-    if filereadable(ftpath)
-        exec "source " . ftpath
-    endif
-
-endfun
-
 "OpenSwapFileType() Quick Access to filtype file {{{2
 fun! OpenSwapFileType()
     let ftpath = "~/.vim/after/ftplugin/". &filetype ."_swapit.vim"

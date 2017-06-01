@@ -1,0 +1,116 @@
+priority -50
+
+# OUT
+snippet out "console.log()" b
+console.log($1);
+endsnippet
+
+snippet outvar "console.log(var = var)" b
+console.log( '$1 = ' + JSON.stringify($1) );
+endsnippet
+snippet outval "console.log(name = val)" b
+console.log( '$1 = ' + $2 );
+endsnippet
+
+snippet cons "constructor" b
+constructor($1) {
+  $2
+}
+endsnippet
+
+snippet cmi "constructor member init" b
+this.$1 = $2;
+endsnippet
+snippet cmis "constructor member simple init" b
+this.$1 = $1;
+endsnippet
+
+snippet meth "create class method" b
+${1:method_name}($2) {
+	$3
+}
+endsnippet
+
+snippet nopt "options={}"
+options={}
+endsnippet
+
+snippet opt= "set default option.key"
+if ( !('${1:key}' in options) ) { options.$1 = $2; }
+endsnippet
+
+snippet opt "get option.key"
+options.$1
+endsnippet
+
+snippet t. "this." i
+this.$1
+endsnippet
+
+snippet let "let name: type"
+let ${1:name}: $2 = $3
+endsnippet
+
+snippet var "var name: type"
+var ${1:name}: $2 = $3
+endsnippet
+
+# IF
+snippet if "if" b
+if ( $1 ) {
+  $2
+}
+endsnippet
+
+snippet iff "if 1 line" b
+if ( $1 ) { $2 }
+endsnippet
+
+snippet ife "if... else" b
+if ( $1 ) {
+  $2
+} else {
+  $3
+}
+endsnippet
+
+# LOOPS
+snippet fof "for (let v of array)" b
+for (let $1 of $2) {
+  $3
+}
+endsnippet
+
+snippet fos "for (let v of array)" b
+for (let $1 of $1s) {
+  $2
+}
+endsnippet
+
+# TESTING
+snippet it "it('', ..." b
+it('$1', () => {
+  $2
+});
+endsnippet
+
+snippet desc "describe(..." b
+describe('$1', () => {
+});
+endsnippet
+
+snippet befe "beforeEach" b
+beforeEach(() => {
+  $1
+});
+endsnippet
+
+snippet exeq "expect toEqual" b
+expect( $1 ).toEqual( $2 );
+endsnippet
+snippet exbe "expect toBe" b
+expect( $1 ).toEqual( $2 );
+endsnippet
+snippet exp "expect to..." b
+expect( $1 ).to$2($3);
+endsnippet

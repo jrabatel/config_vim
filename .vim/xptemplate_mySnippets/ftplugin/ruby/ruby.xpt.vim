@@ -34,22 +34,6 @@ XPT atw " attr_writer :`cursor~
 attr_writer :`cursor~
 ..XPT
 
-XPT out " puts `cursor~
-puts "`cursor~"
-..XPT
-
-XPT outs " puts "`cursor~"
-puts "`cursor~"
-..XPT
-
-XPT outvar " puts "`var~ = #{`var~}"
-puts "`var~ = #{`var~}"
-..XPT
-
-XPT outval " puts "`exp~ = #{`var~}"
-puts "`exp~ = #{`var~}"
-..XPT
-
 XPT warn " warn `cursor~
 warn "`cursor~"
 ..XPT

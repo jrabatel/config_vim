@@ -1,0 +1,18 @@
+priority -50
+
+snippet out "puts" b
+puts "$1"
+endsnippet
+
+snippet outvar "puts variable" b
+puts "$1 = #{$1}"
+endsnippet
+
+snippet outval "puts value" b
+puts "$1 = #{$2}"
+endsnippet
+
+snippet fread "File.open" b
+File.open($1, 'r').data
+endsnippet
+

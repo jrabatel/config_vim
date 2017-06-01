@@ -1,0 +1,20 @@
+priority -50
+
+extends html
+
+snippet < "<% ... %>"
+<% $1 %>
+endsnippet
+
+snippet <lt "<%= link_to ... %>"
+<%= link_to"$1", $2 %>
+endsnippet
+snippet lt "link_to ..."
+link_to( "$1", $2 )
+endsnippet
+
+
+# I18N
+snippet <t " <%= t('...') %>" i
+<%= t("$1") %>
+endsnippet
